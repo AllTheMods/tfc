@@ -1,0 +1,14 @@
+{
+  "type": "bloodmagic:array",
+  "texture": "bloodmagic:textures/models/alchemyarrays/bindingarray.png",
+  "baseinput": {
+    "item": "bloodmagic:reagentbinding"
+  },
+  "addedinput": {
+    "item": "tfc:metal/chestplate/wrought_iron"
+  },
+  "output": {
+    "item": "bloodmagic:livingplate",
+    "nbt": "{Damage:0}"
+  }
+}

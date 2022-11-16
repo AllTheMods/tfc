@@ -1,0 +1,12 @@
+{
+  "type": "exmachinis:compacting",
+  "input": {
+    "ingredient": {
+      "item": "tfc:ore/rich_garnierite"
+    },
+    "count": 3
+  },
+  "output": {
+    "item": "immersiveengineering:raw_nickel"
+  }
+}

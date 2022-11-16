@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:fermenter",
+  "fluid": {
+    "fluid": "immersiveengineering:ethanol",
+    "amount": 80
+  },
+  "input": {
+    "tag": "tfc:foods/apples"
+  },
+  "energy": 6400
+}

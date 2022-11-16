@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "forge:magma"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:obsidian"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "immersiveengineering:mold_plate",
+  "result": {
+    "tag": "beyond_earth:compresseds/calorite"
+  },
+  "input": {
+    "tag": "forge:ingots/calorite"
+  },
+  "energy": 2400
+}

@@ -1,0 +1,12 @@
+{
+  "type": "exmachinis:compacting",
+  "input": {
+    "ingredient": {
+      "item": "tfc:ore/normal_native_gold"
+    },
+    "count": 4
+  },
+  "output": {
+    "item": "minecraft:raw_gold"
+  }
+}

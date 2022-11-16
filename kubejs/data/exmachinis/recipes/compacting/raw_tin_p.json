@@ -1,0 +1,12 @@
+{
+  "type": "exmachinis:compacting",
+  "input": {
+    "ingredient": {
+      "item": "tfc:ore/poor_cassiterite"
+    },
+    "count": 7
+  },
+  "output": {
+    "item": "thermal:raw_tin"
+  }
+}

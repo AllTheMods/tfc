@@ -1,0 +1,12 @@
+{
+  "type": "exmachinis:compacting",
+  "input": {
+    "ingredient": {
+      "item": "tfc:ore/poor_hematite"
+    },
+    "count": 7
+  },
+  "output": {
+    "item": "minecraft:raw_iron"
+  }
+}

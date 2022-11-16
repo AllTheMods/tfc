@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "tfc:food/barley_grain"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:food/barley_flour"
+    },
+    {
+      "item": "tfc:food/barley_flour",
+      "count": 2,
+      "chance": 0.25
+    },
+    {
+      "item": "tfc:seeds/barley",
+      "chance": 0.25
+    }
+  ],
+  "processingTime": 150
+}

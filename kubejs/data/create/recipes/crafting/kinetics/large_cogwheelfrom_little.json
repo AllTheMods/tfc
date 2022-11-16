@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "create:cogwheel"
+    },
+    {
+      "item": "firmalife:treated_lumber"
+    },
+    {
+      "item": "firmalife:treated_lumber"
+    }
+  ],
+  "result": {
+    "item": "create:large_cogwheel"
+  }
+}

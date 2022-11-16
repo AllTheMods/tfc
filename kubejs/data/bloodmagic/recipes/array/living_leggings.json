@@ -1,0 +1,14 @@
+{
+  "type": "bloodmagic:array",
+  "texture": "bloodmagic:textures/models/alchemyarrays/bindingarray.png",
+  "baseinput": {
+    "item": "bloodmagic:reagentbinding"
+  },
+  "addedinput": {
+    "item": "tfc:metal/greaves/wrought_iron"
+  },
+  "output": {
+    "item": "bloodmagic:livingleggings",
+    "nbt": "{Damage:0}"
+  }
+}

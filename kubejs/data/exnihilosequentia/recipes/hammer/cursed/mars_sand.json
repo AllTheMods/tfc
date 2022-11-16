@@ -1,0 +1,11 @@
+{
+  "type": "exnihilosequentia:hammer",
+  "results": [{
+    "chance": 1.0,
+    "item": "beyond_earth:mars_sand",
+    "count": 1
+  }],
+  "input": {
+    "item": "beyond_earth:mars_stone"
+  }
+}

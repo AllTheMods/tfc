@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "tfc:food/maize_grain"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:food/maize_flour"
+    },
+    {
+      "item": "tfc:food/maize_flour",
+      "count": 2,
+      "chance": 0.25
+    },
+    {
+      "item": "tfc:seeds/maize",
+      "chance": 0.25
+    }
+  ],
+  "processingTime": 150
+}

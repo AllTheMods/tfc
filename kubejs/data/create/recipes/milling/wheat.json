@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "tfc:food/wheat_grain"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:food/wheat_flour"
+    },
+    {
+      "item": "tfc:food/wheat_flour",
+      "count": 2,
+      "chance": 0.25
+    },
+    {
+      "item": "tfc:seeds/wheat",
+      "chance": 0.25
+    }
+  ],
+  "processingTime": 150
+}
