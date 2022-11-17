@@ -166,6 +166,10 @@ onEvent('item.tags', event => {
 
 
     event.get('forge:crops/potato').add('tfc:food/potato')
+    event.get('forge:crops/carrot').add('tfc:food/carrot')
+    event.get('forge:crops/beetroot').add('tfc:food/beet')
+    event.get('forge:crops/wheat').add('tfc:food/wheat')
+
     event.get('forge:ingots/iron').add('tfc:metal/ingot/wrought_iron')
     event.get('forge:raw_materials/aluminum').add('tfc:ore/cryolite')
     event.get('forge:plates/steel').add('beyond_earth:compressed_steel')
@@ -178,7 +182,11 @@ onEvent('item.tags', event => {
     event.get('forge:magma').add('tfc:rock/magma/rhyolite')
     event.get('forge:magma').add('tfc:rock/magma/andesite')
     event.get('forge:magma').add('tfc:rock/magma/dacite')
-    event.get('forge:treated_wood').add('firmalife:treated_lumber')
+    event.get('forge:treated_lumber').add('firmalife:treated_lumber')
+    event.get('forge:treated_lumber').add('#forge:treated_wood')
+
+
+    event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
     event.get('forge:sandstone').add('tfc:raw_sandstone/brown')
     event.get('forge:sandstone').add('tfc:raw_sandstone/white')

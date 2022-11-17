@@ -1,0 +1,1 @@
+{"type":"immersiveengineering:crusher","secondaries":[{"chance":0.5,"output":{"tag":"forge:dusts/saltpeter"}}],"result":{"item":"tfc:sand/yellow","count":2},"input":{"tag":"forge:sandstone"},"energy":3200}

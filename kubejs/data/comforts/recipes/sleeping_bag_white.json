@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sleeping_bag",
+  "pattern": [
+    "yyy",
+    "z  ",
+    "aaa"
+  ],
+  "key": {
+    "y": {
+      "item": "tfc:wool_cloth"
+    },
+    "z": {
+      "item": "tfc:wool_yarn"
+    },
+    "a": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result": {
+    "item": "comforts:sleeping_bag_white"
+  }
+}

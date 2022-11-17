@@ -5,16 +5,16 @@
       "item": "create:shaft"
     },
     {
-      "item": "firmalife:treated_lumber"
+      "tag": "forge:treated_lumber"
     },
     {
-      "item": "firmalife:treated_lumber"
+      "tag": "forge:treated_lumber"
     },
     {
-      "item": "firmalife:treated_lumber"
+      "tag": "forge:treated_lumber"
     },
     {
-      "item": "firmalife:treated_lumber"
+      "tag": "forge:treated_lumber"
     }
   ],
   "result": {

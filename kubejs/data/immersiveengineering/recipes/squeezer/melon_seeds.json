@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:squeezer",
+  "fluid": {
+    "fluid": "immersiveengineering:plantoil",
+    "amount": 20
+  },
+  "input": {
+    "item": "tfc:seeds/melon"
+  },
+  "energy": 6400
+}

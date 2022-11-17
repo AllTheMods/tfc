@@ -1,0 +1,11 @@
+{
+  "type": "immersiveengineering:squeezer",
+  "fluid": {
+    "fluid": "immersiveengineering:plantoil",
+    "amount": 40
+  },
+  "input": {
+    "item": "tfc:seeds/pumpkin"
+  },
+  "energy": 6400
+}
