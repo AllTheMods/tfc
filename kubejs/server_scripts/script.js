@@ -110,16 +110,17 @@ modifyShaped(event, 'bloodmagic:alchemicalreactionchamber', 1, ['SSS', 'IOI', 'B
     B: 'minecraft:iron_block'
   })
 
-modifyShaped(event, 'immersiveengineering:alloybrick', 1, ['SI ', 'IS ', '   '], {
+modifyShaped(event, 'immersiveengineering:alloybrick', 2, ['SI ', 'IS ', '   '], {
     S: '#forge:sandstone',
     I: 'tfc:ceramic/fire_brick'
   })
-modifyShaped(event, 'immersiveengineering:cokebrick', 1, ['CBC', 'BSB', 'CBC'], {
+modifyShaped(event, 'immersiveengineering:cokebrick', 3, ['CBC', 'BSB', 'CBC'], {
     S: '#forge:sandstone',
     B: 'tfc:ceramic/fire_brick',
     C: 'tfc:mortar'
   })
-  modifyShaped(event, 'immersiveengineering:blastbrick', 1, ['CBC', 'BMB', 'CBC'], {
+  modifyShaped(event, 'immersiveengineering:blastbrick', 3, ['CBC', 'BMB', 'CSC'], {
+      S: '#forge:ingots/steel',
       C: 'tfc:fire_clay',
       B: 'tfc:ceramic/fire_brick',
       M: '#forge:magma'
@@ -170,6 +171,7 @@ onEvent('item.tags', event => {
     event.get('forge:crops/beetroot').add('tfc:food/beet')
     event.get('forge:crops/wheat').add('tfc:food/wheat')
 
+    event.get('forge:ingots/graphite').add('immersiveengineering:ingot_hop_graphite')
     event.get('forge:ingots/iron').add('tfc:metal/ingot/wrought_iron')
     event.get('forge:raw_materials/aluminum').add('tfc:ore/cryolite')
     event.get('forge:plates/steel').add('beyond_earth:compressed_steel')
@@ -184,7 +186,6 @@ onEvent('item.tags', event => {
     event.get('forge:magma').add('tfc:rock/magma/dacite')
     event.get('forge:treated_lumber').add('firmalife:treated_lumber')
     event.get('forge:treated_lumber').add('#forge:treated_wood')
-
 
     event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
