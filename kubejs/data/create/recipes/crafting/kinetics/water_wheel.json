@@ -7,7 +7,7 @@
   ],
   "key": {
     "S": {
-     "item": "firmalife:treated_lumber"
+     "tag": "forge:treated_lumber"
     },
     "C": {
       "item": "create:large_cogwheel"

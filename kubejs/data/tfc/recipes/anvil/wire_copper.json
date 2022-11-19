@@ -1,0 +1,16 @@
+{
+    "type": "tfc:anvil",
+    "input": {
+      "tag": "forge:sheets/copper"
+    },
+    "result": {
+      "item": "immersiveengineering:wire_copper",
+      "count": 2
+    },
+    "tier": 3,
+    "rules": [
+      "draw_any",
+      "draw_any",
+      "draw_any"
+    ]
+  }
