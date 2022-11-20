@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "GGG",
+      "GRG",
+      "ICI"
+    ],
+    "key": {
+      "G": {
+       "item": "minecraft:red_stained_glass"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "I":
+      { 
+        "tag": "forge:plates/iron"
+      },
+      "C": {
+        "tag": "forge:wires/copper"
+      }
+    },
+    "result": {
+      "item": "create:electron_tube"
+    }
+  }

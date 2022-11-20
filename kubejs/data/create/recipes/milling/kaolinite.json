@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "tfc:ore/kaolinite"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:powder/kaolinite",
+      "count": 4
+    },
+    {
+      "item": "tfc:powder/kaolinite",
+      "count": 2,
+      "chance": 0.20
+    }
+  ],
+  "processingTime": 300
+}

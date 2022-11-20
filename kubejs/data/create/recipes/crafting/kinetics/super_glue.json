@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " SL",
+      "SGS",
+      "NS "
+    ],
+    "key": {
+      "S": {
+        "tag": "forge:plates/iron"
+      },
+      "G": {
+        "tag": "forge:glue"
+      },
+      "L": {
+        "tag": "forge:dyes/lime"
+      },
+      "N": {
+        "tag": "forge:nuggets/iron"
+      }
+    },
+    "result": {
+      "item": "create:super_glue"
+    }
+  }
