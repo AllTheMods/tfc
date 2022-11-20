@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "tag": "forge:light_blue_dye_material"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:light_blue_dye",
+      "count": 2
+    },
+    {
+      "item": "minecraft:light_blue_dye",
+      "count": 1,
+      "chance": 0.10
+    }
+  ],
+  "processingTime": 100
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "CQC",
+    "ISI"
+  ],
+  "key": {
+    "C": {
+      "item": "create:cogwheel"
+    },
+    "Q": {
+      "item": "tfc:quern"
+    },
+    "I": {
+      "tag": "forge:smooth_stone"
+    },    
+    "S": {
+      "item": "create:andesite_casing"
+    }
+  },
+  "result": {
+    "item": "create:millstone"
+  }
+}
