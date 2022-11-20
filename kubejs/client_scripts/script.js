@@ -6,3 +6,8 @@ onEvent('jei.hide.items', event => {
 	// Hide items in JEI here
 	// event.hide('minecraft:cobblestone')
 })
+
+onEvent('item.tooltip', tooltip => {
+	tooltip.add('immersiveengineering:wire_copper', [
+		Text.of('Made in iron or better anvils.').green()])
+})
