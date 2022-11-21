@@ -3,6 +3,7 @@ onEvent('item.tags', event => {
     event.add('forge:electron_tube',['immersiveengineering:electron_tube', 'create:electron_tube'])
 
     event.add('forge:glue', 'tfc:glue')
+    event.add('forge:kelp', ['tfc:plant/winged_kelp', 'tfc:plant/leafy_kelp', 'tfc:plant/giant_kelp_flower'])
 
     event.add('forge:white_dye_material', ['tfc:plant/spanish_moss', 'tfc:plant/houstonia', 'tfc:plant/oxeye_daisy', 'tfc:plant/primrose', 'tfc:plant/trillium', 'tfc:plant/snapdragon_white','tfc:plant/tulip_white'])
     event.add('forge:green_dye_material', ['tfc:plant/reindeer_lichen', 'tfc:plant/barrel_cactus'])
