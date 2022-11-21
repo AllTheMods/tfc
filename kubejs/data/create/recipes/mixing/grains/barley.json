@@ -1,0 +1,13 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      {
+        "item": "tfc:food/barley"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:food/barley_grain"
+      }
+    ]
+}

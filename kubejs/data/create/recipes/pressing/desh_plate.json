@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "item": "beyond_earth:desh_plate"
+      }
+    ],
+    "results": [
+      {
+        "item": "beyond_earth:desh_plate"
+      }
+    ],
+    "processingTime": 200
+  }

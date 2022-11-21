@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E ",
+    "AA",
+    "KK"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/brass"
+    },
+    "K": {
+      "item": "tfc:food/dried_kelp"
+    },
+    "E": {
+      "tag": "forge:electron_tube"
+    }
+  },
+  "result": {
+    "item": "create:brass_tunnel",
+    "count": 2
+  }
+}

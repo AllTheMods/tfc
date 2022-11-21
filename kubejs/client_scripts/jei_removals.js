@@ -4,5 +4,4 @@ onEvent('jei.hide.items', event => {
 
 	event.hide('create:red_sand_paper')
 
-
 })

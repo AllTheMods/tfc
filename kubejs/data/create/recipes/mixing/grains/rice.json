@@ -1,0 +1,13 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      {
+        "item": "tfc:food/rice"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:food/rice_grain"
+      }
+    ]
+}

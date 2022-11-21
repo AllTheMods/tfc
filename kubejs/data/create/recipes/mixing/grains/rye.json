@@ -1,0 +1,13 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      {
+        "item": "tfc:food/rye"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:food/rye_grain"
+      }
+    ]
+}
