@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/nickel"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/nickel"
+      }
+    ],
+    "processingTime": 200
+  }

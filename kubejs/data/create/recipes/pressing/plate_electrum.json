@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/electrum"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/electrum"
+      }
+    ],
+    "processingTime": 200
+  }

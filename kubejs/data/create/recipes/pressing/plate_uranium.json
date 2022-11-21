@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/uranium"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/uranium"
+      }
+    ],
+    "processingTime": 200
+  }

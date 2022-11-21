@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/silver"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/silver"
+      }
+    ],
+    "processingTime": 200
+  }
