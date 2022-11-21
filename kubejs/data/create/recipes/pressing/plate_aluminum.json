@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/aluminum"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/aluminum"
+      }
+    ],
+    "processingTime": 200
+  }

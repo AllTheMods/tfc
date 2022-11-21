@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/constantan"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/constantan"
+      }
+    ],
+    "processingTime": 200
+  }

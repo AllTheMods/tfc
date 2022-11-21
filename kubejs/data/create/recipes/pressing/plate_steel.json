@@ -1,0 +1,14 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+      {
+        "tag": "forge:ingots/steel"
+      }
+    ],
+    "results": [
+      {
+        "tag": "forge:plates/steel"
+      }
+    ],
+    "processingTime": 200
+  }

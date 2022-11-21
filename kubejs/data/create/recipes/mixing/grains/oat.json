@@ -1,0 +1,13 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      {
+        "item": "tfc:food/oat"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:food/oat_grain"
+      }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      {
+        "item": "tfc:food/wheat"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:food/wheat_grain"
+      }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "type": "create:milling",
+    "ingredients": [
+      {
+        "item": "tfc:ore/borax"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:powder/flux",
+        "count": 2
+      },
+      {
+        "item": "tfc:powder/flux",
+        "count": 2,
+        "chance": 0.50
+      }
+    ],
+    "processingTime": 180
+  }

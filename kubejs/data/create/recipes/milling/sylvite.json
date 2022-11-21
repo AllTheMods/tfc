@@ -1,0 +1,20 @@
+{
+    "type": "create:milling",
+    "ingredients": [
+      {
+        "item": "tfc:ore/sylvite"
+      }
+    ],
+    "results": [
+      {
+        "item": "tfc:powder/sylvite",
+        "count": 4
+      },
+      {
+        "item": "tfc:powder/sylvite",
+        "count": 2,
+        "chance": 0.45
+      }
+    ],
+    "processingTime": 150
+  }
