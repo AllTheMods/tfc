@@ -1,0 +1,13 @@
+{
+  "type": "bloodmagic:altar",
+  "input": {
+    "item": "tfc:metal/sword/wrought_iron"
+  },
+  "output": {
+    "item": "bloodmagic:daggerofsacrifice"
+  },
+  "upgradeLevel": 1,
+  "altarSyphon": 3000,
+  "consumptionRate": 5,
+  "drainRate": 5
+}
