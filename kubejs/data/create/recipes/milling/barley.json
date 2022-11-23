@@ -1,8 +1,7 @@
 {
   "type": "create:milling",
   "ingredients": [
-    {
-    {
+   {
       "type": "tfc:not_rotten",
       "ingredient": {
         "item": "tfc:food/barley_grain"
