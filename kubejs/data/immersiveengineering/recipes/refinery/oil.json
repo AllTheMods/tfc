@@ -2,7 +2,7 @@
   "type": "immersiveengineering:refinery",
   "result": {
     "fluid": "thermal:crude_oil",
-    "amount": 16
+    "amount": 4
   },
   "catalyst": {
     "item": "tfc:ore/bituminous_coal"
