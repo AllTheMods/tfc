@@ -221,10 +221,18 @@ onEvent('block.tags', event => {
     event.get('tfc:can_trigger_collapse').add('minecraft:blackstone')
     event.get('tfc:can_trigger_collapse').add('minecraft:magma_block')
 
+    event.get('forge:magma').add('tfc:rock/magma/basalt')
+    event.get('forge:magma').add('tfc:rock/magma/granite')
+    event.get('forge:magma').add('tfc:rock/magma/diorite')
+    event.get('forge:magma').add('tfc:rock/magma/gabbro')
+    event.get('forge:magma').add('tfc:rock/magma/rhyolite')
+    event.get('forge:magma').add('tfc:rock/magma/andesite')
+    event.get('forge:magma').add('tfc:rock/magma/dacite')
+
     event.get('tfc:can_landslide').add('beyond_earth:mars_sand')
     event.get('tfc:can_landslide').add('beyond_earth:venus_sand')
     event.get('tfc:can_landslide').add('beyond_earth:moon_sand')
-
+    event.get('create:passive_boiler_heaters').add('#forge:magma')
 })
 onEvent('fluid.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
