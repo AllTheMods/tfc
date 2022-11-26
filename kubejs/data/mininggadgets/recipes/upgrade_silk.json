@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "GAG",
+      "IBI",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "tag": "forge:glue"
+      },
+      "I": {
+        "tag": "forge:ingots/gold"
+      },
+      "A":{
+        "item": "minecraft:golden_apple"
+      },
+      "B":{
+        "item": "mininggadgets:upgrade_empty"
+      }
+    },
+    "result": {
+      "item": "mininggadgets:upgrade_silk"
+    }
+  }

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " R",
+      " C",
+      " E"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:comparator"
+      },
+      "C": {
+        "item": "create:andesite_casing"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:content_observer"
+    }
+  }

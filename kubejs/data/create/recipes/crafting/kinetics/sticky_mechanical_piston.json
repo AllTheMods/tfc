@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " G ",
+      " P ",
+      "   "
+    ],
+    "key": {
+      "G": {
+        "tag": "forge:glue"
+      },
+      "P": {
+        "item": "create:mechanical_piston"
+      }
+    },
+    "result": {
+      "item": "create:sticky_mechanical_piston"
+    }
+  }

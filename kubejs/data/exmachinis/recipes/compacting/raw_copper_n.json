@@ -2,7 +2,7 @@
   "type": "exmachinis:compacting",
   "input": {
     "ingredient": {
-      "item": "tfc:ore/normal_native_copper"
+      "tag": "forge:copper_ore_n"
     },
     "count": 4
   },

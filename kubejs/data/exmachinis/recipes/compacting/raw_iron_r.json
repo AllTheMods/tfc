@@ -2,7 +2,7 @@
   "type": "exmachinis:compacting",
   "input": {
     "ingredient": {
-      "item": "tfc:ore/rich_hematite"
+      "tag": "forge:iron_ore_r"
     },
     "count": 3
   },

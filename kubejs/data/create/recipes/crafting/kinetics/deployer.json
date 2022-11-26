@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " E",
+      " C",
+      " H"
+    ],
+    "key": {
+      "H": {
+        "item": "create:brass_hand"
+      },
+      "C": {
+        "item": "create:andesite_casing"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:deployer"
+    }
+  }

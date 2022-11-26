@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "FB ",
+      "GL ",
+      "   "
+    ],
+    "key": {
+      "G": {
+        "tag": "forge:glue"
+      },
+      "F": {
+        "type": "tfc:not_rotten",
+        "ingredient": {
+          "tag": "tfc:foods/grains"
+        }
+      },
+      "B": {
+        "type": "tfc:not_rotten",
+        "ingredient": {
+          "tag": "tfc:food/beet"
+        }
+      },
+      "L": {
+          "tag": "forge:nuggets/lead"
+      }
+    },
+    "result": {
+      "item": "thermal:deep_aquachow"
+    }
+  }
