@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "DE"
+    ],
+    "key": {
+      "D": {
+        "item": "create:encased_chain_drive"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:adjustable_chain_gearshift"
+    }
+  }

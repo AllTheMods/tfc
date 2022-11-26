@@ -10,7 +10,10 @@
       "tag": "forge:ingots/brass"
     },
     "K": {
-      "item": "tfc:food/dried_kelp"
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "tfc:food/dried_kelp"
+      }
     },
     "E": {
       "tag": "forge:electron_tube"

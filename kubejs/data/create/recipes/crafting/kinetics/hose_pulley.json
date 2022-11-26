@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "KCK",
+      "K K",
+      "KPK"
+    ],
+    "key": {
+      "P": {
+        "tag": "forge:plates/copper"
+      },
+      "C": {
+        "item": "create:copper_casing"
+      },
+      "K": {
+        "type": "tfc:not_rotten",
+        "ingredient": {
+          "item": "tfc:food/dried_kelp"
+        }
+      }
+    },
+    "result": {
+      "item": "create:hose_pulley"
+    }
+  }

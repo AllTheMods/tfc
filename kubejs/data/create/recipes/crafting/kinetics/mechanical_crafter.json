@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " E",
+      " C",
+      " T"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:crafting_table"
+      },
+      "C": {
+        "item": "create:brass_casing"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:mechanical_crafter"
+    }
+  }

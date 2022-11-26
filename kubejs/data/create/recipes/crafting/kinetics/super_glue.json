@@ -12,11 +12,11 @@
       "G": {
         "tag": "forge:glue"
       },
-      "L": {
-        "tag": "forge:dyes/lime"
-      },
       "N": {
         "tag": "forge:nuggets/iron"
+      },
+      "L": {
+        "item": "minecraft:lime_dye"
       }
     },
     "result": {

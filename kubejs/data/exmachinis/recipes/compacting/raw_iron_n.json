@@ -2,7 +2,7 @@
   "type": "exmachinis:compacting",
   "input": {
     "ingredient": {
-      "item": "tfc:ore/normal_hematite"
+      "tag": "forge:iron_ore_n"
     },
     "count": 4
   },

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "G G",
+      "GSG",
+      "GEG"
+    ],
+    "key": {
+      "G": {
+        "tag": "forge:ingots/gold"
+      },
+      "S": {
+        "tag": "forge:rods/wooden"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:controller_rail"
+    }
+  }

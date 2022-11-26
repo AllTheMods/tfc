@@ -88,7 +88,14 @@ event.remove({id: 'create:mixing/andesite_alloy'})
 
 
 modifyShaped(event, 'create:belt_connector', 1, ['   ', 'SSS', 'SSS'], {
-    S: 'tfc:food/dried_kelp'
+    S: {
+      "K": {
+        "type": "tfc:not_rotten",
+        "ingredient": {
+          "item": "tfc:food/dried_kelp"
+        }
+      }
+    }
   })
 
 

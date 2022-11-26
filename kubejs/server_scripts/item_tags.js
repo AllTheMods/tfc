@@ -19,4 +19,12 @@ onEvent('item.tags', event => {
     event.add('forge:brown_dye_material', ['tfc:plant/field_horsetail', 'tfc:plant/sargassum'])
     event.add('forge:red_dye_material', ['tfc:plant/tropical_milkweed', 'tfc:plant/snapdragon_red', 'tfc:plant/poppy', 'tfc:plant/guzmania', 'tfc:plant/tulip_red', 'tfc:plant/vriesea', 'tfc:plant/rose'])
 
+    event.add('forge:copper_ore_r', ['tfc:ore/rich_native_copper','tfc:ore/rich_tetrahedrite','tfc:ore/rich_malachite'])
+    event.add('forge:copper_ore_n', ['tfc:ore/normal_native_copper','tfc:ore/normal_tetrahedrite','tfc:ore/normal_malachite'])
+    event.add('forge:copper_ore_p', ['tfc:ore/poor_native_copper','tfc:ore/poor_tetrahedrite','tfc:ore/poor_malachite'])
+
+    event.add('forge:iron_ore_r', ['tfc:ore/rich_hematite','tfc:ore/rich_magnetite','tfc:ore/rich_limonite'])
+    event.add('forge:iron_ore_n', ['tfc:ore/normal_hematite','tfc:ore/normal_magnetite','tfc:ore/normal_limonite'])
+    event.add('forge:iron_ore_p', ['tfc:ore/poor_hematite','tfc:ore/poor_magnetite','tfc:ore/poor_limonite'])
+
 })

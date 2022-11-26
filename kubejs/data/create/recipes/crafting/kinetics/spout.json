@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "C",
+      "K"
+    ],
+    "key": {
+        "K": {
+            "type": "tfc:not_rotten",
+            "ingredient": {
+              "item": "tfc:food/dried_kelp"
+            }
+          },
+      "C": {
+        "item": "create:copper_casing"
+      }
+    },
+    "result": {
+      "item": "create:spout"
+    }
+  }
