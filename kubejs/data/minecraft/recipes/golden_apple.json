@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "GGG",
+      "GAG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "tag": "forge:ingots/gold"
+      },
+      "A": {
+        "tag": "tfc:foods/apples"
+      }
+    },
+    "result": {
+      "item": "minecraft:golden_apple"
+    }
+  }

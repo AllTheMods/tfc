@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "IEI"
+    ],
+    "key": {
+      "I": {
+        "item": "create:andesite_alloy"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:display_board"
+    }
+  }

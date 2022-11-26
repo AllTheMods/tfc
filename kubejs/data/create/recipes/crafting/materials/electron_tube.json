@@ -14,7 +14,7 @@
       },
       "I":
       { 
-        "tag": "forge:plates/iron"
+        "tag": "forge:sheets/wrought_iron"
       },
       "C": {
         "tag": "forge:wires/copper"

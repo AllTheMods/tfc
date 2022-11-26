@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "AGA",
+      "SRS"
+    ],
+    "key": {
+      "G": {
+        "tag": "forge:glue"
+      },
+      "A": {
+        "item": "create:andesite_alloy"
+      },
+      "S":{
+        "tag": "forge:cobblestone"
+      },
+      "R":{
+        "item": "minecraft:redstone"
+      }
+    },
+    "result": {
+      "item": "create:sticker"
+    }
+  }

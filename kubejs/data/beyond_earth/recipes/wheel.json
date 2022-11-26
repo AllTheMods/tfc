@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "BGB",
+      "GSG",
+      "BGB"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:black_dye"
+      },
+      "G": {
+        "tag": "forge:glue"
+      },
+      "S": {
+        "tag": "forge:ingots/steel"
+      }
+    },
+    "result": {
+      "item": "beyond_earth:wheel"
+    }
+  }

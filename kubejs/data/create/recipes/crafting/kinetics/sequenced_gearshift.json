@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CW",
+      "E "
+    ],
+    "key": {
+      "W": {
+        "item": "create:cogwheel"
+      },
+      "C": {
+        "item": "create:brass_casing"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:sequenced_gearshift"
+    }
+  }

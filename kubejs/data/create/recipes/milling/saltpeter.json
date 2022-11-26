@@ -7,11 +7,11 @@
     ],
     "results": [
       {
-        "item": "tfc:ore/saltpeter",
+        "item": "tfc:powder/saltpeter",
         "count": 4
       },
       {
-        "item": "tfc:ore/saltpeter",
+        "item": "tfc:powder/saltpeter",
         "count": 2,
         "chance": 0.45
       }

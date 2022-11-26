@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " P",
+      " F",
+      " E"
+    ],
+    "key": {
+      "P": {
+        "tag": "forge:plates/brass"
+      },
+      "F": {
+        "item": "create:fluid_pipe"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:smart_fluid_pipe"
+    }
+  }

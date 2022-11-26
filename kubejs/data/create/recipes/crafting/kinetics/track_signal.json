@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CE"
+    ],
+    "key": {
+      "C": {
+        "item": "create:railway_casing"
+      },
+      "E": {
+        "tag": "forge:electron_tube"
+      }
+    },
+    "result": {
+      "item": "create:track_signal"
+    }
+  }
