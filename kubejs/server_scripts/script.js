@@ -244,3 +244,18 @@ onEvent('fluid.tags', event => {
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 })
+
+onEvent('entity.spawned', event => {
+    let dimension = event.level.getDimension()
+    // in the correct dim
+    if (dimension == "beyond_earth:mercury") {
+        let entity = event.entity
+        // have a living entity
+        if (entity.isLiving() && !entity.isPlayer()) {
+            entity.setHeadArmorItem('beyond_earth:netherite_oxygen_mask')
+            entity.setChestArmorItem(Item.of('beyond_earth:netherite_space_suit', '{Damage:0,Energy:48000}'))
+            entity.setLegsArmorItem('beyond_earth:netherite_space_pants')
+            entity.setFeetArmorItem('beyond_earth:netherite_space_boots')
+        }
+    }
+})
