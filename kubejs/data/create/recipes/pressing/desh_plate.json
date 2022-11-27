@@ -2,7 +2,7 @@
     "type": "create:pressing",
     "ingredients": [
       {
-        "item": "beyond_earth:desh_plate"
+        "item": "beyond_earth:desh_ingot"
       }
     ],
     "results": [
