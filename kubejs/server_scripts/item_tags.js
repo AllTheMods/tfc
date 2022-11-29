@@ -3,8 +3,6 @@ onEvent('item.tags', event => {
     event.add('forge:electron_tube',['immersiveengineering:electron_tube', 'create:electron_tube'])
 
     event.add('forge:glue', 'tfc:glue')
-    event.add('forge:kelp', ['tfc:plant/winged_kelp', 'tfc:plant/leafy_kelp', 'tfc:plant/giant_kelp_flower'])
-
     event.add('forge:white_dye_material', ['tfc:plant/spanish_moss', 'tfc:plant/houstonia', 'tfc:plant/oxeye_daisy', 'tfc:plant/primrose', 'tfc:plant/trillium', 'tfc:plant/snapdragon_white','tfc:plant/tulip_white'])
     event.add('forge:green_dye_material', ['tfc:plant/reindeer_lichen', 'tfc:plant/barrel_cactus'])
     event.add('forge:orange_dye_material', ['tfc:plant/canna', 'tfc:plant/butterfly_milkweed', 'tfc:plant/strelitzia', 'tfc:plant/nasturtium', 'tfc:plant/water_canna'])
@@ -27,4 +25,5 @@ onEvent('item.tags', event => {
     event.add('forge:iron_ore_n', ['tfc:ore/normal_hematite','tfc:ore/normal_magnetite','tfc:ore/normal_limonite'])
     event.add('forge:iron_ore_p', ['tfc:ore/poor_hematite','tfc:ore/poor_magnetite','tfc:ore/poor_limonite'])
 
+    event.add('tfc:kelp_tree', ['tfc:plant/leafy_kelp', 'tfc:plant/winged_kelp'])
 })

@@ -1,0 +1,29 @@
+{
+    "ingredient": [
+      {
+        "item": "tfc:plant/sago"
+      },
+      {
+        "item": "tfc:plant/gutweed"
+      },
+      {
+        "item": "tfc:plant/laminaria"
+      },
+      {
+        "item": "tfc:plant/milfoil"
+      },
+      {
+        "item": "tfc:plant/giant_kelp_flower"
+      },
+      {
+        "item": "tfc:groundcover/seaweed"
+      },
+      {
+        "item": "tfc:plant/winged_kelp"
+      },
+      {
+        "item": "tfc:plant/leafy_kelp"
+      }
+    ],
+    "heat_capacity": 1.0
+  }
