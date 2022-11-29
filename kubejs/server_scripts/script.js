@@ -245,6 +245,46 @@ onEvent('fluid.tags', event => {
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 })
 
+onEvent('biome.tags', event => {
+	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
+	// event.get('forge:cobblestone').add('minecraft:diamond_ore')
+    event.get('forge:is_overworld').add('tfc:badlands')
+    event.get('forge:is_overworld').add('tfc:canyons')
+    event.get('forge:is_overworld').add('tfc:deep_ocean')
+    event.get('forge:is_overworld').add('tfc:deep_ocean_trench')
+    event.get('forge:is_overworld').add('tfc:hills')
+    event.get('forge:is_overworld').add('tfc:inverted_badlands')
+    event.get('forge:is_overworld').add('tfc:lake')
+    event.get('forge:is_overworld').add('tfc:lowlands')
+    event.get('forge:is_overworld').add('tfc:low_canyons')
+    event.get('forge:is_overworld').add('tfc:mountains')
+    event.get('forge:is_overworld').add('tfc:mountain_lake')
+    event.get('forge:is_overworld').add('tfc:mountain_river')
+    event.get('forge:is_overworld').add('tfc:ocean')
+    event.get('forge:is_overworld').add('tfc:oceanic_mountains')
+    event.get('forge:is_overworld').add('tfc:oceanic_mountain_lake')
+    event.get('forge:is_overworld').add('tfc:oceanic_mountain_river')
+    event.get('forge:is_overworld').add('tfc:ocean_reef')
+    event.get('forge:is_overworld').add('tfc:old_mountains')
+    event.get('forge:is_overworld').add('tfc:old_mountain_lake')
+    event.get('forge:is_overworld').add('tfc:old_mountain_river')
+    event.get('forge:is_overworld').add('tfc:plains')
+    event.get('forge:is_overworld').add('tfc:plateau')
+    event.get('forge:is_overworld').add('tfc:plateau_lake')
+    event.get('forge:is_overworld').add('tfc:river')
+    event.get('forge:is_overworld').add('tfc:rolling_hills')
+    event.get('forge:is_overworld').add('tfc:shore')
+    event.get('forge:is_overworld').add('tfc:volcanic_mountains')
+    event.get('forge:is_overworld').add('tfc:volcanic_mountain_lake')
+    event.get('forge:is_overworld').add('tfc:volcanic_mountain_river')
+    event.get('forge:is_overworld').add('tfc:volcanic_oceanic_mountains')
+    event.get('forge:is_overworld').add('tfc:volcanic_oceanic_mountain_lake')
+    event.get('forge:is_overworld').add('tfc:volcanic_oceanic_mountain_river')
+    // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
+	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
+})
+
+
 onEvent('entity.spawned', event => {
     let dimension = event.level.getDimension()
     // in the correct dim
