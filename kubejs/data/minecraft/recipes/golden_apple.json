@@ -10,10 +10,7 @@
         "tag": "forge:ingots/gold"
       },
       "A": {
-        "type": "tfc:not_rotten",
-        "ingredient": {
-          "tag": "tfc:foods/apples"
-        }
+        "tag": "tfc:foods/apples"
       }
     },
     "result": {

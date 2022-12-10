@@ -85,6 +85,13 @@ event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
 
 event.remove({id: 'create:mixing/andesite_alloy'})
 
+
+
+modifyShaped(event, 'create:belt_connector', 1, ['   ', 'SSS', 'SSS'], {
+    S: 'tfc:food/dried_kelp'
+  })
+
+
 modifyShaped(event, 'beyond_earth:rover', 1, ['L C', 'PEB', 'WSW'], {
     S: '#forge:ingots/steel',
     L: '#forge:gems/lapis',
