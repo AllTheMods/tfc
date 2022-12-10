@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PRP",
+      "IFI",
+      "PCP"
+    ],
+    "key": {
+      "P": {
+        "item": "immersiveengineering:plate_duroplast"
+      },
+      "R":{
+        "item": "minecraft:redstone_block"
+      },
+      "I":{
+        "tag": "forge:ingots/iron"
+      },
+      "F":{
+        "item": "thermal:energy_cell_frame"
+      },
+      "C":{
+        "item": "thermal:rf_coil"
+      }
+
+    },
+    "result": {
+      "item": "thermal:energy_cell"
+    }
+  }
