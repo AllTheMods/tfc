@@ -9,9 +9,3 @@ onEvent('worldgen.add', event => {
     ore.triangleHeight(-34, 36)
   })
 })
-onEvent('worldgen.remove', event => {     //  WorldgenEvents.remove(event => {
-    event.removeSpawns(properties => {
-      properties.biomes = [ '#forge:is_overworld']
-      properties.mobs = [ 'thermal:basalz', 'thermal:blizz', 'thermal:blitz' ]
-    })
-  })

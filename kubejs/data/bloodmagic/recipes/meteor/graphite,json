@@ -1,0 +1,39 @@
+{
+  "type": "bloodmagic:meteor",
+  "input": {
+    "item": "tfc:ore/graphite"
+  },
+  "syphon": 750000,
+  "explosion": 32.0,
+  "layers": [
+    {
+      "radius": 3,
+      "additionalWeight": 0,
+      "minWeight": 0,
+      "weightMap": [
+        {
+          "block": "tfc:ore/graphite/basalt",
+          "weight": 100
+        }
+      ],
+      "fill": "tfc:rock/magma/basalt"
+    },
+    {
+      "radius": 9,
+      "additionalWeight": 200,
+      "minWeight": 0,
+      "weightMap": [
+        {
+          "block": "tfc:ore/graphite/basalt",
+          "weight": 100
+        },
+        {
+          "block": "tfc:ore/graphite/basalt",
+          "weight": 25
+        }
+      ],
+      "fill": "tfc:rock/magma/basalt",
+      "shell": "tfc:rock/hardened/basalt"
+    }
+  ]
+}

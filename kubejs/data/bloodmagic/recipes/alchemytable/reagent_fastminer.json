@@ -1,0 +1,23 @@
+{
+  "type": "bloodmagic:alchemytable",
+  "input": [
+    {
+      "item": "tfc:metal/pickaxe/wrought_iron"
+    },
+    {
+      "item": "tfc:metal/axe/wrought_iron"
+    },
+    {
+      "item": "tfc:metal/shovel/wrought_iron"
+    },
+    {
+      "tag": "forge:gunpowder"
+    }
+  ],
+  "output": {
+    "item": "bloodmagic:reagentfastminer"
+  },
+  "syphon": 2000,
+  "ticks": 200,
+  "upgradeLevel": 2
+}
