@@ -226,6 +226,7 @@ onEvent('block.tags', event => {
     event.get('tfc:can_landslide').add('beyond_earth:venus_sand')
     event.get('tfc:can_landslide').add('beyond_earth:moon_sand')
     event.get('create:passive_boiler_heaters').add('#forge:magma')
+    event.get('forge:farmland').add('#tfc:farmland')
 })
 onEvent('fluid.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
