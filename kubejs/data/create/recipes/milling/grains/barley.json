@@ -1,25 +1,25 @@
 {
   "type": "create:milling",
   "ingredients": [
-    {
+   {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "item": "tfc:food/rye_grain"
+        "item": "tfc:food/barley_grain"
       }
     }
   ],
   "results": [
     {
-      "item": "tfc:food/rye_flour"
+      "item": "tfc:food/barley_flour"
     },
     {
-      "item": "tfc:food/rye_flour",
+      "item": "tfc:food/barley_flour",
       "count": 2,
       "chance": 0.25
     },
     {
-      "item": "tfc:seeds/rye",
-      "chance": 0.25
+      "item": "tfc:seeds/barley",
+      "chance": 0.75
     }
   ],
   "processingTime": 150

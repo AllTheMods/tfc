@@ -4,22 +4,22 @@
     {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "item": "tfc:food/maize_grain"
+        "item": "tfc:food/rice_grain"
       }
     }
   ],
   "results": [
     {
-      "item": "tfc:food/maize_flour"
+      "item": "tfc:food/rice_flour"
     },
     {
-      "item": "tfc:food/maize_flour",
+      "item": "tfc:food/rice_flour",
       "count": 2,
       "chance": 0.25
     },
     {
-      "item": "tfc:seeds/maize",
-      "chance": 0.25
+      "item": "tfc:seeds/rice",
+      "chance": 0.75
     }
   ],
   "processingTime": 150

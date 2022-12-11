@@ -41,7 +41,7 @@ cloche('tfc:food/squash','2', 'tfc:seeds/squash', '#tfc:dirt','tfc:wild_crop/squ
 cloche('tfc:food/garlic','2', 'tfc:seeds/garlic', '#tfc:dirt','tfc:wild_crop/garlic',800)
 cloche('tfc:food/maize','2', 'tfc:seeds/maize', '#tfc:dirt','tfc:wild_crop/maize',800)
 cloche('tfc:food/cabbage','2', 'tfc:seeds/cabbage', '#tfc:dirt','tfc:wild_crop/cabbage',800)
-cloche('tfc:food/potato','2', 'tfc:seeds/potato', '#tfc:dirt','tfc:wild_crop/potato',800)
+cloche('tfc:food/potato','2', 'tfc:seeds/potato', '#tfc:dirt','tfc:wild_crop/potato',600)
 cloche('tfc:food/tomato','2', 'tfc:seeds/tomato', '#tfc:dirt','tfc:wild_crop/tomato',800)
 cloche('tfc:food/beet','2', 'tfc:seeds/beet', '#tfc:dirt','tfc:wild_crop/beet',800)
 cloche('tfc:food/soybean','2', 'tfc:seeds/soybean', '#tfc:dirt','tfc:wild_crop/soybean',800)

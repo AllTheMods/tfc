@@ -4,22 +4,22 @@
     {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "item": "tfc:food/rice_grain"
+        "item": "tfc:food/rye_grain"
       }
     }
   ],
   "results": [
     {
-      "item": "tfc:food/rice_flour"
+      "item": "tfc:food/rye_flour"
     },
     {
-      "item": "tfc:food/rice_flour",
+      "item": "tfc:food/rye_flour",
       "count": 2,
       "chance": 0.25
     },
     {
-      "item": "tfc:seeds/rice",
-      "chance": 0.25
+      "item": "tfc:seeds/rye",
+      "chance": 0.75
     }
   ],
   "processingTime": 150

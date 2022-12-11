@@ -1,25 +1,25 @@
 {
   "type": "create:milling",
   "ingredients": [
-   {
+    {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "item": "tfc:food/barley_grain"
+        "item": "tfc:food/oat_grain"
       }
     }
   ],
   "results": [
     {
-      "item": "tfc:food/barley_flour"
+      "item": "tfc:food/oat_flour"
     },
     {
-      "item": "tfc:food/barley_flour",
+      "item": "tfc:food/oat_flour",
       "count": 2,
       "chance": 0.25
     },
     {
-      "item": "tfc:seeds/barley",
-      "chance": 0.25
+      "item": "tfc:seeds/oat",
+      "chance": 0.75
     }
   ],
   "processingTime": 150
