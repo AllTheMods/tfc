@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#C#",
+    "CIC",
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:stone"
+    },
+    "C": {
+      "tag": "forge:cobblestone"
+    },
+    "I": {
+      "tag": "forge:ingots/lead"
+    }
+  },
+  "result": {
+    "item": "vs_eureka:ballast",
+    "count": 1
+  }
+}
