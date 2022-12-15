@@ -33,7 +33,7 @@
         }
       ],
       "fill": "tfc:rock/magma/basalt",
-      "shell": "tfc:rock/hardened/basalt"
+      "shell": "tfc:rock/raw/basalt"
     }
   ]
 }

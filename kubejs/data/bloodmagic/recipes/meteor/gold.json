@@ -1,9 +1,9 @@
 {
   "type": "bloodmagic:meteor",
   "input": {
-    "item": "tfc:ore/graphite"
+    "item": "tfc:ore/rich_native_gold"
   },
-  "syphon": 750000,
+  "syphon": 500000,
   "explosion": 32.0,
   "layers": [
     {
@@ -12,11 +12,11 @@
       "minWeight": 0,
       "weightMap": [
         {
-          "block": "tfc:ore/graphite/basalt",
+          "block": "tfc:ore/rich_native_gold/basalt",
           "weight": 100
         }
       ],
-      "fill": "tfc:rock/magma/basalt"
+      "fill": "tfc:rock/normal_native_gold/basalt"
     },
     {
       "radius": 9,
@@ -24,11 +24,15 @@
       "minWeight": 0,
       "weightMap": [
         {
-          "block": "tfc:ore/graphite/basalt",
-          "weight": 100
+          "block": "tfc:ore/normal_native_gold/basalt",
+          "weight": 50
         },
         {
-          "block": "tfc:ore/graphite/basalt",
+          "block": "tfc:ore/poor_native_gold/basalt",
+          "weight": 25
+        },
+        {
+          "block": "tfc:deposit/native_gold/basalt",
           "weight": 25
         }
       ],
