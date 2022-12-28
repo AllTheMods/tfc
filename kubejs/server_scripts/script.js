@@ -16,6 +16,14 @@ let modifyShaped = (event, result, count, pattern, ingredients) => {
   event.shaped(Item.of(result, count), pattern, ingredients).id(`kubejs:shaped/${result.replace(':', '/')}`)
 }
 onEvent('recipes', event => {
+
+const types = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
+const things = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
+for (const piece in types) {
+    for (const thing in things) {
+        event.remove({id:`mcwroofs:${piece}_${thing}`})
+    }
+}
 function cloche(output, amount, seed, soil, render, time) {
     event.custom({
         type: "immersiveengineering:cloche",
@@ -74,6 +82,8 @@ event.remove({id: 'create:honey_bucket'})
 event.remove({id: 'create:honeyed_apple'})
 event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
+
+
 
 event.remove({id: 'minecraft:minecart'})
 
@@ -148,6 +158,9 @@ modifyShaped(event, 'create:andesite_alloy', 1, ['SZ ', 'ZS ', '   '], {
     Z: '#forge:nuggets/zinc'
 
   })
+
+
+
 })
 
 
