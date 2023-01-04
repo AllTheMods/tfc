@@ -26,4 +26,11 @@ onEvent('item.tags', e => {
     e.add('forge:iron_ore_r', ['tfc:ore/rich_hematite','tfc:ore/rich_magnetite','tfc:ore/rich_limonite'])
     e.add('forge:iron_ore_n', ['tfc:ore/normal_hematite','tfc:ore/normal_magnetite','tfc:ore/normal_limonite'])
     e.add('forge:iron_ore_p', ['tfc:ore/poor_hematite','tfc:ore/poor_magnetite','tfc:ore/poor_limonite'])
+    e.add('forge:honey', ['minecraft:honey_bottle', 'firmalife:honey_jar'])
+    e.add('forge:honeycombs', ['minecraft:honeycomb', 'firmalife:raw_honey'])
+    e.add('forge:apples', ['minecraft:apple', 'tfc:food/red_apple'])
+    e.add('forge:bitumen', ['thermal:bitumen', 'tfc:ore/bituminous_coal'])
+})
+onEvent('fluid.tags', e => {
+e.add('forge:refined_fuel', ['thermal:refined_fuel'])
 })

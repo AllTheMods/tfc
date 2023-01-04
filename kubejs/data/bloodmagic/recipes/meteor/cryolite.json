@@ -3,7 +3,7 @@
   "input": {
     "item": "tfc:ore/cryolite"
   },
-  "syphon": 550000,
+  "syphon": 1000000,
   "explosion": 32.0,
   "layers": [
     {

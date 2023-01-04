@@ -17,13 +17,15 @@ let modifyShaped = (event, result, count, pattern, ingredients) => {
 }
 onEvent('recipes', event => {
 
-const types = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
-const things = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
-for (const piece in types) {
-    for (const thing in things) {
-        event.remove({id:`mcwroofs:${piece}_${thing}`})
-    }
-}
+let material =["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
+let type = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
+material.forEach(material=>{
+  type.forEach(type =>{
+    event.remove({id:`mcwroofs:${material}_${type}`})
+  })
+})
+
+
 function cloche(output, amount, seed, soil, render, time) {
     event.custom({
         type: "immersiveengineering:cloche",
@@ -47,23 +49,52 @@ cloche('tfc:food/carrot','2', 'tfc:seeds/carrot', '#tfc:dirt','tfc:wild_crop/car
 cloche('tfc:food/onion','2', 'tfc:seeds/onion', '#tfc:dirt','tfc:wild_crop/onion',800)
 cloche('tfc:food/squash','2', 'tfc:seeds/squash', '#tfc:dirt','tfc:wild_crop/squash',800)
 cloche('tfc:food/garlic','2', 'tfc:seeds/garlic', '#tfc:dirt','tfc:wild_crop/garlic',800)
-cloche('tfc:food/maize','2', 'tfc:seeds/maize', '#tfc:dirt','tfc:wild_crop/maize',800)
-cloche('tfc:food/cabbage','2', 'tfc:seeds/cabbage', '#tfc:dirt','tfc:wild_crop/cabbage',800)
-cloche('tfc:food/potato','2', 'tfc:seeds/potato', '#tfc:dirt','tfc:wild_crop/potato',600)
-cloche('tfc:food/tomato','2', 'tfc:seeds/tomato', '#tfc:dirt','tfc:wild_crop/tomato',800)
-cloche('tfc:food/beet','2', 'tfc:seeds/beet', '#tfc:dirt','tfc:wild_crop/beet',800)
-cloche('tfc:food/soybean','2', 'tfc:seeds/soybean', '#tfc:dirt','tfc:wild_crop/soybean',800)
-cloche('tfc:food/green_bean','2', 'tfc:seeds/green_bean', '#tfc:dirt','tfc:wild_crop/green_bean',800)
-cloche('tfc:food/sugarcane','2', 'tfc:seeds/sugarcane', '#tfc:dirt','tfc:wild_crop/sugarcane',800)
-cloche('tfc:food/barley','2', 'tfc:seeds/barley', '#tfc:dirt','tfc:wild_crop/barley',800)
-cloche('tfc:food/oat','2', 'tfc:seeds/oat', '#tfc:dirt','tfc:wild_crop/oat',800)
-cloche('tfc:food/rye','2', 'tfc:seeds/rye', '#tfc:dirt','tfc:wild_crop/rye',800)
-cloche('tfc:food/wheat','2', 'tfc:seeds/wheat', '#tfc:dirt','tfc:wild_crop/wheat',800)
-cloche('tfc:food/rice','2', 'tfc:seeds/rice', '#tfc:dirt','tfc:wild_crop/rice',800)
+cloche('tfc:food/maize','2', 'tfc:seeds/maize', '#tfc:dirt','tfc:wild_crop/maize',1550)
+cloche('tfc:food/cabbage','2', 'tfc:seeds/cabbage', '#tfc:dirt','tfc:wild_crop/cabbage',1500)
+cloche('tfc:food/potato','2', 'tfc:seeds/potato', '#tfc:dirt','tfc:wild_crop/potato',1450)
+cloche('tfc:food/tomato','2', 'tfc:seeds/tomato', '#tfc:dirt','tfc:wild_crop/tomato',1400)
+cloche('tfc:food/beet','2', 'tfc:seeds/beet', '#tfc:dirt','tfc:wild_crop/beet',1350)
+cloche('tfc:food/soybean','2', 'tfc:seeds/soybean', '#tfc:dirt','tfc:wild_crop/soybean',1300)
+cloche('tfc:food/green_bean','2', 'tfc:seeds/green_bean', '#tfc:dirt','tfc:wild_crop/green_bean',1250)
+cloche('tfc:jute','2', 'tfc:seeds/jute', '#tfc:dirt','tfc:wild_crop/jute',1800)
+cloche('tfc:food/sugarcane','2', 'tfc:seeds/sugarcane', '#tfc:dirt','tfc:wild_crop/sugarcane',1800)
+cloche('tfc:food/barley','2', 'tfc:seeds/barley', '#tfc:dirt','tfc:wild_crop/barley',1650)
+cloche('tfc:food/oat','2', 'tfc:seeds/oat', '#tfc:dirt','tfc:wild_crop/oat',1700)
+cloche('tfc:food/rye','2', 'tfc:seeds/rye', '#tfc:dirt','tfc:wild_crop/rye',1700)
+cloche('tfc:food/wheat','2', 'tfc:seeds/wheat', '#tfc:dirt','tfc:wild_crop/wheat',1700)
+cloche('tfc:food/rice','2', 'tfc:seeds/rice', '#tfc:dirt','tfc:wild_crop/rice',1750)
 
-cloche('tfc:melon','2', 'tfc:seeds/melon', '#tfc:dirt','tfc:wild_crop/melon',800)
-cloche('tfc:pumpkin','2', 'tfc:seeds/pumpkin', '#tfc:dirt','tfc:wild_crop/pumpkin',800)
+cloche('tfc:melon','2', 'tfc:seeds/melon', '#tfc:dirt','tfc:wild_crop/melon',1600)
+cloche('tfc:pumpkin','2', 'tfc:seeds/pumpkin', '#tfc:dirt','tfc:wild_crop/pumpkin',1600)
 
+
+event.recipes.thermal.insolator('tfc:jute', 'tfc:seeds/jute').water(900)
+event.recipes.thermal.insolator('tfc:melon', 'tfc:seeds/melon').water(750)
+event.recipes.thermal.insolator('tfc:pumpkin','tfc:seeds/pumpkin').water(750)
+
+let seeds =[
+"carrot",
+"onion",
+"squash",
+"garlic",
+"maize",
+"cabbage",
+"potato",
+"tomato",
+"beet",
+"soybean",
+"green_bean",
+"sugarcane",
+"barley",
+"oat",
+"rye",
+"rice"
+]
+
+seeds.forEach(seed => {
+     event.recipes.thermal.insolator([Item.of(`tfc:food/${seed}`),Item.of( `tfc:seeds/${seed}`).withChance(1.2) ], Item.of(`tfc:seeds/${seed}`)).water(850)
+})
+event.remove({id: 'create:honey_bucket'})
 event.remove({id: 'minecraft:smoker'})
 event.remove({id: 'minecraft:blast_furnace'})
 event.remove({id: 'minecraft:furnace_minecart'})
@@ -78,10 +109,9 @@ event.remove({id: 'beyond_earth:steel_ingot_blasting'})
 event.remove({id: 'immersiveengineering:smelting/ingot_steel_from_dust_from_blasting'})
 event.remove({id: 'immersiveengineering:smelting/ingot_steel_from_dust'})
 event.remove({id: 'minecraft:honey_bottle'})
-event.remove({id: 'create:honey_bucket'})
-event.remove({id: 'create:honeyed_apple'})
 event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
+
 
 
 
@@ -117,6 +147,11 @@ modifyShaped(event, 'immersiveengineering:alloybrick', 2, ['SI ', 'IS ', '   '],
     S: '#forge:sandstone',
     I: 'tfc:ceramic/fire_brick'
   })
+
+  modifyShaped(event, 'immersiveengineering:hemp_fabric', 2, ['CCC', 'SSS', 'CCC'], {
+      S: '#forge:rods/wooden',
+      C: 'tfc:wool_cloth'
+    })
 modifyShaped(event, 'immersiveengineering:cokebrick', 3, ['CBC', 'BSB', 'CBC'], {
     S: '#forge:sandstone',
     B: 'tfc:ceramic/fire_brick',
@@ -177,7 +212,6 @@ onEvent('item.tags', event => {
     event.get('forge:crops/beetroot').add('tfc:food/beet')
     event.get('forge:crops/wheat').add('tfc:food/wheat')
 
-    event.get('forge:ingots/graphite').add('immersiveengineering:ingot_hop_graphite')
     event.get('forge:ingots/iron').add('tfc:metal/ingot/wrought_iron')
     event.get('forge:raw_materials/aluminum').add('tfc:ore/cryolite')
     event.get('forge:plates/steel').add('beyond_earth:compressed_steel')
@@ -246,6 +280,7 @@ onEvent('fluid.tags', event => {
 	// event.get('forge:cobblestone').add('minecraft:diamond_ore')
     event.get('minecraft:water').remove('beyond_earth:fuel')
     event.get('minecraft:water').remove('beyond_earth:oil')
+    event.get('minecraft:water').remove('create:honey')
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it

@@ -3,7 +3,7 @@
   "input": {
     "item": "tfc:ore/rich_bismuthinite"
   },
-  "syphon": 500000,
+  "syphon": 1000000,
   "explosion": 32.0,
   "layers": [
     {

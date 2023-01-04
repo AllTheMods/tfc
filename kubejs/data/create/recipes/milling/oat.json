@@ -1,0 +1,26 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "tfc:food/oat_grain"
+      }
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:food/oat_flour"
+    },
+    {
+      "item": "tfc:food/oat_flour",
+      "count": 2,
+      "chance": 0.25
+    },
+    {
+      "item": "tfc:seeds/oat",
+      "chance": 0.25
+    }
+  ],
+  "processingTime": 150
+}
