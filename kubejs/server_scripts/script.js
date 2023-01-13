@@ -236,7 +236,49 @@ onEvent('item.tags', event => {
     event.get('forge:sandstone').add('tfc:raw_sandstone/yellow')
     event.get('forge:sandstone').add('tfc:raw_sandstone/green')
     event.get('forge:sandstone').add('tfc:raw_sandstone/pink')
+    event.get('forge:ores').add('#tfc:ore_pieces')
 
+    event.get('forge:bookshelves').add('#tfc:bookshelves')
+
+    let woodTypes =[
+    "ash",
+    "aspen",
+    "blackwood",
+    "chestnut",
+    "douglas_fir",
+    "hickory",
+    "kapok",
+    "maple",
+    "palm",
+    "pine",
+    "rosewood",
+    "sequoia",
+    "sycamore",
+    "white_cedar",
+    "willow"
+    ]
+    let vanwoodTypes =[
+    "acacia",
+    "birch",
+    "oak",
+    "spruce"
+    ]
+
+    vanwoodTypes.forEach(wood => {
+    event.get('forge:bookshelves').add("tfc:wood/planks/"${wood}"_bookshelf")
+    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_bookshelf")
+    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_bookshelf_cupboard")
+    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_bookshelf_drawer")
+    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_lower_bookshelf_drawer")
+    })
+
+    woodTypes.forEach(wood => {
+    event.get('forge:bookshelves').add("tfc:wood/planks/"${wood}"_bookshelf")
+    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_bookshelf")
+    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_bookshelf_cupboard")
+    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_bookshelf_drawer")
+    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_lower_bookshelf_drawer")
+    })
 
 	// Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')

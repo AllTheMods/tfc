@@ -19,3 +19,7 @@ onEvent('jei.hide.items', event => {
 	event.hide('beyond_earth:coal_torch')
 	event.hide('beyond_earth:coal_lantern')
 })
+onEvent('jei.remove.categories', event => {
+
+  console.log(event.getCategoryIds())
+})
