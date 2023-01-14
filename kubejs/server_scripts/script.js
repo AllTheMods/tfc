@@ -112,8 +112,33 @@ event.remove({id: 'minecraft:honey_bottle'})
 event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
 
+let gemStones =[
+"amethyst",
+"diamond",
+"emerald",
+"lapis_lazuli",
+"opal",
+"pyrite",
+"ruby",
+"sapphire",
+"topaz"
+]
+gemStones.forEach(gem => {
+    event.shapeless(`tfc:gem/${gem}`,[Ingredient.of(`tfc:ore/${gem}`), Ingredient.of(`create:sand_paper`)])
+})
 
 
+
+let outputs = []
+outputs.push({ item: 'apotheosis:gem_dust'})
+event.custom({
+      "type": "create:crushing",
+      "ingredients": [
+        Ingredient.of('apotheosis:gem')
+      ],
+      "results": outputs,
+      "processingTime": 400
+    }).id(`kubejs:crushing/gem_dust`)
 
 event.remove({id: 'minecraft:minecart'})
 
@@ -193,9 +218,46 @@ modifyShaped(event, 'create:andesite_alloy', 1, ['SZ ', 'ZS ', '   '], {
     Z: '#forge:nuggets/zinc'
 
   })
+modifyShaped(event, 'apotheosis:melonshelf', 1, ['MMM', 'SBS', 'MMM'], {
+    M: '#forge:melon',
+    B: '#forge:bookshelves',
+    S: 'minecraft:glistering_melon_slice'
+  })
 
+modifyShaped(event, 'apotheosis:beeshelf', 1, ['CVC', 'HBH', 'CVC'], {
+    C: 'firmalife:raw_honey',
+    V: 'firmalife:beehive',
+    H: 'minecraft:honey_block',
+    B: '#forge:bookshelves'
+  })
+  modifyShaped(event, 'apotheosis:salvaging_table', 1, ['CCC', 'PSA', 'DBD'], {
+      C: 'tfc:metal/ingot/copper',
+      P: 'tfc:metal/pickaxe/blue_steel',
+      A: 'tfc:metal/axe/blue_steel',
+      S: 'minecraft:smithing_table',
+      D: 'apotheosis:gem_dust',
+      B: 'minecraft:lava_bucket'
+    })
+modifyShaped(event, 'apotheosis:library', 1, ['CVC', 'VBV', 'CVC'], {
+    C: 'minecraft:ender_chest',
+    V: 'apotheosis:infused_hellshelf',
+    B: 'minecraft:enchanted_book'
+  })
+  modifyShaped(event, 'apotheosis:reforging_table', 1, [' N ', 'DED', 'BBB'], {
+      N: 'minecraft:netherite_ingot',
+      D: 'apotheosis:gem_dust',
+      E: 'minecraft:enchanted_book',
+      B: 'minecraft:nether_bricks'
+    })
+modifyShaped(event, 'apotheosis:scrap_tome', 8, ['BBB', 'BAB', 'BBB'], {
+    A: 'tfc:metal/anvil/steel',
+    B: 'minecraft:book'
+  })
 
-
+  modifyShaped(event, 'minecraft:lodestone', 1, ['BBB', 'BAB', 'BBB'], {
+      A: 'minecraft:netherite_ingot',
+      B: '#tfc:rock/bricks'
+    })
 })
 
 
@@ -229,6 +291,12 @@ onEvent('item.tags', event => {
 
     event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
+    event.get('forge:melon').add('minecraft:melon')
+    event.get('forge:melon').add('tfc:melon')
+
+    event.get('forge:bottle').add("minecraft:glass_bottle")
+    event.get('forge:bottle').add("firmalife:empty_jar")
+
     event.get('forge:sandstone').add('tfc:raw_sandstone/brown')
     event.get('forge:sandstone').add('tfc:raw_sandstone/white')
     event.get('forge:sandstone').add('tfc:raw_sandstone/black')
@@ -237,9 +305,7 @@ onEvent('item.tags', event => {
     event.get('forge:sandstone').add('tfc:raw_sandstone/green')
     event.get('forge:sandstone').add('tfc:raw_sandstone/pink')
     event.get('forge:ores').add('#tfc:ore_pieces')
-
-    event.get('forge:bookshelves').add('#tfc:bookshelves')
-
+    event.get('forge:gems/amethyst').add('tfc:gem/amethyst')
     let woodTypes =[
     "ash",
     "aspen",
@@ -265,19 +331,19 @@ onEvent('item.tags', event => {
     ]
 
     vanwoodTypes.forEach(wood => {
-    event.get('forge:bookshelves').add("tfc:wood/planks/"${wood}"_bookshelf")
-    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_bookshelf")
-    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_bookshelf_cupboard")
-    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_bookshelf_drawer")
-    event.get('forge:bookshelves').add("mcwfurnitures:"${wood}"_lower_bookshelf_drawer")
+    event.get('forge:bookshelves').add(`tfc:wood/planks/${wood}_bookshelf`)
+    event.get('forge:bookshelves').add(`mcwfurnitures:${wood}_bookshelf`)
+    event.get('forge:bookshelves').add(`mcwfurnitures:${wood}_bookshelf_cupboard`)
+    event.get('forge:bookshelves').add(`mcwfurnitures:${wood}_bookshelf_drawer`)
+    event.get('forge:bookshelves').add(`mcwfurnitures:${wood}_lower_bookshelf_drawer`)
     })
 
     woodTypes.forEach(wood => {
-    event.get('forge:bookshelves').add("tfc:wood/planks/"${wood}"_bookshelf")
-    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_bookshelf")
-    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_bookshelf_cupboard")
-    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_bookshelf_drawer")
-    event.get('forge:bookshelves').add("mcw_tfc_furn:"${wood}"_lower_bookshelf_drawer")
+    event.get('forge:bookshelves').add(`tfc:wood/planks/${wood}_bookshelf`)
+    event.get('forge:bookshelves').add(`mcw_tfc_furn:${wood}_bookshelf`)
+    event.get('forge:bookshelves').add(`mcw_tfc_furn:${wood}_bookshelf_cupboard`)
+    event.get('forge:bookshelves').add(`mcw_tfc_furn:${wood}_bookshelf_drawer`)
+    event.get('forge:bookshelves').add(`mcw_tfc_furn:${wood}_lower_bookshelf_drawer`)
     })
 
 	// Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
@@ -316,6 +382,7 @@ onEvent('block.tags', event => {
     event.get('tfc:can_landslide').add('beyond_earth:moon_sand')
     event.get('create:passive_boiler_heaters').add('#forge:magma')
     event.get('forge:farmland').add('#tfc:farmland')
+    event.get('minecraft:anvil').add('#tfc:anvils')
 })
 onEvent('fluid.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
