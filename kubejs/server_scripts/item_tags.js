@@ -30,6 +30,28 @@ onEvent('item.tags', e => {
     e.add('forge:honeycombs', ['minecraft:honeycomb', 'firmalife:raw_honey'])
     e.add('forge:apples', ['minecraft:apple', 'tfc:food/red_apple'])
     e.add('forge:bitumen', ['thermal:bitumen', 'tfc:ore/bituminous_coal'])
+    e.remove('forge:cobblestone', ['minecraft:cobblestone'])
+    e.remove('forge:stone', ['minecraft:stone'])
+    e.remove('forge:cobblestone/normal', ['minecraft:cobblestone'])
+    e.add('forge:chocolate', ['create:bar_of_chocolate', 'firmalife:food/dark_chocolate'])
+
+    let berries =[
+    "blackberry",
+    "blueberry",
+    "bunchberry",
+    "cloudberry",
+    "cranberry",
+    "elderberry",
+    "gooseberry",
+    "raspberry",
+    "snowberry",
+    "strawberry",
+    "wintergreen_berry"
+    ]
+
+    berries.forEach(berry => {
+    e.add('forge:berries', [`tfc:food/${berry}`])
+    })
 })
 onEvent('fluid.tags', e => {
 e.add('forge:refined_fuel', ['thermal:refined_fuel'])

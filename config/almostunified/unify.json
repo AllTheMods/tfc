@@ -1,9 +1,11 @@
 {
   "modPriorities": [
     "tfc",
+    "firmalife",
     "minecraft",
     "immersiveengineering",
     "kubejs",
+    "furniturecompatfc",
     "crafttweaker",
     "create",
     "thermal",
@@ -31,10 +33,19 @@
     "forge:storage_blocks/{material}",
     "forge:storage_blocks/raw_{material}",
     "forge:biodiesel",
+    "forge:honey",
+    "forge:honeycombs",
+    "forge:apples",
+    "forge:bitumen",
+    "forge:melon",
+    "forge:bottle",
+    "forge:cocoa_beans",
+    "forge:chocolate",
     "minecraft:plank"
   ],
   "materials": [
     "aeternium",
+    "amethyst",
     "aluminum",
     "amber",
     "apatite",

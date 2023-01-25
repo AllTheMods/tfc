@@ -147,9 +147,38 @@ event.remove({id: 'immersiveengineering:jei_bucket_sea_water'})
 event.remove({id: 'create:crafting/materials/andesite_alloy'})
 
 event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
-
+event.remove({id: 'create:filling/sweet_roll'})
 event.remove({id: 'create:mixing/andesite_alloy'})
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/stirling_silver')
+event.replaceInput({type: 'minecraft:crafting_shaped'}, 'minecraft:stone', '#forge:stone')
 
+
+modifyShaped(event, 'exmachinis:flux_hammer', 1, ['PHP', 'PTP', 'CSU'], {
+    H: 'minecraft:hopper',
+    T: 'thermal:machine_pulverizer',
+    P: '#forge:glass_panes',
+    C: 'thermal:rf_coil',
+    U: 'thermal:upgrade_augment_3',
+    S: '#forge:sheets/stainless_steel'
+  })
+
+modifyShaped(event, 'exmachinis:flux_sieve', 1, ['SGS', 'PTP', 'CHU'], {
+    H: 'minecraft:hopper',
+    T: 'create:smart_chute',
+    P: '#forge:glass_panes',
+    C: 'thermal:rf_coil',
+    G: 'beyond_earth:desh_plate',
+    U: 'thermal:upgrade_augment_3',
+    S: '#forge:sheets/stainless_steel'
+  })
+
+modifyShaped(event, 'exmachinis:gold_upgrade', 1, ['GGG', 'RPR', 'GMG'], {
+    G: '#forge:sheets/rose_gold',
+    M: '#ae2:memory_cards',
+    P: 'ae2:logic_processor',
+    R: 'minecraft:redstone'
+  })
 modifyShaped(event, 'beyond_earth:rover', 1, ['L C', 'PEB', 'WSW'], {
     S: '#forge:ingots/steel',
     L: '#forge:gems/lapis',
@@ -167,12 +196,14 @@ modifyShaped(event, 'bloodmagic:alchemicalreactionchamber', 1, ['SSS', 'IOI', 'B
     F: 'tfc:crucible',
     B: 'minecraft:iron_block'
   })
-
+event.remove({id: 'biggerreactors:smelting/graphite_ingot'})
 modifyShaped(event, 'immersiveengineering:alloybrick', 2, ['SI ', 'IS ', '   '], {
     S: '#forge:sandstone',
     I: 'tfc:ceramic/fire_brick'
   })
-
+modifyShaped(event, 'biggerreactors:graphite_dust', 1, ['DDD', 'DDD', 'DDD'], {
+    D: 'tfc:powder/graphite'
+  })
   modifyShaped(event, 'immersiveengineering:hemp_fabric', 2, ['CCC', 'SSS', 'CCC'], {
       S: '#forge:rods/wooden',
       C: 'tfc:wool_cloth'
@@ -196,6 +227,28 @@ modifyShaped(event, 'beyond_earth:fuel_refinery', 1, ['SIS', 'BFB', 'SOS'], {
     F: 'tfc:crucible',
     B: 'minecraft:bucket'
   })
+modifyShaped(event, 'beyond_earth:rocket_nose_cone', 1, [' T ', ' S ', 'SPS'], {
+  T: 'minecraft:redstone_torch',
+  S: '#forge:ingots/stainless_steel',
+  P: '#forge:sheets/red_steel'
+})
+modifyShaped(event, 'beyond_earth:rocket_fin', 2, [' S ', 'TST', 'PSP'], {
+  T: '#forge:sheets/stainless_steel',
+  S: '#forge:ingots/red_steel',
+  P: '#forge:sheets/red_steel'
+})
+modifyShaped(event, 'beyond_earth:engine_frame', 1, ['ISI', 'S S', 'ISI'], {
+  I: '#forge:ingots/stainless_steel',
+  S: '#forge:sheets/stainless_steel'
+})
+modifyShaped(event, 'beyond_earth:engine_fan', 1, ['I I', ' D ', 'I I'], {
+  D: '#forge:ingots/red_steel',
+  I: '#forge:sheets/stainless_steel'
+})
+modifyShaped(event, 'beyond_earth:steel_tank', 1, ['STS', 'T T', 'STS'], {
+  T: '#forge:sheets/stainless_steel',
+  S: '#forge:ingots/stainless_steel'
+})
 
 modifyShaped(event, 'beyond_earth:oxygen_loader', 1, ['ISI', 'SFS', 'ITI'], {
   S: '#forge:plates/iron',
@@ -306,6 +359,8 @@ onEvent('item.tags', event => {
     event.get('forge:sandstone').add('tfc:raw_sandstone/pink')
     event.get('forge:ores').add('#tfc:ore_pieces')
     event.get('forge:gems/amethyst').add('tfc:gem/amethyst')
+    event.get('forge:cocoa_beans').add('minecraft:cocoa_beans')
+    event.get('forge:cocoa_beans').add('firmalife:food/roasted_cocoa_beans')
     let woodTypes =[
     "ash",
     "aspen",
@@ -390,6 +445,12 @@ onEvent('fluid.tags', event => {
     event.get('minecraft:water').remove('beyond_earth:fuel')
     event.get('minecraft:water').remove('beyond_earth:oil')
     event.get('minecraft:water').remove('create:honey')
+    event.get('minecraft:water').remove('create:chocolate')
+
+    event.get('minecraft:water').remove('firmalife:coconut_milk')
+    event.get('minecraft:water').remove('firmalife:yak_milk')
+    event.get('minecraft:water').remove('firmalife:goat_milk')
+
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it

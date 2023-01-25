@@ -15,6 +15,22 @@ onEvent('jei.hide.items', event => {
 	event.hide('minecraft:lantern')
 	event.hide('minecraft:soul_lantern')
 
+    event.hide('exnihilosequentia:acacia_sieve')
+    event.hide('exnihilosequentia:birch_sieve')
+    event.hide('exnihilosequentia:dark_oak_sieve')
+    event.hide('exnihilosequentia:jungle_sieve')
+    event.hide('exnihilosequentia:oak_sieve')
+    event.hide('exnihilosequentia:spruce_sieve')
+    event.hide('exnihilosequentia:crimson_sieve')
+    event.hide('exnihilosequentia:warped_sieve')
+
+    event.hide('exnihilosequentia:witch_water_bucket')
+
+    event.hide('exnihilosequentia:sea_water_bucket')
+
+    event.hide('exnihilosequentia:witchwater')
+
+    event.hide('exnihilosequentia:seawater')
 
 	event.hide('beyond_earth:coal_torch')
 	event.hide('beyond_earth:coal_lantern')
