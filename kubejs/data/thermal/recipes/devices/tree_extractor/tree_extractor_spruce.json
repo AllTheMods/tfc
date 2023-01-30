@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/spruce",
+  "leaves": "tfc:wood/leaves/spruce",
+  "result": {
+    "fluid": "thermal:resin",
+    "amount": 50
+  }
+}

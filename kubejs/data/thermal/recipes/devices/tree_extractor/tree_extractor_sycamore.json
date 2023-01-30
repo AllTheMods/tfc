@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/sycamore",
+  "leaves": "tfc:wood/leaves/sycamore",
+  "result": {
+    "fluid": "thermal:latex",
+    "amount": 25
+  }
+}

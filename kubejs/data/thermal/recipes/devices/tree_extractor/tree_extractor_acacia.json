@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/acacia",
+  "leaves": "tfc:wood/leaves/acacia",
+  "result": {
+    "fluid": "thermal:latex",
+    "amount": 25
+  }
+}

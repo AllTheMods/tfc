@@ -28,9 +28,8 @@ onEvent('jei.hide.items', event => {
 
     event.hide('exnihilosequentia:sea_water_bucket')
 
-    event.hide('exnihilosequentia:witchwater')
+    event.hide(/dark_oak/)
 
-    event.hide('exnihilosequentia:seawater')
 
 	event.hide('beyond_earth:coal_torch')
 	event.hide('beyond_earth:coal_lantern')

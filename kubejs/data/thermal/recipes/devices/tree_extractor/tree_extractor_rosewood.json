@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/rosewood",
+  "leaves": "tfc:wood/leaves/rosewood",
+  "result": {
+    "fluid": "thermal:resin",
+    "amount": 25
+  }
+}

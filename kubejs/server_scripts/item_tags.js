@@ -34,6 +34,7 @@ onEvent('item.tags', e => {
     e.remove('forge:stone', ['minecraft:stone'])
     e.remove('forge:cobblestone/normal', ['minecraft:cobblestone'])
     e.add('forge:chocolate', ['create:bar_of_chocolate', 'firmalife:food/dark_chocolate'])
+    e.add('forge:seapickles', ['minecraft:sea_pickle', 'tfc:sea_pickle'])
 
     let berries =[
     "blackberry",

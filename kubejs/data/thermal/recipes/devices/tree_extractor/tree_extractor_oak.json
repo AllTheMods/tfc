@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/oak",
+  "leaves": "tfc:wood/leaves/oak",
+  "result": {
+    "fluid": "thermal:resin",
+    "amount": 25
+  }
+}

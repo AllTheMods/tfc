@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/kapok",
+  "leaves": "tfc:wood/leaves/kapok",
+  "result": {
+    "fluid": "thermal:latex",
+    "amount": 25
+  }
+}

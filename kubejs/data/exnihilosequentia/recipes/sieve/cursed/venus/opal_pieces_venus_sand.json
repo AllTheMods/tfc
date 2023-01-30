@@ -1,0 +1,13 @@
+{
+  "type": "exnihilosequentia:sieve",
+  "rolls": [{
+    "chance": 0.1,
+    "mesh": "netherite"
+  }],
+  "input": {
+    "item": "beyond_earth:venus_sand"
+  },
+  "result": {
+    "item": "tfc:ore/opal"
+  }
+}

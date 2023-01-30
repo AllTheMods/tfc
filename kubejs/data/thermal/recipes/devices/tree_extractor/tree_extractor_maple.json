@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/maple",
+  "leaves": "tfc:wood/leaves/maple",
+  "result": {
+    "fluid": "thermal:sap",
+    "amount": 50
+  }
+}

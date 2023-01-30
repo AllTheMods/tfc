@@ -1,1 +1,8 @@
-{"type":"immersiveengineering:mineral_mix","ores":[{"chance":0.8,"output":{"tag":"forge:ores/coal"}},{"chance":0.2,"output":{"tag":"forge:dusts/sulfur"}},{"conditions":[{"value":{"tag":"forge:dusts/phosphorus","type":"forge:tag_empty"},"type":"forge:not"}],"chance":0.2,"output":{"tag":"forge:dusts/phosphorus"}}],"spoils":[{"chance":0.2,"output":{"item":"minecraft:gravel"}},{"chance":0.5,"output":{"item":"minecraft:cobblestone"}},{"chance":0.3,"output":{"item":"minecraft:cobbled_deepslate"}}],"dimensions":["minecraft:overworld"],"weight":25,"fail_chance":0.05}
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ]
+}

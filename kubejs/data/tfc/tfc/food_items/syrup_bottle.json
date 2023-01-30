@@ -1,0 +1,10 @@
+{
+ "ingredient": {
+    "item": "thermal:syrup_bottle"
+  },
+  "hunger": 10,
+  "water":  10,
+  "saturation": 1.1,
+  "decay_modifier": 2.9,
+  "fruit": 0.5
+}

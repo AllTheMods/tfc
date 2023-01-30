@@ -1,0 +1,9 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": "tfc:wood/log/palm",
+  "leaves": "tfc:wood/leaves/palm",
+  "result": {
+    "fluid": "thermal:latex",
+    "amount": 25
+  }
+}

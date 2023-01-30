@@ -126,7 +126,28 @@ let gemStones =[
 gemStones.forEach(gem => {
     event.shapeless(`tfc:gem/${gem}`,[Ingredient.of(`tfc:ore/${gem}`), Ingredient.of(`create:sand_paper`)])
 })
+let ferns =[
+"king",
+"lady",
+"licorice",
+"ostrich",
+"sword",
+"tree"
+]
 
+ferns.forEach(fern => {
+event.custom({
+    type: 'create:crushing',
+    ingredients: [
+      Ingredient.of(`tfc:plant/${fern}_fern`).toJson()
+    ],
+    results: [
+      Item.of('2x minecraft:green_dye').toResultJson(),
+      Item.of('minecraft:green_dye').withChance(0.5).toResultJson()
+    ],
+    processingTime: 100
+  })
+})
 
 
 let outputs = []
@@ -150,8 +171,9 @@ event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
 event.remove({id: 'create:filling/sweet_roll'})
 event.remove({id: 'create:mixing/andesite_alloy'})
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/stirling_silver')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped'}, 'minecraft:stone', '#forge:stone')
+
 
 
 modifyShaped(event, 'exmachinis:flux_hammer', 1, ['PHP', 'PTP', 'CSU'], {
@@ -342,6 +364,7 @@ onEvent('item.tags', event => {
     event.get('forge:treated_lumber').add('firmalife:treated_lumber')
     event.get('forge:treated_lumber').add('#forge:treated_wood')
 
+    event.get('forge:cinnabar').add(['tfc:ore/cinnabar', 'thermal:cinnabar'])
     event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
     event.get('forge:melon').add('minecraft:melon')
@@ -349,6 +372,17 @@ onEvent('item.tags', event => {
 
     event.get('forge:bottle').add("minecraft:glass_bottle")
     event.get('forge:bottle').add("firmalife:empty_jar")
+
+    event.get('forge:poppies').add(['minecraft:poppy', 'tfc:plant/poppy'])
+    event.get('forge:dandelions').add(['minecraft:dandelion', 'tfc:plant/dandelion'])
+    event.get('forge:blue_orchids').add(['minecraft:blue_orchid', 'tfc:plant/blue_orchid'])
+    event.get('forge:allium').add(['minecraft:allium', 'tfc:plant/allium'])
+    event.get('forge:oxeye_daisy').add(['minecraft:oxeye_daisy', 'tfc:plant/oxeye_daisy'])
+    event.get('forge:orange_tulip').add(['minecraft:orange_tulip', 'tfc:plant/tulip_orange'])
+    event.get('forge:pink_tulip').add(['minecraft:pink_tulip', 'tfc:plant/tulip_pink'])
+    event.get('forge:white_tulip').add(['minecraft:white_tulip', 'tfc:plant/tulip_white'])
+    event.get('forge:red_tulip').add(['minecraft:red_tulip', 'tfc:plant/tulip_red'])
+
 
     event.get('forge:sandstone').add('tfc:raw_sandstone/brown')
     event.get('forge:sandstone').add('tfc:raw_sandstone/white')
@@ -361,6 +395,8 @@ onEvent('item.tags', event => {
     event.get('forge:gems/amethyst').add('tfc:gem/amethyst')
     event.get('forge:cocoa_beans').add('minecraft:cocoa_beans')
     event.get('forge:cocoa_beans').add('firmalife:food/roasted_cocoa_beans')
+    event.get('forge:carrots').add(['tfc:food/carrot', 'minecraft:carrot'])
+
     let woodTypes =[
     "ash",
     "aspen",
@@ -438,6 +474,7 @@ onEvent('block.tags', event => {
     event.get('create:passive_boiler_heaters').add('#forge:magma')
     event.get('forge:farmland').add('#tfc:farmland')
     event.get('minecraft:anvil').add('#tfc:anvils')
+
 })
 onEvent('fluid.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
@@ -450,7 +487,6 @@ onEvent('fluid.tags', event => {
     event.get('minecraft:water').remove('firmalife:coconut_milk')
     event.get('minecraft:water').remove('firmalife:yak_milk')
     event.get('minecraft:water').remove('firmalife:goat_milk')
-
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
@@ -508,6 +544,20 @@ onEvent('entity.spawned', event => {
             entity.setChestArmorItem(Item.of('beyond_earth:netherite_space_suit', '{Damage:0,Energy:48000}'))
             entity.setLegsArmorItem('beyond_earth:netherite_space_pants')
             entity.setFeetArmorItem('beyond_earth:netherite_space_boots')
+        }
+    }
+})
+
+const WaterBottleSources = ['minecraft:water', 'tfc:fluid/spring_water', 'tfc:fluid/river_water', 'tfc:fluid/salt_water']
+
+onEvent('item.right_click', event => {
+    const { item, hand, player } = event
+    if (item != 'firmalife:empty_jar' || hand != 'main_hand') return;
+    let result = player.rayTrace(event.player.reachDistance)
+    if (result.type == 'block') {
+        if (WaterBottleSources.includes(result.block.id)) {
+            item.count--
+            player.give(Item.of('minecraft:potion', { Potion: 'minecraft:water' }))
         }
     }
 })
