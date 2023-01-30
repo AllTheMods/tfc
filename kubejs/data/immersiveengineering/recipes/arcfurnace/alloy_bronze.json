@@ -1,0 +1,27 @@
+{
+	"type": "immersiveengineering:arc_furnace",
+	"results": [
+		{
+			"count": 8,
+			"base_ingredient": {
+				"tag": "forge:ingots/bronze"
+			}
+		}
+	],
+	"additives": [
+		{
+			"count": 1,
+			"base_ingredient": {
+				"tag": "forge:ingots/tin"
+			}
+		}
+	],
+	"input": {
+		"count": 7,
+		"base_ingredient": {
+			"tag": "forge:ingots/copper"
+		}
+	},
+	"time": 400,
+	"energy": 204800
+}
