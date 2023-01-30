@@ -1,0 +1,27 @@
+{
+	"type": "immersiveengineering:arc_furnace",
+	"results": [
+		{
+			"count": 2,
+			"base_ingredient": {
+				"tag": "forge:ingots/black_steel"
+			}
+		}
+	],
+	"additives": [
+		{
+			"count": 1,
+			"base_ingredient": {
+				"tag": "forge:ingots/weak_steel"
+			}
+		}
+	],
+	"input": {
+		"count": 1,
+		"base_ingredient": {
+			"tag": "forge:ingots/steel"
+		}
+	},
+	"time": 100,
+	"energy": 51200
+}
