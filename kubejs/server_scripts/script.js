@@ -332,13 +332,13 @@ modifyShaped(event, 'apotheosis:beeshelf', 1, ['CVC', 'HBH', 'CVC'], {
     B: '#forge:bookshelves'
   })
   modifyShaped(event, 'apotheosis:salvaging_table', 1, ['CCC', 'PSA', 'DBD'], {
-      C: 'tfc:metal/ingot/copper',
-      P: 'tfc:metal/pickaxe/blue_steel',
-      A: 'tfc:metal/axe/blue_steel',
-      S: 'minecraft:smithing_table',
-      D: 'apotheosis:gem_dust',
-      B: 'minecraft:lava_bucket'
-    })
+    C: 'tfc:metal/ingot/copper',
+    P: Ingredient.of('tfc:metal/pickaxe/blue_steel').ignoreNBT().toJson(),
+    A: Ingredient.of('tfc:metal/axe/blue_steel').ignoreNBT().toJson(),
+    S: 'minecraft:smithing_table',
+    D: 'apotheosis:gem_dust',
+    B: 'minecraft:lava_bucket'
+  })
 modifyShaped(event, 'apotheosis:library', 1, ['CVC', 'VBV', 'CVC'], {
     C: 'minecraft:ender_chest',
     V: 'apotheosis:infused_hellshelf',
@@ -354,10 +354,16 @@ modifyShaped(event, 'apotheosis:scrap_tome', 8, ['BBB', 'BAB', 'BBB'], {
     A: 'tfc:metal/anvil/steel',
     B: 'minecraft:book'
   })
-
-  modifyShaped(event, 'minecraft:lodestone', 1, ['BBB', 'BAB', 'BBB'], {
+ modifyShaped(event, 'minecraft:lodestone', 1, ['BBB', 'BAB', 'BBB'], {
       A: 'minecraft:netherite_ingot',
       B: '#tfc:rock/bricks'
+    })
+  modifyShaped(event, 'ae2:network/cables/network_memory_card_clean', 1, ['AAA', 'CFE', 'BBB'], {
+      A: '#forge:sheets/nickel',
+      B: '#forge:nuggets/gold',
+      C: 'ae2:cell_component_1k',
+      E: 'ae2:emgomeering_processor',
+      F: 'minecraft:redstone'
     })
 })
 
