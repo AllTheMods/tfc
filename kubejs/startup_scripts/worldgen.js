@@ -11,7 +11,7 @@ onEvent('worldgen.add', event => {
 })
 onEvent('worldgen.remove', event => {
   event.removeSpawns(properties => {
-    properties.biomes = '$overworld'
-    properties.mobs = [ 'thermal:basalz', 'thermal:blizz', 'thermal:blitz' ]
+    properties.biomes = /tfc:.*/
+    properties.mobs = /thermal:b.*/
   })
 })

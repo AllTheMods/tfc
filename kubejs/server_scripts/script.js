@@ -94,6 +94,7 @@ let seeds =[
 seeds.forEach(seed => {
      event.recipes.thermal.insolator([Item.of(`tfc:food/${seed}`),Item.of( `tfc:seeds/${seed}`).withChance(1.2) ], Item.of(`tfc:seeds/${seed}`)).water(850)
 })
+event.remove({id: /ae2:tools\/.*/})
 event.remove({id: 'create:honey_bucket'})
 event.remove({id: 'minecraft:smoker'})
 event.remove({id: 'minecraft:blast_furnace'})
@@ -170,11 +171,36 @@ event.remove({id: 'create:crafting/materials/andesite_alloy'})
 event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
 event.remove({id: 'create:filling/sweet_roll'})
 event.remove({id: 'create:mixing/andesite_alloy'})
+
+event.remove({id: 'thermal:storage/cured_rubber_block'})
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/sterling_silver')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:dirt', '#tfc:dirt')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:cured_rubber', 'immersiveengineering:plate_duroplast')
+
 event.replaceInput({type: 'minecraft:crafting_shaped'}, 'minecraft:stone', '#forge:stone')
 
 
+modifyShaped(event, 'ae2:certus_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
+    Q: 'ae2:certus_quartz_crystal',
+    I: '#forge:rods/wrought_iron'
+  })
+
+modifyShaped(event, 'ae2:nether_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
+    Q: 'minecraft:quartz',
+    I: '#forge:rods/wrought_iron'
+})
+modifyShaped(event, 'ae2:certus_quartz_cutting_knife', 1, ['Q  ', ' I ', '   '], {
+     Q: 'ae2:certus_quartz_crystal',
+     I: '#forge:rods/wrought_iron'
+})
+
+modifyShaped(event, 'ae2:nether_quartz_cutting_knife', 1, ['Q  ', ' I ', '   '], {
+     Q: 'minecraft:quartz',
+     I: '#forge:rods/wrought_iron'
+})
 
 modifyShaped(event, 'exmachinis:flux_hammer', 1, ['PHP', 'PTP', 'CSU'], {
     H: 'minecraft:hopper',
@@ -363,7 +389,7 @@ onEvent('item.tags', event => {
     event.get('forge:magma').add('tfc:rock/magma/dacite')
     event.get('forge:treated_lumber').add('firmalife:treated_lumber')
     event.get('forge:treated_lumber').add('#forge:treated_wood')
-
+    event.get('forge:rods/iron').add('#forge:rods/wrought_iron')
     event.get('forge:cinnabar').add(['tfc:ore/cinnabar', 'thermal:cinnabar'])
     event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
@@ -475,6 +501,7 @@ onEvent('block.tags', event => {
     event.get('forge:farmland').add('#tfc:farmland')
     event.get('minecraft:anvil').add('#tfc:anvils')
 
+    event.get('minecraft:mineable/axe').add(['craftingstation:crafting_station_slab', 'craftingstation:crafting_station'])
 })
 onEvent('fluid.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
