@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "tfc:vinegar",
+      "nbt": {},
+      "amount": 1
+    },
+    {
+      "fluid": "tfc:salt_water",
+      "nbt": {},
+      "amount": 9
+    }
+  ],
+  "results": [
+    {
+      "fluid": "tfc:brine",
+      "nbt": {},
+      "amount": 10
+    }
+  ],
+  "processingTime": 120
+}

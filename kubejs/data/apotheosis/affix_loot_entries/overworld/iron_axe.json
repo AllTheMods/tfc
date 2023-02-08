@@ -1,0 +1,14 @@
+{
+  "weight": 85,
+  "quality": 3.0,
+  "stack": {
+    "item": "tfc:metal/axe/wrought_iron",
+    "count": 1,
+    "nbt": "{Damage:0}"
+  },
+  "type": "HEAVY_WEAPON",
+  "dimensions": [
+    "minecraft:overworld"
+  ],
+  "max_rarity": "uncommon"
+}

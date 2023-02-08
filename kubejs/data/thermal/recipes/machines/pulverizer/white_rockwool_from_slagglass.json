@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "immersiveengineering:slag_glass"
+  },
+  "result": [
+    {
+      "item": "thermal:white_rockwool",
+      "count": 1
+    }
+  ],
+  "energy_mod": 0.5
+}

@@ -1,0 +1,14 @@
+{
+  "weight": 100,
+  "quality": 1.0,
+  "stack": {
+    "item": "tfc:metal/sword/copper",
+    "count": 1,
+    "nbt": "{Damage:0}"
+  },
+  "type": "SWORD",
+  "dimensions": [
+    "minecraft:overworld"
+  ],
+  "max_rarity": "uncommon"
+}

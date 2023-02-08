@@ -29,7 +29,10 @@ onEvent('jei.hide.items', event => {
     event.hide('exnihilosequentia:sea_water_bucket')
 
     event.hide(/dark_oak/)
-
+    event.hide(/ae2:tools.*/)
+    event.hide(/allthemodium.*/)
+    event.hide(/vibranium.*/)
+    event.hide(/unobtainium.*/)
 
 	event.hide('beyond_earth:coal_torch')
 	event.hide('beyond_earth:coal_lantern')

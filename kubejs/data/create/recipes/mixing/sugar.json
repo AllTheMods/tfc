@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "create:honey",
+      "nbt": {},
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:sugar",
+      "count": 3
+    }
+  ],
+  "processingTime": 600,
+  "heatRequirement": "heated"
+}

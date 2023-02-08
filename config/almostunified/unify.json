@@ -43,8 +43,10 @@
     "forge:cocoa_beans",
     "forge:chocolate",
     "forge:seapickles",
+    "forge:slimeballs",
     "forge:crude_oil",
     "forge:carrots",
+    "forge:crops/potato",
     "forge:poppies",
     "forge:dandelions",
     "forge:allium",
@@ -57,6 +59,7 @@
     "forge:cinnabar",
     "forge:fern",
     "forge:slag",
+    "forge:coal_coke",
     "minecraft:plank"
   ],
   "materials": [
@@ -70,9 +73,7 @@
     "bronze",
     "charcoal",
     "chrome",
-    "cinnabar",
     "coal",
-    "coal_coke",
     "cobalt",
     "constantan",
     "copper",

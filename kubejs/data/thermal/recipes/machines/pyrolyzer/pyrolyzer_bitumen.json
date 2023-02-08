@@ -1,0 +1,21 @@
+{
+  "type": "thermal:pyrolyzer",
+  "ingredient": {
+    "tag": "forge:cokesource"
+  },
+  "result": [
+    {
+      "item": "thermal:coal_coke"
+    },
+    {
+      "item": "thermal:tar",
+      "chance": 0.50
+    },
+    {
+      "fluid": "immersivepetroleum:crudeoil",
+      "amount": 10
+    }
+  ],
+  "energy": 4000,
+  "experience": 0.15
+}

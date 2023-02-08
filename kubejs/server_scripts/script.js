@@ -33,7 +33,12 @@ function cloche(output, amount, seed, soil, render, time) {
           {
             item: output,
             count: amount
+          },
+          {
+            item: seed,
+            count: 1
           }
+
         ],
         input: Ingredient.of(seed),
         soil: Ingredient.of(soil),
@@ -45,7 +50,7 @@ function cloche(output, amount, seed, soil, render, time) {
       }).id(`kubejs:cloche/${seed.replace(':', '/')}`)
   }
 
-cloche('tfc:food/carrot','2', 'tfc:seeds/carrot', '#tfc:dirt','tfc:wild_crop/carrot',800)
+cloche('tfc:food/carrot','2','tfc:seeds/carrot', '#tfc:dirt','tfc:wild_crop/carrot',800)
 cloche('tfc:food/onion','2', 'tfc:seeds/onion', '#tfc:dirt','tfc:wild_crop/onion',800)
 cloche('tfc:food/squash','2', 'tfc:seeds/squash', '#tfc:dirt','tfc:wild_crop/squash',800)
 cloche('tfc:food/garlic','2', 'tfc:seeds/garlic', '#tfc:dirt','tfc:wild_crop/garlic',800)
@@ -95,6 +100,10 @@ seeds.forEach(seed => {
      event.recipes.thermal.insolator([Item.of(`tfc:food/${seed}`),Item.of( `tfc:seeds/${seed}`).withChance(1.2) ], Item.of(`tfc:seeds/${seed}`)).water(850)
 })
 event.remove({id: /ae2:tools\/.*/})
+event.remove({id: /allthemodium.*/})
+event.remove({id: /vibranium.*/})
+event.remove({id: /unobtainium.*/})
+
 event.remove({id: 'create:honey_bucket'})
 event.remove({id: 'minecraft:smoker'})
 event.remove({id: 'minecraft:blast_furnace'})
@@ -171,21 +180,53 @@ event.remove({id: 'create:crafting/materials/andesite_alloy'})
 event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
 event.remove({id: 'create:filling/sweet_roll'})
 event.remove({id: 'create:mixing/andesite_alloy'})
-
+event.remove({id: 'thermal:machines/press/unpacking/press_wheat_unpacking'})
 event.remove({id: 'thermal:storage/cured_rubber_block'})
+event.remove({id: 'minecraft:sugar_from_honey_bottle'})
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/steel', '#forge:sheets/steel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/lead', '#forge:plates/steel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/copper', '#forge:sheets/copper')
+
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/sterling_silver')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/lead', '#forge:plates/lead')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:dirt', '#tfc:dirt')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:cured_rubber', 'immersiveengineering:plate_duroplast')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'waystones'}, 'minecraft:emerald', 'tfc:gem/emerald')
 
 event.replaceInput({type: 'minecraft:crafting_shaped'}, 'minecraft:stone', '#forge:stone')
 
+event.replaceInput({type: 'immersiveengineering:cloche'}, 'minecraft:dirt', '#tfc:dirt')
 
 modifyShaped(event, 'ae2:certus_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
     Q: 'ae2:certus_quartz_crystal',
     I: '#forge:rods/wrought_iron'
+  })
+modifyShaped(event, 'apotheosis:ender_lead', 1, ['PL ', 'G  ', '   '], {
+      P: 'minecraft:ender_pearl',
+      L: 'minecraft:lead',
+      G: 'tfc:metal/ingot/gold'
+    })
+modifyShaped(event, 'thermal:energy_duct', 3, ['LOL', 'BRB', 'LOL'], {
+        B: '#forge:sheets/bronze',
+        R: 'minecraft:redstone_block',
+        O: '#forge:glass_panes',
+        L: '#forge:plates/lead'
+      })
+modifyShaped(event, 'thermal:fluid_duct', 3, ['LBL', 'B B', 'LBL'], {
+    B: '#forge:sheets/bronze',
+    L: '#forge:plates/lead'
+  })
+modifyShaped(event, 'thermal:fluid_duct_windowed', 3, ['LBL', 'BWB', 'LBL'], {
+    B: '#forge:sheets/bronze',
+    W: '#forge:glass_panes',
+    L: '#forge:plates/lead'
   })
 
 modifyShaped(event, 'ae2:nether_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
@@ -358,13 +399,29 @@ modifyShaped(event, 'apotheosis:scrap_tome', 8, ['BBB', 'BAB', 'BBB'], {
       A: 'minecraft:netherite_ingot',
       B: '#tfc:rock/bricks'
     })
-  modifyShaped(event, 'ae2:network/cables/network_memory_card_clean', 1, ['AAA', 'CFE', 'BBB'], {
+  modifyShaped(event, 'ae2:memory_card', 1, ['AAA', 'CFE', 'BBB'], {
       A: '#forge:sheets/nickel',
       B: '#forge:nuggets/gold',
       C: 'ae2:cell_component_1k',
-      E: 'ae2:emgomeering_processor',
+      E: 'ae2:engineering_processor',
       F: 'minecraft:redstone'
     })
+    modifyShaped(event, 'create:belt_connector', 1, ['AAA', 'RLR', 'AAA'], {
+      A: 'tfc:food/dried_kelp',
+      R: '#forge:rods/wrought_iron',
+      L: '#forge:treated_lumber'
+    })
+    modifyShaped(event, 'immersiveengineering:conveyor_basic', 1, ['AAA', 'RLR', 'AAA'], {
+          A: 'create:belt_connector',
+          R: '#forge:rods/nickel',
+          L: '#forge:rods/wrought_iron'
+        })
+    modifyShaped(event, 'immersiveengineering:crate', 1, ['ABA', 'B B', 'ABA'], {
+          A: 'thermal:tar',
+          B: '#forge:treated_wood'
+        })
+
+
 })
 
 
@@ -374,6 +431,8 @@ onEvent('item.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
 	// event.get('forge:cobblestone').add('minecraft:diamond_ore')
 
+    event.get('apotheosis:boon_drops').removeAll().add('#tfc:ore_pieces').add('#forge:nuggets/lead')
+    event.get('minecraft:fishes').remove(['minecraft:cod', 'minecraft:salmon', 'minecraft:tropical_fish', 'minecraft:pufferfish','minecraft:cooked_cod', 'minecraft:cooked_salmon'])
 
 
     event.get('forge:crops/potato').add('tfc:food/potato')
@@ -383,12 +442,10 @@ onEvent('item.tags', event => {
 
     event.get('forge:ingots/iron').add('tfc:metal/ingot/wrought_iron')
     event.get('forge:raw_materials/aluminum').add('tfc:ore/cryolite')
-    event.get('forge:plates/steel').add('beyond_earth:compressed_steel')
-    event.get('beyond_earth:compresseds').add('immersiveengineering:plate_steel')
-    event.get('beyond_earth:compresseds/steel').add('immersiveengineering:plate_steel')
     event.get('forge:magma').add('tfc:rock/magma/basalt')
     event.get('forge:magma').add('tfc:rock/magma/granite')
     event.get('forge:magma').add('tfc:rock/magma/diorite')
+    event.get('forge:magma').add('tfc:rock/magma/gabbro')
     event.get('forge:magma').add('tfc:rock/magma/gabbro')
     event.get('forge:magma').add('tfc:rock/magma/rhyolite')
     event.get('forge:magma').add('tfc:rock/magma/andesite')
@@ -399,6 +456,11 @@ onEvent('item.tags', event => {
     event.get('forge:cinnabar').add(['tfc:ore/cinnabar', 'thermal:cinnabar'])
     event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
+    event.get('forge:cokesource').add(['minecraft:coal', 'tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
+
+
+
+    event.get('forge:slimeballs').add('tfc:glue')
     event.get('forge:melon').add('minecraft:melon')
     event.get('forge:melon').add('tfc:melon')
 
@@ -428,6 +490,9 @@ onEvent('item.tags', event => {
     event.get('forge:cocoa_beans').add('minecraft:cocoa_beans')
     event.get('forge:cocoa_beans').add('firmalife:food/roasted_cocoa_beans')
     event.get('forge:carrots').add(['tfc:food/carrot', 'minecraft:carrot'])
+
+
+
 
     let woodTypes =[
     "ash",
@@ -512,14 +577,11 @@ onEvent('block.tags', event => {
 onEvent('fluid.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
 	// event.get('forge:cobblestone').add('minecraft:diamond_ore')
-    event.get('minecraft:water').remove('beyond_earth:fuel')
-    event.get('minecraft:water').remove('beyond_earth:oil')
-    event.get('minecraft:water').remove('create:honey')
-    event.get('minecraft:water').remove('create:chocolate')
 
-    event.get('minecraft:water').remove('firmalife:coconut_milk')
-    event.get('minecraft:water').remove('firmalife:yak_milk')
-    event.get('minecraft:water').remove('firmalife:goat_milk')
+
+   event.get('minecraft:water').removeAll().add([/^(minecraft|tfc):.*water$/])
+
+
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it

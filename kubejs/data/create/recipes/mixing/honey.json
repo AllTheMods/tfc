@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "firmalife:raw_honey"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "create:honey",
+      "nbt": {},
+      "amount": 250
+    }
+  ],
+  "processingTime": 600,
+  "heatRequirement": "heated"
+}
