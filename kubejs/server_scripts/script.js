@@ -121,6 +121,7 @@ event.remove({id: 'immersiveengineering:smelting/ingot_steel_from_dust'})
 event.remove({id: 'minecraft:honey_bottle'})
 event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
+event.remove({id: 'tombstone:white_marble'})
 
 let gemStones =[
 "amethyst",
@@ -188,11 +189,16 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineerin
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/lead', '#forge:plates/steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/copper', '#forge:sheets/copper')
-
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/steel', '#forge:sheets/steel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/lead', '#forge:gears/lead')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/copper', '#forge:sheets/copper')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/lead', '#forge:plates/lead')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
@@ -208,6 +214,10 @@ modifyShaped(event, 'ae2:certus_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
     Q: 'ae2:certus_quartz_crystal',
     I: '#forge:rods/wrought_iron'
   })
+  modifyShaped(event, 'tombstone:white_marble', 1, ['QQQ', 'QDQ', 'QQQ'], {
+      Q: 'tfc:rock/loose/marble',
+      D: 'tombstone:grave_dust'
+    })
 modifyShaped(event, 'apotheosis:ender_lead', 1, ['PL ', 'G  ', '   '], {
       P: 'minecraft:ender_pearl',
       L: 'minecraft:lead',
