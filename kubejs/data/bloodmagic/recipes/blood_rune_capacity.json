@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aba",
+    "scs",
+    "ada"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:stone"
+    },
+    "b": {
+      "item": "tfc:wooden_bucket"
+    },
+    "c": {
+      "item": "bloodmagic:blankrune"
+    },
+    "d": {
+      "item": "bloodmagic:infusedslate"
+    },
+    "s": {
+      "item": "tfc:metal/sheet/wrought_iron"
+    }
+  },
+  "result": {
+    "item": "bloodmagic:altarcapacityrune"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "jkl",
+    "ddd",
+    "ppp"
+  ],
+  "key": {
+    "j": {
+      "tag": "forge:ingots/graphite"
+    },
+    "l": {
+      "tag": "forge:ingots/steel"
+    },
+    "k": {
+      "tag": "forge:ingots/copper"
+    },
+    "d": {
+      "tag": "forge:dyes/blue"
+    },
+    "p": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "immersiveengineering:blueprint",
+    "nbt": {
+      "blueprint": "electrode"
+    }
+  }
+}

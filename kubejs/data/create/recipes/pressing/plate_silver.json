@@ -2,7 +2,8 @@
     "type": "create:pressing",
     "ingredients": [
       {
-        "tag": "forge:ingots/silver"
+        "tag": "forge:ingots/silver",
+        "count": 2
       }
     ],
     "results": [

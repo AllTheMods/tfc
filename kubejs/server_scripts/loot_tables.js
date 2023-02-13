@@ -37,7 +37,7 @@ onEvent("lootjs", (event) => {
     .replaceLoot("minecraft:emerald","tfc:gem/emerald");
     event
     .addLootTypeModifier(LootType.CHEST)
-    .replaceLoot("minecraft:lapis","tfc:gem/lapis_lazuli");
+    .replaceLoot("minecraft:lapis_lazuli","tfc:gem/lapis_lazuli");
     event
     .addLootTypeModifier(LootType.CHEST)
     .replaceLoot("minecraft:enchanting_table","tfc:gem/diamond");

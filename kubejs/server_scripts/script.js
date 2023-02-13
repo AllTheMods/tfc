@@ -1,6 +1,6 @@
 // priority: 0
 
-settings.logAddedRecipes = true
+settings.logAddedRecipes = false
 settings.logRemovedRecipes = true
 settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
@@ -172,8 +172,22 @@ event.custom({
       "processingTime": 400
     }).id(`kubejs:crushing/gem_dust`)
 
-event.remove({id: 'minecraft:minecart'})
+let ingotz =[
+"copper",
+"silver",
+"nickel",
+"steel",
+"gold"
 
+]
+let mold = "immersiveengineering:mold_plate"
+ingotz.forEach(ingot =>{
+event.recipes.immersiveengineeringMetalPress(`tfc:metal/sheet/${ingot}`, Ingredient.of(`immersiveengineering:plate_${ingot}`,2), mold)
+})
+event.recipes.immersiveengineeringMetalPress('tfc:metal/sheet/wrought_iron', Ingredient.of('immersiveengineering:plate_iron',2), mold)
+
+event.remove({id: 'minecraft:minecart'})
+event.remove({id: 'minecraft:ens_ancient_debris'})
 event.remove({id: 'immersiveengineering:jei_bucket_fuel'})
 event.remove({id: 'immersiveengineering:jei_bucket_sea_water'})
 event.remove({id: 'create:crafting/materials/andesite_alloy'})
@@ -184,24 +198,27 @@ event.remove({id: 'create:mixing/andesite_alloy'})
 event.remove({id: 'thermal:machines/press/unpacking/press_wheat_unpacking'})
 event.remove({id: 'thermal:storage/cured_rubber_block'})
 event.remove({id: 'minecraft:sugar_from_honey_bottle'})
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/steel', '#forge:sheets/steel')
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+
+event.remove({id: 'minecraft:stone_bricks'})
+
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/steel', '#forge:plates/steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/lead', '#forge:plates/steel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/bronze', '#forge:plates/bronze')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/copper', '#forge:sheets/copper')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/steel', '#forge:sheets/steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/lead', '#forge:gears/lead')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/copper', '#forge:sheets/copper')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+event.replaceInput({type: 'minecraft:crafting_shaped'}, 'immersiveengineering:hemp_fiber', 'tfc:jute_fiber')
 
-
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/lead', '#forge:plates/lead')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
+
+
+
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:dirt', '#tfc:dirt')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:cured_rubber', 'immersiveengineering:plate_duroplast')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'waystones'}, 'minecraft:emerald', 'tfc:gem/emerald')
@@ -444,6 +461,7 @@ onEvent('item.tags', event => {
     event.get('apotheosis:boon_drops').removeAll().add('#tfc:ore_pieces').add('#forge:nuggets/lead')
     event.get('minecraft:fishes').remove(['minecraft:cod', 'minecraft:salmon', 'minecraft:tropical_fish', 'minecraft:pufferfish','minecraft:cooked_cod', 'minecraft:cooked_salmon'])
 
+    event.get('forge:fishing_rods').remove('minecraft:fishing_rod')
 
     event.get('forge:crops/potato').add('tfc:food/potato')
     event.get('forge:crops/carrot').add('tfc:food/carrot')
@@ -521,6 +539,7 @@ onEvent('item.tags', event => {
     "white_cedar",
     "willow"
     ]
+
     let vanwoodTypes =[
     "acacia",
     "birch",
@@ -639,18 +658,20 @@ onEvent('biome.tags', event => {
 
 
 onEvent('entity.spawned', event => {
-    let dimension = event.level.getDimension()
-    // in the correct dim
-    if (dimension == "beyond_earth:mercury") {
-        let entity = event.entity
-        // have a living entity
-        if (entity.isLiving() && !entity.isPlayer()) {
-            entity.setHeadArmorItem('beyond_earth:netherite_oxygen_mask')
-            entity.setChestArmorItem(Item.of('beyond_earth:netherite_space_suit', '{Damage:0,Energy:48000}'))
-            entity.setLegsArmorItem('beyond_earth:netherite_space_pants')
-            entity.setFeetArmorItem('beyond_earth:netherite_space_boots')
-        }
+  const {level, entity} = event
+  if (entity.type == "minecraft:item" && entity.item == "minecraft:chest") {
+    console.log("Spawn")
+    entity.setItem("tfc:wood/chest/oak")
+  }
+  let dimension = level.getDimension()
+  if (dimension == "beyond_earth:mercury") {
+    if (entity.isLiving() && !entity.isPlayer()) {
+      entity.setHeadArmorItem('beyond_earth:netherite_oxygen_mask')
+      entity.setChestArmorItem(Item.of('beyond_earth:netherite_space_suit', '{Damage:0,Energy:48000}'))
+      entity.setLegsArmorItem('beyond_earth:netherite_space_pants')
+      entity.setFeetArmorItem('beyond_earth:netherite_space_boots')
     }
+  }
 })
 
 const WaterBottleSources = ['minecraft:water', 'tfc:fluid/spring_water', 'tfc:fluid/river_water', 'tfc:fluid/salt_water']
