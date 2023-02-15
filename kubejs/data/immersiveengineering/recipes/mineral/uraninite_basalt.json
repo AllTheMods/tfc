@@ -43,7 +43,7 @@
   "dimensions": [
     "minecraft:overworld"
   ],
-  "weight": 20,
+  "weight": 25,
   "fail_chance": 0.15,
   "sample_background": "tfc:rock/raw/basalt"
 }

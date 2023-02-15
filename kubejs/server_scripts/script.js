@@ -22,6 +22,13 @@ let type = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper
 material.forEach(material=>{
   type.forEach(type =>{
     event.remove({id:`mcwroofs:${material}_${type}`})
+    event.remove({id: `create:cutting/${material}_wood`})
+    event.remove({id: `create:cutting/stripped_${material}_wood`})
+    event.remove({id: `create:cutting/stripped_${material}_log`})
+    event.remove({id: `immersiveengineering:sawmill/${material}_log`})
+    event.remove({id: `immersiveengineering:sawmill/${material}_stairs`})
+    event.remove({id: `immersiveengineering:sawmill/${material}_door`})
+    event.remove({id: `immersiveengineering:sawmill/stripped_${material}_log`})
   })
 })
 
@@ -160,6 +167,22 @@ event.custom({
   })
 })
 
+let logs = ["acacia", "ash", "aspen", "birch", "blackwood", "chestnut", "douglas_fir", "hickory", "kapok", "maple", "oak", "palm", "pine", "rosewood", "sequoia", "spruce", "sycamore", "white_cedar", "willow"]
+
+logs.forEach(log => {
+    let output = `6x tfc:wood/planks/${log}`
+    let secondary = [
+        { "output": { "tag": "forge:dusts/wood" }, "stripping": false },
+        { "output": { "tag": "forge:dusts/wood" }, "stripping": true }
+    ]
+
+    event.recipes.immersiveengineeringSawmill(output, Item.of(`tfc:wood/log/${log}`),secondary , Item.of(`tfc:wood/stripped_log/${log}`))
+    event.recipes.immersiveengineeringSawmill(output, Item.of(`tfc:wood/stripped_log/${log}`),secondary)
+    event.recipes.immersiveengineeringSawmill(output, Item.of(`tfc:wood/wood/${log}`),secondary , Item.of(`tfc:wood/stripped_wood/${log}`))
+
+    event.recipes.createCutting(Item.of(`tfc:wood/stripped_log/${log}`), Item.of(`tfc:wood/log/${log}`) )
+    event.recipes.createCutting(output, Item.of(`tfc:wood/stripped_log/${log}`))
+})
 
 let outputs = []
 outputs.push({ item: 'apotheosis:gem_dust'})
@@ -183,8 +206,11 @@ let ingotz =[
 let mold = "immersiveengineering:mold_plate"
 ingotz.forEach(ingot =>{
 event.recipes.immersiveengineeringMetalPress(`tfc:metal/sheet/${ingot}`, Ingredient.of(`immersiveengineering:plate_${ingot}`,2), mold)
+event.recipes.immersiveengineeringMetalPress(`tfc:metal/double_sheet/${ingot}`, Ingredient.of(`tfc:metal/sheet/${ingot}`,2), mold)
+
 })
 event.recipes.immersiveengineeringMetalPress('tfc:metal/sheet/wrought_iron', Ingredient.of('immersiveengineering:plate_iron',2), mold)
+event.recipes.immersiveengineeringMetalPress('tfc:metal/double_sheet/wrought_iron', Ingredient.of('tfc:metal/sheet/wrought_iron',2), mold)
 
 event.remove({id: 'minecraft:minecart'})
 event.remove({id: 'minecraft:ens_ancient_debris'})
@@ -217,6 +243,7 @@ event.replaceInput({type: 'minecraft:crafting_shaped'}, 'immersiveengineering:he
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
 
+event.replaceInput({type: 'create:mixing', mod: 'create'}, 'create:wheat_flour', '#tfc:foods/flour')
 
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:dirt', '#tfc:dirt')
@@ -363,7 +390,7 @@ modifyShaped(event, 'beyond_earth:engine_fan', 1, ['I I', ' D ', 'I I'], {
 })
 modifyShaped(event, 'beyond_earth:steel_tank', 1, ['STS', 'T T', 'STS'], {
   T: '#forge:sheets/stainless_steel',
-  S: '#forge:ingots/stainless_steel'
+  S: '#forge:double_sheets/stainless_steel'
 })
 
 modifyShaped(event, 'beyond_earth:oxygen_loader', 1, ['ISI', 'SFS', 'ITI'], {
@@ -486,6 +513,7 @@ onEvent('item.tags', event => {
 
     event.get('forge:cokesource').add(['minecraft:coal', 'tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
 
+    event.get('tfc:axes').add('bloodmagic:soulaxe')
 
 
     event.get('forge:slimeballs').add('tfc:glue')
@@ -520,7 +548,7 @@ onEvent('item.tags', event => {
     event.get('forge:carrots').add(['tfc:food/carrot', 'minecraft:carrot'])
 
 
-
+    event.get('forge:cake').add(['minecraft:cake', 'tfc:cake'])
 
     let woodTypes =[
     "ash",

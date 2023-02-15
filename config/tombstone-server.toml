@@ -110,7 +110,7 @@
 	#Scroll of True Sight [false/true|default:true]
 	allow_scroll_of_true_sight = true
 	#Lost Tablet [false/true|default:true]
-	allow_lost_tablet = true
+	allow_lost_tablet = false
 	#Scroll of Reach [false/true|default:true]
 	allow_scroll_of_reach = true
 	#Scroll of Lightning Resistance [false/true|default:true]

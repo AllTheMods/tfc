@@ -41,7 +41,10 @@ onEvent("lootjs", (event) => {
     event
     .addLootTypeModifier(LootType.CHEST)
     .replaceLoot("minecraft:enchanting_table","tfc:gem/diamond");
-     event
-     .addEntityLootModifier("minecraft:zombie")
-     .removeLoot(Item.of("minecraft:iron_ingot"));
+    event
+    .addEntityLootModifier("minecraft:zombie")
+    .removeLoot(Item.of("minecraft:iron_ingot"));
+    event
+    .addEntityLootModifier("minecraft:husk")
+    .removeLoot(Item.of("minecraft:iron_ingot"));
      });
