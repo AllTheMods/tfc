@@ -14,6 +14,9 @@
     },
     {
       "item": "tfc:food/rye_flour",
+      "modifiers": [
+        "tfc:copy_oldest_food"
+      ],
       "count": 2,
       "chance": 0.25
     },

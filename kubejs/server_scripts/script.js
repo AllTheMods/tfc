@@ -550,6 +550,18 @@ onEvent('item.tags', event => {
 
     event.get('forge:cake').add(['minecraft:cake', 'tfc:cake'])
 
+    let corals =[
+    "tube",
+    "brain",
+    "bubble",
+    "fire",
+    "horn"
+    ]
+
+    corals.forEach(coral => {
+        event.get('tfc:corals').add(`tfc:coral/${coral}_coral`)
+    })
+
     let woodTypes =[
     "ash",
     "aspen",
@@ -641,6 +653,7 @@ onEvent('fluid.tags', event => {
 
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
+    event.get('tfc:usable_in_barrel').add('immersiveengineering:creosote')
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 })

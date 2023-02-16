@@ -10,10 +10,16 @@
   ],
   "results": [
     {
-      "item": "tfc:food/barley_flour"
+      "item": "tfc:food/barley_flour",
+      "modifiers": [
+        "tfc:copy_oldest_food"
+      ]
     },
     {
       "item": "tfc:food/barley_flour",
+      "modifiers": [
+        "tfc:copy_oldest_food"
+      ],
       "count": 2,
       "chance": 0.25
     },
