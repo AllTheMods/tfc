@@ -5,7 +5,8 @@ onEvent('jei.hide.items', event => {
 	event.hide('create:red_sand_paper')
 	event.hide('create:dough')
 
-
+    event.hide('createaddition:iron_wire')
+    event.hide('createaddition:gold_wire')
 
 	event.hide('minecraft:kelp')
 	event.hide('minecraft:dried_kelp')

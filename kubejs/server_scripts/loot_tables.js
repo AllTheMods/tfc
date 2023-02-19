@@ -47,4 +47,7 @@ onEvent("lootjs", (event) => {
     event
     .addEntityLootModifier("minecraft:husk")
     .removeLoot(Item.of("minecraft:iron_ingot"));
+    event
+    .addEntityLootModifier("minecraft:drowned")
+    .removeLoot(Item.of("minecraft:copper_ingot"));
      });

@@ -19,18 +19,18 @@ onEvent('recipes', event => {
 
 let material =["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
 let type = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
-material.forEach(material=>{
-  type.forEach(type =>{
-    event.remove({id:`mcwroofs:${material}_${type}`})
-    event.remove({id: `create:cutting/${material}_wood`})
-    event.remove({id: `create:cutting/stripped_${material}_wood`})
-    event.remove({id: `create:cutting/stripped_${material}_log`})
-    event.remove({id: `immersiveengineering:sawmill/${material}_log`})
-    event.remove({id: `immersiveengineering:sawmill/${material}_stairs`})
-    event.remove({id: `immersiveengineering:sawmill/${material}_door`})
-    event.remove({id: `immersiveengineering:sawmill/stripped_${material}_log`})
-  })
-})
+    material.forEach(material=>{
+      type.forEach(type =>{
+        event.remove({id:`mcwroofs:${material}_${type}`})
+        event.remove({id: `create:cutting/${material}_wood`})
+        event.remove({id: `create:cutting/stripped_${material}_wood`})
+        event.remove({id: `create:cutting/stripped_${material}_log`})
+        event.remove({id: `immersiveengineering:sawmill/${material}_log`})
+        event.remove({id: `immersiveengineering:sawmill/${material}_stairs`})
+        event.remove({id: `immersiveengineering:sawmill/${material}_door`})
+        event.remove({id: `immersiveengineering:sawmill/stripped_${material}_log`})
+      })
+    })
 
 
 function cloche(output, amount, seed, soil, render, time) {
@@ -78,6 +78,13 @@ cloche('tfc:food/rice','2', 'tfc:seeds/rice', '#tfc:dirt','tfc:wild_crop/rice',1
 
 cloche('tfc:melon','2', 'tfc:seeds/melon', '#tfc:dirt','tfc:wild_crop/melon',1600)
 cloche('tfc:pumpkin','2', 'tfc:seeds/pumpkin', '#tfc:dirt','tfc:wild_crop/pumpkin',1600)
+
+let windows =["oak", "birch", "spruce", "acacia"]
+windows.forEach(wood => {
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, `minecraft:${wood}_planks` , `tfc:wood/planks/${wood}`)
+})
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraft:dark_oak_planks' , 'tfc:wood/planks/hickory')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraft:jungle_planks' , 'tfc:wood/planks/palm')
 
 
 event.recipes.thermal.insolator('tfc:jute', 'tfc:seeds/jute').water(900)
@@ -152,7 +159,6 @@ let ferns =[
 "sword",
 "tree"
 ]
-
 ferns.forEach(fern => {
 event.custom({
     type: 'create:crushing',
@@ -201,14 +207,36 @@ let ingotz =[
 "nickel",
 "steel",
 "gold"
-
 ]
+
+let others =[
+"red_steel",
+"blue_steel",
+"zinc",
+"tin",
+"rose_gold",
+"bronze",
+"bismuth_bronze",
+"black_bronze"
+]
+
 let mold = "immersiveengineering:mold_plate"
+
 ingotz.forEach(ingot =>{
 event.recipes.immersiveengineeringMetalPress(`tfc:metal/sheet/${ingot}`, Ingredient.of(`immersiveengineering:plate_${ingot}`,2), mold)
 event.recipes.immersiveengineeringMetalPress(`tfc:metal/double_sheet/${ingot}`, Ingredient.of(`tfc:metal/sheet/${ingot}`,2), mold)
 
 })
+others.forEach(ingot =>{
+event.recipes.immersiveengineeringMetalPress(`tfc:metal/sheet/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`,2), mold)
+event.recipes.immersiveengineeringMetalPress(`tfc:metal/double_sheet/${ingot}`, Ingredient.of(`tfc:metal/sheet/${ingot}`,2), mold)
+
+})
+
+event.recipes.immersiveengineeringMetalPress('firmalife:metal/sheet/stainless_steel', Ingredient.of('firmalife:metal/ingot/stainless_steel',2), mold)
+event.recipes.immersiveengineeringMetalPress('firmalife:metal/double_sheet/stainless_steel', Ingredient.of('firmalife:metal/sheet/stainless_steel',2), mold)
+
+
 event.recipes.immersiveengineeringMetalPress('tfc:metal/sheet/wrought_iron', Ingredient.of('immersiveengineering:plate_iron',2), mold)
 event.recipes.immersiveengineeringMetalPress('tfc:metal/double_sheet/wrought_iron', Ingredient.of('tfc:metal/sheet/wrought_iron',2), mold)
 
@@ -217,6 +245,9 @@ event.remove({id: 'minecraft:ens_ancient_debris'})
 event.remove({id: 'immersiveengineering:jei_bucket_fuel'})
 event.remove({id: 'immersiveengineering:jei_bucket_sea_water'})
 event.remove({id: 'create:crafting/materials/andesite_alloy'})
+
+event.remove({id: 'createaddition:iron_wire'})
+event.remove({id: 'createaddition:gold_wire'})
 
 event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
 event.remove({id: 'create:filling/sweet_roll'})
@@ -347,9 +378,10 @@ modifyShaped(event, 'immersiveengineering:alloybrick', 2, ['SI ', 'IS ', '   '],
 modifyShaped(event, 'biggerreactors:graphite_dust', 1, ['DDD', 'DDD', 'DDD'], {
     D: 'tfc:powder/graphite'
   })
-  modifyShaped(event, 'immersiveengineering:hemp_fabric', 2, ['CCC', 'SSS', 'CCC'], {
+  modifyShaped(event, 'immersiveengineering:hemp_fabric', 3, ['CYC', 'SYS', 'YCY'], {
       S: '#forge:rods/wooden',
-      C: 'tfc:wool_cloth'
+      C: 'tfc:wool_cloth',
+      Y: 'tfc:wool_yarn'
     })
 modifyShaped(event, 'immersiveengineering:cokebrick', 3, ['CBC', 'BSB', 'CBC'], {
     S: '#forge:sandstone',
@@ -511,9 +543,11 @@ onEvent('item.tags', event => {
     event.get('forge:cinnabar').add(['tfc:ore/cinnabar', 'thermal:cinnabar'])
     event.get('forge:dusts/saltpeter').add('tfc:powder/saltpeter')
 
-    event.get('forge:cokesource').add(['minecraft:coal', 'tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
+    event.get('forge:cokesourcez').add(['minecraft:coal', 'tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
 
+    event.get('forge:cokesource').add(['tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
     event.get('tfc:axes').add('bloodmagic:soulaxe')
+
 
 
     event.get('forge:slimeballs').add('tfc:glue')
