@@ -4,13 +4,13 @@
     {
       "chance": 0.6,
       "output": {
-        "item": "tfc:ore/cryolite"
+        "item": "ae2:certus_quartz_crystal"
       }
     },
     {
       "chance": 0.2,
       "output": {
-        "item": "tfc:ore/cryolite"
+        "item": "ae2:certus_quartz_crystal"
       }
     },
     {
@@ -24,26 +24,26 @@
     {
       "chance": 0.5,
       "output": {
-        "item": "tfc:rock/raw/granite"
+        "item": "tfc:rock/raw/quartzite"
       }
     },
     {
       "chance": 0.3,
       "output": {
-        "item": "tfc:rock/loose/granite"
+        "item": "tfc:rock/loose/quartzite"
       }
     },
     {
       "chance": 0.2,
       "output": {
-        "item": "tfc:rock/gravel/granite"
+        "item": "tfc:rock/gravel/quartzite"
       }
     }
   ],
   "dimensions": [
-    "minecraft:overworld"
+    "beyond_earth:moon"
   ],
-  "weight": 35,
+  "weight": 20,
   "fail_chance": 0.15,
-  "sample_background": "tfc:rock/raw/granite"
+  "sample_background": "tfc:rock/raw/quartzite"
 }

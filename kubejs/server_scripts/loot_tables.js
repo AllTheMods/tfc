@@ -50,4 +50,7 @@ onEvent("lootjs", (event) => {
     event
     .addEntityLootModifier("minecraft:drowned")
     .removeLoot(Item.of("minecraft:copper_ingot"));
+   event
+    .addEntityLootModifier("minecraft:evoker")
+    .replaceLoot("minecraft:emerald","tfc:gem/emerald");
      });

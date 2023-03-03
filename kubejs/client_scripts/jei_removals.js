@@ -5,8 +5,6 @@ onEvent('jei.hide.items', event => {
 	event.hide('create:red_sand_paper')
 	event.hide('create:dough')
 
-    event.hide('createaddition:iron_wire')
-    event.hide('createaddition:gold_wire')
 
 	event.hide('minecraft:kelp')
 	event.hide('minecraft:dried_kelp')
@@ -15,6 +13,8 @@ onEvent('jei.hide.items', event => {
 	event.hide('minecraft:soul_torch')
 	event.hide('minecraft:lantern')
 	event.hide('minecraft:soul_lantern')
+
+    event.hide('bloodmagic:teleposer')
 
     event.hide('exnihilosequentia:acacia_sieve')
     event.hide('exnihilosequentia:birch_sieve')
@@ -28,7 +28,28 @@ onEvent('jei.hide.items', event => {
     event.hide('exnihilosequentia:witch_water_bucket')
 
     event.hide('exnihilosequentia:sea_water_bucket')
-
+    event.hide('minecraft:candle')
+    let candles =[
+    "white",
+    "orange",
+    "magenta",
+    "light_blue",
+    "yellow",
+    "lime",
+    "pink",
+    "gray",
+    "light_gray",
+    "cyan",
+    "purple",
+    "blue",
+    "brown",
+    "green",
+    "red",
+    "black"
+    ]
+    candles.forEach(candle => {
+    event.hide(`minecraft:${candle}_candle`)
+    })
     event.hide(/dark_oak/)
     event.hide(/ae2:tools.*/)
     event.hide(/allthemodium.*/)
