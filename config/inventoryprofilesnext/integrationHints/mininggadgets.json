@@ -1,0 +1,18 @@
+{
+    "com.direwolf20.mininggadgets.client.screens.ModificationTableScreen": {
+        "ignore": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "com.direwolf20.mininggadgets.common.containers.ModificationTableContainer": {
+        "ignore": true
+    }
+}
