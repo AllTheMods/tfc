@@ -352,7 +352,7 @@ modifyShaped(event, 'enderstorage:ender_pouch',1, ["BLB", "LPL", "BWB"], {
 modifyShaped(event, 'enderstorage:ender_tank',1, ["BWB", "OCO", "BPB"], {
        P: '#forge:ender_pearls',
 	   O: '#forge:obsidian',
-	   C: '#forge:chests/wooden',
+	   C: '#tfc:buckets',
 	   B: 'minecraft:blaze_rod',
 	   W: '#thermal:rockwool'
 })
@@ -482,6 +482,11 @@ modifyShaped(event, 'beyond_earth:oxygen_mask', 1, ['   ', 'SFS', 'SGS'], {
     S: '#forge:plates/iron',
     F: 'tfc:metal/helmet/steel',
     G: '#forge:glass'
+  })
+modifyShaped(event, 'create:hand_crank', 1, ['   ', 'WWW', '  A'], {
+    W: '#minecraft:planks',
+    A: 'create:andesite_alloy'
+
   })
 modifyShaped(event, 'create:andesite_alloy', 1, ['SZ ', 'ZS ', '   '], {
     S: '#tfc:igneous_extrusive_rock',
