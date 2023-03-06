@@ -575,5 +575,53 @@
                 "top": -25
             }
         }
+    },
+    "cofh.thermal.core.client.gui.device.DeviceComposterScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "cofh.thermal.expansion.client.gui.machine.MachineCrystallizerScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "cofh.thermal.dynamics.client.gui.ItemBufferScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "cofh.thermal.core.client.gui.storage.SatchelScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
     }
 }

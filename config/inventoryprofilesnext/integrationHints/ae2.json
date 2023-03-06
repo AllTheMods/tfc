@@ -184,5 +184,78 @@
                 "top": -25
             }
         }
+    },
+    "appeng.client.gui.implementations.PriorityScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "appeng.client.gui.me.networktool.NetworkStatusScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "appeng.client.gui.me.items.CraftingTermScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "appeng.client.gui.me.common.TerminalSettingsScreen": {
+        "ignore": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "appeng.client.gui.me.items.PatternEncodingTermScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "appeng.client.gui.me.interfaceterminal.InterfaceTerminalScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
     }
 }

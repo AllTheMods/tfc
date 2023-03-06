@@ -73,5 +73,80 @@
                 "top": -25
             }
         }
+    },
+    "com.simibubi.create.content.logistics.item.filter.FilterScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            },
+            "SORT": {
+                "horizontalOffset": 10,
+                "bottom": 10
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 10,
+                "bottom": 10
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 10,
+                "bottom": 10
+            }
+        }
+    },
+    "com.simibubi.create.content.logistics.item.filter.AttributeFilterScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            },
+            "SORT": {
+                "horizontalOffset": 20,
+                "bottom": 10
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20,
+                "bottom": 10
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20,
+                "bottom": 10
+            }
+        }
+    },
+    "com.simibubi.create.content.logistics.item.LinkedControllerScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            },
+            "SORT": {
+                "horizontalOffset": 10,
+                "bottom": 10
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 10,
+                "bottom": 10
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 10,
+                "bottom": 10
+            }
+        }
     }
 }

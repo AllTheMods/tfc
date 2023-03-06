@@ -1,5 +1,6 @@
 {
-    "net.minecraft.client.gui.screens.inventory.InventoryScreen": {
+    "net.permutated.exmachinis.machines.sieve.FluxSieveScreen": {
+        "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
                 "horizontalOffset": 20,
@@ -11,7 +12,8 @@
             }
         }
     },
-    "net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen": {
+    "net.permutated.exmachinis.machines.hammer.FluxHammerScreen": {
+        "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
                 "horizontalOffset": 20,
@@ -23,7 +25,8 @@
             }
         }
     },
-    "net.minecraft.client.gui.screens.inventory.ContainerScreen": {
+    "net.permutated.exmachinis.machines.compactor.FluxCompactorScreen": {
+        "playerSideOnly": true,
         "buttonHints": {
             "SHOW_EDITOR": {
                 "horizontalOffset": 20,
