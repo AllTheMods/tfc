@@ -56,7 +56,7 @@
 	#If prospect information should appear in the space above the hotbar (the actionbar). False will put them in the chat window.
 	sendProspectResultsToActionbar = true
 	#If hoe overlays (for hydration, nutrition, or temperature, shown when hovering over a plant or farmland while holding a hoe), should only be shown when the shift key is held down.
-	showHoeOverlaysOnlyWhenShifting = false
+	showHoeOverlaysOnlyWhenShifting = true
 	#If true, mods like Jade that add info when hovering on a block will add the hoe's overlay info to the tooltip, even when not holding a hoe.
 	showHoeOverlaysInInfoMods = true
 	#If familiarity is displayed as a percent rather than a heart

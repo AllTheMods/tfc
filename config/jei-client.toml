@@ -84,7 +84,7 @@
 	HorizontalAlignment = "LEFT"
 	#Horizontal alignment of the ingredient grid inside the available area
 	#Allowed Values: TOP, CENTER, BOTTOM
-	VerticalAlignment = "TOP"
+	VerticalAlignment = "CENTER"
 	#Visibility of the top page buttons. Use AUTO_HIDE to only show it when there are multiple pages.
 	#Allowed Values: ENABLED, AUTO_HIDE, DISABLED
 	ButtonNavigationVisibility = "ENABLED"
