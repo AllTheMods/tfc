@@ -81,18 +81,17 @@ cloche('tfc:pumpkin','2', 'tfc:seeds/pumpkin', '#tfc:dirt','tfc:wild_crop/pumpki
 
 let windows =["oak", "birch", "spruce", "acacia"]
 windows.forEach(wood => {
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, `minecraft:${wood}_planks` , `tfc:wood/planks/${wood}`)
+event.replaceInput({id: `create:${wood}_window`}, `minecraft:${wood}_planks` , `tfc:wood/planks/${wood}`)
 })
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraft:dark_oak_planks' , 'tfc:wood/planks/hickory')
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraft:jungle_planks' , 'tfc:wood/planks/palm')
-
+event.replaceInput({id: 'create:jungle_window'}, 'minecraft:jungle_planks' , 'tfc:wood/planks/palm')
+event.replaceInput({id: 'create:dark_oak_window'}, 'minecraft:dark_oak_planks' , 'tfc:wood/planks/hickory')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraft:oak_planks', '#minecraft:planks')
+event.replaceInput({input: 'minecraft:cobblestone', mod: 'create'}, 'minecraft:cobblestone', '#forge:cobblestone/normal')
+event.replaceInput({input: 'minecraft:smooth_stone', mod: 'create'}, 'minecraft:smooth_stone', '#tfc:rock/smooth')
 
 event.recipes.thermal.insolator('tfc:jute', 'tfc:seeds/jute').water(900)
 event.recipes.thermal.insolator('tfc:melon', 'tfc:seeds/melon').water(750)
 event.recipes.thermal.insolator('tfc:pumpkin','tfc:seeds/pumpkin').water(750)
-event.remove({id: 'enderstorage:ender_chest'})
-event.remove({id: 'enderstorage:ender_tank'})
-event.remove({id: 'enderstorage:ender_pouch'})
 let seeds =[
 "carrot",
 "onion",
@@ -298,7 +297,6 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecra
 
 event.replaceInput({type: 'create:mixing', mod: 'create'}, 'create:wheat_flour', '#tfc:foods/flour')
 
-
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:dirt', '#tfc:dirt')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:cured_rubber', 'immersiveengineering:plate_duroplast')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'waystones'}, 'minecraft:emerald', 'tfc:gem/emerald')
@@ -482,11 +480,6 @@ modifyShaped(event, 'beyond_earth:oxygen_mask', 1, ['   ', 'SFS', 'SGS'], {
     S: '#forge:plates/iron',
     F: 'tfc:metal/helmet/steel',
     G: '#forge:glass'
-  })
-modifyShaped(event, 'create:hand_crank', 1, ['   ', 'WWW', '  A'], {
-    W: '#minecraft:planks',
-    A: 'create:andesite_alloy'
-
   })
 modifyShaped(event, 'create:andesite_alloy', 1, ['SZ ', 'ZS ', '   '], {
     S: '#tfc:igneous_extrusive_rock',
