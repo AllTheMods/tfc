@@ -15,7 +15,11 @@ onEvent('jei.hide.items', event => {
 	event.hide('minecraft:soul_lantern')
 
     event.hide('bloodmagic:teleposer')
+    let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 
+    woods.forEach(logz => {
+        event.hide(`minecraft:${logz}_sign`)
+    })
     event.hide('exnihilosequentia:acacia_sieve')
     event.hide('exnihilosequentia:birch_sieve')
     event.hide('exnihilosequentia:dark_oak_sieve')
@@ -55,7 +59,7 @@ onEvent('jei.hide.items', event => {
     event.hide(/allthemodium.*/)
     event.hide(/vibranium.*/)
     event.hide(/unobtainium.*/)
-
+    event.hide(/platinum.*/)
 	event.hide('beyond_earth:coal_torch')
 	event.hide('beyond_earth:coal_lantern')
 })

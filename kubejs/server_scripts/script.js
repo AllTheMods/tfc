@@ -85,6 +85,7 @@ event.replaceInput({id: `create:${wood}_window`}, `minecraft:${wood}_planks` , `
 })
 event.replaceInput({id: 'create:jungle_window'}, 'minecraft:jungle_planks' , 'tfc:wood/planks/palm')
 event.replaceInput({id: 'create:dark_oak_window'}, 'minecraft:dark_oak_planks' , 'tfc:wood/planks/hickory')
+
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraft:oak_planks', '#minecraft:planks')
 event.replaceInput({input: 'minecraft:cobblestone', mod: 'create'}, 'minecraft:cobblestone', '#forge:cobblestone/normal')
 event.replaceInput({input: 'minecraft:smooth_stone', mod: 'create'}, 'minecraft:smooth_stone', '#tfc:rock/smooth')
@@ -205,6 +206,7 @@ event.custom({
 let ingotz =[
 "copper",
 "silver",
+"sterling_silver",
 "nickel",
 "steel",
 "gold"
@@ -213,36 +215,59 @@ let ingotz =[
 let others =[
 "red_steel",
 "blue_steel",
+"black_steel",
+"wrought_iron",
 "zinc",
 "tin",
 "rose_gold",
 "bronze",
+"bismuth",
 "bismuth_bronze",
 "black_bronze"
 ]
+event.remove({id:'immersiveposts:has_copper_rod'})
+event.remove({id:'immersiveposts:has_lead_rod'})
+event.remove({id:'immersiveposts:has_gold_rod'})
+event.remove({id:'immersiveposts:has_electrum_rod'})
+event.remove({id:'immersiveposts:has_constantan_rod'})
 
 let mold = "immersiveengineering:mold_plate"
 
 ingotz.forEach(ingot =>{
-event.recipes.immersiveengineeringMetalPress(Ingredient.of(`tfc:metal/sheet/${ingot}`).ignoreNBT(), Ingredient.of(`immersiveengineering:plate_${ingot}`,2).ignoreNBT(), mold)
-event.recipes.immersiveengineeringMetalPress(Ingredient.of(`tfc:metal/double_sheet/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${ingot}`,2).ignoreNBT(), mold)
+event.recipes.immersiveengineeringMetalPress(Ingredient.of(`tfc:metal/sheet/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/double_ingot/${ingot}`).ignoreNBT(), mold)
+event.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_sheet/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${ingot}`).ignoreNBT())
+event.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_ingot/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT())
 
 })
 others.forEach(ingot =>{
-event.recipes.immersiveengineeringMetalPress(`tfc:metal/sheet/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`,2).ignoreNBT(), mold)
-event.recipes.immersiveengineeringMetalPress(`tfc:metal/double_sheet/${ingot}`, Ingredient.of(`tfc:metal/sheet/${ingot}`,2).ignoreNBT(), mold)
+event.recipes.immersiveengineeringMetalPress(`tfc:metal/sheet/${ingot}`, Ingredient.of(`tfc:metal/double_ingot/${ingot}`).ignoreNBT(), mold)
+event.recipes.immersiveengineeringArcFurnace(`tfc:metal/double_sheet/${ingot}`, Ingredient.of(`tfc:metal/sheet/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${ingot}`).ignoreNBT())
+event.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_ingot/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT())
 
 })
+event.recipes.createPressing('tfc:refined_iron_bloom', Ingredient.of('tfc:raw_iron_bloom').ignoreNBT())
+event.recipes.createPressing('tfc:metal/ingot/wrought_iron', Ingredient.of('tfc:refined_iron_bloom').ignoreNBT())
+
+event.recipes.immersiveengineeringMetalPress(`firmalife:metal/sheet/chromium`, Ingredient.of(`firmalife:metal/double_ingot/chromium`).ignoreNBT(), mold)
+event.recipes.immersiveengineeringArcFurnace(`firmalife:metal/double_sheet/chromium`, Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT(), Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT())
+event.recipes.immersiveengineeringMetalPress(`firmalife:metal/sheet/stainless_steel`, Ingredient.of(`firmalife:metal/double_ingot/stainless_steel`).ignoreNBT(), mold)
+event.recipes.immersiveengineeringArcFurnace(`firmalife:metal/double_sheet/stainless_steel`, Ingredient.of(`firmalife:metal/sheet/stainless_steel`).ignoreNBT(), Ingredient.of(`firmalife:metal/sheet/stainless_steel`).ignoreNBT())
 let mold2 = "immersiveengineering:mold_rod"
 ingotz.forEach(ingot =>{
-event.recipes.immersiveengineeringMetalPress(Ingredient.of(`tfc:metal/rod/${ingot}`,2).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), mold2)
+event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), mold2)
 })
 others.forEach(ingot =>{
 event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), mold2)
 
 })
+event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
+event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
 
+let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 
+woods.forEach(logz => {
+    event.remove({id: `minecraft:${logz}_sign`})
+})
 event.remove({id: 'immersivepetroleum:candle'})
 event.remove({id: 'minecraft:candle'})
 event.remove({id: 'firmalife:crafting/bee_candle'})
@@ -252,12 +277,7 @@ modifyShaped(event, 'tfc:candle', 4, [' S ', ' I ', '   '], {
     I: '#forge:wax'
   })
 
-event.recipes.immersiveengineeringMetalPress('firmalife:metal/sheet/stainless_steel', Ingredient.of('firmalife:metal/ingot/stainless_steel',2).ignoreNBT(), mold)
-event.recipes.immersiveengineeringMetalPress('firmalife:metal/double_sheet/stainless_steel', Ingredient.of('firmalife:metal/sheet/stainless_steel',2).ignoreNBT(), mold)
 
-
-event.recipes.immersiveengineeringMetalPress('tfc:metal/sheet/wrought_iron', Ingredient.of('immersiveengineering:plate_iron',2), mold)
-event.recipes.immersiveengineeringMetalPress('tfc:metal/double_sheet/wrought_iron', Ingredient.of('tfc:metal/sheet/wrought_iron',2), mold)
 
 event.remove({id: 'minecraft:minecart'})
 event.remove({id: 'minecraft:ens_ancient_debris'})
@@ -282,7 +302,6 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineerin
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/copper', '#forge:sheets/copper')
 
 event.replaceInput({type: 'minecraft:crafting_shaped'}, 'minecraft:stone_bricks', '#forge:stone_bricks')
-
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/steel', '#forge:sheets/steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
@@ -350,7 +369,7 @@ modifyShaped(event, 'enderstorage:ender_pouch',1, ["BLB", "LPL", "BWB"], {
 modifyShaped(event, 'enderstorage:ender_tank',1, ["BWB", "OCO", "BPB"], {
        P: '#forge:ender_pearls',
 	   O: '#forge:obsidian',
-	   C: '#tfc:buckets',
+	   C: 'minecraft:bucket',
 	   B: 'minecraft:blaze_rod',
 	   W: '#thermal:rockwool'
 })
@@ -537,7 +556,7 @@ modifyShaped(event, 'apotheosis:scrap_tome', 8, ['BBB', 'BAB', 'BBB'], {
       R: '#forge:rods/wrought_iron',
       L: '#forge:treated_lumber'
     })
-    modifyShaped(event, 'immersiveengineering:conveyor_basic', 1, ['AAA', 'RLR', 'AAA'], {
+    modifyShaped(event, 'immersiveengineering:conveyor_basic', 4, ['AAA', 'RLR', 'AAA'], {
           A: 'create:belt_connector',
           R: '#forge:rods/nickel',
           L: '#forge:rods/wrought_iron'
@@ -574,6 +593,7 @@ let candles =[
 "red",
 "black"
 ]
+    event.get('forge:seeds').removeAll().add('#tfc:seeds')
     event.get('minecraft:candles').removeAll()
     event.get('minecraft:candles').add('tfc:candle')
     candles.forEach(candle =>{
