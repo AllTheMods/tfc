@@ -53,6 +53,34 @@ onEvent('item.tags', e => {
     berries.forEach(berry => {
     e.add('forge:berries', [`tfc:food/${berry}`])
     })
+
+    e.removeAll('tombstone:seeds')
+    let seeds =[
+    "carrot",
+    "onion",
+    "squash",
+    "garlic",
+    "maize",
+    "cabbage",
+    "potato",
+    "tomato",
+    "beet",
+    "soybean",
+    "green_bean",
+    "sugarcane",
+    "barley",
+    "oat",
+    "rye",
+    "rice",
+    "pumpkin",
+    "melon",
+    "jute",
+    "wheat"
+    ]
+
+    seeds.forEach(seed => {
+    e.add('tombstone:seeds', [`tfc:seeds/${seed}`])
+    })
 })
 onEvent('fluid.tags', e => {
 e.add('forge:refined_fuel', ['thermal:refined_fuel'])

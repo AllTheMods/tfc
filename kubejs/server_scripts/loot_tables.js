@@ -16,7 +16,7 @@ onEvent("lootjs", (event) => {
     .removeLoot(/unobtainium.*/);
     event
     .addLootTypeModifier(LootType.CHEST)
-    .removeLoot(Item.of("minecraft:fishing_rod"));
+    .removeLoot(Item.of("minecraft:fishing_rod").ignoreNBT());
     event
     .addLootTypeModifier(LootType.CHEST)
     .removeLoot(Item.of("minecraft:anvil"));
@@ -42,6 +42,27 @@ onEvent("lootjs", (event) => {
     .addLootTypeModifier(LootType.CHEST)
     .replaceLoot("minecraft:enchanting_table","tfc:gem/diamond");
     event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:carrot","tfc:food/carrot",true);
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:potato","tfc:food/potato",true);
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:wheat","tfc:food/wheat",true);
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:pumpkin","tfc:pumpkin",true);
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:beetroot_seeds","tfc:seeds/beet",true);
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:melon_seeds","tfc:seeds/melon",true);
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:pumpkin_seeds","tfc:seeds/pumpkin",true);
+    event
     .addEntityLootModifier("minecraft:zombie")
     .removeLoot(Item.of("minecraft:iron_ingot"));
     event
@@ -50,7 +71,7 @@ onEvent("lootjs", (event) => {
     event
     .addEntityLootModifier("minecraft:drowned")
     .removeLoot(Item.of("minecraft:copper_ingot"));
-   event
+    event
     .addEntityLootModifier("minecraft:evoker")
     .replaceLoot("minecraft:emerald","tfc:gem/emerald");
      });
