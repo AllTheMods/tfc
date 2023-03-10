@@ -1,0 +1,10 @@
+{
+  "type": "tombstone:disableable_shaped",
+  "pattern": ["010", "234", "010"],
+  "key": {
+    "0": {"item": "tombstone:grave_dust"}, "1": {"item": "clay_ball"}, "2": {"tag": "forge:leather"},
+    "3": {"item": "tfc:plant/dead_bush"}, "4": {"tag": "forge:string"}
+  },
+  "result": {"item": "tombstone:voodoo_poppet"}
+}
+

@@ -21,7 +21,7 @@ let material =["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesi
 let type = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
     material.forEach(material=>{
       type.forEach(type =>{
-        event.remove({id:`mcwroofs:${material}_${type}`})
+        event.remove({id: `mcwroofs:${material}_${type}`})
         event.remove({id: `create:cutting/${material}_wood`})
         event.remove({id: `create:cutting/stripped_${material}_wood`})
         event.remove({id: `create:cutting/stripped_${material}_log`})
@@ -138,6 +138,7 @@ event.remove({id: 'minecraft:honey_bottle'})
 event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
 event.remove({id: 'tombstone:white_marble'})
+event.remove({output: Item.of('tombstone:fishing_rod_of_misadventure').ignoreNBT()})
 
 let gemStones =[
 "amethyst",
