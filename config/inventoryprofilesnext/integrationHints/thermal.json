@@ -623,5 +623,44 @@
                 "top": -25
             }
         }
+    },
+    "cofh.thermal.dynamics.client.gui.attachment.EnergyLimiterAttachmentScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "cofh.thermal.dynamics.client.gui.attachment.FluidTurboServoAttachmentScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "cofh.thermal.dynamics.client.gui.attachment.FluidServoAttachmentScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
     }
 }
