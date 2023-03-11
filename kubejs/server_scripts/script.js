@@ -264,6 +264,8 @@ event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingred
 event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
 event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
 
+event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
+
 let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 
 woods.forEach(logz => {

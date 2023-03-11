@@ -1,0 +1,8 @@
+{
+  "type": "thermal:rock_gen",
+  "adjacent": "minecraft:water",
+  "below": "tfc:rock/magma/basalt",
+  "result": {
+    "item": "minecraft:stone"
+  }
+}

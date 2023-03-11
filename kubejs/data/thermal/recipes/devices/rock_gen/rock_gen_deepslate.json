@@ -1,0 +1,8 @@
+{
+  "type": "thermal:rock_gen",
+  "adjacent": "minecraft:packed_ice",
+  "below": "tfc:rock/magma/basalt",
+  "result": {
+    "item": "minecraft:deepslate"
+  }
+}
