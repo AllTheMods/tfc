@@ -1,7 +1,7 @@
 {
   "type": "thermal:tree_extractor",
-  "trunk": "tfc:wood/log/douglas_fir",
-  "leaves": "tfc:wood/leaves/douglas_fir",
+  "trunk": "tfc:wood/log/hickory",
+  "leaves": "tfc:wood/leaves/hickory",
   "result": {
     "fluid": "thermal:resin",
     "amount": 25
