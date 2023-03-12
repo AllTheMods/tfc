@@ -1,0 +1,13 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "ingredient": [
+    {
+      "item": "immersiveengineering:coal_coke"
+    },
+    {
+      "item": "immersivepetroleum:petcoke"
+    }
+  ],
+  "duration": 4400,
+  "temperature": 1415
+}
