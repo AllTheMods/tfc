@@ -21,7 +21,7 @@ let material =["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesi
 let type = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
     material.forEach(material=>{
       type.forEach(type =>{
-        event.remove({id:`mcwroofs:${material}_${type}`})
+        event.remove({id: `mcwroofs:${material}_${type}`})
         event.remove({id: `create:cutting/${material}_wood`})
         event.remove({id: `create:cutting/stripped_${material}_wood`})
         event.remove({id: `create:cutting/stripped_${material}_log`})
@@ -138,6 +138,7 @@ event.remove({id: 'minecraft:honey_bottle'})
 event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
 event.remove({id: 'tombstone:white_marble'})
+event.remove({output: Item.of('tombstone:fishing_rod_of_misadventure').ignoreNBT()})
 
 let gemStones =[
 "amethyst",
@@ -262,6 +263,8 @@ event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingred
 })
 event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
 event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
+
+event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
 
 let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 

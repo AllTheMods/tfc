@@ -1,7 +1,7 @@
 {
   "type": "thermal:tree_extractor",
-  "trunk": "tfc:wood/log/white_cedar",
-  "leaves": "tfc:wood/leaves/white_cedar",
+  "trunk": "tfc:wood/log/willow",
+  "leaves": "tfc:wood/leaves/willow",
   "result": {
     "fluid": "thermal:resin",
     "amount": 25

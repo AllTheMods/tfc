@@ -63,6 +63,9 @@ onEvent("lootjs", (event) => {
     .addLootTypeModifier(LootType.CHEST)
     .replaceLoot("minecraft:pumpkin_seeds","tfc:seeds/pumpkin",true);
     event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:dead_bush","tfc:plant/dead_bush",true);
+    event
     .addEntityLootModifier("minecraft:zombie")
     .removeLoot(Item.of("minecraft:iron_ingot"));
     event
