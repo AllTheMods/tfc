@@ -12,7 +12,7 @@
       "F": {
         "type": "tfc:not_rotten",
         "ingredient": {
-          "tag": "tfc:foods/grains"
+          "tag": "tfc:small_fishing_bait"
         }
       }
     },

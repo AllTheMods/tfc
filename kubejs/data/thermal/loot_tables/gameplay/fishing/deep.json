@@ -1,0 +1,111 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [   
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "tfc:food/cod"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "tfc:food/salmon"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "tfc:food/bluegill"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:pufferfish"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 36,
+          "name": "tfc:food/tropical_fish"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:plant/winged_kelp"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:plant/leafy_kelp"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:plant/giant_kelp_flower"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:sea_pickle"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:bone"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:ink_sac"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:glow_ink_sac"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:food/calamari"
+        },
+        {
+        "type": "minecraft:item",
+        "weight": 8,
+        "name": "tfc:food/shellfish"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:groundcover/mollusk"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:groundcover/clam"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "name": "minecraft:wet_sponge"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:nautilus_shell"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "firmalife:hollow_shell"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "tfc:blubber"
+        }
+      ]
+    }
+  ]
+}
