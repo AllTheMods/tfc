@@ -246,8 +246,8 @@ event.recipes.immersiveengineeringArcFurnace(`tfc:metal/double_sheet/${ingot}`, 
 event.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_ingot/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT())
 
 })
-event.recipes.createCompacting('tfc:refined_iron_bloom', Ingredient.of('tfc:raw_iron_bloom').ignoreNBT()).heated()
-event.recipes.createCompacting('tfc:metal/ingot/wrought_iron', Ingredient.of('tfc:refined_iron_bloom').ignoreNBT()).heated()
+event.recipes.createPressing('tfc:refined_iron_bloom', Ingredient.of('tfc:raw_iron_bloom').ignoreNBT())
+event.recipes.createPressing('tfc:metal/ingot/wrought_iron', Ingredient.of('tfc:refined_iron_bloom').ignoreNBT())
 
 event.recipes.immersiveengineeringMetalPress(`firmalife:metal/sheet/chromium`, Ingredient.of(`firmalife:metal/double_ingot/chromium`).ignoreNBT(), mold)
 event.recipes.immersiveengineeringArcFurnace(`firmalife:metal/double_sheet/chromium`, Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT(), Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT())
