@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [   
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "tfc:food/cod"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "tfc:food/salmon"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "tfc:food/bluegill"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 36,
+          "name": "tfc:food/tropical_fish"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "minecraft:bone"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:groundcover/seaweed"
+        }
+      ]
+    }
+  ]
+}

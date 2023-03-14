@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [   
+        {
+          "type": "minecraft:item",
+          "weight": 48,
+          "name": "minecraft:seagrass"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 36,
+          "name": "tfc:plant/manatee_grass"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 36,
+          "name": "tfc:plant/eel_grass"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 36,
+          "name": "tfc:plant/turtle_grass"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "tfc:groundcover/seaweed"
+        }
+      ]
+    }
+  ]
+}

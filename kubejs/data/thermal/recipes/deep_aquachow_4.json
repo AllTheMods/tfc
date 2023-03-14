@@ -12,13 +12,13 @@
       "F": {
         "type": "tfc:not_rotten",
         "ingredient": {
-          "tag": "tfc:foods/grains"
+          "tag": "tfc:large_fishing_bait"
         }
       },
       "B": {
         "type": "tfc:not_rotten",
         "ingredient": {
-          "tag": "tfc:food/beet"
+          "tag": "tfc:large_fishing_bait"
         }
       },
       "L": {
