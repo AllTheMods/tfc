@@ -80,5 +80,11 @@ onEvent("lootjs", (event) => {
     .replaceLoot("minecraft:emerald","tfc:gem/emerald");
     event
     .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:cooked_porkchop"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:porkchop","tfc:food/pork");
+    event
+    .addLootTypeModifier(LootType.CHEST)
     .replaceLoot("minecraft:barrel","tfcbarrels:wood/barrel/oak");
      });
