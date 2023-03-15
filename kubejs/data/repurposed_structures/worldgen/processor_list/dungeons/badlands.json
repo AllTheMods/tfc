@@ -17,6 +17,32 @@
         },
         {
           "output_state": {
+            "Name": "tfc:smooth_sandstone/yellow"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/yellow",
+            "probability": 0.25,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "tfc:smooth_sandstone/black"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/black",
+            "probability": 0.25,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
             "Name": "tfc:smooth_sandstone/white"
           },
           "input_predicate": {
