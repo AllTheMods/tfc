@@ -826,6 +826,10 @@ onEvent('entity.spawned', event => {
     console.log("Spawn")
     entity.setItem("tfc:wood/chest/oak")
   }
+  if (entity.type == "minecraft:item" && entity.item == "minecraft:barrel") {
+    console.log("Spawn")
+    entity.setItem("tfcbarrels:wood/barrel/oak")
+  }
   let dimension = level.getDimension()
   if (dimension == "beyond_earth:mercury") {
     if (entity.isLiving() && !entity.isPlayer()) {
