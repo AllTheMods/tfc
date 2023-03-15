@@ -80,6 +80,15 @@ onEvent("lootjs", (event) => {
     .replaceLoot("minecraft:emerald","tfc:gem/emerald");
     event
     .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:lava_bucket"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:water_bucket"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:powder_snow_bucket"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
     .removeLoot(Item.of("minecraft:cooked_porkchop"));
     event
     .addLootTypeModifier(LootType.CHEST)
