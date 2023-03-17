@@ -127,6 +127,9 @@ event.remove({id: 'minecraft:furnace_minecart'})
 event.remove({id: 'beyond_earth:coal_generator'})
 event.remove({id: 'beyond_earth:compressor'})
 
+event.remove({id: 'minecraft:stone_brick_wall'})
+event.remove({id: 'minecraft:stone_brick_slab'})
+
 event.remove({id: 'beyond_earth:compressing/compressed_desh'})
 event.remove({id: 'beyond_earth:compressing/compressed_ostrum'})
 event.remove({id: 'beyond_earth:compressing/compressed_calorite'})
