@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "name": "tfc:metal/bucket/blue_steel",
+            "type": "minecraft:item",
+            "weight": 1,
+            "functions": [
+                {
+                    "function": "minecraft:set_nbt",
+                    "tag": "{fluid:{FluidName:\"minecraft:lava\",Amount:1000}}"
+                }
+          ]
+        }
+        ]
+      }
+    ]
+}
+  

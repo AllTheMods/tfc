@@ -1,0 +1,84 @@
+{
+  "processors": [
+    {
+      "rules": [
+        {
+          "output_state": {
+            "Name": "tfc:smooth_sandstone/red"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/red",
+            "probability": 0.25,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "tfc:smooth_sandstone/yellow"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/yellow",
+            "probability": 0.25,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "tfc:smooth_sandstone/black"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/black",
+            "probability": 0.25,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "tfc:smooth_sandstone/white"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/white",
+            "probability": 0.5,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Name": "tfc:smooth_sandstone/brown"
+          },
+          "input_predicate": {
+            "block": "tfc:raw_sandstone/brown",
+            "probability": 0.75,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          }
+        }
+      ],
+      "processor_type": "minecraft:rule"
+    },
+    {
+      "processor_type": "repurposed_structures:replace_air_only_processor"
+    },
+    {
+      "processor_type": "repurposed_structures:remove_floating_blocks_processor"
+    },
+    {
+      "processor_type": "repurposed_structures:spawner_randomizing_processor",
+      "rs_spawner_resourcelocation": "repurposed_structures:dungeons/badlands"
+    }
+  ]
+}

@@ -1,17 +1,18 @@
 onEvent("lootjs", (event) => {
+    //event.enableLogging();
     event
     .addLootTypeModifier(LootType.CHEST)
     .removeLoot(Item.of("minecraft:bucket"));
-     event
+    event
     .addLootTypeModifier(LootType.CHEST)
     .removeLoot(Item.of("minecraft:bread"));
-     event
+    event
     .addLootTypeModifier(LootType.CHEST)
     .removeLoot(/allthemodium.*/);
-     event
+    event
     .addLootTypeModifier(LootType.CHEST)
     .removeLoot(/vibranium.*/);
-     event
+    event
     .addLootTypeModifier(LootType.CHEST)
     .removeLoot(/unobtainium.*/);
     event
@@ -77,4 +78,22 @@ onEvent("lootjs", (event) => {
     event
     .addEntityLootModifier("minecraft:evoker")
     .replaceLoot("minecraft:emerald","tfc:gem/emerald");
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:lava_bucket"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:water_bucket"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:powder_snow_bucket"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .removeLoot(Item.of("minecraft:cooked_porkchop"));
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:porkchop","tfc:food/pork");
+    event
+    .addLootTypeModifier(LootType.CHEST)
+    .replaceLoot("minecraft:barrel","tfcbarrels:wood/barrel/oak");
      });
