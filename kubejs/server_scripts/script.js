@@ -381,6 +381,22 @@ modifyShaped(event, 'enderstorage:ender_tank',1, ["BWB", "OCO", "BPB"], {
 	   B: 'minecraft:blaze_rod',
 	   W: '#thermal:rockwool'
 })
+event.remove({type: 'enderstorage:recolour_recipe'})
+event.custom({
+    "type": "enderstorage:recolour_recipe",
+    "result": {
+      "item": "enderstorage:ender_chest"
+  }}).id('kubejs:ender_chest_recolour_manual_only')
+event.custom({
+    "type": "enderstorage:recolour_recipe",
+	  "result": {
+		  "item": "enderstorage:ender_pouch"
+	}}).id('kubejs:ender_pouch_recolour_manual_only')
+event.custom({
+    "type": "enderstorage:recolour_recipe",
+	  "result": {
+		  "item": "enderstorage:ender_tank"
+	}}).id('kubejs:ender_tank_recolour_manual_only')
 modifyShaped(event, 'ae2:nether_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
     Q: 'minecraft:quartz',
     I: '#forge:rods/wrought_iron'
