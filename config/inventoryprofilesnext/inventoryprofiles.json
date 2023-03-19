@@ -13,6 +13,19 @@
         },
         "continuous_crafting_saved_value": false
     },
+    "AutoRefillSettings": {
+        "tool_damage_threshold": 1,
+        "type_visual_durability_notification": "CHAT",
+        "audio_durability_notification": {
+            "value": false
+        },
+        "number_of_notifications": 1,
+        "type_visual_replace_success_notification": "CHAT",
+        "audio_replace_failed_notification": {
+            "value": false
+        },
+        "type_visual_replace_failed_notification": "CHAT"
+    },
     "Hotkeys": {
         "sort_inventory": {
             "main": {
