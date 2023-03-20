@@ -1,10 +1,10 @@
 {
 	"type":"createaddition:rolling",
 	"input": {
-		"tag": "forge:ingots/nickel"
+		"tag": "forge:ingots/bronze"
 	},
 	"result": {
-		"item": "tfc:metal/rod/nickel",
+		"item": "tfc:metal/rod/bronze",
 		"count": 2
 	}
 }
