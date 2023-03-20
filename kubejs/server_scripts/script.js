@@ -381,6 +381,22 @@ modifyShaped(event, 'enderstorage:ender_tank',1, ["BWB", "OCO", "BPB"], {
 	   B: 'minecraft:blaze_rod',
 	   W: '#thermal:rockwool'
 })
+event.remove({type: 'enderstorage:recolour_recipe'})
+event.custom({
+    "type": "enderstorage:recolour_recipe",
+    "result": {
+      "item": "enderstorage:ender_chest"
+  }}).id('kubejs:ender_chest_recolour_manual_only')
+event.custom({
+    "type": "enderstorage:recolour_recipe",
+	  "result": {
+		  "item": "enderstorage:ender_pouch"
+	}}).id('kubejs:ender_pouch_recolour_manual_only')
+event.custom({
+    "type": "enderstorage:recolour_recipe",
+	  "result": {
+		  "item": "enderstorage:ender_tank"
+	}}).id('kubejs:ender_tank_recolour_manual_only')
 modifyShaped(event, 'ae2:nether_quartz_wrench', 1, ['Q Q', ' I ', ' I '], {
     Q: 'minecraft:quartz',
     I: '#forge:rods/wrought_iron'
@@ -575,10 +591,186 @@ modifyShaped(event, 'apotheosis:scrap_tome', 8, ['BBB', 'BAB', 'BBB'], {
         })
 
 
+function tfcbuckets(output, fluid, amount, input, multiplier) {
+  event.remove({output: output})
+  event.shapeless(`${multiplier}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_1_manual_only`)
+  event.shapeless(`${multiplier * 2}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_2_manual_only`)
+  event.shapeless(`${multiplier * 3}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_3_manual_only`)
+  event.shapeless(`${multiplier *4}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input,
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_4_manual_only`)
+  event.shapeless(`${multiplier * 5}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input,
+    input,
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_5_manual_only`)
+  event.shapeless(`${multiplier * 6}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input,
+    input,
+    input,
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_6_manual_only`)
+  event.shapeless(`${multiplier * 7}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input,
+    input,
+    input,
+    input,
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_7_manual_only`)
+  event.shapeless(`${multiplier * 8}x ${output}`,[
+    {
+      type: 'tfc:fluid_item',
+      "fluid_ingredient": {
+      "ingredient": fluid,
+      "amount": amount}
+    },
+    input,
+    input,
+    input,
+    input,
+    input,
+    input,
+    input,
+    input
+  ]).id(`kubejs:${output.replace(`:`,`/`)}_8_manual_only`)
+  event.recipes.createMixing(`${multiplier}x ${output}`,[
+    Fluid.of(fluid, amount),
+    input
+  ]).id(`kubejs:${output.replace(':','/')}_mixer`)
+}
+
+  let grains = [
+      "barley",
+      "maize",
+      "oat",
+      "rye",
+      "rice",
+      "wheat"
+    ]
+
+  grains.forEach (grain => {
+      event.remove({output: `firmalife:food/${grain}_dough`})
+      event.shapeless(`4x firmalife:food/${grain}_dough`,[
+        {
+          type: 'tfc:fluid_item',
+          "fluid_ingredient": {
+          "ingredient": "firmalife:yeast_starter",
+          "amount": 100}
+        },
+        {
+          type: "tfc:not_rotten",
+          "ingredient": {
+          "item": `tfc:food/${grain}_flour`}
+        },
+        "#firmalife:sweetener"
+        ])
+        .id(`kubejs:food/${grain}_dough_manual_only`)
+      event.recipes.createMixing(`4x firmalife:food/${grain}_dough`,[
+          Fluid.of('firmalife:yeast_starter',100),
+          {
+            type: "tfc:not_rotten",
+            "ingredient": {
+            "item": `tfc:food/${grain}_flour`
+          }},
+          "#firmalife:sweetener"
+        ])
+        .id(`kubejs:food/${grain}_dough_mixer`)
+      tfcbuckets(`tfc:food/${grain}_dough`,'minecraft:water', 100, {
+        type: "tfc:not_rotten",
+        "ingredient": {
+        "item": `tfc:food/${grain}_flour`
+      }},2)
+    })
+
+  tfcbuckets(`firmalife:food/masa`, `minecraft:water`, 100, {
+    type: "tfc:not_rotten",
+    "ingredient": {
+    "item": `firmalife:food/masa_flour`
+  }},2)
+  
+  let dirts = [
+    "silt",
+    "loam",
+    "sandy_loam",
+    "silty_loam"
+  ]
+  dirts.forEach(dirt => {
+    tfcbuckets(`tfc:mud/${dirt}`, 'minecraft:water', 100, `tfc:dirt/${dirt}`, 1)
+  })
+  event.remove({output: 'firmalife:watering_can'})
+  event.shapeless('firmalife:watering_can',[
+    {
+      "type": "tfc:fluid_item",
+      "fluid_ingredient": {
+        "ingredient": "minecraft:water",
+        "amount": 1000
+      }
+    },
+    'tfc:wooden_bucket','#tfc:lumber'
+  ]).id('kubejs:firmalife_watering_can_manual_only')
+  event.recipes.createMixing(`firmalife:watering_can`,[
+    Fluid.of('minecraft:water',1000),'tfc:wooden_bucket','#tfc:lumber'])
 })
-
-
-
 
 onEvent('item.tags', event => {
 	// Get the #forge:cobblestone tag collection and add Diamond Ore to it
@@ -857,3 +1049,4 @@ onEvent('item.right_click', event => {
         }
     }
 })
+
