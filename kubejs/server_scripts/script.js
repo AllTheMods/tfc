@@ -234,6 +234,8 @@ event.remove({id:'immersiveposts:has_lead_rod'})
 event.remove({id:'immersiveposts:has_gold_rod'})
 event.remove({id:'immersiveposts:has_electrum_rod'})
 event.remove({id:'immersiveposts:has_constantan_rod'})
+event.remove({id:'immersiveposts:has_uranium_rod'})
+event.remove({id:'immersiveposts:has_silver_rod'})
 
 let mold = "immersiveengineering:mold_plate"
 
@@ -259,15 +261,22 @@ event.recipes.immersiveengineeringArcFurnace(`firmalife:metal/double_sheet/stain
 event.recipes.immersiveengineeringArcFurnace(`firmalife:metal/double_ingot/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT())
 
 let mold2 = "immersiveengineering:mold_rod"
-ingotz.forEach(ingot =>{
-event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), mold2)
+let ingotz2 = [
+  "bismuth",
+  "bismuth_bronze",
+  "black_bronze",
+  "sterling_silver",
+  "cast_iron",
+  "black_steel",
+  "blue_steel",
+  "red_steel"
+]
+ingotz2.forEach(ingot =>{
+event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), mold2).id(`kubejs:immersivemetalpress/rod/${ingot}`)
 })
-others.forEach(ingot =>{
-event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingredient.of(`tfc:metal/ingot/${ingot}`).ignoreNBT(), mold2)
 
-})
-event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
-event.recipes.immersiveengineeringMetalPress(`firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
+event.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
+event.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
 
 event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
 
