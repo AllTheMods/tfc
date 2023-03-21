@@ -1,10 +1,10 @@
 {
 	"type":"createaddition:rolling",
 	"input": {
-		"tag": "forge:ingots/nickel"
+		"tag": "forge:ingots/uranium"
 	},
 	"result": {
-		"item": "tfc:metal/rod/nickel",
+		"item": "immersiveposts:stick_uranium",
 		"count": 2
 	}
 }
