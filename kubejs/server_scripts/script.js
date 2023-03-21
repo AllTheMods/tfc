@@ -367,6 +367,19 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:sheets/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
 
+let gear_ingotz = [
+  "copper",
+  "tin",
+  "nickel",
+  "bronze",
+  "gold"
+]
+gear_ingotz.forEach(ingot => {
+  event.replaceInput({type: 'minecraft:crafting_shaped', id: `thermal:parts/${ingot}_gear`}, `#forge:sheets/${ingot}`, `#forge:ingots/${ingot}`)
+})
+event.replaceInput({type: 'minecraft:crafting_shaped', id: `thermal:parts/iron_gear`}, `#forge:sheets/wrought_iron`, `#forge:ingots/wrought_iron`)
+event.replaceInput({type: 'minecraft:crafting_shaped', id: `thermal:parts/silver_gear`}, `#forge:sheets/sterling_silver`, `#forge:ingots/sterling_silver`)
+
 event.replaceInput({type: 'minecraft:crafting_shaped'}, 'immersiveengineering:hemp_fiber', 'tfc:jute_fiber')
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
