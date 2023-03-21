@@ -236,6 +236,7 @@ event.remove({id:'immersiveposts:has_electrum_rod'})
 event.remove({id:'immersiveposts:has_constantan_rod'})
 event.remove({id:'immersiveposts:has_uranium_rod'})
 event.remove({id:'immersiveposts:has_silver_rod'})
+event.remove({id:'immersiveposts:has_nickel_rod'})
 
 let mold = "immersiveengineering:mold_plate"
 
