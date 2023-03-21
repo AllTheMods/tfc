@@ -292,6 +292,27 @@ ca_ingotz.forEach(ingot =>{
   event.remove({id: `createaddition:pressing/${ingot}_ingot`})
 })
 
+let imm_ingotz= [
+  "aluminum",
+  "uranium",
+  "steel"
+]
+imm_ingotz.forEach(ingot =>{
+  event.recipes.thermal.press(`immersiveengineering:plate_${ingot}`,Ingredient.of(`#forge:ingots/${ingot}`)).id(`kubejs:thermal/press/plate/${ingot}`)
+})
+event.recipes.thermal.press('beyond_earth:desh_plate',Ingredient.of('beyond_earth:desh_ingot')).id(`kubejs:thermal/press/plate/desh`)
+event.recipes.thermal.press('create:brass_sheet',Ingredient.of('#forge:ingots/brass')).id(`kubejs:thermal/press/plate/brass`)
+event.recipes.thermal.press('createaddition:zinc_sheet',Ingredient.of('#forge:ingots/zinc')).id(`kubejs:thermal/press/plate/zinc`)
+
+let thermal_ingots = [
+  "tin",
+  "bronze",
+  "invar"
+]
+thermal_ingots.forEach(ingot =>{
+  event.recipes.createPressing(`thermal:${ingot}_plate`,Ingredient.of(`#forge:ingots/${ingot}`)).id(`kubejs:create/press/plate/${ingot}`)
+})
+
 event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
 
 let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
