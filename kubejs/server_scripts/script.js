@@ -313,7 +313,7 @@ thermal_ingots.forEach(ingot =>{
   event.recipes.createPressing(`thermal:${ingot}_plate`,Ingredient.of(`#forge:ingots/${ingot}`)).id(`kubejs:create/press/plate/${ingot}`)
 })
 
-event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
+event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma').id(`kubejs:thermal/machines/crucible/tfc_magma_to_lava`)
 
 let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 
