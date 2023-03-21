@@ -361,6 +361,7 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/copper', '#forge:sheets/copper')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/nickel', '#forge:sheets/nickel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/tin', '#forge:sheets/tin')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/gold', '#forge:sheets/gold')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:sheets/sterling_silver')
