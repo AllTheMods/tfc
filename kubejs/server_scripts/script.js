@@ -278,6 +278,20 @@ event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingred
 event.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
 event.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
 
+let ca_ingotz = [
+  "aluminum",
+  "lead",
+  "silver",
+  "nickel",
+  "uranium",
+  "constantan",
+  "electrum",
+  "steel"
+]
+ca_ingotz.forEach(ingot =>{
+  event.remove({id: `createaddition:pressing/${ingot}_ingot`})
+})
+
 event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
 
 let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
