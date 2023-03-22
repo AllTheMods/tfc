@@ -236,6 +236,7 @@ event.remove({id:'immersiveposts:has_electrum_rod'})
 event.remove({id:'immersiveposts:has_constantan_rod'})
 event.remove({id:'immersiveposts:has_uranium_rod'})
 event.remove({id:'immersiveposts:has_silver_rod'})
+event.remove({id:'immersiveposts:has_nickel_rod'})
 
 let mold = "immersiveengineering:mold_plate"
 
@@ -278,7 +279,42 @@ event.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${ingot}`, Ingred
 event.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), mold2)
 event.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), mold2)
 
-event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma')
+let ca_ingotz = [
+  "aluminum",
+  "lead",
+  "silver",
+  "nickel",
+  "uranium",
+  "constantan",
+  "electrum",
+  "steel"
+]
+ca_ingotz.forEach(ingot =>{
+  event.remove({id: `createaddition:pressing/${ingot}_ingot`})
+})
+
+let imm_ingotz = [
+  "aluminum",
+  "uranium",
+  "steel"
+]
+imm_ingotz.forEach(ingot =>{
+  event.recipes.thermal.press(`immersiveengineering:plate_${ingot}`,Ingredient.of(`#forge:ingots/${ingot}`)).id(`kubejs:thermal/press/plate/${ingot}`)
+})
+event.recipes.thermal.press('beyond_earth:desh_plate',Ingredient.of('beyond_earth:desh_ingot')).id(`kubejs:thermal/press/plate/desh`)
+event.recipes.thermal.press('create:brass_sheet',Ingredient.of('#forge:ingots/brass')).id(`kubejs:thermal/press/plate/brass`)
+event.recipes.thermal.press('createaddition:zinc_sheet',Ingredient.of('#forge:ingots/zinc')).id(`kubejs:thermal/press/plate/zinc`)
+
+let thermal_ingots = [
+  "tin",
+  "bronze",
+  "invar"
+]
+thermal_ingots.forEach(ingot =>{
+  event.recipes.createPressing(`thermal:${ingot}_plate`,Ingredient.of(`#forge:ingots/${ingot}`)).id(`kubejs:create/press/plate/${ingot}`)
+})
+
+event.recipes.thermal.crucible(Fluid.of('minecraft:lava', 1000), '#forge:magma').id(`kubejs:thermal/machines/crucible/tfc_magma_to_lava`)
 
 let woods =["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 
@@ -323,10 +359,27 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/copper', '#forge:sheets/copper')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/nickel', '#forge:sheets/nickel')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/tin', '#forge:sheets/tin')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/gold', '#forge:sheets/gold')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/iron', '#forge:ingots/stainless_steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
-event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:ingots/sterling_silver')
+event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:sheets/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+
+let gear_ingotz = [
+  "copper",
+  "tin",
+  "nickel",
+  "bronze",
+  "gold"
+]
+gear_ingotz.forEach(ingot => {
+  event.replaceInput({type: 'minecraft:crafting_shaped', id: `thermal:parts/${ingot}_gear`}, `#forge:sheets/${ingot}`, `#forge:ingots/${ingot}`)
+})
+event.replaceInput({type: 'minecraft:crafting_shaped', id: `thermal:parts/iron_gear`}, `#forge:sheets/wrought_iron`, `#forge:ingots/wrought_iron`)
+event.replaceInput({type: 'minecraft:crafting_shaped', id: `thermal:parts/silver_gear`}, `#forge:sheets/sterling_silver`, `#forge:ingots/sterling_silver`)
+
 event.replaceInput({type: 'minecraft:crafting_shaped'}, 'immersiveengineering:hemp_fiber', 'tfc:jute_fiber')
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'minecraft:blast_furnace', 'tfc:crucible')
