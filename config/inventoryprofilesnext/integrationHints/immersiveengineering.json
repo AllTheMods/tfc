@@ -234,5 +234,31 @@
                 "top": -25
             }
         }
+    },
+    "blusunrize.immersiveengineering.client.gui.AlloySmelterScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
+    },
+    "blusunrize.immersiveengineering.client.gui.BlastFurnaceScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
     }
 }
