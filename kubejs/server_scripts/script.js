@@ -142,6 +142,7 @@ event.remove({id: 'minecraft:honeycomb_block'})
 event.remove({id: 'minecraft:honey_block'})
 event.remove({id: 'tombstone:white_marble'})
 event.remove({output: Item.of('tombstone:fishing_rod_of_misadventure').ignoreNBT()})
+event.remove({id: 'comforts:rope_and_nail_shapeless'})
 
 let gemStones =[
 "amethyst",
