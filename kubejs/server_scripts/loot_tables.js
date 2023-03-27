@@ -96,4 +96,7 @@ onEvent("lootjs", (event) => {
     event
     .addLootTypeModifier(LootType.CHEST)
     .replaceLoot("minecraft:barrel","tfcbarrels:wood/barrel/oak");
+    event
+    .addEntityLootModifier("minecraft:hoglin")
+    .replaceLoot("minecraft:porkchop","tfc:food/pork",true);
      });
