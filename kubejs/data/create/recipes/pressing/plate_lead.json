@@ -2,8 +2,7 @@
     "type": "create:pressing",
     "ingredients": [
       {
-        "tag": "forge:ingots/lead",
-        "count": 2
+        "tag": "forge:ingots/lead"
       }
     ],
     "results": [
