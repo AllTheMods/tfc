@@ -2,8 +2,7 @@
     "type": "create:pressing",
     "ingredients": [
       {
-        "tag": "forge:ingots/electrum",
-        "count": 2
+        "tag": "forge:ingots/electrum"
       }
     ],
     "results": [

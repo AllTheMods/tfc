@@ -2,8 +2,7 @@
     "type": "create:pressing",
     "ingredients": [
       {
-        "tag": "forge:ingots/nickel",
-        "count": 2
+        "tag": "forge:ingots/nickel"
       }
     ],
     "results": [
