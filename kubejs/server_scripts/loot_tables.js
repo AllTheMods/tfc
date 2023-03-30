@@ -99,4 +99,11 @@ onEvent("lootjs", (event) => {
     event
     .addEntityLootModifier("minecraft:hoglin")
     .replaceLoot("minecraft:porkchop","tfc:food/pork",true);
+    event
+    .addEntityLootModifier("minecraft:hoglin")
+    .replaceLoot("minecraft:cooked_porkchop","tfc:food/cooked_pork",true);
+    event
+    .addEntityLootModifier("minecraft:hoglin")
+    .replaceLoot("minecraft:leather","tfc:large_raw_hide");
      });
+
