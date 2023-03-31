@@ -1,0 +1,22 @@
+{
+    "type": "create:mixing",
+    "ingredients": [
+      {
+        "tag": "firmalife:sweetener"
+      },
+      {
+        "tag": "firmalife:foods/chocolate"
+      },
+      {
+        "fluidTag": "forge:milk",
+        "amount": 1000
+      }
+    ],
+    "results": [
+      {
+        "fluid": "firmalife:chocolate",
+        "amount": 1000
+      }
+    ],
+    "heatRequirement": "heated"
+  }

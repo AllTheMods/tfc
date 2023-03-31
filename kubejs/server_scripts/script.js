@@ -1034,6 +1034,8 @@ onEvent('fluid.tags', event => {
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
     event.get('tfc:usable_in_barrel').add('immersiveengineering:creosote')
+    event.get('forge:chocolate').add('firmalife:chocolate')
+    event.get('forge:milk').removeAll().add(["firmalife:yak_milk", "firmalife:goat_milk", "firmalife:coconut_milk"])
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 })

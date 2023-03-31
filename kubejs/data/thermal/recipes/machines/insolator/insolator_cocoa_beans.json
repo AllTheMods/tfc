@@ -1,0 +1,12 @@
+{
+  "type": "thermal:insolator",
+  "ingredient": {
+    "item": "firmalife:food/cocoa_beans"
+  },
+  "result": [
+    {
+      "item": "firmalife:food/cocoa_beans",
+      "chance": 2.5
+    }
+  ]
+}

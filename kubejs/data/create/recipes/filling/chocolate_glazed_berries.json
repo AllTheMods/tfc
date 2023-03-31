@@ -5,7 +5,7 @@
       "tag": "forge:berries"
     },
     {
-      "fluid": "create:chocolate",
+      "fluid": "firmalife:chocolate",
       "nbt": {},
       "amount": 250
     }
