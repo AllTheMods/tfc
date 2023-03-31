@@ -90,9 +90,9 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraf
 event.replaceInput({input: 'minecraft:cobblestone', mod: 'create'}, 'minecraft:cobblestone', '#forge:cobblestone/normal')
 event.replaceInput({input: 'minecraft:smooth_stone', mod: 'create'}, 'minecraft:smooth_stone', '#tfc:rock/smooth')
 
-event.recipes.thermal.insolator('tfc:jute', 'tfc:seeds/jute').water(900)
-event.recipes.thermal.insolator('tfc:melon', 'tfc:seeds/melon').water(750)
-event.recipes.thermal.insolator('tfc:pumpkin','tfc:seeds/pumpkin').water(750)
+event.recipes.thermal.insolator(['tfc:jute',Item.of('tfc:seeds/jute').withChance(1)], 'tfc:seeds/jute').water(900)
+event.recipes.thermal.insolator(['tfc:melon',Item.of('tfc:seeds/melon').withChance(1.5)], 'tfc:seeds/melon').water(750)
+event.recipes.thermal.insolator(['tfc:pumpkin',Item.of('tfc:seeds/pumpkin').withChance(1.5)],'tfc:seeds/pumpkin').water(750)
 let seeds =[
 "carrot",
 "onion",
@@ -109,7 +109,8 @@ let seeds =[
 "barley",
 "oat",
 "rye",
-"rice"
+"rice",
+"wheat"
 ]
 
 seeds.forEach(seed => {
