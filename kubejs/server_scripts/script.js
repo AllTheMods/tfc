@@ -361,6 +361,7 @@ event.remove({id: 'minecraft:sugar_from_honey_bottle'})
 
 event.remove({id: 'minecraft:stone_bricks'})
 event.remove({id: 'bloodmagic:teleposer'})
+event.remove({id: 'create:mixing/chocolate_melting'})
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/steel', '#forge:plates/steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
