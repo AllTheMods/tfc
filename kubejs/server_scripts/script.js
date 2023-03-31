@@ -381,6 +381,8 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:sheets/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
 
+event.replaceInput({id: 'createaddition:mixing/biomass_from_saplings'}, '#minecraft:saplings', '#forge:saplings')
+
 let gear_ingotz = [
   "copper",
   "tin",
@@ -880,11 +882,6 @@ let candles =[
     event.get('minecraft:fishes').remove(['minecraft:cod', 'minecraft:salmon', 'minecraft:tropical_fish', 'minecraft:pufferfish','minecraft:cooked_cod', 'minecraft:cooked_salmon'])
 
     event.get('forge:fishing_rods').remove('minecraft:fishing_rod')
-
-    event.get('forge:crops/potato').add('tfc:food/potato')
-    event.get('forge:crops/carrot').add('tfc:food/carrot')
-    event.get('forge:crops/beetroot').add('tfc:food/beet')
-    event.get('forge:crops/wheat').add('tfc:food/wheat')
 
     event.get('forge:ingots/iron').add('tfc:metal/ingot/wrought_iron')
     event.get('forge:raw_materials/aluminum').add('tfc:ore/cryolite')

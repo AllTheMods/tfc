@@ -97,15 +97,27 @@ onEvent('item.tags', e => {
     "barley",
     "oat",
     "rye",
-    "rice",
-    "pumpkin",
-    "melon",
-    "jute",
+    "rice", 
     "wheat"
     ]
 
     seeds.forEach(seed => {
     e.add('tombstone:seeds', [`tfc:seeds/${seed}`])
+    e.add(`forge:crops/${seed}`, [`tfc:food/${seed}`])
+    e.add('forge:crops', [`tfc:food/${seed}`])
+    })
+
+    let moreseeds = [
+    "pumpkin",
+    "melon",
+    "jute",
+    "papyrus"
+    ]
+    
+    moreseeds.forEach(seed => {
+    e.add('tombstone:seeds', [`tfc:seeds/${seed}`])
+    e.add(`forge:crops/${seed}`, [`tfc:${seed}`])
+    e.add(`forge:crops`, [`tfc:${seed}`])
     })
 })
 onEvent('fluid.tags', e => {
