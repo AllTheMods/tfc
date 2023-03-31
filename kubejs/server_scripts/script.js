@@ -144,6 +144,8 @@ event.remove({id: 'tombstone:white_marble'})
 event.remove({output: Item.of('tombstone:fishing_rod_of_misadventure').ignoreNBT()})
 event.remove({id: 'comforts:rope_and_nail_shapeless'})
 
+event.remove({id: /thermal:storage\/.*_from_block$/})
+
 let gemStones =[
 "amethyst",
 "diamond",
