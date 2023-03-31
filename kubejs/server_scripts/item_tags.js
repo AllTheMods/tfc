@@ -54,6 +54,32 @@ onEvent('item.tags', e => {
     e.add('forge:berries', [`tfc:food/${berry}`])
     })
 
+    let saplings =[
+    "acacia",
+    "ash",
+    "aspen",
+    "birch",
+    "blackwood",
+    "chestnut",
+    "douglas_fir",
+    "hickory",
+    "kapok",
+    "maple",
+    "oak",
+    "palm",
+    "pine",
+    "rosewood",
+    "sequoia",
+    "spruce",
+    "sycamore",
+    "white_cedar",
+    "willow"
+    ]
+
+    saplings.forEach(sapling => {
+    e.add('forge:saplings', [`tfc:wood/sapling/${sapling}`])
+    })
+
     e.removeAll('tombstone:seeds')
     let seeds =[
     "carrot",

@@ -1,0 +1,23 @@
+{
+  "type": "bloodmagic:alchemytable",
+  "input": [
+    {
+      "tag": "forge:saplings"
+    },
+    {
+      "tag": "forge:saplings"
+    },
+    {
+      "item": "tfc:food/sugarcane"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output": {
+    "item": "bloodmagic:reagentgrowth"
+  },
+  "syphon": 2000,
+  "ticks": 200,
+  "upgradeLevel": 2
+}
