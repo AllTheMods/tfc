@@ -119,7 +119,10 @@ onEvent('item.tags', e => {
     e.add(`forge:crops/${seed}`, [`tfc:${seed}`])
     e.add(`forge:crops`, [`tfc:${seed}`])
     })
+
+    e.add('tfc:foods', ['kubejs:chocolate_cake_slice', 'kubejs:honey_cake_slice'])
 })
+
 onEvent('fluid.tags', e => {
 e.add('forge:refined_fuel', ['thermal:refined_fuel'])
 })

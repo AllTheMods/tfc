@@ -17,3 +17,17 @@ onEvent('worldgen.remove', event => {
     properties.mobs = /thermal:b.*/
   })
 })
+
+onEvent('item.registry', event => {
+  event.create('chocolate_cake_slice').food(food => {
+    food.hunger(20)
+    food.saturation(20)
+  })
+})
+
+onEvent('item.registry', event => {
+  event.create('honey_cake_slice').food(food => {
+    food.hunger(20)
+    food.saturation(20)
+  })
+})

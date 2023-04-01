@@ -1,7 +1,6 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "ingredient": {
-    "item": "createaddition:chocolate_cake"
+    "item": "kubejs:chocolate_cake_slice"
   },
   "hunger": 9,
   "saturation": 2,
