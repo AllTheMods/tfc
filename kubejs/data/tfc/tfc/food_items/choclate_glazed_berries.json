@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "create:chocolate_glazed_berries"
   },
-  "hunger": 9,
+  "hunger": 4,
   "saturation": 2,
   "water": 5,
   "decay_modifier": 2.5,
