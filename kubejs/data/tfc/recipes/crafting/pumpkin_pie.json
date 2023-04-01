@@ -1,0 +1,19 @@
+{
+    "type": "tfc:extra_products_shapeless_crafting",
+    "extra_products": [
+        {
+          "item": "firmalife:pie_pan"
+        }
+    ],
+    "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+            {
+              "item": "firmalife:food/cooked_pumpkin_pie"
+            }
+        ],
+        "result": {
+            "item": "minecraft:pumpkin_pie"
+        }
+    }
+}
