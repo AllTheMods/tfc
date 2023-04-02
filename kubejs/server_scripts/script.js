@@ -90,9 +90,9 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'create'}, 'minecraf
 event.replaceInput({input: 'minecraft:cobblestone', mod: 'create'}, 'minecraft:cobblestone', '#forge:cobblestone/normal')
 event.replaceInput({input: 'minecraft:smooth_stone', mod: 'create'}, 'minecraft:smooth_stone', '#tfc:rock/smooth')
 
-event.recipes.thermal.insolator('tfc:jute', 'tfc:seeds/jute').water(900)
-event.recipes.thermal.insolator('tfc:melon', 'tfc:seeds/melon').water(750)
-event.recipes.thermal.insolator('tfc:pumpkin','tfc:seeds/pumpkin').water(750)
+event.recipes.thermal.insolator(['tfc:jute',Item.of('tfc:seeds/jute').withChance(1)], 'tfc:seeds/jute').water(900)
+event.recipes.thermal.insolator(['tfc:melon',Item.of('tfc:seeds/melon').withChance(1.5)], 'tfc:seeds/melon').water(750)
+event.recipes.thermal.insolator(['tfc:pumpkin',Item.of('tfc:seeds/pumpkin').withChance(1.5)],'tfc:seeds/pumpkin').water(750)
 let seeds =[
 "carrot",
 "onion",
@@ -109,7 +109,8 @@ let seeds =[
 "barley",
 "oat",
 "rye",
-"rice"
+"rice",
+"wheat"
 ]
 
 seeds.forEach(seed => {
@@ -143,6 +144,17 @@ event.remove({id: 'minecraft:honey_block'})
 event.remove({id: 'tombstone:white_marble'})
 event.remove({output: Item.of('tombstone:fishing_rod_of_misadventure').ignoreNBT()})
 event.remove({id: 'comforts:rope_and_nail_shapeless'})
+
+event.remove({id: 'thermal:machines/insolator/insolator_potato'})
+event.remove({id: 'thermal:machines/insolator/insolator_pumpkin'})
+event.remove({id: 'thermal:machines/insolator/insolator_melon'})
+event.remove({id: 'thermal:machines/insolator/insolator_carrot'})
+
+event.remove({id: 'immersiveengineering:cloche/melon'})
+event.remove({id: 'immersiveengineering:cloche/pumpkin'})
+event.remove({id: 'immersiveengineering:cloche/potato'})
+
+event.remove({id: /thermal:storage\/.*_from_block$/})
 
 let gemStones =[
 "amethyst",
@@ -349,6 +361,7 @@ event.remove({id: 'minecraft:sugar_from_honey_bottle'})
 
 event.remove({id: 'minecraft:stone_bricks'})
 event.remove({id: 'bloodmagic:teleposer'})
+event.remove({id: 'create:mixing/chocolate_melting'})
 
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/steel', '#forge:plates/steel')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'immersiveengineering'}, '#forge:ingots/iron', '#forge:sheets/wrought_iron')
@@ -367,6 +380,8 @@ event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, 'thermal:tin_gear', 'thermal:lead_gear')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/silver', '#forge:sheets/sterling_silver')
 event.replaceInput({type: 'minecraft:crafting_shaped', mod: 'thermal'}, '#forge:ingots/bronze', '#forge:sheets/bronze')
+
+event.replaceInput({id: 'createaddition:mixing/biomass_from_saplings'}, '#minecraft:saplings', '#forge:saplings')
 
 let gear_ingotz = [
   "copper",
@@ -868,11 +883,6 @@ let candles =[
 
     event.get('forge:fishing_rods').remove('minecraft:fishing_rod')
 
-    event.get('forge:crops/potato').add('tfc:food/potato')
-    event.get('forge:crops/carrot').add('tfc:food/carrot')
-    event.get('forge:crops/beetroot').add('tfc:food/beet')
-    event.get('forge:crops/wheat').add('tfc:food/wheat')
-
     event.get('forge:ingots/iron').add('tfc:metal/ingot/wrought_iron')
     event.get('forge:raw_materials/aluminum').add('tfc:ore/cryolite')
     event.get('forge:magma').add('tfc:rock/magma/basalt')
@@ -1034,6 +1044,8 @@ onEvent('fluid.tags', event => {
     event.get('forge:crude_oil').add('beyond_earth:oil')
     event.get('beyond_earth:vehicle_fuel').add('thermal:refined_fuel')
     event.get('tfc:usable_in_barrel').add('immersiveengineering:creosote')
+    event.get('forge:chocolate').add('firmalife:chocolate')
+    event.get('forge:milk').removeAll().add(["firmalife:yak_milk", "firmalife:goat_milk", "firmalife:coconut_milk"])
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
 })

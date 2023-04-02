@@ -2,7 +2,7 @@
  "ingredient": {
     "item": "thermal:syrup_bottle"
   },
-  "hunger": 10,
+  "hunger": 4,
   "water":  10,
   "saturation": 1.1,
   "decay_modifier": 2.9,

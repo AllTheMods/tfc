@@ -1,0 +1,22 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "firmalife:sweetener"
+    },
+    {
+      "tag": "firmalife:sweetener"
+    },
+    {
+      "tag": "firmalife:foods/extra_dough"
+    }
+  ],
+  "results": [
+    {
+      "item": "createaddition:cake_base"
+    }
+  ]
+}

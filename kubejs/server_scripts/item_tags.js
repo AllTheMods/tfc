@@ -54,6 +54,32 @@ onEvent('item.tags', e => {
     e.add('forge:berries', [`tfc:food/${berry}`])
     })
 
+    let saplings =[
+    "acacia",
+    "ash",
+    "aspen",
+    "birch",
+    "blackwood",
+    "chestnut",
+    "douglas_fir",
+    "hickory",
+    "kapok",
+    "maple",
+    "oak",
+    "palm",
+    "pine",
+    "rosewood",
+    "sequoia",
+    "spruce",
+    "sycamore",
+    "white_cedar",
+    "willow"
+    ]
+
+    saplings.forEach(sapling => {
+    e.add('forge:saplings', [`tfc:wood/sapling/${sapling}`])
+    })
+
     e.removeAll('tombstone:seeds')
     let seeds =[
     "carrot",
@@ -71,17 +97,32 @@ onEvent('item.tags', e => {
     "barley",
     "oat",
     "rye",
-    "rice",
-    "pumpkin",
-    "melon",
-    "jute",
+    "rice", 
     "wheat"
     ]
 
     seeds.forEach(seed => {
     e.add('tombstone:seeds', [`tfc:seeds/${seed}`])
+    e.add(`forge:crops/${seed}`, [`tfc:food/${seed}`])
+    e.add('forge:crops', [`tfc:food/${seed}`])
     })
+
+    let moreseeds = [
+    "pumpkin",
+    "melon",
+    "jute",
+    "papyrus"
+    ]
+    
+    moreseeds.forEach(seed => {
+    e.add('tombstone:seeds', [`tfc:seeds/${seed}`])
+    e.add(`forge:crops/${seed}`, [`tfc:${seed}`])
+    e.add(`forge:crops`, [`tfc:${seed}`])
+    })
+
+    e.add('tfc:foods', ['kubejs:chocolate_cake_slice', 'kubejs:honey_cake_slice'])
 })
+
 onEvent('fluid.tags', e => {
 e.add('forge:refined_fuel', ['thermal:refined_fuel'])
 })
