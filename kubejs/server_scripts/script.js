@@ -130,6 +130,7 @@ event.remove({id: 'beyond_earth:compressor'})
 
 event.remove({id: 'minecraft:stone_brick_wall'})
 event.remove({id: 'minecraft:stone_brick_slab'})
+event.remove({id: 'minecraft:stone_brick_stairs'})
 
 event.remove({id: 'beyond_earth:compressing/compressed_desh'})
 event.remove({id: 'beyond_earth:compressing/compressed_ostrum'})
