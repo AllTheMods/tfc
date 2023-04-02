@@ -1,0 +1,2197 @@
+{
+	id: "31DBBD60E22446EF"
+	group: "00892B61FDC7AD64"
+	order_index: 0
+	filename: "caveman_age"
+	title: "Caveman age"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Gotta start Somewhere!"
+			x: 4.5d
+			y: 0.0d
+			description: ["Now armed with Tools the first thing you can do is go collect logs from trees"]
+			dependencies: ["5BB844EEAB02F3EF"]
+			id: "6AF34FEE59AC7AEE"
+			tasks: [{
+				id: "3D655CF6EDEF807C"
+				type: "item"
+				title: "Any #tfc:log_pile_logs"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:log_pile_logs"
+					}
+				}
+				count: 8L
+				consume_items: false
+				match_nbt: false
+			}]
+		}
+		{
+			x: 2.5d
+			y: 1.0d
+			description: ["To make some basic tools you will need loose rocks found on the surface."]
+			hide_dependency_lines: false
+			id: "4705AC06819F2948"
+			tasks: [{
+				id: "235353A8DAB15832"
+				type: "item"
+				title: "Pebbles all around"
+				icon: "tfc:rock/loose/granite"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:rock_knapping"
+					}
+				}
+				count: 8L
+				consume_items: false
+			}]
+		}
+		{
+			title: "Stone tools"
+			x: 3.5d
+			y: 0.0d
+			description: ["with the loose pebbles you can knapp them into tool heads check JEI for recipes. Then you can combine the tool heads with a stick to make stone tools"]
+			dependencies: [
+				"4705AC06819F2948"
+				"310044EE2C63F6EA"
+			]
+			id: "5BB844EEAB02F3EF"
+			tasks: [
+				{
+					id: "618913D0C78CBE62"
+					type: "item"
+					title: "Stone hammer"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:hammers"
+						}
+					}
+				}
+				{
+					id: "53B0E7FCA78032D1"
+					type: "item"
+					title: "Stone axe"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:axes"
+						}
+					}
+				}
+				{
+					id: "0DE46120D406B76A"
+					type: "item"
+					title: "Stone knife"
+					tags: ["tfcstone_tools"]
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:knives"
+						}
+					}
+					match_nbt: true
+				}
+			]
+		}
+		{
+			title: "Stick it up"
+			x: 2.5d
+			y: -1.0d
+			description: ["The twigs on the ground are quite usefull make sure to pick plenty up!"]
+			id: "310044EE2C63F6EA"
+			tasks: [{
+				id: "2260F1085EF02ED5"
+				type: "item"
+				title: "Any #tfc:twigs"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:twigs"
+					}
+				}
+				count: 16L
+				consume_items: false
+				only_from_crafting: false
+			}]
+		}
+		{
+			title: "Clay time!"
+			x: 5.5d
+			y: 0.0d
+			description: ["Clay can be hard to find on the surface but there is a few key things to look for while searching. Look for specific plants called &6Athyrium Fern, &6Canna, &6Goldenrod, Pampas Grass, &6Perovskia and &6Water Canna"]
+			id: "36E02BBA8C4B2CFB"
+			tasks: [{
+				id: "3C36CBFAD94F17BF"
+				type: "item"
+				item: "minecraft:clay_ball"
+				count: 16L
+			}]
+		}
+		{
+			title: "Important Molds"
+			x: 6.5d
+			y: -1.0d
+			description: ["These will be the Molds you use the most"]
+			dependencies: ["36E02BBA8C4B2CFB"]
+			id: "16AFF2128F4D2764"
+			tasks: [
+				{
+					id: "5208C31A688AEDCB"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_pickaxe_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "7981013FD83C7965"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_propick_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "3E6CCABCFE519E61"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_saw_blade_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "6588B398A4971C62"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_hammer_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "7AB02F64CBF46CF5"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_ingot_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "6BF2AFDC09091CAD"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_large_vessel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "3370C91BE3BDCF72"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_vessel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Less Important but still useful Molds!"
+			x: 6.5d
+			y: 0.0d
+			description: ["These Molds are still useful but are not NEEDED early on"]
+			dependencies: ["36E02BBA8C4B2CFB"]
+			id: "2E52646F2C573D38"
+			tasks: [
+				{
+					id: "10C32BEB6A0ECA34"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_axe_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "4654A0C8126EC47C"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_shovel_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "42C24B82B38EABF1"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_hoe_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "45482892C745AAB2"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_knife_blade_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "67D3DBD448240588"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_bell_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "592D5FB0A0C51025"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_pot"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "48EF6E65B8EF7405"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_chisel_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Small copper"
+			x: 5.0d
+			y: -5.0d
+			id: "70B253DE34134999"
+			tasks: [{
+				id: "24B5F08300E3DA74"
+				type: "item"
+				item: {
+					id: "tfc:ore/small_malachite"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+				count: 20L
+			}]
+		}
+		{
+			title: "Fire in the Hole!"
+			x: 7.0d
+			y: -2.0d
+			description: [
+				"You can use a pit kiln to fire all the molds you have made"
+				"&34 Small molds can be done at once but larger molds will require a seperate kiln"
+			]
+			dependencies: [
+				"16AFF2128F4D2764"
+				"142C9FCE1C0C8C42"
+			]
+			id: "2C9D0ECAADFB615C"
+			tasks: [
+				{
+					id: "1944EB2509CCF65D"
+					type: "item"
+					title: "Any #tfc:firepit_logs"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:firepit_logs"
+						}
+					}
+					count: 8L
+				}
+				{
+					id: "42EC443AB167DE05"
+					type: "item"
+					item: "tfc:straw"
+					count: 8L
+				}
+				{
+					id: "53EF37747A765EB9"
+					type: "item"
+					item: {
+						id: "tfc:firestarter"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+					count: 2L
+				}
+				{
+					id: "0F20A58EAF986861"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_pickaxe_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "3362A666114573BD"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_propick_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "29B82F356F9B3C7C"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_hammer_head_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "7977D32F3DDA2048"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_saw_blade_mold"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Early game metal storage"
+			x: 6.0d
+			y: -2.0d
+			description: ["Now lets make the vessels where we are going to smelt and store the copper"]
+			dependencies: ["16AFF2128F4D2764"]
+			id: "7BB2C0452907A865"
+			tasks: [
+				{
+					id: "7251EE334107D46E"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_vessel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 4L
+				}
+				{
+					id: "4E3B4D1E4FCE9420"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_large_vessel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "26FA5FD903B36D2E"
+					type: "item"
+					title: "Any #tfc:pit_kiln_logs"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:pit_kiln_logs"
+						}
+					}
+					count: 16L
+				}
+				{
+					id: "0936D6DC231B5E8E"
+					type: "item"
+					item: "tfc:straw"
+					count: 16L
+				}
+			]
+		}
+		{
+			title: "Copper tool heads"
+			x: 6.5d
+			y: -5.0d
+			shape: "gear"
+			description: [
+				"You can make copper tool heads by putting the small copper you collected into the large vessel and putting it through a kiln and then pouring it into a cast before letting it cool down"
+				"&6Both the pickaxe head and prospector head will take 10 small copper each"
+			]
+			dependencies: [
+				"70B253DE34134999"
+				"381FF80AB846589D"
+			]
+			id: "2F073E07D1A9533A"
+			tasks: [
+				{
+					id: "363E3C412B8CE9DD"
+					type: "item"
+					item: {
+						id: "tfc:metal/pickaxe_head/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "427550B3FA7B86A1"
+					type: "item"
+					item: {
+						id: "tfc:metal/propick_head/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Fired Molds"
+			x: 6.5d
+			y: -3.0d
+			dependencies: [
+				"7BB2C0452907A865"
+				"2C9D0ECAADFB615C"
+			]
+			id: "381FF80AB846589D"
+			tasks: [
+				{
+					id: "74B78FCE661FECEA"
+					type: "item"
+					item: "tfc:ceramic/large_vessel"
+				}
+				{
+					id: "117731CFF49045AB"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/pickaxe_head_mold"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "4F7FA46C5104AE6F"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/propick_head_mold"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "43C33EABB054625C"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/ingot_mold"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "3227E9492688FE60"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/saw_blade_mold"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "239E000C0A7DAD67"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/vessel"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "7DC7DD8845C5B77C"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/hammer_head_mold"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Dried plant sticks (aka Straw)"
+			x: 8.5d
+			y: -2.0d
+			id: "142C9FCE1C0C8C42"
+			tasks: [{
+				id: "3A8B47574C625C84"
+				type: "item"
+				item: "tfc:straw"
+				count: 32L
+			}]
+		}
+		{
+			x: 8.0d
+			y: -5.0d
+			description: [
+				"Using your trusty new copper pickaxe you can go up to any generated rock and mine all the blocks on each face so it falls "
+				"Once done the stone block should fall due to gravity then you can pick it up and transport it somewhere closer to your base, Once placed right click with a TFC hammer to turn it into a basic anvil"
+			]
+			dependencies: ["2F073E07D1A9533A"]
+			id: "5B949C879D977B18"
+			tasks: [{
+				id: "3AF7D381594B2398"
+				type: "item"
+				title: "Any #tfc:rock_anvils"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:rock_anvils"
+					}
+				}
+			}]
+		}
+		{
+			x: 9.5d
+			y: -6.0d
+			description: [
+				"You can get flux by crushing certain loose stones in your crafting grid with a hammer"
+				"These rocks are &3Dolomite, &3Marble, &3Limestone and &3Chalk"
+			]
+			id: "538D08DB0D760122"
+			tasks: [{
+				id: "29DD777F2946716B"
+				type: "item"
+				item: "tfc:powder/flux"
+				count: 16L
+			}]
+		}
+		{
+			x: 9.5d
+			y: -5.0d
+			description: ["You can make double copper ingots by heating copper ingots to nright red then putting them on your stone anvil with flux and shift right clicking the anvil."]
+			dependencies: [
+				"5B949C879D977B18"
+				"538D08DB0D760122"
+			]
+			id: "7F97680AF1303C0B"
+			tasks: [{
+				id: "057D774BB77B9DC8"
+				type: "item"
+				item: {
+					id: "tfc:metal/double_ingot/copper"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 11.5d
+			y: -6.0d
+			dependencies: ["4EDF04AAD97993B0"]
+			id: "2E2AFC7444190195"
+			tasks: [{
+				id: "5AD339410D9B02E8"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/bismuth_bronze"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 11.5d
+			y: -5.0d
+			dependencies: ["4EDF04AAD97993B0"]
+			id: "775412D21A5B842C"
+			tasks: [{
+				id: "2E6E9B1AB3D622BC"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/black_bronze"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 11.5d
+			y: -4.0d
+			description: [
+				"Normal Bronze is made of Tin and Copper"
+				"the ratio can be &688%-92% Copper &fand &78%-12% Tin"
+			]
+			dependencies: ["4EDF04AAD97993B0"]
+			id: "67698EC82152C2AE"
+			tasks: [{
+				id: "37E41E5951E61500"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/bronze"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 12.5d
+			y: -6.0d
+			dependencies: ["2E2AFC7444190195"]
+			id: "3A7F51C68201F05C"
+			tasks: [{
+				id: "6E32E59D3B18E8CE"
+				type: "item"
+				item: {
+					id: "tfc:metal/double_ingot/bismuth_bronze"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 12.5d
+			y: -5.0d
+			dependencies: ["775412D21A5B842C"]
+			id: "7A39BB7CB3F07B91"
+			tasks: [{
+				id: "179501F993603EAD"
+				type: "item"
+				item: {
+					id: "tfc:metal/double_ingot/black_bronze"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 12.5d
+			y: -4.0d
+			dependencies: ["67698EC82152C2AE"]
+			id: "5A4581758FADC056"
+			tasks: [{
+				id: "47704A22FF4A09DE"
+				type: "item"
+				item: {
+					id: "tfc:metal/double_ingot/bronze"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 14.0d
+			y: -5.0d
+			description: ["You can make any of the 3 types of anvil as the type of bronze you make is dependant on your situation and the ore veins around you"]
+			dependencies: [
+				"3A7F51C68201F05C"
+				"7A39BB7CB3F07B91"
+				"5A4581758FADC056"
+			]
+			dependency_requirement: "one_completed"
+			id: "606A5B99436B903D"
+			tasks: [{
+				id: "0581704709D8004C"
+				type: "item"
+				title: "Any #tfc:bronze_anvils"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:bronze_anvils"
+					}
+				}
+			}]
+		}
+		{
+			x: 10.5d
+			y: -5.0d
+			dependencies: ["7F97680AF1303C0B"]
+			id: "4EDF04AAD97993B0"
+			tasks: [{
+				id: "33BF1F3AD1193B5C"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/copper"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 9.5d
+			y: 2.5d
+			description: ["Using the quern crush some graphite and kaolinite up and create fire clay"]
+			hide_dependency_lines: false
+			dependencies: ["71F6A2F4C45744B0"]
+			id: "78983DD9E6C2B563"
+			tasks: [{
+				id: "40ADEDF24BC4E06F"
+				type: "item"
+				item: "tfc:fire_clay"
+			}]
+		}
+		{
+			x: 10.5d
+			y: 1.5d
+			description: [
+				"Kaolonite can be found in &3Sedimentary rocks &fabove y=0"
+				"Graphite can be found in &3Gneiss , &3Marble , &3Quartzite and &3Schist &fbellow y=100"
+			]
+			hide_dependency_lines: true
+			dependencies: ["2F073E07D1A9533A"]
+			hide: true
+			id: "205764F4494805D4"
+			tasks: [
+				{
+					id: "16DC89DEBBC80315"
+					type: "item"
+					item: "tfc:ore/graphite"
+					count: 16L
+				}
+				{
+					id: "6A5023EEAF27C7AF"
+					type: "item"
+					item: "tfc:ore/kaolinite"
+					count: 16L
+				}
+			]
+		}
+		{
+			x: 8.5d
+			y: 1.5d
+			description: ["to crush graphite and kaolinite you will need a quern"]
+			dependencies: [
+				"205764F4494805D4"
+				"67CC0E5D923049A4"
+			]
+			id: "71F6A2F4C45744B0"
+			tasks: [
+				{
+					id: "21BA719A6D59487A"
+					type: "item"
+					item: {
+						id: "tfc:handstone"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "4D1E84E66087A54E"
+					type: "item"
+					item: "tfc:quern"
+				}
+			]
+		}
+		{
+			x: 8.5d
+			y: 0.0d
+			description: ["To make a quern you need smooth stone Luckily ruthlessly attacking raw blocks can create smooth versions"]
+			dependencies: ["2E52646F2C573D38"]
+			id: "67CC0E5D923049A4"
+			tasks: [
+				{
+					id: "3E2FCA8793975750"
+					type: "item"
+					item: {
+						id: "tfc:metal/chisel/copper"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "5A01DC88CC68BD58"
+					type: "item"
+					item: {
+						id: "tfc:metal/chisel_head/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 9.5d
+			y: 3.5d
+			description: ["Fire bricks can be made with the same napping as molds and rocks"]
+			dependencies: ["78983DD9E6C2B563"]
+			id: "7555827702D1810C"
+			tasks: [
+				{
+					id: "319CB69AE3F0B4BF"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_fire_brick"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "44CB1F3997B11F49"
+					type: "item"
+					item: "tfc:ceramic/fire_brick"
+				}
+			]
+		}
+		{
+			x: 16.0d
+			y: -5.0d
+			dependencies: [
+				"70E673F1B136B04B"
+				"6923F62255270C3B"
+			]
+			id: "42EF08866DDD2A7D"
+			tasks: [
+				{
+					id: "0CF18FE46CF0A932"
+					type: "item"
+					item: "tfc:bloomery"
+				}
+				{
+					id: "2D8F09CF99266787"
+					type: "item"
+					title: "Any brick"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:rock/bricks"
+						}
+					}
+					count: 11L
+				}
+			]
+		}
+		{
+			title: "primative glue"
+			x: 15.0d
+			y: -7.0d
+			description: [
+				"you get mortar by putting sand in a barrel full of limewater"
+				"Limewater can be obtained by right clicking a barrel of water with flux"
+			]
+			dependencies: [
+				"606A5B99436B903D"
+				"2213ABB8B1EA20B3"
+			]
+			dependency_requirement: "one_started"
+			id: "6923F62255270C3B"
+			tasks: [{
+				id: "6FF459EB631F1639"
+				type: "item"
+				item: "tfc:mortar"
+				count: 16L
+			}]
+		}
+		{
+			title: "Cutting Edge"
+			x: 15.0d
+			y: -4.0d
+			description: ["Simply crafting a rock and a file together you can turn the round stones into a brick"]
+			dependencies: [
+				"606A5B99436B903D"
+				"67CC0E5D923049A4"
+			]
+			dependency_requirement: "all_started"
+			id: "70E673F1B136B04B"
+			tasks: [{
+				id: "4665EB788BA069A2"
+				type: "item"
+				item: "tfc:brick/andesite"
+				count: 16L
+			}]
+		}
+		{
+			x: 14.0d
+			y: 7.5d
+			hide_dependency_lines: false
+			dependencies: ["4170701E508D58B5"]
+			hide: true
+			id: "679D7B1E110BE18E"
+			tasks: [{
+				id: "4D221A36C8F952DF"
+				type: "item"
+				item: "immersiveengineering:cokebrick"
+				count: 27L
+			}]
+		}
+		{
+			x: 17.5d
+			y: -5.0d
+			description: [
+				"Wrought iron is aquired by hammering raw iron bloom into refined iron bloom then into wrought iron"
+				"&3You will need alot of iron so make sure you get enough for an anvil"
+			]
+			dependencies: ["42EF08866DDD2A7D"]
+			id: "58CB73D4B892EA86"
+			tasks: [
+				{
+					id: "3124090FB1DDD241"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/wrought_iron"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 14L
+				}
+				{
+					id: "145E2712E4895FE7"
+					type: "item"
+					item: {
+						id: "tfc:raw_iron_bloom"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 14L
+				}
+				{
+					id: "6D5A1E138B5FC89D"
+					type: "item"
+					item: {
+						id: "tfc:refined_iron_bloom"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 14L
+				}
+			]
+		}
+		{
+			x: 10.5d
+			y: 2.5d
+			subtitle: "Mixing it up"
+			description: [
+				"The crucible will allow for easier alloy creation"
+				"The crucible has to be placed bellow a blast furnace or above a charcoal furnace"
+			]
+			id: "5F6EB92B9F90DDCC"
+			tasks: [
+				{
+					id: "152DBABA4738DC12"
+					type: "item"
+					item: {
+						id: "tfc:ceramic/unfired_crucible"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 2L
+				}
+				{
+					id: "2E1A5D2B0F6F756C"
+					type: "item"
+					item: "tfc:crucible"
+					count: 2L
+				}
+			]
+		}
+		{
+			title: "Charcoal forge"
+			x: 6.5d
+			y: -6.0d
+			description: [
+				"a charcoal furnace is 8 pieces of charcoal in the ground surrounded by a rock of any sort on all sides apart from above"
+				"The production of charcoal can be greatly improved by using a &3charcoal pit"
+			]
+			dependencies: [
+				"2F073E07D1A9533A"
+				"50063D8DA6A258F6"
+			]
+			id: "0423666352F1B01B"
+			tasks: [{
+				id: "5903E1FB30063FC3"
+				type: "item"
+				item: "minecraft:charcoal"
+				count: 8L
+			}]
+		}
+		{
+			title: "Rough cut"
+			x: 5.0d
+			y: -3.0d
+			description: ["you will need a sawblade to make lumber which will be used quite alot"]
+			dependencies: ["381FF80AB846589D"]
+			id: "5AF3534F6A3F88F5"
+			tasks: [
+				{
+					id: "53B418479EB581FE"
+					type: "item"
+					item: {
+						id: "tfc:metal/saw_blade/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "55824489CFE25258"
+					type: "item"
+					item: {
+						id: "tfc:metal/saw/copper"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Lumber jack"
+			x: 3.5d
+			y: -3.0d
+			dependencies: ["5AF3534F6A3F88F5"]
+			id: "56D132B96D044C49"
+			tasks: [{
+				id: "6287BE7962A46976"
+				type: "item"
+				title: "Any 16 Lumber"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:lumber"
+					}
+				}
+				count: 16L
+			}]
+		}
+		{
+			title: "big barrel"
+			x: 3.5d
+			y: -7.0d
+			description: ["you will need a fair few barrels to speed up the production of leather and mortar"]
+			id: "2213ABB8B1EA20B3"
+			tasks: [{
+				id: "6FAC8B8082CCD145"
+				type: "item"
+				title: "Any #tfc:barrels"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:barrels"
+					}
+				}
+				count: 4L
+			}]
+		}
+		{
+			x: 2.0d
+			y: -3.0d
+			description: ["Crafting table at last allows for 3x3 recipes"]
+			dependencies: ["56D132B96D044C49"]
+			id: "173DED94F185C53E"
+			tasks: [{
+				id: "26996CB5BEE6EF21"
+				type: "item"
+				title: "Workbench"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:workbenches"
+					}
+				}
+			}]
+		}
+		{
+			title: "Vanilla crafting table"
+			x: 0.5d
+			y: -3.0d
+			description: ["this is the vanilla crafting table it is needed for late game recipes like ae2 "]
+			dependencies: ["173DED94F185C53E"]
+			optional: true
+			id: "74537365234D1BFF"
+			tasks: [{
+				id: "0E6B086B1E135E89"
+				type: "item"
+				item: "minecraft:crafting_table"
+			}]
+		}
+		{
+			title: "Raw Hide"
+			x: 3.5d
+			y: -8.0d
+			description: [
+				"This is the first step in making leather"
+				"Get as much hide as you can as you need a fair bit of leather for bellows and starting Immersive Engineering"
+			]
+			id: "740BBC74BBF7F8C0"
+			tasks: [{
+				id: "0743625DA6AC4C1E"
+				type: "item"
+				title: "Any raw hide"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:raw_hides"
+					}
+				}
+				count: 8L
+			}]
+		}
+		{
+			title: "Let it soak"
+			x: 4.5d
+			y: -8.0d
+			subtitle: "Limewater+Hide"
+			description: ["This is the second stage of making leather this is made by putting the previously collected hide in a barrel full of Limewater which is made by adding flux to water in a barrel"]
+			dependencies: ["740BBC74BBF7F8C0"]
+			id: "5F68AE5D75F886E6"
+			tasks: [{
+				id: "6AFB78B75B12D8D0"
+				type: "item"
+				title: "Any #tfc:soaked_hides"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:soaked_hides"
+					}
+				}
+				count: 8L
+			}]
+		}
+		{
+			title: "Like a squeegee"
+			x: 5.5d
+			y: -8.0d
+			description: ["This is the 3rd stage of making leather by scraping all the limewater off the hide with your trusty knife"]
+			dependencies: ["5F68AE5D75F886E6"]
+			id: "59DF60A447898A21"
+			tasks: [{
+				id: "6F7AA30953950D35"
+				type: "item"
+				title: "Any #tfc:scraped_hides"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:scraped_hides"
+					}
+				}
+				count: 8L
+			}]
+		}
+		{
+			title: "Let it soak 2"
+			x: 6.5d
+			y: -8.0d
+			description: ["to prepare the leather we need to wash it with water"]
+			dependencies: ["59DF60A447898A21"]
+			id: "56181503EA97CD5E"
+			tasks: [{
+				id: "067FDAC703346343"
+				type: "item"
+				title: "Any #tfc:prepared_hides"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:prepared_hides"
+					}
+				}
+				count: 8L
+			}]
+		}
+		{
+			title: "the premium material"
+			x: 7.5d
+			y: -8.0d
+			description: [
+				"The final process is putting the prepared Hide into a barrel full of Tannin"
+				"Tannin is made by adding certain logs such as &3oak, Birch, Chestnut, Douglas Fir, Hickory, Maple"
+			]
+			dependencies: ["56181503EA97CD5E"]
+			id: "7860C0D66B682A1F"
+			tasks: [{
+				id: "65575C5FAEAC9B7E"
+				type: "item"
+				title: "Any leather"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:leather"
+					}
+				}
+				count: 8L
+			}]
+		}
+		{
+			x: 7.5d
+			y: -6.0d
+			description: [
+				"The bellow keeps the charcoal pit warm and can heat it up quickly"
+				"The more bellows around a charcoal forge the higher the temperature the forge can reach"
+			]
+			dependencies: ["7860C0D66B682A1F"]
+			id: "50063D8DA6A258F6"
+			tasks: [{
+				id: "494BD8673885A4CA"
+				type: "item"
+				item: "tfc:bellows"
+			}]
+		}
+		{
+			x: 19.0d
+			y: -5.0d
+			description: ["The iron anvil is made the same way as copper and bronze you WILL need this"]
+			dependencies: ["58CB73D4B892EA86"]
+			id: "1A99EF05065B3689"
+			tasks: [{
+				id: "66D1384C213A4079"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/wrought_iron"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 19.0d
+			y: -4.0d
+			subtitle: "blast furnace"
+			description: [
+				"This is the minimum items needed for the smallest blast furnace you will need any sort of container underneath the blast furnace like a crucible for example"
+				"&6You need Bellows to increase the max temperature of the blastfurnace"
+			]
+			dependencies: ["1A99EF05065B3689"]
+			id: "7A77905EB8350098"
+			tasks: [
+				{
+					id: "02239FA53229FFC6"
+					type: "item"
+					item: "tfc:blast_furnace"
+				}
+				{
+					id: "4A6C1E0FB8052EE7"
+					type: "item"
+					item: {
+						id: "tfc:metal/sheet/wrought_iron"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 12L
+				}
+				{
+					id: "38BBB45AE5DA35CF"
+					type: "item"
+					item: "tfc:fire_bricks"
+					count: 4L
+				}
+				{
+					id: "2F7E73FE259210A5"
+					type: "item"
+					item: {
+						id: "tfc:metal/tuyere/wrought_iron"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "creating steel"
+			x: 19.0d
+			y: -3.0d
+			dependencies: ["7A77905EB8350098"]
+			id: "19C25C233BCCF44C"
+			tasks: [
+				{
+					id: "6048FAC8D6CF4EE4"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/pig_iron"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "7F4567FA981346C8"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/high_carbon_steel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "553994114B1261E2"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/steel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 19.0d
+			y: -2.0d
+			description: ["Using the same procedure as the previous anvils you need to make a steel anvil next"]
+			dependencies: ["19C25C233BCCF44C"]
+			id: "568F95FC508BA84A"
+			tasks: [{
+				id: "742BF1EDAA186BEE"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 19.0d
+			y: -1.0d
+			dependencies: ["568F95FC508BA84A"]
+			id: "32CE5C0CEBF02E0E"
+			tasks: [{
+				id: "38CEA148BCE0FBFA"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/black_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+				count: 14L
+			}]
+		}
+		{
+			x: 19.0d
+			y: 0.0d
+			dependencies: ["32CE5C0CEBF02E0E"]
+			id: "44CE2B741A323973"
+			tasks: [{
+				id: "00AA0D8F600239E1"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/black_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 18.5d
+			y: 1.5d
+			description: ["Weak blue steel is made by alloying &3Bismuth Bronze, Black Steel, Sterling Silver, Steel"]
+			dependencies: ["44CE2B741A323973"]
+			id: "1F261F1F9CDC5CA8"
+			tasks: [{
+				id: "6B02B33E330B1FF2"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/weak_blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 19.5d
+			y: 1.5d
+			description: ["Weak red Steel is made by alloying &3Black Steel, Brass, Rose Gold, Steel"]
+			dependencies: ["44CE2B741A323973"]
+			id: "6DD0554711B68632"
+			tasks: [{
+				id: "00C1DED048695DA6"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/weak_red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 18.5d
+			y: 3.5d
+			dependencies: ["37180015F854BC0D"]
+			id: "4C8385E2ACE406EE"
+			tasks: [{
+				id: "2D41794F5ED2908B"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 19.5d
+			y: 3.5d
+			dependencies: ["3F1A57E5A784E739"]
+			id: "15BC783BB17EE2D4"
+			tasks: [{
+				id: "2BD6E6BD32452467"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 18.5d
+			y: 4.5d
+			dependencies: ["4C8385E2ACE406EE"]
+			id: "782836C39D00C73C"
+			tasks: [{
+				id: "06F8DDE48FE6BBF0"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 19.5d
+			y: 4.5d
+			dependencies: ["15BC783BB17EE2D4"]
+			id: "01711092E2004315"
+			tasks: [{
+				id: "3A08DCD55EB38342"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 18.5d
+			y: 5.5d
+			dependencies: ["782836C39D00C73C"]
+			id: "4110D65952C446BC"
+			tasks: [{
+				id: "42FB9AAFC71A5729"
+				type: "item"
+				item: "tfc:metal/bucket/blue_steel"
+			}]
+		}
+		{
+			x: 19.5d
+			y: 5.5d
+			dependencies: ["01711092E2004315"]
+			id: "7655E45A37759CAB"
+			tasks: [{
+				id: "39890A991AB341B5"
+				type: "item"
+				item: "tfc:metal/bucket/red_steel"
+			}]
+		}
+		{
+			x: 19.0d
+			y: 6.5d
+			description: ["The main goal of progressing through TFC this will allow you to start moving the creosote around to make treated wood"]
+			dependencies: [
+				"7655E45A37759CAB"
+				"4110D65952C446BC"
+			]
+			id: "42471A8474620E27"
+			tasks: [{
+				id: "5B69D6251E53714A"
+				type: "item"
+				item: "minecraft:bucket"
+			}]
+		}
+		{
+			title: "Engineer's tools"
+			x: 14.0d
+			y: 6.5d
+			dependencies: ["42471A8474620E27"]
+			id: "4170701E508D58B5"
+			tasks: [
+				{
+					id: "1B4B95CC48B88CA0"
+					type: "item"
+					item: {
+						id: "immersiveengineering:hammer"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "4A861E5E22EF9766"
+					type: "item"
+					item: {
+						id: "immersiveengineering:wirecutter"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "2EB2B34F41B4C17D"
+					type: "item"
+					item: "immersiveengineering:screwdriver"
+				}
+			]
+		}
+		{
+			x: 14.0d
+			y: 8.5d
+			description: ["Once you have been to the Nether you should have grabbed some Magma blocks for the blast furnace you only need 9 for 1 Blast Furnace"]
+			dependencies: [
+				"679D7B1E110BE18E"
+				"4B88B6D1DD2A30EA"
+			]
+			id: "584E1EADFF9DB1FC"
+			tasks: [{
+				id: "371BDAFC059C182F"
+				type: "item"
+				item: "immersiveengineering:blastbrick"
+			}]
+		}
+		{
+			x: 20.5d
+			y: 6.5d
+			description: ["Using red or blue steel pickaxe you can mine obsidian to make a nether portal"]
+			dependencies: [
+				"01711092E2004315"
+				"782836C39D00C73C"
+			]
+			id: "7B044C2424F0CF68"
+			tasks: [
+				{
+					id: "34CB282F5D3011A1"
+					type: "item"
+					item: {
+						id: "tfc:metal/pickaxe/blue_steel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "0756308FEA3B221C"
+					type: "item"
+					item: {
+						id: "tfc:metal/pickaxe/red_steel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 20.5d
+			y: 8.5d
+			description: ["Using some spare steel and a flint you can make a flint and steel or you can use a firestarter"]
+			dependencies: ["7B044C2424F0CF68"]
+			dependency_requirement: "all_started"
+			id: "4B88B6D1DD2A30EA"
+			tasks: [{
+				id: "04A96D71D2B55663"
+				type: "dimension"
+				title: "Going Deeper"
+				dimension: "minecraft:the_nether"
+			}]
+		}
+		{
+			x: 3.5d
+			y: -5.0d
+			description: ["These are used in the Beehives and are what holds the Queen Bees and the honey/Beeswax"]
+			dependencies: ["56D132B96D044C49"]
+			id: "7BAF69BE9D91D31E"
+			tasks: [{
+				id: "0D2CE7FBBD3A836E"
+				type: "item"
+				item: {
+					id: "firmalife:beehive_frame"
+					Count: 1b
+					tag: { }
+					ForgeCaps: {
+						Parent: { }
+					}
+				}
+			}]
+		}
+		{
+			x: 2.0d
+			y: -5.0d
+			description: ["The Beehive is where you store the Frames you can store 4 frames in 1 beehive. The more frames in 1 beehive the higher the chance for a Queen to move in this can also be increased by having flowers around a 5 block radius of the beehive"]
+			dependencies: ["7BAF69BE9D91D31E"]
+			id: "3F19B7E75E82329B"
+			tasks: [{
+				id: "3E6F00508B7BBC68"
+				type: "item"
+				item: "firmalife:beehive"
+			}]
+		}
+		{
+			x: 18.5d
+			y: 2.5d
+			description: ["combining the Weak Blue steel with Black Steel and Flux in an anvil will allow you to make High Carbon Blue Steel"]
+			dependencies: ["1F261F1F9CDC5CA8"]
+			id: "37180015F854BC0D"
+			tasks: [{
+				id: "72311DDE4A132AAA"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/high_carbon_blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 19.5d
+			y: 2.5d
+			description: ["Combining Weak red Steel with Black Steel and Flux with create High Carbon Red Steel"]
+			dependencies: ["6DD0554711B68632"]
+			id: "3F1A57E5A784E739"
+			tasks: [{
+				id: "5127DF54C38672CD"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/high_carbon_red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 1.0d
+			y: -5.5d
+			description: ["You get Beeswax by scraping the wax off the frame with a knife. &6THIS WILL KILL THE QUEEN"]
+			dependencies: ["3F19B7E75E82329B"]
+			id: "70E8D108838F5527"
+			tasks: [{
+				id: "7BBF4271488853A4"
+				type: "item"
+				item: "firmalife:beeswax"
+			}]
+		}
+		{
+			x: 1.0d
+			y: -4.5d
+			description: ["This can be aquired by right clicking a beehive with a empty jar"]
+			dependencies: ["3F19B7E75E82329B"]
+			id: "3B69EE76706A7EFD"
+			tasks: [
+				{
+					id: "16E1DE768D0DA67D"
+					type: "item"
+					item: "firmalife:raw_honey"
+				}
+				{
+					id: "716E78E014D1C659"
+					type: "item"
+					item: "firmalife:empty_jar"
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: -5.5d
+			description: [
+				"Treated Lumber can be used to make early create items and some Firmalife items"
+				"Treated wood can also be used for these recipes but treated Lumber cannot be used for Immersive Engineering recipes"
+			]
+			dependencies: ["70E8D108838F5527"]
+			id: "40CFA951439C59FB"
+			tasks: [{
+				id: "066A3AB04B62A00A"
+				type: "item"
+				item: "firmalife:treated_lumber"
+				count: 8L
+			}]
+		}
+		{
+			x: 12.5d
+			y: 7.5d
+			id: "27F4DD5CDC632173"
+			tasks: [{
+				id: "4192C1D64910ABED"
+				type: "item"
+				item: "immersiveengineering:treated_wood_horizontal"
+				count: 8L
+			}]
+		}
+		{
+			x: 11.5d
+			y: 7.5d
+			id: "2FDBDA458D1D723D"
+			tasks: [{
+				id: "6C441C8D5F1861B7"
+				type: "item"
+				item: "immersiveengineering:craftingtable"
+			}]
+		}
+		{
+			x: 10.5d
+			y: 7.5d
+			id: "7EB06BF19F1B8CFD"
+			tasks: [{
+				id: "0E1052BBC52081EE"
+				type: "item"
+				item: "immersiveengineering:workbench"
+			}]
+		}
+		{
+			title: "Blueprints"
+			x: 9.5d
+			y: 7.5d
+			id: "5754D2C2E19C734E"
+			tasks: [
+				{
+					id: "2A94BE99331C1EA1"
+					type: "item"
+					item: {
+						id: "immersiveengineering:blueprint"
+						Count: 1b
+						tag: {
+							blueprint: "components"
+						}
+					}
+				}
+				{
+					id: "4084C55DF7E7BC9D"
+					type: "item"
+					item: {
+						id: "immersiveengineering:blueprint"
+						Count: 1b
+						tag: {
+							blueprint: "molds"
+						}
+					}
+				}
+				{
+					id: "0016669B274971F4"
+					type: "item"
+					item: {
+						id: "immersiveengineering:blueprint"
+						Count: 1b
+						tag: {
+							blueprint: "electrode"
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 12.5d
+			y: 6.0d
+			description: ["The most basic item in Create this allows you to move kinetic energy between create blocks"]
+			id: "2D25E53FA7D3BD5B"
+			tasks: [{
+				id: "475C1B3CF913E559"
+				type: "item"
+				item: "create:cogwheel"
+			}]
+		}
+		{
+			title: "Early Create"
+			x: 9.5d
+			y: 6.0d
+			description: [
+				"you need these 2 things to make plates and smelt aluminium dust which you get from crushing cryolite with an engineers hammer"
+				"you then place a bucket of lava infront of the fan with a slab that cant butn and a block behind"
+			]
+			id: "39FEE3418D86CFB9"
+			tasks: [
+				{
+					id: "4A504CC7DF30FB7A"
+					type: "item"
+					item: "create:encased_fan"
+				}
+				{
+					id: "3835C7D033329EF1"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+			]
+		}
+		{
+			x: 12.5d
+			y: 5.0d
+			description: ["the water wheel is one of the most simple ways of automating the energy to spin the cogs and machines"]
+			id: "5C152541C2D4F514"
+			tasks: [{
+				id: "505F89D30A514BE5"
+				type: "item"
+				item: "create:water_wheel"
+			}]
+		}
+	]
+	quest_links: [ ]
+}
