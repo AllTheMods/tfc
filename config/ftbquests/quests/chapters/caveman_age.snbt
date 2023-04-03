@@ -3,21 +3,21 @@
 	group: "00892B61FDC7AD64"
 	order_index: 0
 	filename: "caveman_age"
-	title: "Caveman age"
+	title: "{gravitas.chapters.1.title}"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "Gotta start Somewhere!"
+			title: "{gravitas.quest.caveman.start_somewhere}"
 			x: 4.5d
 			y: 0.0d
-			description: ["Now armed with Tools the first thing you can do is go collect logs from trees"]
+			description: ["{gravitas.quest.caveman.desc.start_somewhere}"]
 			dependencies: ["5BB844EEAB02F3EF"]
 			id: "6AF34FEE59AC7AEE"
 			tasks: [{
 				id: "3D655CF6EDEF807C"
 				type: "item"
-				title: "Any #tfc:log_pile_logs"
+				title: "{gravitas.quest.caveman.logpile}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -33,13 +33,13 @@
 		{
 			x: 2.5d
 			y: 1.0d
-			description: ["To make some basic tools you will need loose rocks found on the surface."]
+			description: ["{gravitas.quest.caveman.desc.pebbles}"]
 			hide_dependency_lines: false
 			id: "4705AC06819F2948"
 			tasks: [{
 				id: "235353A8DAB15832"
 				type: "item"
-				title: "Pebbles all around"
+				title: "{gravitas.quest.caveman.pebbles}"
 				icon: "tfc:rock/loose/granite"
 				item: {
 					id: "itemfilters:tag"
@@ -53,10 +53,10 @@
 			}]
 		}
 		{
-			title: "Stone tools"
+			title: "{gravitas.quest.caveman.stone_tools}"
 			x: 3.5d
 			y: 0.0d
-			description: ["with the loose pebbles you can knapp them into tool heads check JEI for recipes. Then you can combine the tool heads with a stick to make stone tools"]
+			description: ["{gravitas.quest.caveman.desc.stone_tools}"]
 			dependencies: [
 				"4705AC06819F2948"
 				"310044EE2C63F6EA"
@@ -66,7 +66,7 @@
 				{
 					id: "618913D0C78CBE62"
 					type: "item"
-					title: "Stone hammer"
+					title: "{gravitas.quest.caveman.stone_hammer}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -78,7 +78,7 @@
 				{
 					id: "53B0E7FCA78032D1"
 					type: "item"
-					title: "Stone axe"
+					title: "{gravitas.quest.caveman.stone_axe}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -90,7 +90,7 @@
 				{
 					id: "0DE46120D406B76A"
 					type: "item"
-					title: "Stone knife"
+					title: "{gravitas.quest.caveman.stone_knife}"
 					tags: ["tfcstone_tools"]
 					item: {
 						id: "itemfilters:tag"
@@ -104,15 +104,15 @@
 			]
 		}
 		{
-			title: "Stick it up"
+			title: "{gravitas.quest.caveman.stick}"
 			x: 2.5d
 			y: -1.0d
-			description: ["The twigs on the ground are quite usefull make sure to pick plenty up!"]
+			description: ["{gravitas.quest.caveman.desc.stick}"]
 			id: "310044EE2C63F6EA"
 			tasks: [{
 				id: "2260F1085EF02ED5"
 				type: "item"
-				title: "Any #tfc:twigs"
+				title: "{gravitas.quest.caveman.twig}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -126,10 +126,10 @@
 			}]
 		}
 		{
-			title: "Clay time!"
+			title: "{gravitas.quest.caveman.clay}"
 			x: 5.5d
 			y: 0.0d
-			description: ["Clay can be hard to find on the surface but there is a few key things to look for while searching. Look for specific plants called &6Athyrium Fern, &6Canna, &6Goldenrod, Pampas Grass, &6Perovskia and &6Water Canna"]
+			description: ["{gravitas.quest.caveman.desc.clay}"]
 			id: "36E02BBA8C4B2CFB"
 			tasks: [{
 				id: "3C36CBFAD94F17BF"
@@ -139,10 +139,10 @@
 			}]
 		}
 		{
-			title: "Important Molds"
+			title: "{gravitas.quest.caveman.important_molds}"
 			x: 6.5d
 			y: -1.0d
-			description: ["These will be the Molds you use the most"]
+			description: ["{gravitas.quest.caveman.desc.important_molds}"]
 			dependencies: ["36E02BBA8C4B2CFB"]
 			id: "16AFF2128F4D2764"
 			tasks: [
@@ -247,10 +247,10 @@
 			]
 		}
 		{
-			title: "Less Important but still useful Molds!"
+			title: "{gravitas.quest.caveman.useful_molds}"
 			x: 6.5d
 			y: 0.0d
-			description: ["These Molds are still useful but are not NEEDED early on"]
+			description: ["{gravitas.quest.caveman.desc.useful_molds}"]
 			dependencies: ["36E02BBA8C4B2CFB"]
 			id: "2E52646F2C573D38"
 			tasks: [
@@ -355,7 +355,7 @@
 			]
 		}
 		{
-			title: "Small copper"
+			title: "{gravitas.quest.caveman.small_copper}"
 			x: 5.0d
 			y: -5.0d
 			id: "70B253DE34134999"
@@ -376,12 +376,12 @@
 			}]
 		}
 		{
-			title: "Fire in the Hole!"
+			title: "{gravitas.quest.caveman.fire}"
 			x: 7.0d
 			y: -2.0d
 			description: [
-				"You can use a pit kiln to fire all the molds you have made"
-				"&34 Small molds can be done at once but larger molds will require a seperate kiln"
+				"{gravitas.quest.caveman.desc.fire.1}"
+				"{gravitas.quest.caveman.desc.fire.2}"
 			]
 			dependencies: [
 				"16AFF2128F4D2764"
@@ -392,7 +392,7 @@
 				{
 					id: "1944EB2509CCF65D"
 					type: "item"
-					title: "Any #tfc:firepit_logs"
+					title: "{gravitas.quest.caveman.firepit_logs}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -479,10 +479,10 @@
 			]
 		}
 		{
-			title: "Early game metal storage"
+			title: "{gravitas.quest.caveman.early_metal_storage}"
 			x: 6.0d
 			y: -2.0d
-			description: ["Now lets make the vessels where we are going to smelt and store the copper"]
+			description: ["{gravitas.quest.caveman.desc.early_metal_storage}"]
 			dependencies: ["16AFF2128F4D2764"]
 			id: "7BB2C0452907A865"
 			tasks: [
@@ -518,7 +518,7 @@
 				{
 					id: "26FA5FD903B36D2E"
 					type: "item"
-					title: "Any #tfc:pit_kiln_logs"
+					title: "{gravitas.quest.caveman.pit_kiln_logs}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -537,13 +537,13 @@
 			]
 		}
 		{
-			title: "Copper tool heads"
+			title: "{gravitas.quest.caveman.copper_tool}"
 			x: 6.5d
 			y: -5.0d
 			shape: "gear"
 			description: [
-				"You can make copper tool heads by putting the small copper you collected into the large vessel and putting it through a kiln and then pouring it into a cast before letting it cool down"
-				"&6Both the pickaxe head and prospector head will take 10 small copper each"
+				"{gravitas.quest.caveman.desc.copper_tools.1}"
+				"{gravitas.quest.caveman.desc.copper_tools.2}"
 			]
 			dependencies: [
 				"70B253DE34134999"
@@ -582,7 +582,7 @@
 			]
 		}
 		{
-			title: "Fired Molds"
+			title: "{gravitas.quest.caveman.fired_mold}"
 			x: 6.5d
 			y: -3.0d
 			dependencies: [
@@ -689,7 +689,7 @@
 			]
 		}
 		{
-			title: "Dried plant sticks (aka Straw)"
+			title: "{gravitas.quest.caveman.straw}"
 			x: 8.5d
 			y: -2.0d
 			id: "142C9FCE1C0C8C42"
@@ -704,15 +704,15 @@
 			x: 8.0d
 			y: -5.0d
 			description: [
-				"Using your trusty new copper pickaxe you can go up to any generated rock and mine all the blocks on each face so it falls "
-				"Once done the stone block should fall due to gravity then you can pick it up and transport it somewhere closer to your base, Once placed right click with a TFC hammer to turn it into a basic anvil"
+				"{gravitas.quest.caveman.desc.copper_pick.1}"
+				"{gravitas.quest.caveman.desc.copper_pick.2}"
 			]
 			dependencies: ["2F073E07D1A9533A"]
 			id: "5B949C879D977B18"
 			tasks: [{
 				id: "3AF7D381594B2398"
 				type: "item"
-				title: "Any #tfc:rock_anvils"
+				title: "{gravitas.quest.caveman.rock_anvil}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -726,8 +726,8 @@
 			x: 9.5d
 			y: -6.0d
 			description: [
-				"You can get flux by crushing certain loose stones in your crafting grid with a hammer"
-				"These rocks are &3Dolomite, &3Marble, &3Limestone and &3Chalk"
+				"{gravitas.quest.caveman.desc.flux.1}"
+				"{gravitas.quest.caveman.desc.flux.2}"
 			]
 			id: "538D08DB0D760122"
 			tasks: [{
@@ -740,7 +740,7 @@
 		{
 			x: 9.5d
 			y: -5.0d
-			description: ["You can make double copper ingots by heating copper ingots to nright red then putting them on your stone anvil with flux and shift right clicking the anvil."]
+			description: ["{gravitas.quest.caveman.desc.copper_double}"]
 			dependencies: [
 				"5B949C879D977B18"
 				"538D08DB0D760122"
@@ -805,8 +805,8 @@
 			x: 11.5d
 			y: -4.0d
 			description: [
-				"Normal Bronze is made of Tin and Copper"
-				"the ratio can be &688%-92% Copper &fand &78%-12% Tin"
+				"{gravitas.quest.caveman.desc.bronze.1}"
+				"{gravitas.quest.caveman.desc.bronze.2}"
 			]
 			dependencies: ["4EDF04AAD97993B0"]
 			id: "67698EC82152C2AE"
@@ -888,7 +888,7 @@
 		{
 			x: 14.0d
 			y: -5.0d
-			description: ["You can make any of the 3 types of anvil as the type of bronze you make is dependant on your situation and the ore veins around you"]
+			description: ["{gravitas.quest.caveman.desc.bronze_anvil}"]
 			dependencies: [
 				"3A7F51C68201F05C"
 				"7A39BB7CB3F07B91"
@@ -899,7 +899,7 @@
 			tasks: [{
 				id: "0581704709D8004C"
 				type: "item"
-				title: "Any #tfc:bronze_anvils"
+				title: "{gravitas.quest.caveman.bronze_anvil}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -932,7 +932,7 @@
 		{
 			x: 9.5d
 			y: 2.5d
-			description: ["Using the quern crush some graphite and kaolinite up and create fire clay"]
+			description: ["{gravitas.quest.caveman.desc.fire_clay}"]
 			hide_dependency_lines: false
 			dependencies: ["71F6A2F4C45744B0"]
 			id: "78983DD9E6C2B563"
@@ -946,8 +946,8 @@
 			x: 10.5d
 			y: 1.5d
 			description: [
-				"Kaolonite can be found in &3Sedimentary rocks &fabove y=0"
-				"Graphite can be found in &3Gneiss , &3Marble , &3Quartzite and &3Schist &fbellow y=100"
+				"{gravitas.quest.caveman.desc.kaolinite}"
+				"{gravitas.quest.caveman.desc.graphite}"
 			]
 			hide_dependency_lines: true
 			dependencies: ["2F073E07D1A9533A"]
@@ -971,7 +971,7 @@
 		{
 			x: 8.5d
 			y: 1.5d
-			description: ["to crush graphite and kaolinite you will need a quern"]
+			description: ["{gravitas.quest.caveman.desc.quern}"]
 			dependencies: [
 				"205764F4494805D4"
 				"67CC0E5D923049A4"
@@ -999,7 +999,7 @@
 		{
 			x: 8.5d
 			y: 0.0d
-			description: ["To make a quern you need smooth stone Luckily ruthlessly attacking raw blocks can create smooth versions"]
+			description: ["{gravitas.quest.caveman.desc.smooth_stone}"]
 			dependencies: ["2E52646F2C573D38"]
 			id: "67CC0E5D923049A4"
 			tasks: [
@@ -1039,7 +1039,7 @@
 		{
 			x: 9.5d
 			y: 3.5d
-			description: ["Fire bricks can be made with the same napping as molds and rocks"]
+			description: ["{gravitas.quest.caveman.desc.fire_brick}"]
 			dependencies: ["78983DD9E6C2B563"]
 			id: "7555827702D1810C"
 			tasks: [
@@ -1081,7 +1081,7 @@
 				{
 					id: "2D8F09CF99266787"
 					type: "item"
-					title: "Any brick"
+					title: "{gravitas.quest.caveman.brick}"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
@@ -1094,12 +1094,12 @@
 			]
 		}
 		{
-			title: "primative glue"
+			title: "{gravitas.quest.caveman.mortar}"
 			x: 15.0d
 			y: -7.0d
 			description: [
-				"you get mortar by putting sand in a barrel full of limewater"
-				"Limewater can be obtained by right clicking a barrel of water with flux"
+				"{gravitas.quest.caveman.desc.mortar.1}"
+				"{gravitas.quest.caveman.desc.mortar.2}"
 			]
 			dependencies: [
 				"606A5B99436B903D"
@@ -1115,10 +1115,10 @@
 			}]
 		}
 		{
-			title: "Cutting Edge"
+			title: "{gravitas.quest.caveman.cutting}"
 			x: 15.0d
 			y: -4.0d
-			description: ["Simply crafting a rock and a file together you can turn the round stones into a brick"]
+			description: ["{gravitas.quest.caveman.desc.cutting}"]
 			dependencies: [
 				"606A5B99436B903D"
 				"67CC0E5D923049A4"
@@ -1150,8 +1150,8 @@
 			x: 17.5d
 			y: -5.0d
 			description: [
-				"Wrought iron is aquired by hammering raw iron bloom into refined iron bloom then into wrought iron"
-				"&3You will need alot of iron so make sure you get enough for an anvil"
+				"{gravitas.quest.caveman.desc.wrought_iron.1}"
+				"{gravitas.quest.caveman.desc.wrought_iron.2}"
 			]
 			dependencies: ["42EF08866DDD2A7D"]
 			id: "58CB73D4B892EA86"
@@ -1206,10 +1206,10 @@
 		{
 			x: 10.5d
 			y: 2.5d
-			subtitle: "Mixing it up"
+			subtitle: "{gravitas.quest.caveman.crucible}"
 			description: [
-				"The crucible will allow for easier alloy creation"
-				"The crucible has to be placed bellow a blast furnace or above a charcoal furnace"
+				"{gravitas.quest.caveman.desc.crucible.1}"
+				"{gravitas.quest.caveman.desc.crucible.2}"
 			]
 			id: "5F6EB92B9F90DDCC"
 			tasks: [
@@ -1237,12 +1237,12 @@
 			]
 		}
 		{
-			title: "Charcoal forge"
+			title: "{gravitas.quest.caveman.charcoal_forge}"
 			x: 6.5d
 			y: -6.0d
 			description: [
-				"a charcoal furnace is 8 pieces of charcoal in the ground surrounded by a rock of any sort on all sides apart from above"
-				"The production of charcoal can be greatly improved by using a &3charcoal pit"
+				"{gravitas.quest.caveman.desc.charcoal_forge.1}"
+				"{gravitas.quest.caveman.desc.charcoal_forge.2}"
 			]
 			dependencies: [
 				"2F073E07D1A9533A"
@@ -1257,10 +1257,10 @@
 			}]
 		}
 		{
-			title: "Rough cut"
+			title: "{gravitas.quest.caveman.saw_blade}"
 			x: 5.0d
 			y: -3.0d
-			description: ["you will need a sawblade to make lumber which will be used quite alot"]
+			description: ["{gravitas.quest.caveman.desc.saw_blade}"]
 			dependencies: ["381FF80AB846589D"]
 			id: "5AF3534F6A3F88F5"
 			tasks: [
@@ -1298,7 +1298,7 @@
 			]
 		}
 		{
-			title: "Lumber jack"
+			title: "{gravitas.quest.caveman.lumber_jack}"
 			x: 3.5d
 			y: -3.0d
 			dependencies: ["5AF3534F6A3F88F5"]
@@ -1306,7 +1306,7 @@
 			tasks: [{
 				id: "6287BE7962A46976"
 				type: "item"
-				title: "Any 16 Lumber"
+				title: "{gravitas.quest.caveman.lumber_16}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1318,15 +1318,15 @@
 			}]
 		}
 		{
-			title: "big barrel"
+			title: "{gravitas.quest.caveman.big_barrel}"
 			x: 3.5d
 			y: -7.0d
-			description: ["you will need a fair few barrels to speed up the production of leather and mortar"]
+			description: ["{gravitas.quest.caveman.desc.big_barrel}"]
 			id: "2213ABB8B1EA20B3"
 			tasks: [{
 				id: "6FAC8B8082CCD145"
 				type: "item"
-				title: "Any #tfc:barrels"
+				title: "{gravitas.quest.caveman.barrels}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1340,13 +1340,13 @@
 		{
 			x: 2.0d
 			y: -3.0d
-			description: ["Crafting table at last allows for 3x3 recipes"]
+			description: ["{gravitas.quest.caveman.desc.work_bench}"]
 			dependencies: ["56D132B96D044C49"]
 			id: "173DED94F185C53E"
 			tasks: [{
 				id: "26996CB5BEE6EF21"
 				type: "item"
-				title: "Workbench"
+				title: "{gravitas.quest.caveman.workbench}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1357,10 +1357,10 @@
 			}]
 		}
 		{
-			title: "Vanilla crafting table"
+			title: "{gravitas.quest.caveman.crafting_table}"
 			x: 0.5d
 			y: -3.0d
-			description: ["this is the vanilla crafting table it is needed for late game recipes like ae2 "]
+			description: ["{gravitas.quest.caveman.desc.crafting_table}"]
 			dependencies: ["173DED94F185C53E"]
 			optional: true
 			id: "74537365234D1BFF"
@@ -1371,18 +1371,18 @@
 			}]
 		}
 		{
-			title: "Raw Hide"
+			title: "{gravitas.quest.caveman.raw_hide}"
 			x: 3.5d
 			y: -8.0d
 			description: [
-				"This is the first step in making leather"
-				"Get as much hide as you can as you need a fair bit of leather for bellows and starting Immersive Engineering"
+				"{gravitas.quest.caveman.desc.raw_hide.1}"
+				"{gravitas.quest.caveman.desc.raw_hide.2}"
 			]
 			id: "740BBC74BBF7F8C0"
 			tasks: [{
 				id: "0743625DA6AC4C1E"
 				type: "item"
-				title: "Any raw hide"
+				title: "{gravitas.quest.caveman.any_raw_hide}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1394,17 +1394,17 @@
 			}]
 		}
 		{
-			title: "Let it soak"
+			title: "{gravitas.quest.caveman.soak}"
 			x: 4.5d
 			y: -8.0d
-			subtitle: "Limewater+Hide"
-			description: ["This is the second stage of making leather this is made by putting the previously collected hide in a barrel full of Limewater which is made by adding flux to water in a barrel"]
+			subtitle: "{gravitas.quest.caveman.limewater_hide}"
+			description: ["{gravitas.quest.caveman.desc.soak}"]
 			dependencies: ["740BBC74BBF7F8C0"]
 			id: "5F68AE5D75F886E6"
 			tasks: [{
 				id: "6AFB78B75B12D8D0"
 				type: "item"
-				title: "Any #tfc:soaked_hides"
+				title: "{gravitas.quest.caveman.soaked_hide}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1416,16 +1416,16 @@
 			}]
 		}
 		{
-			title: "Like a squeegee"
+			title: "{gravitas.quest.caveman.squeegee}"
 			x: 5.5d
 			y: -8.0d
-			description: ["This is the 3rd stage of making leather by scraping all the limewater off the hide with your trusty knife"]
+			description: ["{gravitas.quest.caveman.desc.squeegee}"]
 			dependencies: ["5F68AE5D75F886E6"]
 			id: "59DF60A447898A21"
 			tasks: [{
 				id: "6F7AA30953950D35"
 				type: "item"
-				title: "Any #tfc:scraped_hides"
+				title: "{gravitas.quest.caveman.scraped_hide}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1437,16 +1437,16 @@
 			}]
 		}
 		{
-			title: "Let it soak 2"
+			title: "{gravitas.quest.caveman.soak_2}"
 			x: 6.5d
 			y: -8.0d
-			description: ["to prepare the leather we need to wash it with water"]
+			description: ["{gravitas.quest.caveman.desc.soak_2}"]
 			dependencies: ["59DF60A447898A21"]
 			id: "56181503EA97CD5E"
 			tasks: [{
 				id: "067FDAC703346343"
 				type: "item"
-				title: "Any #tfc:prepared_hides"
+				title: "{gravitas.quest.caveman.prepared_hide}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1458,19 +1458,19 @@
 			}]
 		}
 		{
-			title: "the premium material"
+			title: "{gravitas.quest.caveman.leather}"
 			x: 7.5d
 			y: -8.0d
 			description: [
-				"The final process is putting the prepared Hide into a barrel full of Tannin"
-				"Tannin is made by adding certain logs such as &3oak, Birch, Chestnut, Douglas Fir, Hickory, Maple"
+				"{gravitas.quest.caveman.desc.leather.1}"
+				"{gravitas.quest.caveman.desc.leather.2}"
 			]
 			dependencies: ["56181503EA97CD5E"]
 			id: "7860C0D66B682A1F"
 			tasks: [{
 				id: "65575C5FAEAC9B7E"
 				type: "item"
-				title: "Any leather"
+				title: "{gravitas.quest.caveman.any_leather}"
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -1485,8 +1485,8 @@
 			x: 7.5d
 			y: -6.0d
 			description: [
-				"The bellow keeps the charcoal pit warm and can heat it up quickly"
-				"The more bellows around a charcoal forge the higher the temperature the forge can reach"
+				"{gravitas.quest.caveman.desc.bellows.1}"
+				"{gravitas.quest.caveman.desc.bellows.2}"
 			]
 			dependencies: ["7860C0D66B682A1F"]
 			id: "50063D8DA6A258F6"
@@ -1499,7 +1499,7 @@
 		{
 			x: 19.0d
 			y: -5.0d
-			description: ["The iron anvil is made the same way as copper and bronze you WILL need this"]
+			description: ["{gravitas.quest.caveman.desc.iron_anvil}"]
 			dependencies: ["58CB73D4B892EA86"]
 			id: "1A99EF05065B3689"
 			tasks: [{
@@ -1520,10 +1520,10 @@
 		{
 			x: 19.0d
 			y: -4.0d
-			subtitle: "blast furnace"
+			subtitle: "{gravitas.quest.caveman.blast_furnace}"
 			description: [
-				"This is the minimum items needed for the smallest blast furnace you will need any sort of container underneath the blast furnace like a crucible for example"
-				"&6You need Bellows to increase the max temperature of the blastfurnace"
+				"{gravitas.quest.caveman.desc.blast_furnace.1}"
+				"{gravitas.quest.caveman.desc.blast_furnace.2}"
 			]
 			dependencies: ["1A99EF05065B3689"]
 			id: "7A77905EB8350098"
@@ -1574,7 +1574,7 @@
 			]
 		}
 		{
-			title: "creating steel"
+			title: "{gravitas.quest.caveman.steel}"
 			x: 19.0d
 			y: -3.0d
 			dependencies: ["7A77905EB8350098"]
@@ -1627,7 +1627,7 @@
 		{
 			x: 19.0d
 			y: -2.0d
-			description: ["Using the same procedure as the previous anvils you need to make a steel anvil next"]
+			description: ["{gravitas.quest.caveman.desc.steel_anvil}"]
 			dependencies: ["19C25C233BCCF44C"]
 			id: "568F95FC508BA84A"
 			tasks: [{
@@ -1689,7 +1689,7 @@
 		{
 			x: 18.5d
 			y: 1.5d
-			description: ["Weak blue steel is made by alloying &3Bismuth Bronze, Black Steel, Sterling Silver, Steel"]
+			description: ["{gravitas.quest.caveman.desc.weak_blue}"]
 			dependencies: ["44CE2B741A323973"]
 			id: "1F261F1F9CDC5CA8"
 			tasks: [{
@@ -1710,7 +1710,7 @@
 		{
 			x: 19.5d
 			y: 1.5d
-			description: ["Weak red Steel is made by alloying &3Black Steel, Brass, Rose Gold, Steel"]
+			description: ["{gravitas.quest.caveman.desc.weak_red}"]
 			dependencies: ["44CE2B741A323973"]
 			id: "6DD0554711B68632"
 			tasks: [{
@@ -1833,7 +1833,7 @@
 		{
 			x: 19.0d
 			y: 6.5d
-			description: ["The main goal of progressing through TFC this will allow you to start moving the creosote around to make treated wood"]
+			description: ["{gravitas.quest.caveman.desc.bucket}"]
 			dependencies: [
 				"7655E45A37759CAB"
 				"4110D65952C446BC"
@@ -1846,7 +1846,7 @@
 			}]
 		}
 		{
-			title: "Engineer's tools"
+			title: "{gravitas.quest.caveman.engineers_tools}"
 			x: 14.0d
 			y: 6.5d
 			dependencies: ["42471A8474620E27"]
@@ -1884,7 +1884,7 @@
 		{
 			x: 14.0d
 			y: 8.5d
-			description: ["Once you have been to the Nether you should have grabbed some Magma blocks for the blast furnace you only need 9 for 1 Blast Furnace"]
+			description: ["{gravitas.quest.caveman.desc.blast_brick}"]
 			dependencies: [
 				"679D7B1E110BE18E"
 				"4B88B6D1DD2A30EA"
@@ -1899,7 +1899,7 @@
 		{
 			x: 20.5d
 			y: 6.5d
-			description: ["Using red or blue steel pickaxe you can mine obsidian to make a nether portal"]
+			description: ["{gravitas.quest.caveman.desc.obsidian}"]
 			dependencies: [
 				"01711092E2004315"
 				"782836C39D00C73C"
@@ -1945,21 +1945,21 @@
 		{
 			x: 20.5d
 			y: 8.5d
-			description: ["Using some spare steel and a flint you can make a flint and steel or you can use a firestarter"]
+			description: ["{gravitas.quest.caveman.desc.going_deeper}"]
 			dependencies: ["7B044C2424F0CF68"]
 			dependency_requirement: "all_started"
 			id: "4B88B6D1DD2A30EA"
 			tasks: [{
 				id: "04A96D71D2B55663"
 				type: "dimension"
-				title: "Going Deeper"
+				title: "{gravitas.quest.caveman.going_deeper}"
 				dimension: "minecraft:the_nether"
 			}]
 		}
 		{
 			x: 3.5d
 			y: -5.0d
-			description: ["These are used in the Beehives and are what holds the Queen Bees and the honey/Beeswax"]
+			description: ["{gravitas.quest.caveman.desc.beehive_frame}"]
 			dependencies: ["56D132B96D044C49"]
 			id: "7BAF69BE9D91D31E"
 			tasks: [{
@@ -1978,7 +1978,7 @@
 		{
 			x: 2.0d
 			y: -5.0d
-			description: ["The Beehive is where you store the Frames you can store 4 frames in 1 beehive. The more frames in 1 beehive the higher the chance for a Queen to move in this can also be increased by having flowers around a 5 block radius of the beehive"]
+			description: ["{gravitas.quest.caveman.desc.beehive}"]
 			dependencies: ["7BAF69BE9D91D31E"]
 			id: "3F19B7E75E82329B"
 			tasks: [{
@@ -1990,7 +1990,7 @@
 		{
 			x: 18.5d
 			y: 2.5d
-			description: ["combining the Weak Blue steel with Black Steel and Flux in an anvil will allow you to make High Carbon Blue Steel"]
+			description: ["{gravitas.quest.caveman.desc.high_blue}"]
 			dependencies: ["1F261F1F9CDC5CA8"]
 			id: "37180015F854BC0D"
 			tasks: [{
@@ -2011,7 +2011,7 @@
 		{
 			x: 19.5d
 			y: 2.5d
-			description: ["Combining Weak red Steel with Black Steel and Flux with create High Carbon Red Steel"]
+			description: ["{gravitas.quest.caveman.desc.high_red}"]
 			dependencies: ["6DD0554711B68632"]
 			id: "3F1A57E5A784E739"
 			tasks: [{
@@ -2032,7 +2032,7 @@
 		{
 			x: 1.0d
 			y: -5.5d
-			description: ["You get Beeswax by scraping the wax off the frame with a knife. &6THIS WILL KILL THE QUEEN"]
+			description: ["{gravitas.quest.caveman.desc.beeswax}"]
 			dependencies: ["3F19B7E75E82329B"]
 			id: "70E8D108838F5527"
 			tasks: [{
@@ -2044,7 +2044,7 @@
 		{
 			x: 1.0d
 			y: -4.5d
-			description: ["This can be aquired by right clicking a beehive with a empty jar"]
+			description: ["{gravitas.quest.caveman.desc.honey}"]
 			dependencies: ["3F19B7E75E82329B"]
 			id: "3B69EE76706A7EFD"
 			tasks: [
@@ -2064,8 +2064,8 @@
 			x: 0.0d
 			y: -5.5d
 			description: [
-				"Treated Lumber can be used to make early create items and some Firmalife items"
-				"Treated wood can also be used for these recipes but treated Lumber cannot be used for Immersive Engineering recipes"
+				"{gravitas.quest.caveman.desc.treated_lumber.1}"
+				"{gravitas.quest.caveman.desc.treated_lumber.2}"
 			]
 			dependencies: ["70E8D108838F5527"]
 			id: "40CFA951439C59FB"
@@ -2108,7 +2108,7 @@
 			}]
 		}
 		{
-			title: "Blueprints"
+			title: "{gravitas.quest.caveman.blueprints}"
 			x: 9.5d
 			y: 7.5d
 			id: "5754D2C2E19C734E"
@@ -2151,7 +2151,7 @@
 		{
 			x: 12.5d
 			y: 6.0d
-			description: ["The most basic item in Create this allows you to move kinetic energy between create blocks"]
+			description: ["{gravitas.quest.caveman.desc.cogwheel}"]
 			id: "2D25E53FA7D3BD5B"
 			tasks: [{
 				id: "475C1B3CF913E559"
@@ -2160,12 +2160,12 @@
 			}]
 		}
 		{
-			title: "Early Create"
+			title: "{gravitas.quest.caveman.early_create}"
 			x: 9.5d
 			y: 6.0d
 			description: [
-				"you need these 2 things to make plates and smelt aluminium dust which you get from crushing cryolite with an engineers hammer"
-				"you then place a bucket of lava infront of the fan with a slab that cant butn and a block behind"
+				"{gravitas.quest.caveman.desc.early_create.1}"
+				"{gravitas.quest.caveman.desc.early_create.2}"
 			]
 			id: "39FEE3418D86CFB9"
 			tasks: [
@@ -2184,7 +2184,7 @@
 		{
 			x: 12.5d
 			y: 5.0d
-			description: ["the water wheel is one of the most simple ways of automating the energy to spin the cogs and machines"]
+			description: ["{gravitas.quest.caveman.desc.water_wheel}"]
 			id: "5C152541C2D4F514"
 			tasks: [{
 				id: "505F89D30A514BE5"

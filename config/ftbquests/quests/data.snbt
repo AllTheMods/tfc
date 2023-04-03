@@ -1,5 +1,13 @@
 {
 	version: 13
+	title: "{gravitas.modpack.title}"
+	icon: {
+		id: "ftbquests:custom_icon"
+		Count: 1b
+		tag: {
+			Icon: "gravitas:textures/items/gravitas_icon.png"
+		}
+	}
 	default_reward_team: false
 	default_consume_items: false
 	default_autoclaim_rewards: "disabled"
