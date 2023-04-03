@@ -97,7 +97,7 @@ onEvent('item.tags', e => {
     "barley",
     "oat",
     "rye",
-    "rice", 
+    "rice",
     "wheat"
     ]
 
