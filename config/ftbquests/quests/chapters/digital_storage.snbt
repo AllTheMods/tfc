@@ -3,14 +3,14 @@
 	group: "00892B61FDC7AD64"
 	order_index: 1
 	filename: "digital_storage"
-	title: "Digital Storage"
+	title: "{gravitas.chapters.2.title}"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
 			x: 0.0d
 			y: 0.0d
-			description: ["Search around on the Moon for the Presses It will also be worth picking up a bunch of skystone while getting the presses"]
+			description: ["{gravitas.quest.digital_storage.desc.silicon_press}"]
 			id: "74D84ACD38B6A7E3"
 			tasks: [
 				{
@@ -38,7 +38,7 @@
 		{
 			x: -1.5d
 			y: 0.0d
-			description: ["Fluix Crystals are formed by dropping &3nether quartz , &3Redstone and &3Charged certus crystals. &finto water"]
+			description: ["{gravitas.quest.digital_storage.desc.fluix_crystal}"]
 			id: "1C4FAA6F3DAA55B2"
 			tasks: [{
 				id: "0444FFF2B759BA15"
