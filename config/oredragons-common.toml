@@ -1,157 +1,153 @@
 
-["Breath Options"]
+["Dragon Structure Options"]
 
-	["Breath Options"."Ice Breath Options"]
+	["Dragon Structure Options"."Coal Dragon Structure Options"]
 		#
-		#Ice Breath Seconds Freeze
-		#Range: 1.0 ~ 1.7976931348623157E308
-		iceBreathSecondsFreeze = 2.5
+		#Coal Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		coalDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Ice Breath Damage
-		#Range: > 1
-		iceBreathDamage = 5
+		#Coal Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		coalDragonStructureBiomes = "*"
 
-	["Breath Options"."Fire Breath Options"]
+	["Dragon Structure Options"."Copper Dragon Structure Options"]
 		#
-		#Fire Breath Damage
-		#Range: > 1
-		fireBreathDamage = 5
+		#Copper Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		copperDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Fire Breath Seconds on Fire
-		#Range: > 1
-		fireBreathSecondsOnFire = 5
+		#Copper Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		copperDragonStructureBiomes = "*"
 
-	["Breath Options"."Drain Breath Options"]
+	["Dragon Structure Options"."Iron Dragon Structure Options"]
 		#
-		#Drain Breath Damage
-		#Range: > 1
-		drainBreathDamage = 5
+		#Iron Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		ironDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Drain Breath Drain Amplifier
-		#Range: > 1
-		drainBreathDrainAmplifier = 4
-		#
-		#Drain Breath Seconds Drain
-		#Range: > 1
-		drainBreathSecondsDrain = 8
+		#Iron Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		ironDragonStructureBiomes = "*"
 
-	["Breath Options"."Disenchanting Breath Options"]
+	["Dragon Structure Options"."Gold Dragon Structure Options"]
 		#
-		#Disenchanting Breath Damage
-		#Range: > 1
-		disenchantingBreathDamage = 5
+		#Gold Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		goldDragonStructureDimensions = "minecraft:overworld"
+		#
+		#Gold Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		goldDragonStructureBiomes = "*"
 
-	["Breath Options"."Poison Breath Options"]
+	["Dragon Structure Options"."Redstone Dragon Structure Options"]
 		#
-		#Poison Breath Seconds Poison
-		#Range: > 1
-		poisonBreathSecondsRadiation = 4
+		#Redstone Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		redstoneDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Poison Breath Poison Amplifier
-		#Range: > 1
-		poisonBreathRadiationAmplifier = 3
-		#
-		#Poison Breath Splash Range
-		#Range: 1.0 ~ 1.7976931348623157E308
-		poisonBreathSplashRange = 4.0
+		#Redstone Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		redstoneDragonStructureBiomes = "*"
 
-	["Breath Options"."Withering Breath Options"]
+	["Dragon Structure Options"."Lapis Dragon Structure Options"]
 		#
-		#Withering Breath Damage
-		#Range: > 1
-		witheringBreathDamage = 5
+		#Lapis Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		lapisDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Withering Breath Seconds Wither
-		#Range: > 1
-		witheringBreathSecondsWither = 4
-		#
-		#Withering Breath Wither Amplifier
-		#Range: > 1
-		witheringBreathWitherAmplifier = 4
+		#Lapis Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		lapisDragonStructureBiomes = "*"
 
-	["Breath Options"."Lightning Breath Options"]
+	["Dragon Structure Options"."Diamond Dragon Structure Options"]
 		#
-		#Lightning Breath Damage
-		#Range: > 1
-		lightningBreathDamage = 5
+		#Diamond Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		diamondDragonStructureDimensions = "minecraft:overworld"
+		#
+		#Diamond Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		diamondDragonStructureBiomes = "*"
 
-	["Breath Options"."Radiation Breath Options"]
+	["Dragon Structure Options"."Emerald Dragon Structure Options"]
 		#
-		#Radiation Breath Splash Range
-		#Range: 1.0 ~ 1.7976931348623157E308
-		radiationBreathSplashRange = 4.0
+		#Emerald Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		emeraldDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Radiation Breath Radiation Amplifier
-		#Range: > 1
-		radiationBreathRadiationAmplifier = 1
-		#
-		#Radiation Breath Seconds Radiation
-		#Range: > 1
-		radiationBreathSecondsRadiation = 5
-		#
-		#Radiation Breath Damage
-		#Range: > 1
-		radiationBreathDamage = 5
+		#Emerald Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		emeraldDragonStructureBiomes = "*"
 
-	["Breath Options"."Acid Breath Options"]
+	["Dragon Structure Options"."Obsidian Dragon Structure Options"]
 		#
-		#Acid Breath Seconds Acid
-		#Range: > 1
-		acidBreathSecondsAcid = 4
+		#Obsidian Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		obsidianDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Acid Breath Damage
-		#Range: > 1
-		acidBreathDamage = 5
-		#
-		#Acid Breath Acid Amplifier
-		#Range: > 1
-		acidBreathAcidAmplifier = 1
+		#Obsidian Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		obsidianDragonStructureBiomes = "mushroom_fields, badlands_plateau"
 
-["Effect Options"]
+	["Dragon Structure Options"."Netherite Dragon Structure Options"]
+		#
+		#Netherite Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		netheriteDragonStructureDimensions = "minecraft:nether"
+		#
+		#Netherite Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		netheriteDragonStructureBiomes = "*"
 
-	["Effect Options"."Radiation Effect Options"]
+	["Dragon Structure Options"."Allthemodium Dragon Structure Options **Not implemented yet**"]
 		#
-		#Radiation Effect Damage Amount
-		#Range: > 1
-		radiationEffectDamageAmount = 10
+		#Allthemodium Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		allthemodiumDragonStructureDimensions = "minecraft:overworld"
+		#
+		#Allthemodium Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		allthemodiumDragonStructureBiomes = "*"
 
-	["Effect Options"."Drain Effect Options"]
+	["Dragon Structure Options"."Vibranium Dragon Structure Options **Not implemented yet**"]
 		#
-		#Drain Effect Drain Amount
-		#Range: > 1
-		drainEffectDrainAmount = 5000
+		#Vibranium Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		vibraniumDragonStructureDimensions = "minecraft:overworld"
+		#
+		#Vibranium Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		vibraniumDragonStructureBiomes = "*"
 
-	["Effect Options"."Acid Effect Options"]
+	["Dragon Structure Options"."Unobtainium Dragon Structure Options **Not implemented yet**"]
 		#
-		#Acid Effect Enchanted Damage Amount
-		#Range: > 1
-		acidEffectEnchantedDamageAmount = 2
+		#Unobtainium Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		unobtainiumDragonStructureDimensions = "minecraft:overworld"
 		#
-		#Acid Effect not Enchanted Damage Amount
-		#Range: > 1
-		acidEffectNotEnchantedDamageAmount = 3
-		#
-		#Acid Effect Damage Cooldown in Seconds
-		#Range: 1.0 ~ 1.7976931348623157E308
-		acidEffectDamageCooldown = 1.0
-		#
-		#Acid Effect Damage Amount
-		#Range: 1.0 ~ 1.7976931348623157E308
-		acidEffectDamageAmount = 1.5
+		#Unobtainium Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		unobtainiumDragonStructureBiomes = "*"
 
-["Structure Options"]
-	#
-	#Dragon Cave Chest Weight 
-	#Higher Value -> Less Chests
-	#Range: > 1
-	dragonCaveChestWeight = 80
-	#
-	#Dragon Cave Shell Block (Example: minecraft:tnt, leave empty if you do not want an extra shell)
-	dragonCaveShellBlock = ""
+	["Dragon Structure Options"."Dracolich Dragon Structure Options **Not implemented yet**"]
+		#
+		#Dracolich Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
+		dracolichDragonStructureDimensions = "minecraft:overworld"
+		#
+		#Dracolich Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
+		dracolichDragonStructureBiomes = "*"
 
 ["Dragon Options"]
 
+	["Dragon Options"."Coal Dragon Options"]
+		#
+		#Coal Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		coalDragonMaxHealth = 800.0
+		#
+		#Coal Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		coalDragonArmor = 5.0
+		#
+		#Coal Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		coalDragonAttackDamage = 8.5
+
+	["Dragon Options"."Copper Dragon Options"]
+		#
+		#Copper Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		copperDragonMaxHealth = 1200.0
+		#
+		#Copper Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		copperDragonArmor = 5.5
+		#
+		#Copper Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		copperDragonAttackDamage = 9.0
+
 	["Dragon Options"."Iron Dragon Options"]
+		#
+		#Iron Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		ironDragonMaxHealth = 1800.0
 		#
 		#Iron Dragon Armor
 		#Range: 1.0 ~ 1.7976931348623157E308
@@ -160,10 +156,20 @@
 		#Iron Dragon Attack Damage
 		#Range: 1.0 ~ 1.7976931348623157E308
 		ironDragonAttackDamage = 9.5
+
+	["Dragon Options"."Gold Dragon Options"]
 		#
-		#Iron Dragon Max Health
+		#Gold Dragon Max Health
 		#Range: 1.0 ~ 1.7976931348623157E308
-		ironDragonMaxHealth = 1800.0
+		goldDragonMaxHealth = 2500.0
+		#
+		#Gold Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		goldDragonArmor = 5.5
+		#
+		#Gold Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		goldDragonAttackDamage = 9.5
 
 	["Dragon Options"."Redstone Dragon Options"]
 		#
@@ -179,131 +185,19 @@
 		#Range: 1.0 ~ 1.7976931348623157E308
 		redstoneDragonAttackDamage = 10.0
 
-	["Dragon Options"."Vibranium Dragon Options **Not implemented yet**"]
-		#
-		#Vibranium Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		vibraniumDragonArmor = 12.0
-		#
-		#Vibranium Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		vibraniumDragonMaxHealth = 20000.0
-		#
-		#Vibranium Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		vibraniumDragonAttackDamage = 14.0
-
 	["Dragon Options"."Lapis Dragon Options"]
 		#
 		#Lapis Dragon Max Health
 		#Range: 1.0 ~ 1.7976931348623157E308
 		lapisDragonMaxHealth = 3000.0
 		#
-		#Lapis Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		lapisDragonAttackDamage = 10.5
-		#
 		#Lapis Dragon Armor
 		#Range: 1.0 ~ 1.7976931348623157E308
 		lapisDragonArmor = 6.5
-
-	["Dragon Options"."Allthemodium Dragon Options **Not implemented yet**"]
 		#
-		#Allthemodium Dragon Attack Damage
+		#Lapis Dragon Attack Damage
 		#Range: 1.0 ~ 1.7976931348623157E308
-		allthemodiumDragonAttackDamage = 12.0
-		#
-		#Allthemodium Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		allthemodiumDragonArmor = 10.0
-		#
-		#Allthemodium Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		allthemodiumDragonMaxHealth = 10000.0
-
-	["Dragon Options"."Unobtainium Dragon Options **Not implemented yet**"]
-		#
-		#Unobtainium Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		unobtainiumDragonArmor = 15.0
-		#
-		#Unobtainium Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		unobtainiumDragonMaxHealth = 30000.0
-		#
-		#Unobtainium Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		unobtainiumDragonAttackDamage = 18.0
-
-	["Dragon Options"."Copper Dragon Options"]
-		#
-		#Copper Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		copperDragonArmor = 5.5
-		#
-		#Copper Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		copperDragonAttackDamage = 9.0
-		#
-		#Copper Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		copperDragonMaxHealth = 1200.0
-
-	["Dragon Options"."Netherite Dragon Options"]
-		#
-		#Netherite Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		netheriteDragonArmor = 9.0
-		#
-		#Netherite Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		netheriteDragonAttackDamage = 14.0
-		#
-		#Netherite Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		netheriteDragonMaxHealth = 5500.0
-
-	["Dragon Options"."Dracolich Dragon Options **Not implemented yet**"]
-		#
-		#Dracolich Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		dracolichDragonArmor = 20.0
-		#
-		#Dracolich Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		dracolichDragonMaxHealth = 50000.0
-		#
-		#Dracolich Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		dracolichDragonAttackDamage = 25.0
-
-	["Dragon Options"."Emerald Dragon Options"]
-		#
-		#Emerald Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		emeraldDragonAttackDamage = 12.0
-		#
-		#Emerald Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		emeraldDragonArmor = 7.5
-		#
-		#Emerald Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		emeraldDragonMaxHealth = 3500.0
-
-	["Dragon Options"."Obsidian Dragon Options"]
-		#
-		#Obsidian Dragon Armor
-		#Range: 1.0 ~ 1.7976931348623157E308
-		obsidianDragonArmor = 8.0
-		#
-		#Obsidian Dragon Attack Damage
-		#Range: 1.0 ~ 1.7976931348623157E308
-		obsidianDragonAttackDamage = 12.5
-		#
-		#Obsidian Dragon Max Health
-		#Range: 1.0 ~ 1.7976931348623157E308
-		obsidianDragonMaxHealth = 4200.0
+		lapisDragonAttackDamage = 10.5
 
 	["Dragon Options"."Diamond Dragon Options"]
 		#
@@ -319,147 +213,253 @@
 		#Range: 1.0 ~ 1.7976931348623157E308
 		diamondDragonAttackDamage = 11.0
 
-	["Dragon Options"."Coal Dragon Options"]
+	["Dragon Options"."Emerald Dragon Options"]
 		#
-		#Coal Dragon Attack Damage
+		#Emerald Dragon Max Health
 		#Range: 1.0 ~ 1.7976931348623157E308
-		coalDragonAttackDamage = 8.5
+		emeraldDragonMaxHealth = 3500.0
 		#
-		#Coal Dragon Max Health
+		#Emerald Dragon Armor
 		#Range: 1.0 ~ 1.7976931348623157E308
-		coalDragonMaxHealth = 800.0
+		emeraldDragonArmor = 7.5
 		#
-		#Coal Dragon Armor
+		#Emerald Dragon Attack Damage
 		#Range: 1.0 ~ 1.7976931348623157E308
-		coalDragonArmor = 5.0
+		emeraldDragonAttackDamage = 12.0
 
-	["Dragon Options"."Gold Dragon Options"]
+	["Dragon Options"."Obsidian Dragon Options"]
 		#
-		#Gold Dragon Armor
+		#Obsidian Dragon Max Health
 		#Range: 1.0 ~ 1.7976931348623157E308
-		goldDragonArmor = 5.5
+		obsidianDragonMaxHealth = 4200.0
 		#
-		#Gold Dragon Attack Damage
+		#Obsidian Dragon Armor
 		#Range: 1.0 ~ 1.7976931348623157E308
-		goldDragonAttackDamage = 9.5
+		obsidianDragonArmor = 8.0
 		#
-		#Gold Dragon Max Health
+		#Obsidian Dragon Attack Damage
 		#Range: 1.0 ~ 1.7976931348623157E308
-		goldDragonMaxHealth = 2500.0
+		obsidianDragonAttackDamage = 12.5
 
-["Dragon Structure Options"]
+	["Dragon Options"."Netherite Dragon Options"]
+		#
+		#Netherite Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		netheriteDragonMaxHealth = 5500.0
+		#
+		#Netherite Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		netheriteDragonArmor = 9.0
+		#
+		#Netherite Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		netheriteDragonAttackDamage = 14.0
 
-	["Dragon Structure Options"."Redstone Dragon Structure Options"]
+	["Dragon Options"."Allthemodium Dragon Options **Not implemented yet**"]
 		#
-		#Redstone Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		redstoneDragonStructureDimensions = "minecraft:overworld"
+		#Allthemodium Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		allthemodiumDragonMaxHealth = 10000.0
 		#
-		#Redstone Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		redstoneDragonStructureBiomes = "*"
+		#Allthemodium Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		allthemodiumDragonArmor = 10.0
+		#
+		#Allthemodium Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		allthemodiumDragonAttackDamage = 12.0
 
-	["Dragon Structure Options"."Emerald Dragon Structure Options"]
+	["Dragon Options"."Vibranium Dragon Options **Not implemented yet**"]
 		#
-		#Emerald Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		emeraldDragonStructureDimensions = "minecraft:overworld"
+		#Vibranium Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		vibraniumDragonMaxHealth = 20000.0
 		#
-		#Emerald Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		emeraldDragonStructureBiomes = "tfc:mountains"
+		#Vibranium Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		vibraniumDragonArmor = 12.0
+		#
+		#Vibranium Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		vibraniumDragonAttackDamage = 14.0
 
-	["Dragon Structure Options"."Gold Dragon Structure Options"]
+	["Dragon Options"."Unobtainium Dragon Options **Not implemented yet**"]
 		#
-		#Gold Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		goldDragonStructureBiomes = "tfc:volcanic_oceanic_mountains"
+		#Unobtainium Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		unobtainiumDragonMaxHealth = 30000.0
 		#
-		#Gold Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		goldDragonStructureDimensions = "minecraft:overworld"
+		#Unobtainium Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		unobtainiumDragonArmor = 15.0
+		#
+		#Unobtainium Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		unobtainiumDragonAttackDamage = 18.0
 
-	["Dragon Structure Options"."Netherite Dragon Structure Options"]
+	["Dragon Options"."Dracolich Dragon Options **Not implemented yet**"]
 		#
-		#Netherite Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		netheriteDragonStructureBiomes = "*"
+		#Dracolich Dragon Max Health
+		#Range: 1.0 ~ 1.7976931348623157E308
+		dracolichDragonMaxHealth = 50000.0
 		#
-		#Netherite Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		netheriteDragonStructureDimensions = "minecraft:nether"
+		#Dracolich Dragon Armor
+		#Range: 1.0 ~ 1.7976931348623157E308
+		dracolichDragonArmor = 20.0
+		#
+		#Dracolich Dragon Attack Damage
+		#Range: 1.0 ~ 1.7976931348623157E308
+		dracolichDragonAttackDamage = 25.0
 
-	["Dragon Structure Options"."Vibranium Dragon Structure Options **Not implemented yet**"]
-		#
-		#Vibranium Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		vibraniumDragonStructureDimensions = "minecraft:overworld"
-		#
-		#Vibranium Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		vibraniumDragonStructureBiomes = "*"
+["Breath Options"]
 
-	["Dragon Structure Options"."Diamond Dragon Structure Options"]
+	["Breath Options"."Ice Breath Options"]
 		#
-		#Diamond Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		diamondDragonStructureDimensions = "minecraft:overworld"
+		#Ice Breath Damage
+		#Range: > 1
+		iceBreathDamage = 5
 		#
-		#Diamond Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		diamondDragonStructureBiomes = "*"
+		#Ice Breath Seconds Freeze
+		#Range: 1.0 ~ 1.7976931348623157E308
+		iceBreathSecondsFreeze = 2.5
 
-	["Dragon Structure Options"."Copper Dragon Structure Options"]
+	["Breath Options"."Fire Breath Options"]
 		#
-		#Copper Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		copperDragonStructureDimensions = "minecraft:overworld"
+		#Fire Breath Damage
+		#Range: > 1
+		fireBreathDamage = 5
 		#
-		#Copper Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		copperDragonStructureBiomes = "tfc:old_mountains"
+		#Fire Breath Seconds on Fire
+		#Range: > 1
+		fireBreathSecondsOnFire = 5
 
-	["Dragon Structure Options"."Dracolich Dragon Structure Options **Not implemented yet**"]
+	["Breath Options"."Lightning Breath Options"]
 		#
-		#Dracolich Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		dracolichDragonStructureBiomes = "*"
-		#
-		#Dracolich Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		dracolichDragonStructureDimensions = "minecraft:overworld"
+		#Lightning Breath Damage
+		#Range: > 1
+		lightningBreathDamage = 5
 
-	["Dragon Structure Options"."Unobtainium Dragon Structure Options **Not implemented yet**"]
+	["Breath Options"."Radiation Breath Options"]
 		#
-		#Unobtainium Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		unobtainiumDragonStructureBiomes = "*"
+		#Radiation Breath Damage
+		#Range: > 1
+		radiationBreathDamage = 5
 		#
-		#Unobtainium Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		unobtainiumDragonStructureDimensions = "minecraft:overworld"
+		#Radiation Breath Splash Range
+		#Range: 1.0 ~ 1.7976931348623157E308
+		radiationBreathSplashRange = 4.0
+		#
+		#Radiation Breath Seconds Radiation
+		#Range: > 1
+		radiationBreathSecondsRadiation = 5
+		#
+		#Radiation Breath Radiation Amplifier
+		#Range: > 1
+		radiationBreathRadiationAmplifier = 1
 
-	["Dragon Structure Options"."Iron Dragon Structure Options"]
+	["Breath Options"."Poison Breath Options"]
 		#
-		#Iron Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		ironDragonStructureBiomes = "tfc:volcanic_mountains"
+		#Poison Breath Splash Range
+		#Range: 1.0 ~ 1.7976931348623157E308
+		poisonBreathSplashRange = 4.0
 		#
-		#Iron Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		ironDragonStructureDimensions = "minecraft:overworld"
+		#Poison Breath Seconds Poison
+		#Range: > 1
+		poisonBreathSecondsRadiation = 4
+		#
+		#Poison Breath Poison Amplifier
+		#Range: > 1
+		poisonBreathRadiationAmplifier = 3
 
-	["Dragon Structure Options"."Obsidian Dragon Structure Options"]
+	["Breath Options"."Acid Breath Options"]
 		#
-		#Obsidian Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		obsidianDragonStructureDimensions = "minecraft:overworld"
+		#Acid Breath Damage
+		#Range: > 1
+		acidBreathDamage = 5
 		#
-		#Obsidian Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		obsidianDragonStructureBiomes = "tfc:plateau"
+		#Acid Breath Seconds Acid
+		#Range: > 1
+		acidBreathSecondsAcid = 4
+		#
+		#Acid Breath Acid Amplifier
+		#Range: > 1
+		acidBreathAcidAmplifier = 1
 
-	["Dragon Structure Options"."Coal Dragon Structure Options"]
+	["Breath Options"."Withering Breath Options"]
 		#
-		#Coal Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		coalDragonStructureDimensions = "minecraft:overworld"
+		#Withering Breath Damage
+		#Range: > 1
+		witheringBreathDamage = 5
 		#
-		#Coal Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		coalDragonStructureBiomes = "tfc:rolling_hills"
+		#Withering Breath Seconds Wither
+		#Range: > 1
+		witheringBreathSecondsWither = 4
+		#
+		#Withering Breath Wither Amplifier
+		#Range: > 1
+		witheringBreathWitherAmplifier = 4
 
-	["Dragon Structure Options"."Allthemodium Dragon Structure Options **Not implemented yet**"]
+	["Breath Options"."Drain Breath Options"]
 		#
-		#Allthemodium Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		allthemodiumDragonStructureBiomes = "*"
+		#Drain Breath Damage
+		#Range: > 1
+		drainBreathDamage = 5
 		#
-		#Allthemodium Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		allthemodiumDragonStructureDimensions = "minecraft:overworld"
+		#Drain Breath Seconds Drain
+		#Range: > 1
+		drainBreathSecondsDrain = 8
+		#
+		#Drain Breath Drain Amplifier
+		#Range: > 1
+		drainBreathDrainAmplifier = 4
 
-	["Dragon Structure Options"."Lapis Dragon Structure Options"]
+	["Breath Options"."Disenchanting Breath Options"]
 		#
-		#Lapis Dragon Structure Dimensions (Example: minecraft:overworld, minecraft:nether)
-		lapisDragonStructureDimensions = "minecraft:overworld"
+		#Disenchanting Breath Damage
+		#Range: > 1
+		disenchantingBreathDamage = 5
+
+["Effect Options"]
+
+	["Effect Options"."Radiation Effect Options"]
 		#
-		#Lapis Dragon Structure Biomes (Example: mushroom_fields, swamp; Put * for every biome)
-		lapisDragonStructureBiomes = "tfc:badlands"
+		#Radiation Effect Damage Amount
+		#Range: > 1
+		radiationEffectDamageAmount = 10
+
+	["Effect Options"."Acid Effect Options"]
+		#
+		#Acid Effect Damage Amount
+		#Range: 1.0 ~ 1.7976931348623157E308
+		acidEffectDamageAmount = 1.5
+		#
+		#Acid Effect Damage Cooldown in Seconds
+		#Range: 1.0 ~ 1.7976931348623157E308
+		acidEffectDamageCooldown = 0.2
+		#
+		#Acid Effect Enchanted Damage Amount
+		#Range: > 1
+		acidEffectEnchantedDamageAmount = 2
+		#
+		#Acid Effect not Enchanted Damage Amount
+		#Range: > 1
+		acidEffectNotEnchantedDamageAmount = 3
+
+	["Effect Options"."Drain Effect Options"]
+		#
+		#Drain Effect Drain Amount
+		#Range: > 1
+		drainEffectDrainAmount = 5000
+
+["Structure Options"]
+	#
+	#Dragon Cave Chest Weight 
+	#Higher Value -> Less Chests
+	#Range: > 1
+	dragonCaveChestWeight = 80
+	#
+	#Dragon Cave Shell Block (Example: minecraft:tnt, leave empty if you do not want an extra shell)
+	dragonCaveShellBlock = ""
 
 ["Debug Options"]
 	#
