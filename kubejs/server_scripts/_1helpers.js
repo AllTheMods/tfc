@@ -99,10 +99,10 @@ const addClocheRecipe = (recipesEvent, output, amount, seed, soil, render, time)
 
 const tfcBucketRecipes = (recipesEvent, output, fluid, amount, input, multiplier) => {
 		recipesEvent.remove({output: output})
-		for (let i = 1; i < 8; i++) {
+		for (let i = 1; i <= 8; i++) {
 				recipesEvent
 						.shapeless(
-								`${multiplier}x ${output}`,
+								`${i}x ${output}`,
 								[
 										{
 												type: "tfc:fluid_item",
