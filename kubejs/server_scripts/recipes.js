@@ -713,7 +713,7 @@ const setRecipes = (recipesEvent) => {
 				)
 		
 		// drawers related
-		recipesEvent.recipes.immersiveengineeringMetalPress("tfc:brass_mechanisms", "#forge:ingots/brass", "immersiveengineering:mold_gear" )
+		recipesEvent.recipes.immersiveengineeringMetalPress("2x tfc:brass_mechanisms", "#forge:ingots/brass", "immersiveengineering:mold_gear" )
 		
 		
 		
