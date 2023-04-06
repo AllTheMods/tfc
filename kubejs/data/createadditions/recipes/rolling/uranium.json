@@ -1,0 +1,10 @@
+{
+	"type":"createaddition:rolling",
+	"input": {
+		"tag": "forge:ingots/uranium"
+	},
+	"result": {
+		"item": "immersiveposts:stick_uranium",
+		"count": 2
+	}
+}
