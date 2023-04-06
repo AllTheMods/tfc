@@ -679,7 +679,13 @@ const setRecipes = (recipesEvent) => {
 						}
 				}, 2)
 		}
-		
+
+		recipesEvent
+				.shapeless(`9x minecraft:charcoal`, [
+						"#forge:storage_blocks/charcoal"
+				])
+				.id(`kubejs:charcoal_block_revert`);
+
 		tfcBucketRecipes(recipesEvent, `firmalife:food/masa`, `minecraft:water`, 100, {
 				type: "tfc:not_rotten",
 				"ingredient": {
