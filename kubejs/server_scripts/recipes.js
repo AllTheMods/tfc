@@ -745,6 +745,15 @@ const setRecipes = (recipesEvent) => {
 				)
 				.id("kubejs:bismuth_bronze_from_nugget");
 		
+		modifyShaped(recipesEvent, "storagedrawers:upgrade_template", 4, [
+				"SSS",
+				"STS",
+				"SSS"
+		], {
+				"T": "framedcompactdrawers:framed_trim",
+				"S": "#balm:wooden_rods"
+		})
+		
 		modifyShaped(recipesEvent, "framedcompactdrawers:framed_full_one", 1, [
 				"SSS",
 				"NCN",
