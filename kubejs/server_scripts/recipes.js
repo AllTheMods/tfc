@@ -212,13 +212,19 @@ const setRecipes = (recipesEvent) => {
 				{"output": {"tag": "forge:dusts/wood"}, "stripping": true}
 		]
 		for (const log of logs) {
-				plankOutput = `6x tfc:wood/planks/${log}`
+				plankOutput = `6x tfc:wood/planks/${log}`;
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/log/${log}`), secondary, Item.of(`tfc:wood/stripped_log/${log}`))
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/stripped_log/${log}`), secondary)
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/wood/${log}`), secondary, Item.of(`tfc:wood/stripped_wood/${log}`))
+				recipesEvent.recipes.immersiveengineeringSawmill(`4x tfc:wood/lumber/${log}`, `tfc:wood/planks/${log}`);
+				
+				recipesEvent.recipes.thermal.sawmill(["thermal:sawdust", plankOutput], `tfc:wood/stripped_wood/${log}`)
+				recipesEvent.recipes.thermal.sawmill(["thermal:sawdust", `tfc:wood/stripped_wood/${log}`], `tfc:wood/wood/${log}`)
+				recipesEvent.recipes.thermal.sawmill(["thermal:sawdust", `4x tfc:wood/lumber/${log}`], `tfc:wood/planks/${log}`)
 				
 				recipesEvent.recipes.createCutting(Item.of(`tfc:wood/stripped_log/${log}`), Item.of(`tfc:wood/log/${log}`))
 				recipesEvent.recipes.createCutting(plankOutput, Item.of(`tfc:wood/stripped_log/${log}`))
+				recipesEvent.recipes.createCutting(`4x tfc:wood/lumber/${log}`, `tfc:wood/planks/${log}`)
 		}
 		
 		recipesEvent
@@ -732,6 +738,12 @@ const setRecipes = (recipesEvent) => {
 				)
 				.id("kubejs:bismuth_bronze_nugget");
 		
+		recipesEvent
+				.shapeless(
+						"tfc:metal/ingot/bismuth_bronze",
+						Array.from(new Array(9)).map(i => "kubejs:bismuth_bronze_nugget")
+				)
+				.id("kubejs:bismuth_bronze_from_nugget");
 		
 		modifyShaped(recipesEvent, "framedcompactdrawers:framed_full_one", 1, [
 				"SSS",

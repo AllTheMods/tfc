@@ -33,6 +33,7 @@ const vanillaWoodTypes = [
 ]
 const tfcWoodTypes = [
 		"ash",
+		"aspen",
 		"blackwood",
 		"chestnut",
 		"douglas_fir",
