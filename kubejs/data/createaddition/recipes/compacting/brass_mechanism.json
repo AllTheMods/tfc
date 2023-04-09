@@ -1,0 +1,22 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/brass"
+    },
+    {
+      "item": "immersiveengineering:mold_gear"
+    }
+  ],
+  "results": [
+    {
+      "item": "immersiveengineering:mold_gear"
+    },
+    {
+      "item": "tfc:brass_mechanisms"
+    },
+    {
+      "item": "tfc:brass_mechanisms"
+    }
+  ]
+}

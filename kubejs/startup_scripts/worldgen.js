@@ -18,16 +18,15 @@ onEvent('worldgen.remove', event => {
   })
 })
 
-onEvent('item.registry', event => {
-  event.create('chocolate_cake_slice').food(food => {
+onEvent('item.registry', itemRegistryEvent => {
+  itemRegistryEvent.create('chocolate_cake_slice').food(food => {
     food.hunger(20)
     food.saturation(20)
   })
-})
-
-onEvent('item.registry', event => {
-  event.create('honey_cake_slice').food(food => {
+  itemRegistryEvent.create('honey_cake_slice').food(food => {
     food.hunger(20)
     food.saturation(20)
   })
+  console.log("bismuth bronze creating..");
+  itemRegistryEvent.create("bismuth_bronze_nugget");
 })
