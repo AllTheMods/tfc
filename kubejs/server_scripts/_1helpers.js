@@ -63,6 +63,13 @@ const dirtTypes = [
 		"silty_loam"
 ]
 
+const stoneToolTypes = [
+        "igneous_extrusive",
+        "igneous_intrusive",
+        "metamorphic",
+        "sedimentary"
+
+]
 const removeRecipeByID = (recipesEvent, recipes) => {
 		for (const recipe of recipes) {
 				recipesEvent.remove({id: recipe})

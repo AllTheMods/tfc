@@ -244,7 +244,16 @@ const setItemTags = itemTagsEvent => {
             "tfc:wood/sapling/white_cedar",
             "tfc:wood/sapling/willow"
     ])
-    
+    //stone tool tags for quests
+    for(const stone of stoneToolTypes){
+        itemTagsEvent.add('tfc:stone_knives', [`tfc:stone/knife/${stone}`])
+        itemTagsEvent.add('tfc:stone_axes', [`tfc:stone/axe/${stone}`])
+        itemTagsEvent.add('tfc:stone_hammers', [`tfc:stone/hammer/${stone}`])
+        itemTagsEvent.add('tfc:stone_shovels', [`tfc:stone/shovel/${stone}`])
+        itemTagsEvent.add('tfc:stone_hoes', [`tfc:stone/hoe/${stone}`])
+        itemTagsEvent.add('tfc:stone_javelins', [`tfc:stone/javelin/${stone}`])
+    }
+
     // Seeds related
     itemTagsEvent.get('forge:seeds').removeAll().add('#tfc:seeds')
     itemTagsEvent.removeAll('tombstone:seeds')

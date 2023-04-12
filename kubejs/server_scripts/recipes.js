@@ -6,6 +6,7 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: /allthemodium.*/})
 		recipesEvent.remove({id: /vibranium.*/})
 		recipesEvent.remove({id: /unobtainium.*/})
+
 		
 		recipesEvent.remove({id: "create:honey_bucket"})
 		recipesEvent.remove({id: "minecraft:smoker"})
@@ -13,7 +14,8 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "minecraft:furnace_minecart"})
 		recipesEvent.remove({id: "beyond_earth:coal_generator"})
 		recipesEvent.remove({id: "beyond_earth:compressor"})
-		
+		recipesEvent.remove({id: "beyond_earth:fuel_refinery"})
+
 		recipesEvent.remove({id: "minecraft:stone_brick_wall"})
 		recipesEvent.remove({id: "minecraft:stone_brick_slab"})
 		recipesEvent.remove({id: "minecraft:stone_brick_stairs"})
