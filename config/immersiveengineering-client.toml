@@ -1,6 +1,6 @@
 #Disables most lighting code for certain models that are rendered dynamically (TESR). May improve FPS.
 #Affects turrets and garden cloches
-disableFancyTESR = false
+disableFancyTESR = true
 #Show the text overlay for various blocks, such as the configuration of capacitors or pumps
 showTextOverlay = true
 #Set the GUI scale of the Engineer's Manual. This uses the same numbers as Vanilla's GUI Scale and is therefor limited to the maximum value available ingame.
