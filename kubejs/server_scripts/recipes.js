@@ -61,7 +61,6 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({type: "enderstorage:recolour_recipe"})
 		
 		recipesEvent.remove({id: "create:mixing/andesite_alloy_from_zinc"})
-		recipesEvent.remove({id: "create:filling/sweet_roll"})
 		recipesEvent.remove({id: "create:mixing/andesite_alloy"})
 		recipesEvent.remove({id: "thermal:machines/press/unpacking/press_wheat_unpacking"})
 		recipesEvent.remove({id: "thermal:storage/cured_rubber_block"})

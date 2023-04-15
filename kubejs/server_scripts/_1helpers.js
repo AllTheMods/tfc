@@ -70,6 +70,7 @@ const stoneToolTypes = [
         "sedimentary"
 
 ]
+
 const removeRecipeByID = (recipesEvent, recipes) => {
 		for (const recipe of recipes) {
 				recipesEvent.remove({id: recipe})
@@ -110,7 +111,7 @@ const tfcBucketRecipes = (recipesEvent, output, fluid, amount, input, multiplier
 		for (let i = 1; i <= 8; i++) {
 				recipesEvent
 						.shapeless(
-								`${i}x ${output}`,
+								`${i * multiplier}x ${output}`,
 								[
 										{
 												type: "tfc:fluid_item",
