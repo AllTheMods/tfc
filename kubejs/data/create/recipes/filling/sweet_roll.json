@@ -2,10 +2,10 @@
   "type": "create:filling",
   "ingredients": [
     {
-      "tag": "tfc:food/breads"
+      "tag": "tfc:foods/breads"
     },
     {
-      "fluidTag": "tfc:milks",
+      "fluidTag": "forge:milk",
       "amount": 250
     }
   ],
