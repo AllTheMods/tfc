@@ -459,7 +459,7 @@
 	dragonCaveChestWeight = 80
 	#
 	#Dragon Cave Shell Block (Example: minecraft:tnt, leave empty if you do not want an extra shell)
-	dragonCaveShellBlock = ""
+	dragonCaveShellBlock = "tfc:rock/bricks/granite"
 
 ["Debug Options"]
 	#
