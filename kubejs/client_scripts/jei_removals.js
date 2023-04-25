@@ -63,6 +63,7 @@ onEvent('jei.hide.items', event => {
 		event.hide('beyond_earth:coal_torch')
 		event.hide('beyond_earth:coal_lantern')
 		event.hide("#storagedrawers:drawers")
+		event.hide('biggerreactors:uranium_ore')
 })
 onEvent('jei.remove.categories', event => {
 		
