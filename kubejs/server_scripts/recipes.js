@@ -103,6 +103,7 @@ const removeRecipes = (recipesEvent) => {
 		
 		for (const vanillaWood of vanillaWoodTypes) {
 				recipesEvent.remove({id: `minecraft:${vanillaWood}_sign`})
+				recipesEvent.remove({id: `thermal:machines/sawmill/sawmill_${vanillaWood}_logs`})
 		}
 		recipesEvent.remove({id: "immersivepetroleum:candle"})
 		recipesEvent.remove({id: "minecraft:candle"})
@@ -217,15 +218,15 @@ const setRecipes = (recipesEvent) => {
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/log/${log}`), secondary, Item.of(`tfc:wood/stripped_log/${log}`))
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/stripped_log/${log}`), secondary)
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/wood/${log}`), secondary, Item.of(`tfc:wood/stripped_wood/${log}`))
-				recipesEvent.recipes.immersiveengineeringSawmill(`4x tfc:wood/lumber/${log}`, `tfc:wood/planks/${log}`);
+				recipesEvent.recipes.immersiveengineeringSawmill(`4x tfc:wood/lumber/${log}`, `tfc:wood/planks/${log}`, );
 				
-				recipesEvent.recipes.thermal.sawmill(["thermal:sawdust", plankOutput], `tfc:wood/stripped_wood/${log}`)
-				recipesEvent.recipes.thermal.sawmill(["thermal:sawdust", `tfc:wood/stripped_wood/${log}`], `tfc:wood/wood/${log}`)
-				recipesEvent.recipes.thermal.sawmill(["thermal:sawdust", `4x tfc:wood/lumber/${log}`], `tfc:wood/planks/${log}`)
+				recipesEvent.recipes.thermal.sawmill([Item.of('#forge:dusts/wood').withChance(1.25), plankOutput], `tfc:wood/stripped_wood/${log}`)
+				recipesEvent.recipes.thermal.sawmill([Item.of('#forge:dusts/wood').withChance(1.25), `tfc:wood/stripped_wood/${log}`], `tfc:wood/wood/${log}`)
+				recipesEvent.recipes.thermal.sawmill([Item.of('#forge:dusts/wood').withChance(1.25), `4x tfc:wood/lumber/${log}`], `tfc:wood/planks/${log}`)
 				
-				recipesEvent.recipes.createCutting(Item.of(`tfc:wood/stripped_log/${log}`), Item.of(`tfc:wood/log/${log}`))
-				recipesEvent.recipes.createCutting(plankOutput, Item.of(`tfc:wood/stripped_log/${log}`))
-				recipesEvent.recipes.createCutting(`4x tfc:wood/lumber/${log}`, `tfc:wood/planks/${log}`)
+				recipesEvent.recipes.createCutting([Item.of(`tfc:wood/stripped_log/${log}`), Item.of('#forge:dusts/wood').withChance(0.25)], Item.of(`tfc:wood/log/${log}`))
+				recipesEvent.recipes.createCutting([plankOutput, Item.of('#forge:dusts/wood').withChance(0.25)], Item.of(`tfc:wood/stripped_log/${log}`))
+				recipesEvent.recipes.createCutting([`4x tfc:wood/lumber/${log}`, Item.of('#forge:dusts/wood').withChance(0.25)], `tfc:wood/planks/${log}`)
 		}
 		
 		recipesEvent
