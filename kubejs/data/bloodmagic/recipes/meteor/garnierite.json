@@ -7,7 +7,7 @@
   "explosion": 32.0,
   "layers": [
     {
-      "radius": 3,
+      "radius": 5,
       "additionalWeight": 0,
       "minWeight": 0,
       "weightMap": [
@@ -19,7 +19,7 @@
       "fill": "tfc:rock/normal_garnierite/basalt"
     },
     {
-      "radius": 9,
+      "radius": 12,
       "additionalWeight": 200,
       "minWeight": 0,
       "weightMap": [
