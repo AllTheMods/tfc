@@ -295,6 +295,40 @@ const setItemTags = itemTagsEvent => {
         itemTagsEvent.get('forge:bookshelves').add(`mcwfurnitures:${vanillaWoodType}_lower_bookshelf_drawer`)
     }
 
+    for (const tfcStoneType of tfcStoneTypes){
+        for (const tfcOreType of tfcOreTypes){
+            itemTagsEvent.get(`forge:ores_in_ground/${tfcStoneType}`).add(`tfc:ore/rich_${tfcOreType}/${tfcStoneType}`).add(`tfc:ore/normal_${tfcOreType}/${tfcStoneType}`).add(`tfc:ore/poor_${tfcOreType}/${tfcStoneType}`)
+        }
+        for (const tfcGemOreType of tfcGemOreTypes){
+            itemTagsEvent.get(`forge:ores_in_ground/${tfcStoneType}`).add(`tfc:ore/${tfcGemOreType}/${tfcStoneType}`)
+        }
+    }
+
+    for (const tfcMetalOreType of tfcMetalOreTypes){
+        itemTagsEvent.get(`forge:ores/${tfcMetalOreType}`).remove(`#tfc:ores/${tfcMetalOreType}/poor`).remove(`#tfc:ores/${tfcMetalOreType}/normal`)
+    }
+
+    itemTagsEvent.get('forge:ores/apatite').removeAll()
+    itemTagsEvent.get('forge:ores/aluminum').remove(['exnihilosequentia:raw_aluminum', 'immersiveengineering:deepslate_ore_aluminum', 'immersiveengineering:ore_aluminum'])
+    itemTagsEvent.get('forge:ores/coal').remove(['beyond_earth:glacio_coal_ore', 'beyond_earth:venus_coal_ore', 'minecraft:coal_ore', 'minecraft:deepslate_coal_ore'])
+    itemTagsEvent.get('forge:ores/copper').remove(['beyond_earth:glacio_copper_ore', 'minecraft:copper_ore', 'minecraft:deepslate_copper_ore'])
+    itemTagsEvent.get('forge:ores/diamond').remove(['beyond_earth:glacio_copper_ore', 'minecraft:copper_ore', 'minecraft:deepslate_copper_ore'])
+    itemTagsEvent.get('forge:ores/emerald').remove(['minecraft:deepslate_emerald_ore', 'minecraft:emerald_ore'])
+    itemTagsEvent.get('forge:ores/gold').remove(['beyond_earth:venus_gold_ore', 'minecraft:deepslate_gold_ore', 'minecraft:gold_ore', 'minecraft:nether_gold_ore'])
+    itemTagsEvent.get('forge:ores/iron').remove(['beyond_earth:glacio_iron_ore', 'beyond_earth:mars_iron_ore', 'beyond_earth:mercury_iron_ore', 'beyond_earth:moon_iron_ore', 'minecraft:deepslate_iron_ore', 'minecraft:iron_ore'])
+    itemTagsEvent.get('forge:ores/lapis').remove(['beyond_earth:glacio_lapis_ore', 'minecraft:deepslate_lapis_ore', 'minecraft:lapis_ore'])
+    itemTagsEvent.get('forge:ores/lead').remove(['exnihilosequentia:raw_lead', 'immersiveengineering:deepslate_ore_lead', 'immersiveengineering:ore_lead', 'thermal:deepslate_lead_ore', 'thermal:lead_ore'])
+    itemTagsEvent.get('forge:ores/nickel').remove(['exnihilosequentia:raw_nickel', 'immersiveengineering:deepslate_ore_nickel', 'immersiveengineering:ore_nickel', 'thermal:deepslate_nickel_ore', 'thermal:nickel_ore'])
+    itemTagsEvent.get('forge:ores/platinum').removeAll()
+    itemTagsEvent.get('forge:ores/ruby').remove(['thermal:deepslate_ruby_ore', 'thermal:ruby_ore'])
+    itemTagsEvent.get('forge:ores/sapphire').remove(['thermal:deepslate_sapphire_ore', 'thermal:sapphire_ore'])
+    itemTagsEvent.get('forge:ores/silver').remove(['exnihilosequentia:raw_silver', 'immersiveengineering:deepslate_ore_silver', 'immersiveengineering:ore_silver', 'thermal:deepslate_silver_ore', 'thermal:silver_ore'])
+    itemTagsEvent.get('forge:ores/sulfur').remove(['thermal:deepslate_sulfur_ore', 'thermal:sulfur_ore'])
+    itemTagsEvent.get('forge:ores/tin').remove(['exnihilosequentia:raw_tin', 'thermal:deepslate_tin_ore', 'thermal:tin_ore'])
+    itemTagsEvent.get('forge:ores/uranium').remove(['biggerreactors:uranium_ore', 'exnihilosequentia:raw_uranium', 'immersiveengineering:deepslate_ore_uranium', 'immersiveengineering:ore_uranium'])
+    itemTagsEvent.get('forge:ores/zinc').remove(['create:deepslate_zinc_ore', 'create:zinc_ore', 'exnihilosequentia:raw_zinc'])
+
+
     //itemTagsEvent.add('tfc:foods', ['kubejs:chocolate_cake_slice', 'kubejs:honey_cake_slice'])
     const framedDrawerTypes = [
         "full",

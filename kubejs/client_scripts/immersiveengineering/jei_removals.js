@@ -1,3 +1,14 @@
 onEvent('jei.hide.items', e => {
-
+    e.hide('immersiveengineering:deepslate_ore_aluminum')
+    e.hide('immersiveengineering:ore_aluminum')
+    e.hide('immersiveengineering:deepslate_ore_lead')
+    e.hide('immersiveengineering:ore_lead')
+    e.hide('immersiveengineering:deepslate_ore_nickel')
+    e.hide('immersiveengineering:ore_nickel')
+    e.hide('immersiveengineering:deepslate_ore_silver')
+    e.hide('immersiveengineering:ore_silver')
+    e.hide('immersiveengineering:deepslate_ore_uranium')
+    e.hide('immersiveengineering:ore_uranium')
+    e.hide('immersiveengineering:deepslate_ore_')
+    e.hide('immersiveengineering:ore_')
 })

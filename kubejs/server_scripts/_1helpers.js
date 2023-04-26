@@ -62,7 +62,69 @@ const dirtTypes = [
 		"sandy_loam",
 		"silty_loam"
 ]
-
+const tfcStoneTypes = [
+		"granite",
+		"diorite",
+		"gabbro",
+		"shale",
+		"claystone",
+		"limestone",
+		"conglomerate",
+		"dolomite",
+		"chert",
+		"chalk",
+		"rhyolite",
+		"basalt",
+		"andesite",
+		"dacite",
+		"quartzite",
+		"slate",
+		"phyllite",
+		"schist",
+		"gneiss",
+		"marble"
+]
+const tfcMetalOreTypes = [
+		"bismuth",
+		"copper",
+		"gold",
+		"iron",
+		"nickel",
+		"silver",
+		"tin",
+		"zinc"
+]
+const tfcGemOreTypes = [
+    	"kaolinite",
+    	"gypsum",
+    	"graphite",
+    	"sulfur",
+    	"saltpeter",
+    	"sylvite",
+    	"borax",
+    	"halite",
+    	"amethyst",
+    	"opal",
+    	"pyrite",
+    	"ruby",
+    	"sapphire",
+    	"topaz",
+		"diamond"
+]
+const tfcOreTypes = [
+		"native_copper",
+		"native_gold",
+		"native_silver",
+		"hematite",
+		"cassiterite",
+		"bismuthinite",
+		"garnierite",
+		"malachite",
+		"magnetite",
+		"limonite",
+		"sphalerite",
+		"tetrahedrite"
+]
 const stoneToolTypes = [
         "igneous_extrusive",
         "igneous_intrusive",
