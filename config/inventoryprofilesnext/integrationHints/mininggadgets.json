@@ -14,5 +14,19 @@
     },
     "com.direwolf20.mininggadgets.common.containers.ModificationTableContainer": {
         "ignore": true
+    },
+    "com.direwolf20.mininggadgets.client.screens.FilterScreen": {
+        "playerSideOnly": true,
+        "disableFastSwipe": true,
+        "buttonHints": {
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            }
+        }
     }
 }
