@@ -70,6 +70,8 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "bloodmagic:teleposer"})
 		recipesEvent.remove({id: "create:mixing/chocolate_melting"})
 		recipesEvent.remove({id: "biggerreactors:smelting/graphite_ingot"})
+
+		recipesEvent.remove({input: "#forge:ores/apatite"})
 		
 		
 		const materials = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
