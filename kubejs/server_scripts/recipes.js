@@ -72,8 +72,8 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "biggerreactors:smelting/graphite_ingot"})
 
 		recipesEvent.remove({input: "#forge:ores/apatite"})
-		
-		
+
+
 		const materials = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
 		const roofTypes = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
 		for (const woodType of vanillaWoodTypes) {
@@ -91,7 +91,7 @@ const removeRecipes = (recipesEvent) => {
 						recipesEvent.remove({id: `mcwroofs:${material}_${roofType}`})
 				}
 		}
-		
+
 		const noCAPressMetals = [
 				"aluminum",
 				"lead",
@@ -102,7 +102,7 @@ const removeRecipes = (recipesEvent) => {
 				"electrum",
 				"steel"
 		]
-		
+
 		for (const vanillaWood of vanillaWoodTypes) {
 				recipesEvent.remove({id: `minecraft:${vanillaWood}_sign`})
 				recipesEvent.remove({id: `thermal:machines/sawmill/sawmill_${vanillaWood}_logs`})
@@ -144,18 +144,19 @@ const setRecipes = (recipesEvent) => {
 		addClocheRecipe(recipesEvent, "tfc:food/rice", "2", "tfc:seeds/rice", "#tfc:dirt", "tfc:wild_crop/rice", 1750)
 		addClocheRecipe(recipesEvent, "tfc:melon", "2", "tfc:seeds/melon", "#tfc:dirt", "tfc:wild_crop/melon", 1600)
 		addClocheRecipe(recipesEvent, "tfc:pumpkin", "2", "tfc:seeds/pumpkin", "#tfc:dirt", "tfc:wild_crop/pumpkin", 1600)
-		
+
 		recipesEvent.replaceInput({id: "create:jungle_window"}, "minecraft:jungle_planks", "tfc:wood/planks/palm")
 		recipesEvent.replaceInput({id: "create:dark_oak_window"}, "minecraft:dark_oak_planks", "tfc:wood/planks/hickory")
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "create"}, "minecraft:oak_planks", "#minecraft:planks")
 		recipesEvent.replaceInput({input: "minecraft:cobblestone", mod: "create"}, "minecraft:cobblestone", "#forge:cobblestone/normal")
 		recipesEvent.replaceInput({input: "minecraft:smooth_stone", mod: "create"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
-		
+		recipesEvent.replaceInput({input: "minecraft:deepslate", mod: "supercircuitmaker"}, "minecraft:deepslate", "#tfc:rock/smooth")
+
 		recipesEvent.recipes.thermal.insolator(["tfc:jute", Item.of("tfc:seeds/jute").withChance(1)], "tfc:seeds/jute").water(900)
 		recipesEvent.recipes.thermal.insolator(["tfc:melon", Item.of("tfc:seeds/melon").withChance(1.5)], "tfc:seeds/melon").water(750)
 		recipesEvent.recipes.thermal.insolator(["tfc:pumpkin", Item.of("tfc:seeds/pumpkin").withChance(1.5)], "tfc:seeds/pumpkin").water(750)
-		
+
 		for (const seed of tfcFoodSeeds) {
 				recipesEvent.recipes.thermal.insolator(
 						[
@@ -165,8 +166,8 @@ const setRecipes = (recipesEvent) => {
 						Item.of(`tfc:seeds/${seed}`)
 				).water(850)
 		}
-		
-		
+
+
 		const gemStones = [
 				"amethyst",
 				"diamond",
@@ -184,7 +185,7 @@ const setRecipes = (recipesEvent) => {
 						Ingredient.of(`create:sand_paper`)
 				])
 		}
-		
+
 		const ferns = [
 				"king",
 				"lady",
@@ -206,9 +207,9 @@ const setRecipes = (recipesEvent) => {
 						processingTime: 100
 				})
 		}
-		
+
 		const logs = vanillaWoodTypes.concat(tfcWoodTypes)
-		
+
 		let plankOutput = ''; // this should be filed as a bug on kubejs because it doesn't allow declaration of block level vars inside for.
 		// probably related to their JS engine.
 		const secondary = [
@@ -221,16 +222,16 @@ const setRecipes = (recipesEvent) => {
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/stripped_log/${log}`), secondary)
 				recipesEvent.recipes.immersiveengineeringSawmill(plankOutput, Item.of(`tfc:wood/wood/${log}`), secondary, Item.of(`tfc:wood/stripped_wood/${log}`))
 				recipesEvent.recipes.immersiveengineeringSawmill(`4x tfc:wood/lumber/${log}`, `tfc:wood/planks/${log}`, );
-				
+
 				recipesEvent.recipes.thermal.sawmill([Item.of('#forge:dusts/wood').withChance(1.25), plankOutput], `tfc:wood/stripped_wood/${log}`)
 				recipesEvent.recipes.thermal.sawmill([Item.of('#forge:dusts/wood').withChance(1.25), `tfc:wood/stripped_wood/${log}`], `tfc:wood/wood/${log}`)
 				recipesEvent.recipes.thermal.sawmill([Item.of('#forge:dusts/wood').withChance(1.25), `4x tfc:wood/lumber/${log}`], `tfc:wood/planks/${log}`)
-				
+
 				recipesEvent.recipes.createCutting([Item.of(`tfc:wood/stripped_log/${log}`), Item.of('#forge:dusts/wood').withChance(0.25)], Item.of(`tfc:wood/log/${log}`))
 				recipesEvent.recipes.createCutting([plankOutput, Item.of('#forge:dusts/wood').withChance(0.25)], Item.of(`tfc:wood/stripped_log/${log}`))
 				recipesEvent.recipes.createCutting([`4x tfc:wood/lumber/${log}`, Item.of('#forge:dusts/wood').withChance(0.25)], `tfc:wood/planks/${log}`)
 		}
-		
+
 		recipesEvent
 				.custom({
 						"type": "create:crushing",
@@ -241,10 +242,10 @@ const setRecipes = (recipesEvent) => {
 						"processingTime": 400
 				})
 				.id(`kubejs:crushing/gem_dust`)
-		
+
 		recipesEvent.recipes.createPressing("tfc:refined_iron_bloom", Ingredient.of("tfc:raw_iron_bloom").ignoreNBT())
 		recipesEvent.recipes.createPressing("tfc:metal/ingot/wrought_iron", Ingredient.of("tfc:refined_iron_bloom").ignoreNBT())
-		
+
 		const sheetAndDoubleIngotMetals = [
 				"copper",
 				"silver",
@@ -271,7 +272,7 @@ const setRecipes = (recipesEvent) => {
 				recipesEvent.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_sheet/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${sheetMetal}`).ignoreNBT())
 				recipesEvent.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_ingot/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${sheetMetal}`).ignoreNBT())
 		}
-		
+
 		recipesEvent.recipes.immersiveengineeringMetalPress(`firmalife:metal/sheet/chromium`, Ingredient.of(`firmalife:metal/double_ingot/chromium`).ignoreNBT(), "immersiveengineering:mold_plate")
 		recipesEvent.recipes.immersiveengineeringArcFurnace(`firmalife:metal/double_sheet/chromium`, Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT(), Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT())
 		recipesEvent.recipes.immersiveengineeringMetalPress(`firmalife:metal/sheet/stainless_steel`, Ingredient.of(`firmalife:metal/double_ingot/stainless_steel`).ignoreNBT(), "immersiveengineering:mold_plate")
@@ -291,11 +292,11 @@ const setRecipes = (recipesEvent) => {
 		for (const rodMetal of rodMetals) {
 				recipesEvent.recipes.immersiveengineeringMetalPress(`2x tfc:metal/rod/${rodMetal}`, Ingredient.of(`tfc:metal/ingot/${rodMetal}`).ignoreNBT(), "immersiveengineering:mold_rod").id(`kubejs:immersivemetalpress/rod/${rodMetal}`)
 		}
-		
+
 		recipesEvent.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/chromium`, Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(), "immersiveengineering:mold_rod")
 		recipesEvent.recipes.immersiveengineeringMetalPress(`2x firmalife:metal/rod/stainless_steel`, Ingredient.of(`firmalife:metal/ingot/stainless_steel`).ignoreNBT(), "immersiveengineering:mold_rod")
-		
-		
+
+
 		const ie_Metals = [
 				"aluminum",
 				"uranium",
@@ -307,7 +308,7 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.recipes.thermal.press("beyond_earth:desh_plate", Ingredient.of("beyond_earth:desh_ingot")).id(`kubejs:thermal/press/plate/desh`)
 		recipesEvent.recipes.thermal.press("create:brass_sheet", Ingredient.of("#forge:ingots/brass")).id(`kubejs:thermal/press/plate/brass`)
 		recipesEvent.recipes.thermal.press("createaddition:zinc_sheet", Ingredient.of("#forge:ingots/zinc")).id(`kubejs:thermal/press/plate/zinc`)
-		
+
 		const thermalIngots = [
 				"tin",
 				"bronze",
@@ -316,10 +317,10 @@ const setRecipes = (recipesEvent) => {
 		for (const ingot of thermalIngots) {
 				recipesEvent.recipes.createPressing(`thermal:${ingot}_plate`, Ingredient.of(`#forge:ingots/${ingot}`)).id(`kubejs:create/press/plate/${ingot}`)
 		}
-		
+
 		recipesEvent.recipes.thermal.crucible(Fluid.of("minecraft:lava", 1000), "#forge:magma").id(`kubejs:thermal/machines/crucible/tfc_magma_to_lava`)
-		
-		
+
+
 		modifyShaped(
 				recipesEvent,
 				"tfc:candle",
@@ -330,12 +331,12 @@ const setRecipes = (recipesEvent) => {
 						I: "#forge:wax"
 				}
 		)
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "immersiveengineering"}, "#forge:ingots/steel", "#forge:plates/steel")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "immersiveengineering"}, "#forge:ingots/iron", "#forge:sheets/wrought_iron")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "immersiveengineering"}, "#forge:ingots/bronze", "#forge:plates/bronze")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "immersiveengineering"}, "#forge:ingots/copper", "#forge:sheets/copper")
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped"}, "minecraft:stone_bricks", "#forge:stone_bricks")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "#forge:ingots/steel", "#forge:sheets/steel")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "#forge:ingots/bronze", "#forge:sheets/bronze")
@@ -348,9 +349,9 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "thermal:tin_gear", "thermal:lead_gear")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "#forge:ingots/silver", "#forge:sheets/sterling_silver")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "#forge:ingots/bronze", "#forge:sheets/bronze")
-		
+
 		recipesEvent.replaceInput({id: "createaddition:mixing/biomass_from_saplings"}, "#minecraft:saplings", "#forge:saplings")
-		
+
 		const gearIngots = [
 				"copper",
 				"tin",
@@ -361,25 +362,25 @@ const setRecipes = (recipesEvent) => {
 		for (const ingot of gearIngots) {
 				recipesEvent.replaceInput({type: "minecraft:crafting_shaped", id: `thermal:parts/${ingot}_gear`}, `#forge:sheets/${ingot}`, `#forge:ingots/${ingot}`)
 		}
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", id: `thermal:parts/iron_gear`}, `#forge:sheets/wrought_iron`, `#forge:ingots/wrought_iron`)
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", id: `thermal:parts/silver_gear`}, `#forge:sheets/sterling_silver`, `#forge:ingots/sterling_silver`)
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped"}, "immersiveengineering:hemp_fiber", "tfc:jute_fiber")
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "minecraft:blast_furnace", "tfc:crucible")
-		
+
 		recipesEvent.replaceInput({type: "create:mixing", mod: "create"}, "create:wheat_flour", "#tfc:foods/flour")
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "minecraft:dirt", "#tfc:dirt")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "thermal"}, "thermal:cured_rubber", "immersiveengineering:plate_duroplast")
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "waystones"}, "minecraft:emerald", "tfc:gem/emerald")
-		
+
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped"}, "minecraft:stone", "#forge:stone")
-		
+
 		recipesEvent.replaceInput({type: "immersiveengineering:cloche"}, "minecraft:dirt", "#tfc:dirt")
-		
-		
+
+
 		modifyShaped(recipesEvent, "ae2:certus_quartz_wrench", 1, ['Q Q', ' I ', ' I '], {
 				Q: "ae2:certus_quartz_crystal",
 				I: "#forge:rods/wrought_iron"
@@ -428,43 +429,43 @@ const setRecipes = (recipesEvent) => {
 				B: "minecraft:blaze_rod",
 				W: "#thermal:rockwool"
 		})
-		
+
 		recipesEvent.custom({
 				"type": "enderstorage:recolour_recipe",
 				"result": {
 						"item": "enderstorage:ender_chest"
 				}
 		}).id("kubejs:ender_chest_recolour_manual_only")
-		
+
 		recipesEvent.custom({
 				"type": "enderstorage:recolour_recipe",
 				"result": {
 						"item": "enderstorage:ender_pouch"
 				}
 		}).id("kubejs:ender_pouch_recolour_manual_only")
-		
+
 		recipesEvent.custom({
 				"type": "enderstorage:recolour_recipe",
 				"result": {
 						"item": "enderstorage:ender_tank"
 				}
 		}).id("kubejs:ender_tank_recolour_manual_only")
-		
+
 		modifyShaped(recipesEvent, "ae2:nether_quartz_wrench", 1, ['Q Q', ' I ', ' I '], {
 				Q: "minecraft:quartz",
 				I: "#forge:rods/wrought_iron"
 		})
-		
+
 		modifyShaped(recipesEvent, "ae2:certus_quartz_cutting_knife", 1, ['Q  ', ' I ', '   '], {
 				Q: "ae2:certus_quartz_crystal",
 				I: "#forge:rods/wrought_iron"
 		})
-		
+
 		modifyShaped(recipesEvent, "ae2:nether_quartz_cutting_knife", 1, ['Q  ', ' I ', '   '], {
 				Q: "minecraft:quartz",
 				I: "#forge:rods/wrought_iron"
 		})
-		
+
 		modifyShaped(recipesEvent, "exmachinis:flux_hammer", 1, ["PHP", "PTP", "CSU"], {
 				H: "minecraft:hopper",
 				T: "thermal:machine_pulverizer",
@@ -473,7 +474,7 @@ const setRecipes = (recipesEvent) => {
 				U: "thermal:upgrade_augment_3",
 				S: "#forge:sheets/stainless_steel"
 		})
-		
+
 		modifyShaped(recipesEvent, "exmachinis:flux_sieve", 1, ["SGS", "PTP", "CHU"], {
 				H: "minecraft:hopper",
 				T: "create:smart_chute",
@@ -483,7 +484,7 @@ const setRecipes = (recipesEvent) => {
 				U: "thermal:upgrade_augment_3",
 				S: "#forge:sheets/stainless_steel"
 		})
-		
+
 		modifyShaped(recipesEvent, "exmachinis:gold_upgrade", 1, ["GGG", "RPR", "GMG"], {
 				G: "#forge:sheets/rose_gold",
 				M: "#ae2:memory_cards",
@@ -499,7 +500,7 @@ const setRecipes = (recipesEvent) => {
 				E: "immersiveengineering:light_engineering",
 				B: "minecraft:bucket"
 		})
-		
+
 		modifyShaped(recipesEvent, "bloodmagic:alchemicalreactionchamber", 1, ["SSS", "IOI", "BFB"], {
 				S: "#forge:stone",
 				I: "bloodmagic:infusedslate",
@@ -530,7 +531,7 @@ const setRecipes = (recipesEvent) => {
 				B: "tfc:ceramic/fire_brick",
 				M: "#forge:magma"
 		})
-		
+
 		modifyShaped(recipesEvent, "beyond_earth:fuel_refinery", 1, ["SIS", "BFB", "SOS"], {
 				S: "#forge:ingots/steel",
 				I: "#forge:ingots/iron",
@@ -560,7 +561,7 @@ const setRecipes = (recipesEvent) => {
 				T: "#forge:sheets/stainless_steel",
 				S: "#forge:double_sheets/stainless_steel"
 		})
-		
+
 		modifyShaped(recipesEvent, "beyond_earth:oxygen_loader", 1, ["ISI", "SFS", "ITI"], {
 				S: "#forge:plates/iron",
 				I: "#forge:ingots/iron",
@@ -580,21 +581,21 @@ const setRecipes = (recipesEvent) => {
 		modifyShaped(recipesEvent, "create:andesite_alloy", 1, ['SZ ', 'ZS ', '   '], {
 				S: "#tfc:igneous_extrusive_rock",
 				Z: "#forge:nuggets/zinc"
-				
+
 		})
 		modifyShaped(recipesEvent, "apotheosis:melonshelf", 1, ["MMM", "SBS", "MMM"], {
 				M: "#forge:melon",
 				B: "#forge:bookshelves",
 				S: "minecraft:glistering_melon_slice"
 		})
-		
+
 		modifyShaped(recipesEvent, "apotheosis:beeshelf", 1, ["CVC", "HBH", "CVC"], {
 				C: "firmalife:raw_honey",
 				V: "firmalife:beehive",
 				H: "minecraft:honey_block",
 				B: "#forge:bookshelves"
 		})
-		
+
 		modifyShaped(recipesEvent, "apotheosis:salvaging_table", 1, ["CCC", "PSA", "DBD"], {
 				C: "tfc:metal/ingot/copper",
 				P: Ingredient.of("tfc:metal/pickaxe/blue_steel").ignoreNBT().toJson(),
@@ -603,7 +604,7 @@ const setRecipes = (recipesEvent) => {
 				D: "apotheosis:gem_dust",
 				B: "minecraft:lava_bucket"
 		})
-		
+
 		modifyShaped(recipesEvent, "apotheosis:library", 1, ["CVC", "VBV", "CVC"], {
 				C: "minecraft:ender_chest",
 				V: "apotheosis:infused_hellshelf",
@@ -644,7 +645,7 @@ const setRecipes = (recipesEvent) => {
 				A: "thermal:tar",
 				B: "#forge:treated_wood"
 		})
-		
+
 		for (const grain of grains) {
 				recipesEvent.remove({output: `firmalife:food/${grain}_dough`})
 				recipesEvent
@@ -665,7 +666,7 @@ const setRecipes = (recipesEvent) => {
 								"#firmalife:sweetener"
 						])
 						.id(`kubejs:food/${grain}_dough_manual_only`)
-				
+
 				recipesEvent
 						.recipes
 						.createMixing(
@@ -702,12 +703,12 @@ const setRecipes = (recipesEvent) => {
 						"item": `firmalife:food/masa_flour`
 				}
 		}, 2)
-		
-		
+
+
 		for (const dirtType of dirtTypes) {
 				tfcBucketRecipes(recipesEvent, `tfc:mud/${dirtType}`, "minecraft:water", 100, `tfc:dirt/${dirtType}`, 1)
 		}
-		
+
 		recipesEvent.remove({output: "firmalife:watering_can"})
 		recipesEvent
 				.shapeless("firmalife:watering_can", [
@@ -727,12 +728,12 @@ const setRecipes = (recipesEvent) => {
 								Fluid.of("minecraft:water", 1000), "tfc:wooden_bucket", "#tfc:lumber"
 						]
 				)
-		
+
 		// drawers related
 		recipesEvent.recipes.immersiveengineeringMetalPress("2x tfc:brass_mechanisms", "#forge:ingots/brass", "immersiveengineering:mold_gear" )
-		
-		
-		
+
+
+
 		recipesEvent
 				.shapeless(
 						"9x kubejs:bismuth_bronze_nugget",
@@ -741,14 +742,14 @@ const setRecipes = (recipesEvent) => {
 						]
 				)
 				.id("kubejs:bismuth_bronze_nugget");
-		
+
 		recipesEvent
 				.shapeless(
 						"tfc:metal/ingot/bismuth_bronze",
 						Array.from(new Array(9)).map(i => "kubejs:bismuth_bronze_nugget")
 				)
 				.id("kubejs:bismuth_bronze_from_nugget");
-		
+
 		modifyShaped(recipesEvent, "storagedrawers:upgrade_template", 4, [
 				"SSS",
 				"STS",
@@ -757,7 +758,7 @@ const setRecipes = (recipesEvent) => {
 				"T": "framedcompactdrawers:framed_trim",
 				"S": "#balm:wooden_rods"
 		})
-		
+
 		modifyShaped(recipesEvent, "framedcompactdrawers:framed_full_one", 1, [
 				"SSS",
 				"NCN",
@@ -785,7 +786,7 @@ const setRecipes = (recipesEvent) => {
 				"C": "#balm:wooden_chests",
 				"S": "#balm:wooden_rods"
 		})
-		
+
 		modifyShaped(recipesEvent, "framedcompactdrawers:framed_half_one", 1, [
 				"S S",
 				"NCN",
@@ -823,7 +824,7 @@ const setRecipes = (recipesEvent) => {
 				"I": "#forge:ingots/iron",
 				"T": "framedcompactdrawers:framed_trim"
 		})
-		
+
 		modifyShaped(recipesEvent, "storagedrawers:controller", 1, [
 				"SSS",
 				"RTR",
@@ -834,7 +835,7 @@ const setRecipes = (recipesEvent) => {
 				"D": "#forge:gems/diamond",
 				"T": "framedcompactdrawers:framed_trim"
 		})
-		
+
 		modifyShaped(recipesEvent, "storagedrawers:controller_slave", 1, [
 				"SSS",
 				"RTR",
@@ -845,4 +846,65 @@ const setRecipes = (recipesEvent) => {
 				"A": "#forge:gems/amethyst",
 				"T": "framedcompactdrawers:framed_trim"
 		})
+
+        // Integrated Dynamics... integration ?
+        modifyShaped(recipesEvent, "integrateddynamics:part_machine_reader", 1, [
+            " D ",
+            "CIC",
+            " S "
+        ], {
+            "D": "integrateddynamics:part_display_panel",
+            "C": "#forge:ingots/copper",
+            "I": "integrateddynamics:variable_transformer_input",
+            "S": "craftingstation:crafting_station"
+        })
+
+
+        modifyShaped(recipesEvent, "integrateddynamics:drying_basin", 1, [
+            "WDW",
+            "I I",
+            "WDW"
+        ], {
+            "W": "integrateddynamics:menril_log",
+            "I": "#forge:rods/black_bronze",
+            "D": "#balm:black_dyes"
+        })
+
+        modifyShaped(recipesEvent, "integrateddynamics:squeezer", 1, [
+            "RBR",
+            "R R",
+            "WPW"
+        ], {
+            "R": "#forge:rods/iron",
+            "B": "#forge:storage_blocks/uranium",
+            "W": "integrateddynamics:menril_log",
+            "P": "#forge:plates/steel"
+        })
+
+        modifyShaped(recipesEvent, "integratedtunnels:part_interface_fluid", 1, [
+            "   ",
+            "CBC",
+            "CCC"
+        ], {
+            "C": "integrateddynamics:crystalized_menril_chunk",
+            "B": "#tfc:buckets"
+        })
+
+        modifyShaped(recipesEvent, "integratedtunnels:part_interface_fluid", 1, [
+            " M ",
+            "MVM",
+            " M "
+        ], {
+            "V": "integrateddynamics:variable_transformer_input",
+            "M": "#tfc:foods/meats"
+        })
+
+        modifyShaped(recipesEvent, "integratedtunnels:part_interface_fluid", 1, [
+            " M ",
+            "MVM",
+            " M "
+        ], {
+            "V": "integrateddynamics:variable_transformer_output",
+            "M": "#tfc:foods/meats"
+        })
 }
