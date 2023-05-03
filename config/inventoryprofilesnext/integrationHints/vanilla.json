@@ -46,5 +46,17 @@
                 "top": -25
             }
         }
+    },
+    "net.minecraft.client.gui.screens.inventory.MerchantScreen": {
+        "buttonHints": {
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20,
+                "top": -10
+            },
+            "SETTINGS": {
+                "horizontalOffset": 30,
+                "top": -25
+            }
+        }
     }
 }
