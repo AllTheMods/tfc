@@ -328,6 +328,24 @@ const setItemTags = itemTagsEvent => {
     itemTagsEvent.get('forge:ores/uranium').remove(['biggerreactors:uranium_ore', 'exnihilosequentia:raw_uranium', 'immersiveengineering:deepslate_ore_uranium', 'immersiveengineering:ore_uranium'])
     itemTagsEvent.get('forge:ores/zinc').remove(['create:deepslate_zinc_ore', 'create:zinc_ore', 'exnihilosequentia:raw_zinc'])
 
+    itemTagsEvent.get('tfc:usable_on_tool_rack').add([
+        'mininggadgets:mininggadget',
+        'create:wrench',
+        'create:hand_crank',
+        '#immersiveengineering:toolbox/tools',
+        '#forge:swords',
+        '#forge:axes',
+        '#forge:pickaxes',
+        '#forge:shovels',
+        '#forge:hoes',
+        '#forge:bows',
+        'minecraft:trident',
+        '#bloodmagic:daggerofsacrifice',
+        '#bloodmagic:sacrificialdagger',
+        'mcwroofs:roofing_hammer',
+        'tfchomestead:walking_cane',
+        'tfchomestead:refined_walking_cane'
+    ])
 
     //itemTagsEvent.add('tfc:foods', ['kubejs:chocolate_cake_slice', 'kubejs:honey_cake_slice'])
     const framedDrawerTypes = [
