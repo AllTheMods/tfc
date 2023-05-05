@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "minecraft:golden_chestplate"
+    },
+    {
+      "item": "minecraft:golden_leggings"
+    },
+    {
+      "item": "minecraft:golden_boots"
+    },
+    {
+      "item": "minecraft:golden_helmet"
+    }
+  ],
+  "piercing": 2,
+  "slashing": 3,
+  "crushing": 2
+}
