@@ -379,6 +379,7 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped"}, "minecraft:stone", "#forge:stone")
 
 		recipesEvent.replaceInput({type: "immersiveengineering:cloche"}, "minecraft:dirt", "#tfc:dirt")
+		recipesEvent.replaceInput({id: "immersiveengineering:crafting/balloon"}, "minecraft:torch", "tfc:torch")
 
 
 		modifyShaped(recipesEvent, "ae2:certus_quartz_wrench", 1, ['Q Q', ' I ', ' I '], {
