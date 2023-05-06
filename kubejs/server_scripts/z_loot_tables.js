@@ -8,6 +8,7 @@ const setLoot = (lootEvent) =>{
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(/vibranium.*/);
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(/unobtainium.*/);
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(Item.of("minecraft:fishing_rod").ignoreNBT());
+    lootEvent.addLootTypeModifier(LootType.FISHING).removeLoot(Item.of("minecraft:fishing_rod").ignoreNBT());
 
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(Item.of("minecraft:anvil"));
     lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:copper_ingot","tfc:metal/ingot/copper");
