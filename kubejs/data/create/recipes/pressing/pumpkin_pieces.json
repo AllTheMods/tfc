@@ -1,0 +1,19 @@
+{
+    "type": "create:pressing",
+    "ingredients": [
+        {
+           "type": "tfc:not_rotten",
+           "ingredient": {
+             "item": "tfc:pumpkin"
+           }
+         }
+       ],
+       "results": [
+         {
+           "item": "firmalife:food/pumpkin_chunks",
+           "modifiers": [
+            "tfc:copy_oldest_food"
+           ]
+         }
+       ]
+}
