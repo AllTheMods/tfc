@@ -9,12 +9,11 @@
     }
   ],
   "results": [
-
     {
-    "item": "tfc:food/wheat_flour",
-    "modifiers": [
-      "tfc:copy_oldest_food"
-     ]
+      "item": "tfc:food/wheat_flour",
+      "modifiers": [
+        "tfc:copy_oldest_food"
+      ]
     },
     {
       "item": "tfc:food/wheat_flour",
@@ -26,7 +25,7 @@
     },
     {
       "item": "tfc:seeds/wheat",
-      "chance": 0.75
+      "chance": 0.25
     }
   ],
   "processingTime": 150
