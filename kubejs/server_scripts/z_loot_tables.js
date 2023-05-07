@@ -36,7 +36,12 @@ const setLoot = (lootEvent) =>{
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(Item.of("minecraft:water_bucket"));
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(Item.of("minecraft:powder_snow_bucket"));
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(Item.of("minecraft:cooked_porkchop"));
-    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:porkchop","tfc:food/pork");
+    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:porkchop","tfc:food/pork",true);
+    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:mutton","tfc:food/muttton",true);
+    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:beef","tfc:food/beef",true);
+    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:chicken","tfc:food/chicken",true);
+    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:rabbit","tfc:food/rabbit",true);
+    lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:rabbit_hide","tfc:small_raw_hide", true);
     lootEvent.addLootTypeModifier(LootType.CHEST).replaceLoot("minecraft:barrel","tfcbarrels:wood/barrel/oak");
     lootEvent.addEntityLootModifier("minecraft:hoglin").replaceLoot("minecraft:porkchop","tfc:food/pork",true);
     lootEvent.addEntityLootModifier("minecraft:hoglin").replaceLoot("minecraft:cooked_porkchop","tfc:food/cooked_pork",true);
