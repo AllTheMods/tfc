@@ -4,25 +4,17 @@
     {
       "type": "tfc:not_rotten",
       "ingredient": {
-        "item": "tfc:food/rye_grain"
+        "item": "firmalife:food/nixtamal"
       }
     }
   ],
   "results": [
     {
-      "item": "tfc:food/rye_flour"
-    },
-    {
-      "item": "tfc:food/rye_flour",
+      "item": "firmalife:food/masa_flour",
       "modifiers": [
         "tfc:copy_oldest_food"
       ],
-      "count": 2,
-      "chance": 0.25
-    },
-    {
-      "item": "tfc:seeds/rye",
-      "chance": 0.25
+      "count": 4
     }
   ],
   "processingTime": 150

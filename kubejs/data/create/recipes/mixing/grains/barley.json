@@ -2,12 +2,22 @@
     "type": "create:mixing",
     "ingredients": [
       {
-        "item": "tfc:food/barley"
+        "type": "tfc:not_rotten",
+        "ingredient": {
+          "item": "tfc:food/barley"
+        }
       }
     ],
     "results": [
       {
-        "item": "tfc:food/barley_grain"
+          "item": "tfc:food/barley_grain",
+          "modifiers": [
+            "tfc:copy_oldest_food"
+          ]
+      },
+      {
+        "item": "tfc:straw",
+        "chance": 0.95
       }
     ]
 }
