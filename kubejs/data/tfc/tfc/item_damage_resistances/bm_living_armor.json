@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "bloodmagic:livingplate"
+    },
+    {
+      "item": "bloodmagic:livingleggings"
+    },
+    {
+      "item": "bloodmagic:livingboots"
+    },
+    {
+      "item": "bloodmagic:livinghelmet"
+    }
+  ],
+  "piercing": 5,
+  "slashing": 2,
+  "crushing": 5
+}

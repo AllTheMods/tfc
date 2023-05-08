@@ -82,7 +82,6 @@ const setItemTags = itemTagsEvent => {
 
     itemTagsEvent.get('forge:cokesourcez').add(['minecraft:coal', 'tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
     itemTagsEvent.get('forge:cokesource').add(['tfc:ore/lignite', 'tfc:ore/bituminous_coal'])
-    itemTagsEvent.get('tfc:axes').add('bloodmagic:soulaxe')
     itemTagsEvent.get('forge:bottle').add("minecraft:glass_bottle")
     itemTagsEvent.get('forge:bottle').add("firmalife:empty_jar")
 
@@ -346,6 +345,39 @@ const setItemTags = itemTagsEvent => {
         'tfchomestead:walking_cane',
         'tfchomestead:refined_walking_cane',
         'tombstone:ankh_of_pray'
+    ])
+
+    itemTagsEvent.get('tfc:deals_slashing_damage').add([
+        'bloodmagic:soulscythe'
+    ])
+
+    itemTagsEvent.get('tfc:deals_piercing_damage').add([
+        'minecraft:trident'
+    ])
+
+    itemTagsEvent.get('tfc:axes').add([
+        'bloodmagic:soulaxe',
+        'immersiveengineering:axe_steel',
+        'ae2:certus_quartz_axe',
+        'ae2:nether_quartz_axe',
+        'ae2:fluix_axe',
+        'minecraft:golden_axe',
+        'minecraft:diamond_axe',
+        'minecraft:netherite_axe',
+        'minecraft:iron_axe',
+        'minecraft:stone_axe'
+    ])
+
+    itemTagsEvent.get('tfc:swords').add([
+        'bloodmagic:soulsword',
+        'ae2:certus_quartz_sword',
+        'ae2:nether_quartz_sword',
+        'ae2:fluix_sword',
+        'minecraft:golden_sword',
+        'minecraft:diamond_sword',
+        'minecraft:netherite_sword',
+        'minecraft:iron_sword',
+        'minecraft:stone_sword'
     ])
 
     //itemTagsEvent.add('tfc:foods', ['kubejs:chocolate_cake_slice', 'kubejs:honey_cake_slice'])
