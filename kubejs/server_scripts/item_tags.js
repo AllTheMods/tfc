@@ -344,7 +344,8 @@ const setItemTags = itemTagsEvent => {
         '#bloodmagic:sacrificialdagger',
         'mcwroofs:roofing_hammer',
         'tfchomestead:walking_cane',
-        'tfchomestead:refined_walking_cane'
+        'tfchomestead:refined_walking_cane',
+        'tombstone:ankh_of_pray'
     ])
 
     //itemTagsEvent.add('tfc:foods', ['kubejs:chocolate_cake_slice', 'kubejs:honey_cake_slice'])
