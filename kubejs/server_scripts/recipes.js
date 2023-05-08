@@ -171,6 +171,55 @@ const setRecipes = (recipesEvent) => {
 				).water(850)
 		}
 
+		const bushes = [
+			"snowberry",
+			"bunchberry",
+			"gooseberry",
+			"cloudberry",
+			"strawberry",
+			"wintergreen_berry",
+			"cranberry",
+			"blackberry",
+			"raspberry",
+			"blueberry",
+			"elderberry"
+		]
+		for (const bush of bushes) {
+			recipesEvent.recipes.thermal.insolator(
+				[
+					Item.of(`tfc:food/${bush}`).withChance(2),
+					Item.of(`tfc:plant/${bush}_bush`).withChance(1.1)
+				],
+				Item.of(`tfc:plant/${bush}_bush`)
+			).water(500)
+		}
+
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/nightshade_berry").withChance(2), Item.of("firmalife:plant/nightshade_bush").withChance(1.1)], "firmalife:plant/nightshade_bush").water(500)
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/pineapple").withChance(2), Item.of("firmalife:plant/pineapple_bush").withChance(1.1)], "firmalife:plant/pineapple_bush").water(500)
+
+		const fruitTrees = [
+			"cherry",
+			"green_apple",
+			"lemon",
+			"olive",
+			"orange",
+			"peach",
+			"plum",
+			"red_apple",
+			"banana"
+		]
+		for (const fruitTree of fruitTrees) {
+			recipesEvent.recipes.thermal.insolator(
+				[
+					Item.of(`tfc:food/${fruitTree}`).withChance(2),
+					Item.of(`tfc:plant/${fruitTree}_sapling`).withChance(1.1)
+				],
+				Item.of(`tfc:plant/${fruitTree}_sapling`)
+			).water(750)
+		}
+
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/cocoa_beans").withChance(2), Item.of("firmalife:plant/cocoa_sapling").withChance(1.1)], "firmalife:plant/cocoa_sapling").water(750)
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/fig").withChance(2), Item.of("firmalife:plant/fig_sapling").withChance(1.1)], "firmalife:plant/fig_sapling").water(750)
 
 		const gemStones = [
 				"amethyst",
