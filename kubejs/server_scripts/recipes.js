@@ -38,6 +38,9 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_pumpkin"})
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_melon"})
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_carrot"})
+
+		recipesEvent.remove({id: "thermal:machines/insolator/insolator_dark_oak_sapling"})
+		recipesEvent.remove({id: "thermal:machines/insolator/insolator_jungle_sapling"})
 		
 		recipesEvent.remove({id: "immersiveengineering:cloche/melon"})
 		recipesEvent.remove({id: "immersiveengineering:cloche/pumpkin"})
@@ -78,6 +81,7 @@ const removeRecipes = (recipesEvent) => {
 		const roofTypes = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
 		for (const woodType of vanillaWoodTypes) {
 				recipesEvent.replaceInput({id: `create:${woodType}_window`}, `minecraft:${woodType}_planks`, `tfc:wood/planks/${woodType}`)
+				recipesEvent.remove({id: `thermal:machines/insolator/insolator_${woodType}_sapling`})
 		}
 		for (const material of materials) {
 				recipesEvent.remove({id: `create:cutting/${material}_wood`})
@@ -153,20 +157,69 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({input: "minecraft:smooth_stone", mod: "create"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
 		recipesEvent.replaceInput({input: "minecraft:deepslate", mod: "supercircuitmaker"}, "minecraft:deepslate", "#tfc:rock/smooth")
 
-		recipesEvent.recipes.thermal.insolator(["tfc:jute", Item.of("tfc:seeds/jute").withChance(1)], "tfc:seeds/jute").water(900)
-		recipesEvent.recipes.thermal.insolator(["tfc:melon", Item.of("tfc:seeds/melon").withChance(1.5)], "tfc:seeds/melon").water(750)
-		recipesEvent.recipes.thermal.insolator(["tfc:pumpkin", Item.of("tfc:seeds/pumpkin").withChance(1.5)], "tfc:seeds/pumpkin").water(750)
+		recipesEvent.recipes.thermal.insolator([Item.of("tfc:jute").withChance(2), Item.of("tfc:seeds/jute").withChance(1.1)], "tfc:seeds/jute").water(900)
+		recipesEvent.recipes.thermal.insolator([Item.of("tfc:melon").withChance(2), Item.of("tfc:seeds/melon").withChance(1.1)], "tfc:seeds/melon").water(750)
+		recipesEvent.recipes.thermal.insolator([Item.of("tfc:pumpkin").withChance(2), Item.of("tfc:seeds/pumpkin").withChance(1.1)], "tfc:seeds/pumpkin").water(750)
 
 		for (const seed of tfcFoodSeeds) {
 				recipesEvent.recipes.thermal.insolator(
 						[
-								Item.of(`tfc:food/${seed}`),
-								Item.of(`tfc:seeds/${seed}`).withChance(1.2)
+								Item.of(`tfc:food/${seed}`).withChance(2),
+								Item.of(`tfc:seeds/${seed}`).withChance(1.1)
 						],
 						Item.of(`tfc:seeds/${seed}`)
 				).water(850)
 		}
 
+		const bushes = [
+			"snowberry",
+			"bunchberry",
+			"gooseberry",
+			"cloudberry",
+			"strawberry",
+			"wintergreen_berry",
+			"cranberry",
+			"blackberry",
+			"raspberry",
+			"blueberry",
+			"elderberry"
+		]
+		for (const bush of bushes) {
+			recipesEvent.recipes.thermal.insolator(
+				[
+					Item.of(`tfc:food/${bush}`).withChance(2),
+					Item.of(`tfc:plant/${bush}_bush`).withChance(1.1)
+				],
+				Item.of(`tfc:plant/${bush}_bush`)
+			).water(500)
+		}
+
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/nightshade_berry").withChance(2), Item.of("firmalife:plant/nightshade_bush").withChance(1.1)], "firmalife:plant/nightshade_bush").water(500)
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/pineapple").withChance(2), Item.of("firmalife:plant/pineapple_bush").withChance(1.1)], "firmalife:plant/pineapple_bush").water(500)
+
+		const fruitTrees = [
+			"cherry",
+			"green_apple",
+			"lemon",
+			"olive",
+			"orange",
+			"peach",
+			"plum",
+			"red_apple",
+			"banana"
+		]
+		for (const fruitTree of fruitTrees) {
+			recipesEvent.recipes.thermal.insolator(
+				[
+					Item.of(`tfc:food/${fruitTree}`).withChance(2),
+					Item.of(`tfc:plant/${fruitTree}_sapling`).withChance(1.1)
+				],
+				Item.of(`tfc:plant/${fruitTree}_sapling`)
+			).water(750)
+		}
+
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/cocoa_beans").withChance(2), Item.of("firmalife:plant/cocoa_sapling").withChance(1.1)], "firmalife:plant/cocoa_sapling").water(750)
+		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/fig").withChance(2), Item.of("firmalife:plant/fig_sapling").withChance(1.1)], "firmalife:plant/fig_sapling").water(750)
 
 		const gemStones = [
 				"amethyst",
@@ -230,6 +283,8 @@ const setRecipes = (recipesEvent) => {
 				recipesEvent.recipes.createCutting([Item.of(`tfc:wood/stripped_log/${log}`), Item.of('#forge:dusts/wood').withChance(0.25)], Item.of(`tfc:wood/log/${log}`))
 				recipesEvent.recipes.createCutting([plankOutput, Item.of('#forge:dusts/wood').withChance(0.25)], Item.of(`tfc:wood/stripped_log/${log}`))
 				recipesEvent.recipes.createCutting([`4x tfc:wood/lumber/${log}`, Item.of('#forge:dusts/wood').withChance(0.25)], `tfc:wood/planks/${log}`)
+
+				recipesEvent.recipes.thermal.insolator([Item.of(`tfc:wood/log/${log}`).withChance(4),Item.of(`tfc:wood/sapling/${log}`).withChance(1.1),Item.of(`tfc:wood/twig/${log}`).withChance(2)],`tfc:wood/sapling/${log}`).water(1000)
 		}
 
 		recipesEvent

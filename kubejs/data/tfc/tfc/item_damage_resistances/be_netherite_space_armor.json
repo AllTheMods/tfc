@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "beyond_earth:netherite_oxygen_mask"
+    },
+    {
+      "item": "beyond_earth:netherite_space_suit"
+    },
+    {
+      "item": "beyond_earth:netherite_space_pants"
+    },
+    {
+      "item": "beyond_earth:netherite_space_boots"
+    }
+  ],
+  "piercing": 12,
+  "slashing": 14,
+  "crushing": 12
+}

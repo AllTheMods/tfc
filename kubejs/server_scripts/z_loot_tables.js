@@ -30,6 +30,9 @@ const setLoot = (lootEvent) =>{
     lootEvent.addEntityLootModifier("minecraft:zombie").replaceLoot(Item.of("minecraft:iron_ingot"), "tfc:metal/shovel/wrought_iron");
     lootEvent.addEntityLootModifier("minecraft:husk").replaceLoot(Item.of("minecraft:iron_ingot"), "tfc:metal/shovel/wrought_iron");
     lootEvent.addEntityLootModifier("minecraft:drowned").replaceLoot(Item.of("minecraft:copper_ingot"), "tfc:metal/shovel/copper");
+
+    lootEvent.addLootTypeModifier(LootType.ENTITY).replaceLoot("minecraft:potato", "tfc:food/potato", true);
+    lootEvent.addLootTypeModifier(LootType.ENTITY).replaceLoot("minecraft:carrot", "tfc:food/carrot", true);
     
     lootEvent.addEntityLootModifier("minecraft:evoker").replaceLoot("minecraft:emerald","tfc:gem/emerald");
     lootEvent.addLootTypeModifier(LootType.CHEST).removeLoot(Item.of("minecraft:lava_bucket"));
