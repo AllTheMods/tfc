@@ -964,4 +964,82 @@ const setRecipes = (recipesEvent) => {
             "V": "integrateddynamics:variable_transformer_output",
             "M": "#tfc:foods/meats"
         })
+
+		
+		recipesEvent.shapeless("9x tfc:gem/lapis_lazuli", [
+			'#forge:storage_blocks/lapis'
+		]).id("kubejs:lapis_block_revert");
+
+		// Tin
+		recipesEvent.remove({"output": "thermal:tin_block"});
+		
+		recipesEvent.shapeless("thermal:tin_block",
+			Array.from(new Array(9)).map(i => 'tfc:metal/ingot/tin')
+		).id("kubejs:tin_block")
+
+		recipesEvent.shapeless("9x tfc:metal/ingot/tin", [
+			'#forge:storage_blocks/tin'
+		]).id("kubejs:tin_block_revert");
+
+		// Bronze
+		recipesEvent.remove({"output": "thermal:bronze_block"});
+		
+		recipesEvent.shapeless("thermal:bronze_block",
+			Array.from(new Array(9)).map(i => 'tfc:metal/ingot/bronze')
+		).id("kubejs:tin_block")
+
+		recipesEvent.shapeless("9x tfc:metal/ingot/bronze", [
+			'#forge:storage_blocks/bronze'
+		]).id("kubejs:bronze_block_revert");
+
+		recipesEvent.shapeless("9x thermal:invar_ingot", [
+			'#forge:storage_blocks/invar'
+		]).id("kubejs:invar_block_revert");
+
+		recipesEvent.shapeless("9x thermal:signalum_ingot", [
+			'#forge:storage_blocks/signalum'
+		]).id("kubejs:signalum_block_revert");
+
+		recipesEvent.shapeless("9x thermal:lumium_ingot", [
+			'#forge:storage_blocks/lumium'
+		]).id("kubejs:lumium_block_revert");
+		
+		recipesEvent.shapeless("9x thermal:enderium_ingot", [
+			'#forge:storage_blocks/enderium'
+		]).id("kubejs:enderium_block_revert");
+
+		
+		recipesEvent.shapeless("9x minecraft:gunpowder", [
+			'#forge:storage_blocks/gunpowder'
+		]).id("kubejs:gunpowder_block_revert");
+		
+		// Bamboo
+		recipesEvent.shapeless("9x minecraft:bamboo", [
+			'#forge:storage_blocks/bamboo'
+		]).id("kubejs:bamboo_block_revert");
+
+		recipesEvent.shapeless("9x thermal:apatite", [
+			'#forge:storage_blocks/apatite'
+		]).id("kubejs:apatite_block_revert");
+
+		recipesEvent.shapeless("9x tfc:ore/cinnabar", [
+			'#forge:storage_blocks/cinnabar'
+		]).id("kubejs:cinnabar_block_revert");
+
+		recipesEvent.shapeless("9x thermal:niter", [
+			'#forge:storage_blocks/niter'
+		]).id("kubejs:niter_block_revert");
+
+		// bituminous_coal
+		recipesEvent.shapeless("9x tfc:ore/bituminous_coal", [
+			'#forge:storage_blocks/bitumen'
+		]).id("kubejs:bitumen_block_revert");
+
+		recipesEvent.shapeless("9x thermal:tar", [
+			'#forge:storage_blocks/tar'
+		]).id("kubejs:tar_block_revert");
+
+		recipesEvent.shapeless("9x thermal:tar", [
+			'#forge:storage_blocks/tar'
+		])
 }
