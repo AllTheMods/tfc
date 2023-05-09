@@ -149,6 +149,9 @@ const addClocheRecipe = (recipesEvent, output, amount, seed, soil, render, time)
 				results: [
 						{
 								item: output,
+								modifiers: [
+									"tfc:copy_oldest_food"
+								],
 								count: amount
 						},
 						{
