@@ -158,18 +158,6 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({input: "minecraft:deepslate", mod: "supercircuitmaker"}, "minecraft:deepslate", "#tfc:rock/smooth")
 
 		recipesEvent.recipes.thermal.insolator([Item.of("tfc:jute").withChance(2), Item.of("tfc:seeds/jute").withChance(1.1)], "tfc:seeds/jute").water(900)
-		recipesEvent.recipes.thermal.insolator([Item.of("tfc:melon").withChance(2), Item.of("tfc:seeds/melon").withChance(1.1)], "tfc:seeds/melon").water(750)
-		recipesEvent.recipes.thermal.insolator([Item.of("tfc:pumpkin").withChance(2), Item.of("tfc:seeds/pumpkin").withChance(1.1)], "tfc:seeds/pumpkin").water(750)
-
-		for (const seed of tfcFoodSeeds) {
-				recipesEvent.recipes.thermal.insolator(
-						[
-								Item.of(`tfc:food/${seed}`).withChance(2),
-								Item.of(`tfc:seeds/${seed}`).withChance(1.1)
-						],
-						Item.of(`tfc:seeds/${seed}`)
-				).water(850)
-		}
 
 		const bushes = [
 			"snowberry",
@@ -185,17 +173,11 @@ const setRecipes = (recipesEvent) => {
 			"elderberry"
 		]
 		for (const bush of bushes) {
-			recipesEvent.recipes.thermal.insolator(
-				[
-					Item.of(`tfc:food/${bush}`).withChance(2),
-					Item.of(`tfc:plant/${bush}_bush`).withChance(1.1)
-				],
-				Item.of(`tfc:plant/${bush}_bush`)
-			).water(500)
+			addClocheRecipe(recipesEvent,`tfc:food/${bush}`, "2", `tfc:plant/${bush}_bush`, "#tfc:dirt", `tfc:food/${bush}_bush`, 1500)
 		}
 
-		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/nightshade_berry").withChance(2), Item.of("firmalife:plant/nightshade_bush").withChance(1.1)], "firmalife:plant/nightshade_bush").water(500)
-		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/pineapple").withChance(2), Item.of("firmalife:plant/pineapple_bush").withChance(1.1)], "firmalife:plant/pineapple_bush").water(500)
+		addClocheRecipe(recipesEvent,"firmalife:food/nightshade_berry", "2", "firmalife:plant/nightshade_bush", "#tfc:dirt", "firmalife:plant/nightshade_bush", 1500)
+		addClocheRecipe(recipesEvent,"firmalife:food/pineapple", "2", "firmalife:plant/pineapple_bush", "#tfc:dirt", "firmalife:plant/pineapple_bush", 1500)
 
 		const fruitTrees = [
 			"cherry",
@@ -209,17 +191,11 @@ const setRecipes = (recipesEvent) => {
 			"banana"
 		]
 		for (const fruitTree of fruitTrees) {
-			recipesEvent.recipes.thermal.insolator(
-				[
-					Item.of(`tfc:food/${fruitTree}`).withChance(2),
-					Item.of(`tfc:plant/${fruitTree}_sapling`).withChance(1.1)
-				],
-				Item.of(`tfc:plant/${fruitTree}_sapling`)
-			).water(750)
+			addClocheRecipe(recipesEvent,`tfc:food/${fruitTree}`, "2", `tfc:plant/${fruitTree}_sapling`, "#tfc:dirt", `tfc:food/${fruitTree}_sapling`, 2500)
 		}
 
-		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/cocoa_beans").withChance(2), Item.of("firmalife:plant/cocoa_sapling").withChance(1.1)], "firmalife:plant/cocoa_sapling").water(750)
-		recipesEvent.recipes.thermal.insolator([Item.of("firmalife:food/fig").withChance(2), Item.of("firmalife:plant/fig_sapling").withChance(1.1)], "firmalife:plant/fig_sapling").water(750)
+		addClocheRecipe(recipesEvent,"firmalife:food/cocoa_beans", "2", "firmalife:plant/cocoa_sapling", "#tfc:dirt", "firmalife:plant/cocoa_sapling", 2500)
+		addClocheRecipe(recipesEvent,"firmalife:food/fig", "2", "firmalife:plant/fig_sapling", "#tfc:dirt", "firmalife:plant/fig_sapling", 2500)
 
 		const gemStones = [
 				"amethyst",
