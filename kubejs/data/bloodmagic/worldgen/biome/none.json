@@ -1,0 +1,31 @@
+{
+    "temperature": 0.4,
+    "downfall": 0,
+    "precipitation": "none",
+    "category": "desert",
+    "effects": {
+      "sky_color": -3044526,
+      "fog_color": -3044526,
+      "water_color": 4159204,
+      "water_fog_color": 329011,
+      "grass_color": 9551193,
+      "foliage_color": 7842607,
+      "particle": {
+        "options": {
+          "type": "minecraft:crimson_spore"
+        },
+        "probability": 0.000
+      }
+    },
+    "creature_spawn_probability": 0.0,
+    "spawners": {
+      "monster": [
+      ]
+    },
+    "spawn_costs": {
+    },
+    "carvers": {
+    },
+    "features": [
+    ]
+}

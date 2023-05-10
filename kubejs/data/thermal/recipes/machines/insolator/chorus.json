@@ -1,0 +1,16 @@
+{
+    "type": "thermal:insolator",
+    "ingredient": {
+      "item": "integrateddynamics:proto_chorus"
+    },
+    "result": [
+      {
+        "item": "minecraft:chorus_fruit",
+        "chance": 2.5
+      },
+      {
+        "item": "integrateddynamics:proto_chorus",
+        "chance": 1
+      }
+    ]
+  }
