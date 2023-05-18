@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc_aerospace:polyester"
+    },
+    {
+      "item": "tfc_aerospace:cfrp"
+    },
+    {
+      "item": "tfc_aerospace:airgel"
+    },
+    {
+      "item": "tfc_aerospace:aluminiumfiber"
+    },
+    {
+      "item": "immersiveengineering:plate_duroplast"
+    },
+    {
+      "item": "ae2:silicon"
+    }
+  ],
+  "result": {
+    "item": "tfc_aerospace:aerospacefiber",
+    "count": 1
+  }
+}

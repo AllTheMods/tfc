@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tfc_aerospace:alcohol"
+    },
+    {
+      "item": "immersivepetroleum:ethylene_bucket"
+    },
+    {
+      "item": "immersivepetroleum:crudeoil_bucket"
+    }
+  ],
+  "result": {
+    "item": "tfc_aerospace:polyester",
+    "count": 32
+  }
+}

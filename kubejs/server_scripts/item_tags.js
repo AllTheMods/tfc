@@ -396,4 +396,9 @@ const setItemTags = itemTagsEvent => {
         "two",
         "four"
     ]
+
+    // Add slab for raw rock types
+    for (const tfcStoneType of tfcStoneTypes){
+        itemTagsEvent.add('tfc:raw_rock_slabs',[`tfc:rock/raw/${tfcStoneType}_slab`])
+    }
 }

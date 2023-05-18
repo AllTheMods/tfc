@@ -124,7 +124,16 @@ const removeRecipes = (recipesEvent) => {
 				console.log(`removing storagedrawers:${woodType}_trim`)
 				recipesEvent.remove({output: `storagedrawers:${woodType}_trim`})
 		}
-}
+
+		// Removing vanilla kelp
+		recipesEvent.remove({input: "minecraft:kelp"})
+		recipesEvent.remove({id: "integrateddynamics:drying_basin/convenience/minecraft_dried_kelp"})
+		recipesEvent.remove({id: "integrateddynamics:mechanical_drying_basin/convenience/minecraft_dried_kelp"})
+
+		// Removing dye from ID Squeezer
+		recipesEvent.remove({output: /minecraft:.*_dye/, mod:"integrateddynamics"})
+
+	}
 const setRecipes = (recipesEvent) => {
 		console.log("Loading recipes...");
 		// first remove unneeded ones....
@@ -156,7 +165,7 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "create"}, "minecraft:oak_planks", "#minecraft:planks")
 		recipesEvent.replaceInput({input: "minecraft:cobblestone", mod: "create"}, "minecraft:cobblestone", "#forge:cobblestone/normal")
 		recipesEvent.replaceInput({input: "minecraft:smooth_stone", mod: "create"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
-		recipesEvent.replaceInput({input: "minecraft:stone_slab"}, "minecraft:stone_slab", "#minecraft:slabs")
+		recipesEvent.replaceInput({input: "minecraft:stone_slab"}, "minecraft:stone_slab", "#tfc:raw_rock_slabs")
 		recipesEvent.replaceInput({input: "minecraft:deepslate", mod: "supercircuitmaker"}, "minecraft:deepslate", "#tfc:rock/smooth")
 
 		recipesEvent.recipes.thermal.insolator([Item.of("tfc:jute").withChance(2), Item.of("tfc:seeds/jute").withChance(1.1)], "tfc:seeds/jute").water(900)
@@ -897,11 +906,11 @@ const setRecipes = (recipesEvent) => {
 
         // Integrated Dynamics... integration ?
         modifyShaped(recipesEvent, "integrateddynamics:part_machine_reader", 1, [
-            " D ",
+            " F ",
             "CIC",
             " S "
         ], {
-            "D": "integrateddynamics:part_display_panel",
+            "F": "thermal:machine_furnace",
             "C": "#forge:ingots/copper",
             "I": "integrateddynamics:variable_transformer_input",
             "S": "craftingstation:crafting_station"
@@ -935,10 +944,10 @@ const setRecipes = (recipesEvent) => {
             "CCC"
         ], {
             "C": "integrateddynamics:crystalized_menril_chunk",
-            "B": "#tfc:buckets"
+            "B": "tfc:wooden_bucket"
         })
 
-        modifyShaped(recipesEvent, "integratedtunnels:part_interface_fluid", 1, [
+        modifyShaped(recipesEvent, "integrateddynamics:part_entity_reader", 1, [
             " M ",
             "MVM",
             " M "
@@ -946,17 +955,22 @@ const setRecipes = (recipesEvent) => {
             "V": "integrateddynamics:variable_transformer_input",
             "M": "#tfc:foods/meats"
         })
-
-        modifyShaped(recipesEvent, "integratedtunnels:part_interface_fluid", 1, [
-            " M ",
-            "MVM",
-            " M "
-        ], {
-            "V": "integrateddynamics:variable_transformer_output",
-            "M": "#tfc:foods/meats"
-        })
-
+	
+		recipesEvent.remove({id: "integratedtunnels:crafting/part_importer_world_block"})
+		recipesEvent.remove({id: "integratedtunnels:crafting/part_exporter_world_block"})
 		
+		recipesEvent.shapeless("integratedtunnels:part_importer_world_block", [
+			"integratedtunnels:part_importer_item",
+			"integrateddynamics:logic_director",
+			Item.of('tfc:metal/pickaxe/blue_steel', '{Damage:0,"tfc:forging_bonus":4}').enchant('minecraft:silk_touch', 1)
+		]).id("kubejs:integratedtunnels/part_importer_world_block")
+		
+		recipesEvent.shapeless("integratedtunnels:part_exporter_world_block", [
+			"integratedtunnels:part_exporter_item",
+			"integrateddynamics:logic_director",
+			Item.of('tfc:metal/pickaxe/red_steel', '{Damage:0,"tfc:forging_bonus":4}').enchant('minecraft:silk_touch', 1)
+		]).id("kubejs:integratedtunnels/part_exporter_world_block")
+			
 		recipesEvent.shapeless("9x tfc:gem/lapis_lazuli", [
 			'#forge:storage_blocks/lapis'
 		]).id("kubejs:lapis_block_revert");
