@@ -19,7 +19,8 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "minecraft:stone_brick_wall"})
 		recipesEvent.remove({id: "minecraft:stone_brick_slab"})
 		recipesEvent.remove({id: "minecraft:stone_brick_stairs"})
-		
+		recipesEvent.remove({id: "minecraft:stone_slab"})
+
 		recipesEvent.remove({id: "beyond_earth:compressing/compressed_desh"})
 		recipesEvent.remove({id: "beyond_earth:compressing/compressed_ostrum"})
 		recipesEvent.remove({id: "beyond_earth:compressing/compressed_calorite"})
@@ -155,6 +156,7 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({type: "minecraft:crafting_shaped", mod: "create"}, "minecraft:oak_planks", "#minecraft:planks")
 		recipesEvent.replaceInput({input: "minecraft:cobblestone", mod: "create"}, "minecraft:cobblestone", "#forge:cobblestone/normal")
 		recipesEvent.replaceInput({input: "minecraft:smooth_stone", mod: "create"}, "minecraft:smooth_stone", "#tfc:rock/smooth")
+		recipesEvent.replaceInput({input: "minecraft:stone_slab"}, "minecraft:stone_slab", "#minecraft:slabs")
 		recipesEvent.replaceInput({input: "minecraft:deepslate", mod: "supercircuitmaker"}, "minecraft:deepslate", "#tfc:rock/smooth")
 
 		recipesEvent.recipes.thermal.insolator([Item.of("tfc:jute").withChance(2), Item.of("tfc:seeds/jute").withChance(1.1)], "tfc:seeds/jute").water(900)
@@ -351,7 +353,20 @@ const setRecipes = (recipesEvent) => {
 
 		recipesEvent.recipes.thermal.crucible(Fluid.of("minecraft:lava", 1000), "#forge:magma").id(`kubejs:thermal/machines/crucible/tfc_magma_to_lava`)
 
-
+        for (const stone of tfcStoneTypes) {
+				recipesEvent.custom({
+						type: "create:crushing",
+						ingredients: [
+								Ingredient.of(`tfc:rock/cobble/${stone}`).toJson()
+						],
+						results: [
+								Item.of(`tfc:rock/gravel/${stone}`).toResultJson(),
+								Item.of(`tfc:rock/gravel/${stone}`).withChance(0.5).toResultJson()
+						],
+						processingTime: 100
+				})
+				recipesEvent.recipes.immersiveengineeringCrusher(Item.of(`tfc:rock/gravel/${stone}`), Ingredient.of(`tfc:rock/cobble/${stone}`)) // Secondary output format: {chance: 0.5, output: 'item:id'}
+		}
 		modifyShaped(
 				recipesEvent,
 				"tfc:candle",

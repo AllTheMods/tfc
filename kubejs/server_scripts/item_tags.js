@@ -1,6 +1,12 @@
 //priority: 895
 
 const setDyeAndFlowerTags = itemTagsEvent => {
+    itemTagsEvent.get('tfc:cat_food').add('beyond_earth:cheese')
+    itemTagsEvent.get('tfc:foods').add('beyond_earth:cheese')
+    itemTagsEvent.get('tfc:pig_food').add('beyond_earth:cheese')
+    itemTagsEvent.get('tfc:foods/dairy').add('beyond_earth:cheese')
+    itemTagsEvent.get('tfc:foods/usable_in_sandwich').add('beyond_earth:cheese')
+    
     itemTagsEvent.get('forge:poppies').add(['minecraft:poppy', 'tfc:plant/poppy'])
     itemTagsEvent.get('forge:dandelions').add(['minecraft:dandelion', 'tfc:plant/dandelion'])
     itemTagsEvent.get('forge:blue_orchids').add(['minecraft:blue_orchid', 'tfc:plant/blue_orchid'])
