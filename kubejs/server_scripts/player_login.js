@@ -1,3 +1,5 @@
+//priority: 900
+
 const loginEvent = playerLogin => {
     const {player} = playerLogin
     Utils.server.runCommand(`attribute ${player} apotheosis:crit_chance base set 1.0`)
