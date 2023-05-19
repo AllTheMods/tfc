@@ -130,8 +130,14 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "integrateddynamics:drying_basin/convenience/minecraft_dried_kelp"})
 		recipesEvent.remove({id: "integrateddynamics:mechanical_drying_basin/convenience/minecraft_dried_kelp"})
 
-		// Removing dye from ID Squeezer
-		recipesEvent.remove({output: /minecraft:.*_dye/, mod:"integrateddynamics"})
+		// Removing vanilla dye recipes from ID Squeezer and create mill
+		recipesEvent.remove({id: /minecraft_dye_.*/, mod:"integrateddynamics"})
+		recipesEvent.remove({output: /minecraft:.*_dye/, type:"create:milling"})
+
+		// Removing raw ore recipes from ID
+		recipesEvent.remove({id: /raw_.*/, mod:"integrateddynamics"})
+
+		recipesEvent.remove({id: /gem_[diamond|emerald|lapis]/, mod:"integrateddynamics"})
 
 	}
 const setRecipes = (recipesEvent) => {
@@ -1047,4 +1053,17 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.shapeless("9x thermal:tar", [
 			'#forge:storage_blocks/tar'
 		])
+
+		for (const color of dyes) {
+			dyeRecipes(recipesEvent, color)
+		}
+
+		recipesEvent.replaceOutput({mod: 'thermal'}, 'minecraft:leather', 'tfc:large_raw_hide')
+		recipesEvent.replaceOutput({mod: 'integrateddynamics'}, 'minecraft:leather', 'tfc:small_raw_hide')
+		recipesEvent.replaceOutput({mod: 'bloodmagic'},'minecraft:leather', 'tfc:small_raw_hide')
+
+		recipesEvent.replaceInput({mod: 'integrateddynamics', id: /ore\/flint/}, 'minecraft:gravel', '#forge:gravel')
+		recipesEvent.replaceInput({id: 'create:milling/gravel'}, 'minecraft:gravel', '#forge:gravel')
+
+		recipesEvent.replaceInput({mod: 'integrateddynamics', id: /ore\/redstone/}, '#forge:ores/redstone', '#forge:cinnabar')
 }
