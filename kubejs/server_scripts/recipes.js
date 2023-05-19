@@ -134,6 +134,11 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: /minecraft_dye_.*/, mod:"integrateddynamics"})
 		recipesEvent.remove({output: /minecraft:.*_dye/, type:"create:milling"})
 
+		// Removing raw ore recipes from ID
+		recipesEvent.remove({id: /raw_.*/, mod:"integrateddynamics"})
+
+		recipesEvent.remove({id: /gem_[diamond|emerald|lapis]/, mod:"integrateddynamics"})
+
 	}
 const setRecipes = (recipesEvent) => {
 		console.log("Loading recipes...");
