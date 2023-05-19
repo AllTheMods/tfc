@@ -1,0 +1,24 @@
+{
+  "type": "integrateddynamics:mechanical_squeezer",
+  "item": {
+    "tag": "forge:white_dye_material"
+  },
+  "result": {
+    "items": [
+      {
+        "item": {
+          "item": "minecraft:white_dye",
+          "count": 2
+        }
+      },
+      {
+        "item": {
+          "item": "minecraft:white_dye",
+          "count": 1
+        },
+        "chance": 0.10
+      }
+    ]
+  },
+  "duration": 5
+}

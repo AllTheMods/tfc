@@ -1,0 +1,24 @@
+{
+  "type": "integrateddynamics:mechanical_squeezer",
+  "item": {
+    "tag": "forge:yellow_dye_material"
+  },
+  "result": {
+    "items": [
+      {
+        "item": {
+          "item": "minecraft:yellow_dye",
+          "count": 2
+        }
+      },
+      {
+        "item": {
+          "item": "minecraft:yellow_dye",
+          "count": 1
+        },
+        "chance": 0.10
+      }
+    ]
+  },
+  "duration": 5
+}

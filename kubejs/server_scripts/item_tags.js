@@ -83,6 +83,10 @@ const setDyeAndFlowerTags = itemTagsEvent => {
         'tfc:plant/vriesea',
         'tfc:plant/rose'
     ])
+    itemTagsEvent.add('forge:black_dye_material', [
+        'minecraft:wither_rose',
+        'minecraft:ink_sac'
+    ])
 }
 const setItemTags = itemTagsEvent => {
 

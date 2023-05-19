@@ -1,0 +1,23 @@
+{
+  "type": "integrateddynamics:mechanical_squeezer",
+  "item": {
+    "tag": "forge:magenta_dye_material"
+  },
+  "result": {
+    "items": [
+      {
+        "item": {
+          "item": "minecraft:magenta_dye",
+          "count": 2        }
+      },
+      {
+        "item": {
+          "item": "minecraft:magenta_dye",
+          "count": 1
+        },
+        "chance": 0.10
+      }
+    ]
+  },
+  "duration": 5
+}

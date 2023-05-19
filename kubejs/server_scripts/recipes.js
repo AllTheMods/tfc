@@ -130,8 +130,9 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "integrateddynamics:drying_basin/convenience/minecraft_dried_kelp"})
 		recipesEvent.remove({id: "integrateddynamics:mechanical_drying_basin/convenience/minecraft_dried_kelp"})
 
-		// Removing dye from ID Squeezer
-		recipesEvent.remove({output: /minecraft:.*_dye/, mod:"integrateddynamics"})
+		// Removing vanilla dye recipes from ID Squeezer and create mill
+		recipesEvent.remove({id: /minecraft_dye_.*/, mod:"integrateddynamics"})
+		recipesEvent.remove({output: /minecraft:.*_dye/, type:"create:milling"})
 
 	}
 const setRecipes = (recipesEvent) => {
@@ -1047,4 +1048,8 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.shapeless("9x thermal:tar", [
 			'#forge:storage_blocks/tar'
 		])
+
+		for (const color of dyes) {
+			dyeRecipes(recipesEvent, color)
+		}
 }

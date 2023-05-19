@@ -130,7 +130,23 @@ const stoneToolTypes = [
         "igneous_intrusive",
         "metamorphic",
         "sedimentary"
+]
 
+const dyes = [
+		"blue",
+		"brown",
+		"green",
+		"light_blue",
+		"light_gray",
+		"lime",
+		"magenta",
+		"orange",
+		"pink",
+		"purple",
+		"red",
+		"white",
+		"yellow",
+		"black"
 ]
 
 const removeRecipeByID = (recipesEvent, recipes) => {
@@ -169,8 +185,6 @@ const addClocheRecipe = (recipesEvent, output, amount, seed, soil, render, time)
 		}).id(`kubejs:cloche/${seed.replace(':', '/')}`)
 }
 
-
-
 const tfcBucketRecipes = (recipesEvent, output, fluid, amount, input, multiplier) => {
 		recipesEvent.remove({output: output})
 		for (let i = 1; i <= 8; i++) {
@@ -201,4 +215,44 @@ const tfcBucketRecipes = (recipesEvent, output, fluid, amount, input, multiplier
 						]
 				)
 				.id(`kubejs:${output.replace(":", "/")}_mixer`)
+}
+
+const dyeRecipes = (recipesEvent, color) => {
+		recipesEvent.custom({
+			type: "integrateddynamics:squeezer",
+  			item: {
+      			tag: `forge:${color}_dye_material`
+  			},
+  			result: {
+    			items: [
+      				{
+        				item: {
+          					item: `minecraft:${color}_dye`,
+          					count: 2
+        				}
+      				}
+    			]
+  			}
+		}).id(`kubejs:squeezer/${color.replace(':', '/')}/dye`)
+		
+		recipesEvent.custom({
+			type: "create:milling",
+			ingredients: [
+		  		{
+					tag: `forge:${color}_dye_material`
+		  		}
+			],
+			results: [
+		  		{
+					item: `minecraft:${color}_dye`,
+					count: 2
+		 		},
+		  		{
+					item: `minecraft:${color}_dye`,
+					count: 1,
+					chance: 0.10
+		  		}
+			],
+			processingTime: 100
+		}).id(`kubejs:create_milling/${color.replace(':', '/')}/dye`)
 }
