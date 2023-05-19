@@ -11,5 +11,6 @@ onEvent('lootjs', setLoot);
 
 onEvent('item.right_click', rightClickEvent)
 onEvent('recipes', setRecipes)
+onEvent('player.logged_in', loginEvent)
 
 console.log("done loading main script...");
