@@ -1057,4 +1057,13 @@ const setRecipes = (recipesEvent) => {
 		for (const color of dyes) {
 			dyeRecipes(recipesEvent, color)
 		}
+
+		recipesEvent.replaceOutput({mod: 'thermal'}, 'minecraft:leather', 'tfc:large_raw_hide')
+		recipesEvent.replaceOutput({mod: 'integrateddynamics'}, 'minecraft:leather', 'tfc:small_raw_hide')
+		recipesEvent.replaceOutput({mod: 'bloodmagic'},'minecraft:leather', 'tfc:small_raw_hide')
+
+		recipesEvent.replaceInput({mod: 'integrateddynamics', id: /ore\/flint/}, 'minecraft:gravel', '#forge:gravel')
+		recipesEvent.replaceInput({id: 'create:milling/gravel'}, 'minecraft:gravel', '#forge:gravel')
+
+		recipesEvent.replaceInput({mod: 'integrateddynamics', id: /ore\/redstone/}, '#forge:ores/redstone', '#forge:cinnabar')
 }
