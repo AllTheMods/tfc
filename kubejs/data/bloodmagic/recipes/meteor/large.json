@@ -1,90 +1,87 @@
 {
-    "type": "bloodmagic:meteor",
-    "input": {
-      "item": "biggerreactors:reactor_casing"
-    },
-    "syphon": 2500000,
-    "explosion": 40.0,
-    "layers": [
-      {
-        "radius": 10,
-        "minWeight": 0,
-        "additionalWeight": 0,
-        "weightMap": [
-            {
-                "block": "tfc:ore/kaolinite/granite",
-                "weight": 15
-            },
-            {
-                "block": "tfc:ore/graphite/granite",
-                "weight": 75
-            },
-            {
-                "block": "bloodmagic:dungeon_ore",
-                "weight": 10
-            }
-        ]
-      },
-      {
-        "radius": 18,
-        "additionalWeight": 0,
-        "minWeight": 0,
-        "weightMap": [
-          {
-            "block": "immersiveengineering:ore_aluminum",
-            "weight": 10
-          },
-          {
-            "block": "thermal:copper_ore",
-            "weight": 20
-          },
-          {
-            "block": "thermal:cinnabar_ore",
-            "weight": 10
-          },
-          {
-            "block": "thermal:tin_ore",
-            "weight": 15
-          },
-          {
-            "block": "thermal:silver_ore",
-            "weight": 15
-          },
-          {
-            "block": "thermal:nickel_ore",
-            "weight": 15
-          },
-          {
-            "block": "create:zinc_ore",
-            "weight": 15
-          }
-        ]
-      },
-      {
-        "radius": 25,
-        "additionalWeight": 0,
-        "minWeight": 0,
-        "weightMap": [
-            {
-                "block": "minecraft:iron_ore",
-                "weight": 100
-            }
-        ],
-        "fill": "tfc:rock/magma/basalt",
-        "shell": "tfc:rock/raw/basalt"
-      },
-      {
-        "radius": 26,
-        "additionalWeight": 0,
-        "minWeight": 0,
-        "weightMap": [
-            {
-                "block": "tfc:rock/magma/basalt",
-                "weight": 100
-            }
-        ],
-        "fill": "tfc:rock/magma/basalt",
-        "shell": "tfc:rock/raw/basalt"
+  "type": "bloodmagic:meteor",
+  "input": {
+    "item": "biggerreactors:reactor_casing"
+  },
+  "syphon": 2500000,
+  "explosion": 40.0,
+  "layers": [
+    {
+      "radius": 10,
+      "minWeight": 0,
+      "additionalWeight": 0,
+      "weightMap": [
+        {
+          "block": "tfc:ore/kaolinite/granite",
+          "weight": 15
+        },
+        {
+          "block": "tfc:ore/graphite/granite",
+          "weight": 75
+        },
+        {
+          "block": "bloodmagic:dungeon_ore",
+          "weight": 10
+        }
+      ],
+      "fill": {
+        "block": "tfc:rock/raw/basalt"
       }
-    ]
-  }
+    },
+    {
+      "radius": 18,
+      "additionalWeight": 0,
+      "minWeight": 0,
+      "weightMap": [
+        {
+          "block": "immersiveengineering:ore_aluminum",
+          "weight": 10
+        },
+        {
+          "block": "minecraft:copper_ore",
+          "weight": 20
+        },
+        {
+          "block": "thermal:cinnabar_ore",
+          "weight": 10
+        },
+        {
+          "block": "thermal:tin_ore",
+          "weight": 15
+        },
+        {
+          "block": "thermal:silver_ore",
+          "weight": 15
+        },
+        {
+          "block": "thermal:nickel_ore",
+          "weight": 15
+        },
+        {
+          "block": "create:zinc_ore",
+          "weight": 15
+        }
+      ],
+      "fill": {
+        "block": "tfc:rock/raw/basalt"
+      }
+    },
+    {
+      "radius": 25,
+      "additionalWeight": 200,
+      "minWeight": 0,
+      "weightMap": [
+        {
+          "block": "minecraft:iron_ore",
+          "weight": 175
+        }
+      ],
+      "fill": {
+        "block": "tfc:rock/raw/basalt"
+      },
+      "shell": {
+        "block": "tfc:rock/magma/basalt"
+      }
+    }
+  ]
+}
