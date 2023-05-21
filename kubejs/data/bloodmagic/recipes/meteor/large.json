@@ -68,16 +68,16 @@
         },
         {
             "radius": 25,
-            "additionalWeight": 200,
-            "minWeight": 0,
+            "additionalWeight": 0,
+            "minWeight": 100,
             "weightMap": [
                 {
                     "block": "minecraft:iron_ore",
-                    "weight": 175
+                    "weight": 90
                 }
             ],
             "fill": {
-                "block": "tfc:rock/raw/basalt"
+                "block": "minecraft:blue_ice"
             },
             "shell": {
                 "block": "tfc:rock/magma/basalt"
