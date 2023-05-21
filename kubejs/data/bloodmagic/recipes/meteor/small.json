@@ -1,65 +1,65 @@
 {
-  "type": "bloodmagic:meteor",
-  "input": {
-    "item": "tfc:metal/double_ingot/wrought_iron"
-  },
-  "syphon": 500000,
-  "explosion": 10.0,
-  "layers": [
-    {
-      "radius": 8,
-      "additionalWeight": 0,
-      "minWeight": 0,
-      "weightMap": [
-        {
-          "block": "minecraft:coal_ore",
-          "weight": 5
-        },
-        {
-          "block": "minecraft:copper_ore",
-          "weight": 25
-        },
-        {
-          "block": "thermal:cinnabar_ore",
-          "weight": 10
-        },
-        {
-          "block": "thermal:tin_ore",
-          "weight": 15
-        },
-        {
-          "block": "thermal:silver_ore",
-          "weight": 15
-        },
-        {
-          "block": "thermal:nickel_ore",
-          "weight": 15
-        },
-        {
-          "block": "create:zinc_ore",
-          "weight": 15
-        }
-      ],
-      "fill": {
-        "block": "tfc:rock/raw/basalt"
-      }
+    "type": "bloodmagic:meteor",
+    "input": {
+        "item": "tfc:metal/double_ingot/wrought_iron"
     },
-    {
-      "radius": 12,
-      "additionalWeight": 200,
-      "minWeight": 0,
-      "weightMap": [
+    "syphon": 500000,
+    "explosion": 10.0,
+    "layers": [
         {
-          "block": "minecraft:iron_ore",
-          "weight": 175
+            "radius": 8,
+            "additionalWeight": 0,
+            "minWeight": 0,
+            "weightMap": [
+                {
+                    "block": "minecraft:coal_ore",
+                    "weight": 5
+                },
+                {
+                    "block": "minecraft:copper_ore",
+                    "weight": 25
+                },
+                {
+                    "block": "thermal:cinnabar_ore",
+                    "weight": 10
+                },
+                {
+                    "block": "thermal:tin_ore",
+                    "weight": 15
+                },
+                {
+                    "block": "thermal:silver_ore",
+                    "weight": 15
+                },
+                {
+                    "block": "thermal:nickel_ore",
+                    "weight": 15
+                },
+                {
+                    "block": "create:zinc_ore",
+                    "weight": 15
+                }
+            ],
+            "fill": {
+                "block": "tfc:rock/raw/basalt"
+            }
+        },
+        {
+            "radius": 12,
+            "additionalWeight": 200,
+            "minWeight": 0,
+            "weightMap": [
+                {
+                    "block": "minecraft:iron_ore",
+                    "weight": 175
+                }
+            ],
+            "fill": {
+                "block": "tfc:rock/raw/basalt"
+            },
+            "shell": {
+                "block": "tfc:rock/magma/basalt"
+            }
         }
-      ],
-      "fill": {
-        "block": "tfc:rock/raw/basalt"
-      },
-      "shell": {
-        "block": "tfc:rock/magma/basalt"
-      }
-    }
-  ]
+    ]
 }
