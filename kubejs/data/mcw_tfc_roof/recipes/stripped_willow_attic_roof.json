@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gl ",
+    "ls ",
+    "   "
+  ],
+  "key": {
+    "g": {
+      "item": "tfc:glue"
+    },
+    "l": {
+      "item": "tfc:wood/stripped_log/willow"
+    },
+    "s": {
+      "tag": "forge:glass"
+    }
+  },
+  "result": {
+    "item": "mcw_tfc_roof:stripped_willow_attic_roof",
+    "count": 2
+  }
+}

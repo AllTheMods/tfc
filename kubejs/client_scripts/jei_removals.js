@@ -12,9 +12,9 @@ onEvent('jei.hide.items', event => {
 		event.hide('minecraft:torch')
 		event.hide('minecraft:soul_torch')
 		event.hide('minecraft:lantern')
-		event.hide('minecraft:soul_lantern')
+		// event.hide('minecraft:soul_lantern') useful on Apotheosis and obtainable with Create/Blood Magic
 		
-		event.hide('bloodmagic:teleposer')
+		event.hide(/bloodmagic:.*telepos.*/)
 		let woods = ["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 		
 		woods.forEach(logz => {
@@ -54,8 +54,17 @@ onEvent('jei.hide.items', event => {
 		candles.forEach(candle => {
 				event.hide(`minecraft:${candle}_candle`)
 		})
-		event.hide(/dark_oak/)
-		event.hide(/ae2:tools.*/)
+
+		const tools = ["hoe", "axe", "shovel", "pickaxe", "sword"]
+		const materials = ["fluix", "nether_quartz", "certus_quartz"]
+		
+		materials.forEach(material => {
+			tools.forEach(tool =>{
+				event.hide(`ae2:${material}_${tool}`)
+			})
+		})
+
+		event.hide(/ae2:vibration_chamber/)
 		event.hide(/allthemodium.*/)
 		event.hide(/vibranium.*/)
 		event.hide(/unobtainium.*/)

@@ -1,5 +1,6 @@
 {
-    "conditions": [
+  "type": "tfc:heating",  
+  "conditions": [
       {
         "type": "forge:false"
       }
