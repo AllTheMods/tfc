@@ -1,5 +1,6 @@
 {
-    "conditions": [
+  "type": "create:haunting",
+  "conditions": [
       {
         "type": "forge:false"
       }

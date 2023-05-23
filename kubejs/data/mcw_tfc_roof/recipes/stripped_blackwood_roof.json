@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gl ",
+    "ls ",
+    "   "
+  ],
+  "key": {
+    "g": {
+      "item": "tfc:glue"
+    },
+    "l": {
+      "item": "tfc:wood/stripped_log/blackwood"
+    },
+    "s": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "mcw_tfc_roof:stripped_blackwood_roof",
+    "count": 2
+  }
+}

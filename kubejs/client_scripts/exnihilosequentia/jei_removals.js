@@ -119,3 +119,8 @@ onEvent('jei.hide.items', e => {
     e.hide('exnihilosequentia:raw_uranium')
     e.hide('exnihilosequentia:raw_zinc')
 })
+
+onEvent('jei.hide.fluids', e => {
+    e.hide('exnihilosequentia:sea_water')
+    e.hide('exnihilosequentia:witch_water')
+})

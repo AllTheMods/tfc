@@ -3,6 +3,7 @@ onEvent('jei.hide.items', e => {
 	e.hide('beyond_earth:coal_lantern')
     e.hide('beyond_earth:compressor')
     e.hide('beyond_earth:coal_generator')
+    e.hide('beyond_earth:fuel_refinery')
     e.hide('beyond_earth:hammer')
     e.hide('beyond_earth:glacio_coal_ore')
     e.hide('beyond_earth:venus_coal_ore')
@@ -15,4 +16,11 @@ onEvent('jei.hide.items', e => {
     e.hide('beyond_earth:mercury_iron_ore')
     e.hide('beyond_earth:moon_iron_ore')
     e.hide('beyond_earth:glacio_lapis_ore')
+    e.hide('beyond_earth:fuel_bucket')
+    e.hide('beyond_earth:oil_bucket')
+})
+
+onEvent('jei.hide.fluids', e => {
+    e.hide('beyond_earth:fuel')
+    e.hide('beyond_earth:oil')
 })

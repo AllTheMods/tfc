@@ -2,12 +2,38 @@
 console.log("recipes functions loading ...");
 
 const removeRecipes = (recipesEvent) => {
-		recipesEvent.remove({id: /ae2:tools\/.*/})
+		recipesEvent.remove({output: "ae2:vibration_chamber"})
 		recipesEvent.remove({id: /allthemodium.*/})
 		recipesEvent.remove({id: /vibranium.*/})
 		recipesEvent.remove({id: /unobtainium.*/})
-
 		
+		// Removing vanilla woods so it doesn't duplicate with Macaw TFC Compat
+		recipesEvent.remove({id: /[stripped_]*acacia.*/, mod:"mcwfurnitures"})
+		recipesEvent.remove({id: /[stripped_]*birch.*/, mod:"mcwfurnitures"})
+		recipesEvent.remove({id: /^mcwfurnitures:stripped_oak.*/, mod:"mcwfurnitures"})
+		recipesEvent.remove({id: /^mcwfurnitures:oak.*/, mod:"mcwfurnitures"})
+		// recipesEvent.remove({id: /[stripped_]*dark_oak.*/, mod:"mcwfurnitures"}) // Easily obtainable at blood magic dungeons
+		recipesEvent.remove({id: /[stripped_]*jungle.*/, mod:"mcwfurnitures"})
+		recipesEvent.remove({id: /[stripped_]*spruce.*/, mod:"mcwfurnitures"})
+		
+		// Removing Ex Nihilo Sequentia recipes but emerald + netherite mesh & planet sands
+		recipesEvent.remove({type: "exnihilosequentia:compost"})
+		recipesEvent.remove({type: "exnihilosequentia:crook"})
+		recipesEvent.remove({type: "exnihilosequentia:crucible"})
+		recipesEvent.remove({type: "exnihilosequentia:fluid_item"})
+		recipesEvent.remove({type: "exnihilosequentia:fluid_on_top"})
+		recipesEvent.remove({type: "exnihilosequentia:fluid_transform"})
+		recipesEvent.remove({type: "exnihilosequentia:heat"})
+		recipesEvent.remove({id: /.*ens_.*/ ,type: "exnihilosequentia:sieve"})
+		recipesEvent.remove({id: /.*ens_.*/ ,type: "exnihilosequentia:hammer"})
+		recipesEvent.remove({mod: "exnihilosequentia", type: "minecraft:crafting_shapeless"})
+		recipesEvent.remove({mod: "exnihilosequentia", type: "minecraft:crafting_shaped", not: {id:/.*ens_emerald_mesh/}})
+		recipesEvent.remove({mod: "exnihilosequentia", type: "minecraft:smithing", not: {id:/.*ens_netherite_mesh/}})
+		recipesEvent.remove({mod: "exnihilosequentia", type: "minecraft:smelting"})
+		recipesEvent.remove({mod: "exnihilosequentia", type: "minecraft:blasting"})
+		recipesEvent.remove({mod: "exnihilosequentia", input: "exnihilosequentia:silkworm"})
+		recipesEvent.remove({id: /minecraft:ens_.*/})
+
 		recipesEvent.remove({id: "create:honey_bucket"})
 		recipesEvent.remove({id: "minecraft:smoker"})
 		recipesEvent.remove({id: "minecraft:blast_furnace"})
@@ -15,6 +41,9 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "beyond_earth:coal_generator"})
 		recipesEvent.remove({id: "beyond_earth:compressor"})
 		recipesEvent.remove({id: "beyond_earth:fuel_refinery"})
+		recipesEvent.remove({id: /beyond_earth:coal_generating.*/})
+		recipesEvent.remove({id: /beyond_earth:compressing.*/})
+		recipesEvent.remove({id: /beyond_earth:fuel_refining.*/})
 
 		recipesEvent.remove({id: "minecraft:stone_brick_wall"})
 		recipesEvent.remove({id: "minecraft:stone_brick_slab"})
@@ -39,6 +68,13 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_pumpkin"})
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_melon"})
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_carrot"})
+		recipesEvent.remove({type: "thermal:stirling_fuel"})
+		recipesEvent.remove({type: "thermal:compression_fuel"})
+		recipesEvent.remove({type: "thermal:magmatic_fuel"})
+		recipesEvent.remove({type: "thermal:numismatic_fuel"})
+		recipesEvent.remove({type: "thermal:lapidary_fuel"})
+		recipesEvent.remove({type: "thermal:disenchantment_fuel"})
+		recipesEvent.remove({type: "thermal:gourmand_fuel"})
 
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_dark_oak_sapling"})
 		recipesEvent.remove({id: "thermal:machines/insolator/insolator_jungle_sapling"})
@@ -71,14 +107,14 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "minecraft:sugar_from_honey_bottle"})
 		
 		recipesEvent.remove({id: "minecraft:stone_bricks"})
-		recipesEvent.remove({id: "bloodmagic:teleposer"})
+		recipesEvent.remove({id: /bloodmagic:.*telepos.*/})
 		recipesEvent.remove({id: "create:mixing/chocolate_melting"})
 		recipesEvent.remove({id: "biggerreactors:smelting/graphite_ingot"})
 
 		recipesEvent.remove({input: "#forge:ores/apatite"})
 
 
-		const materials = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle", "andesite", "granite", "diorite"]
+		const materials = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle"] // andesite, granite and diorite are obtainable
 		const roofTypes = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
 		for (const woodType of vanillaWoodTypes) {
 				recipesEvent.replaceInput({id: `create:${woodType}_window`}, `minecraft:${woodType}_planks`, `tfc:wood/planks/${woodType}`)
@@ -94,6 +130,7 @@ const removeRecipes = (recipesEvent) => {
 				recipesEvent.remove({id: `immersiveengineering:sawmill/stripped_${material}_log`})
 				for (const roofType of roofTypes) {
 						recipesEvent.remove({id: `mcwroofs:${material}_${roofType}`})
+						recipesEvent.remove({id: `mcwroofs:${material}_planks_${roofType}`}) // some uses _planks_
 				}
 		}
 
@@ -138,8 +175,18 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: /raw_.*/, mod:"integrateddynamics"})
 
 		recipesEvent.remove({id: /gem_[diamond|emerald|lapis]/, mod:"integrateddynamics"})
+		recipesEvent.remove({id: /.*coal_generator/, mod:"integrateddynamics"})
 
+		// Removing AE2 tools
+		const tools = ["hoe", "axe", "shovel", "pickaxe", "sword"]
+		const materialsAe2 = ["fluix", "nether_quartz", "certus_quartz"]
+		materialsAe2.forEach(materialAe2 => {
+			tools.forEach(tool =>{
+				recipesEvent.remove({id: `ae2:tools/${materialAe2}_${tool}`})
+			})
+		})
 	}
+
 const setRecipes = (recipesEvent) => {
 		console.log("Loading recipes...");
 		// first remove unneeded ones....
