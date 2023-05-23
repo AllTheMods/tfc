@@ -1,9 +1,0 @@
-{
-  "__comment__": "This file was automatically created by mcresources",
-  "type": "bloodmagic:meteor",
-  "conditions": [
-    {
-      "type": "forge:false"
-    }
-  ]
-}
