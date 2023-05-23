@@ -1,3 +1,8 @@
 {
-      "type": "forge:false"
+    "type": "immersiveengineering:mineral_mix",
+    "conditions":[
+        {
+            "type": "forge:false"
+        }
+    ]
 }

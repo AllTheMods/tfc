@@ -26,3 +26,9 @@ onEvent('jei.hide.items', e => {
     e.hide('thermal:tin_ore')
     e.hide('thermal:deepslate_tin_ore')
 })
+
+onEvent('jei.remove.categories', event => {
+	event.remove('thermal:disenchantment_fuel')
+	event.remove('thermal:gourmand_fuel')
+	event.remove('thermal:stirling_fuel')
+})

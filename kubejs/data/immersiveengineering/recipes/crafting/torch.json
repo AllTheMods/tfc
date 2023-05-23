@@ -1,5 +1,6 @@
 {
-    "conditions": [
+  "type":"immersiveengineering:shaped_fluid",  
+  "conditions": [
       {
         "type": "forge:false"
       }

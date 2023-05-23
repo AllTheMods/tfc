@@ -5,7 +5,7 @@ onEvent('jei.hide.items', e => {
 	e.hide('minecraft:torch')
 	e.hide('minecraft:soul_torch')
 	e.hide('minecraft:lantern')
-	e.hide('minecraft:soul_lantern')
+	// event.hide('minecraft:soul_lantern') useful on Apotheosis and obtainable with Create/Blood Magic
 
     e.hide('minecraft:diamond_axe')
     e.hide('minecraft:diamond_hoe')
