@@ -55,7 +55,7 @@ onEvent('jei.hide.items', event => {
 				event.hide(`minecraft:${candle}_candle`)
 		})
 
-		const tools = ["hoe", "axe", "shovel", "pickaxe", "sword"]
+		const tools = ["hoe", "axe", "shovel", "pickaxe"]
 		const materials = ["fluix", "nether_quartz", "certus_quartz"]
 		
 		materials.forEach(material => {
