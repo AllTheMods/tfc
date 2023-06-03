@@ -2,7 +2,7 @@
 console.log("recipes functions loading ...");
 
 const removeRecipes = (recipesEvent) => {
-		recipesEvent.remove({output: "ae2:vibration_chamber"})
+		recipesEvent.remove({output: "ae2:vibration_chamber", mod:"ae2"})
 		recipesEvent.remove({id: /allthemodium.*/})
 		recipesEvent.remove({id: /vibranium.*/})
 		recipesEvent.remove({id: /unobtainium.*/})
@@ -163,7 +163,7 @@ const removeRecipes = (recipesEvent) => {
 		}
 
 		// Removing vanilla kelp
-		recipesEvent.remove({input: "minecraft:kelp"})
+		recipesEvent.remove({input: "minecraft:kelp", not: {id: "integrateddynamics:special/facade"}})
 		recipesEvent.remove({id: "integrateddynamics:drying_basin/convenience/minecraft_dried_kelp"})
 		recipesEvent.remove({id: "integrateddynamics:mechanical_drying_basin/convenience/minecraft_dried_kelp"})
 
@@ -178,7 +178,7 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: /.*coal_generator/, mod:"integrateddynamics"})
 
 		// Removing AE2 tools
-		const tools = ["hoe", "axe", "shovel", "pickaxe", "sword"]
+		const tools = ["hoe", "axe", "shovel", "pickaxe"]
 		const materialsAe2 = ["fluix", "nether_quartz", "certus_quartz"]
 		materialsAe2.forEach(materialAe2 => {
 			tools.forEach(tool =>{
@@ -1015,13 +1015,15 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.shapeless("integratedtunnels:part_importer_world_block", [
 			"integratedtunnels:part_importer_item",
 			"integrateddynamics:logic_director",
-			Item.of('tfc:metal/pickaxe/blue_steel', '{Damage:0,"tfc:forging_bonus":4}').enchant('minecraft:silk_touch', 1)
+			Item.of('tfc:metal/pickaxe/blue_steel', '{Damage:0,"tfc:forging_bonus":4}'),
+			"mininggadgets:upgrade_silk"
 		]).id("kubejs:integratedtunnels/part_importer_world_block")
 		
 		recipesEvent.shapeless("integratedtunnels:part_exporter_world_block", [
 			"integratedtunnels:part_exporter_item",
 			"integrateddynamics:logic_director",
-			Item.of('tfc:metal/pickaxe/red_steel', '{Damage:0,"tfc:forging_bonus":4}').enchant('minecraft:silk_touch', 1)
+			Item.of('tfc:metal/pickaxe/red_steel', '{Damage:0,"tfc:forging_bonus":4}'),
+			"mininggadgets:upgrade_silk"
 		]).id("kubejs:integratedtunnels/part_exporter_world_block")
 			
 		recipesEvent.shapeless("9x tfc:gem/lapis_lazuli", [
