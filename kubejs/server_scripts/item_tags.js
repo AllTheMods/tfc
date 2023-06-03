@@ -263,6 +263,13 @@ const setItemTags = itemTagsEvent => {
         itemTagsEvent.add('tfc:stone_javelins', [`tfc:stone/javelin/${stone}`])
     }
 
+    //small copper tags for quests
+    itemTagsEvent.add('tfc:small_ore_pieces_copper', [
+        'tfc:ore/small_native_copper',
+        'tfc:ore/small_tetrahedrite',
+        'tfc:ore/small_malachite'
+    ])
+
     // Seeds related
     itemTagsEvent.get('forge:seeds').removeAll().add('#tfc:seeds')
     itemTagsEvent.removeAll('tombstone:seeds')
@@ -314,18 +321,18 @@ const setItemTags = itemTagsEvent => {
     }
 
     for (const tfcMetalOreType of tfcMetalOreTypes){
-        itemTagsEvent.get(`forge:ores/${tfcMetalOreType}`).remove(`#tfc:ores/${tfcMetalOreType}/poor`).remove(`#tfc:ores/${tfcMetalOreType}/normal`)
+        itemTagsEvent.get(`forge:ores/${tfcMetalOreType}`).remove(`#tfc:ores/${tfcMetalOreType}/poor`).remove(`#tfc:ores/${tfcMetalOreType}/normal`).remove(`#tfc:ores/${tfcMetalOreType}/rich`)
     }
 
     itemTagsEvent.get('forge:ores/apatite').removeAll()
     itemTagsEvent.get('forge:ores/aluminum').remove(['exnihilosequentia:raw_aluminum', 'immersiveengineering:deepslate_ore_aluminum', 'immersiveengineering:ore_aluminum'])
-    itemTagsEvent.get('forge:ores/coal').remove(['beyond_earth:glacio_coal_ore', 'beyond_earth:venus_coal_ore', 'minecraft:coal_ore', 'minecraft:deepslate_coal_ore'])
-    itemTagsEvent.get('forge:ores/copper').remove(['beyond_earth:glacio_copper_ore', 'minecraft:copper_ore', 'minecraft:deepslate_copper_ore'])
-    itemTagsEvent.get('forge:ores/diamond').remove(['beyond_earth:glacio_copper_ore', 'minecraft:copper_ore', 'minecraft:deepslate_copper_ore'])
-    itemTagsEvent.get('forge:ores/emerald').remove(['minecraft:deepslate_emerald_ore', 'minecraft:emerald_ore'])
-    itemTagsEvent.get('forge:ores/gold').remove(['beyond_earth:venus_gold_ore', 'minecraft:deepslate_gold_ore', 'minecraft:gold_ore', 'minecraft:nether_gold_ore'])
-    itemTagsEvent.get('forge:ores/iron').remove(['beyond_earth:glacio_iron_ore', 'beyond_earth:mars_iron_ore', 'beyond_earth:mercury_iron_ore', 'beyond_earth:moon_iron_ore', 'minecraft:deepslate_iron_ore', 'minecraft:iron_ore'])
-    itemTagsEvent.get('forge:ores/lapis').remove(['beyond_earth:glacio_lapis_ore', 'minecraft:deepslate_lapis_ore', 'minecraft:lapis_ore'])
+    itemTagsEvent.get('forge:ores/coal').remove(['beyond_earth:glacio_coal_ore', 'beyond_earth:venus_coal_ore', '#minecraft:coal_ores'])
+    itemTagsEvent.get('forge:ores/copper').remove(['beyond_earth:glacio_copper_ore', "#minecraft:copper_ores"])
+    itemTagsEvent.get('forge:ores/diamond').remove(["beyond_earth:mars_diamond_ore", "beyond_earth:venus_diamond_ore", "#minecraft:diamond_ores"])
+    itemTagsEvent.get('forge:ores/emerald').remove(["#minecraft:emerald_ores"])
+    itemTagsEvent.get('forge:ores/gold').remove(['beyond_earth:venus_gold_ore', "#minecraft:gold_ores"])
+    itemTagsEvent.get('forge:ores/iron').remove(['beyond_earth:glacio_iron_ore', 'beyond_earth:mars_iron_ore', 'beyond_earth:mercury_iron_ore', 'beyond_earth:moon_iron_ore', "#minecraft:iron_ores"])
+    itemTagsEvent.get('forge:ores/lapis').remove(['beyond_earth:glacio_lapis_ore', "#minecraft:lapis_ores"])
     itemTagsEvent.get('forge:ores/lead').remove(['exnihilosequentia:raw_lead', 'immersiveengineering:deepslate_ore_lead', 'immersiveengineering:ore_lead', 'thermal:deepslate_lead_ore', 'thermal:lead_ore'])
     itemTagsEvent.get('forge:ores/nickel').remove(['exnihilosequentia:raw_nickel', 'immersiveengineering:deepslate_ore_nickel', 'immersiveengineering:ore_nickel', 'thermal:deepslate_nickel_ore', 'thermal:nickel_ore'])
     itemTagsEvent.get('forge:ores/platinum').removeAll()
