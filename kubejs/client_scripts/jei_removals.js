@@ -15,6 +15,8 @@ onEvent('jei.hide.items', event => {
 		// event.hide('minecraft:soul_lantern') useful on Apotheosis and obtainable with Create/Blood Magic
 		
 		event.hide(/bloodmagic:.*telepos.*/)
+		event.hide("bloodmagic:reagentsuppression")
+		event.hide("bloodmagic:sigilofsuppression")
 		let woods = ["oak", "birch", "spruce", "acacia", "dark_oak", "jungle"]
 		
 		woods.forEach(logz => {

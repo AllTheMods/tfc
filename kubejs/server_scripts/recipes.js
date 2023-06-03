@@ -108,6 +108,8 @@ const removeRecipes = (recipesEvent) => {
 		
 		recipesEvent.remove({id: "minecraft:stone_bricks"})
 		recipesEvent.remove({id: /bloodmagic:.*telepos.*/})
+		recipesEvent.remove({id: "bloodmagic:alchemytable/reagent_suppression"})
+		recipesEvent.remove({id: "bloodmagic:array/suppressionsigil"})
 		recipesEvent.remove({id: "create:mixing/chocolate_melting"})
 		recipesEvent.remove({id: "biggerreactors:smelting/graphite_ingot"})
 
