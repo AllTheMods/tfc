@@ -178,7 +178,7 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: /.*coal_generator/, mod:"integrateddynamics"})
 
 		// Removing AE2 tools
-		const tools = ["hoe", "axe", "shovel", "pickaxe"]
+		const tools = ["hoe", "axe", "shovel", "pickaxe", "spade"]
 		const materialsAe2 = ["fluix", "nether_quartz", "certus_quartz"]
 		materialsAe2.forEach(materialAe2 => {
 			tools.forEach(tool =>{
