@@ -91,7 +91,7 @@
 	#Range: -1 ~ 1440
 	cooldown_teleport_bind = -1
 	#Beneficial effects that can't used by certain features such as ankh of pray, lollipop, scroll of preservation, alchemy perk and magic siphon enchantment
-	unhandled_beneficial_effects = ["astralsorcery:potiontimefreeze"]
+	unhandled_beneficial_effects = ["astralsorcery:potiontimefreeze", "potionsmaster:osmiumpotioneffect", "potionsmaster:vibraniumpotioneffect", "potionsmaster:allthemodiumpotioneffect", "potionsmaster:platinumpotioneffect", "potionsmaster:uraniumpotioneffect", "potionsmaster:leadpotioneffect", "potionsmaster:crimsonironpotioneffect", "potionsmaster:unobtainiumpotioneffect"]
 	#Harmful effects that can't used by certain features such as tablet of cupidity and the enchantment plague bringer
 	unhandled_harmful_effects = ["minecraft:nausea"]
 
@@ -201,7 +201,7 @@
 	#Range: 1 ~ 200000
 	max_xp_lost_page = 2000
 	#Entities that can't found as loot in a Familiar Receptacle
-	unhandled_tameable_entities = []
+	unhandled_tameable_entities = ["Vibranium Dragon","Unobtainium Dragon","Allthemodium Dragon"]
 
 #Allows to enable some features related to others mods
 [compatibility]

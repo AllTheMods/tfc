@@ -1117,4 +1117,29 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({id: 'create:milling/gravel'}, 'minecraft:gravel', '#forge:gravel')
 
 		recipesEvent.replaceInput({mod: 'integrateddynamics', id: /ore\/redstone/}, '#forge:ores/redstone', '#forge:cinnabar')
+		
+		// Smallships
+		recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, 'minecraft:chest', '#balm:wooden_chests')
+		recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, '#minecraft:wool', '#tfc:high_quality_cloth')
+		recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, '#minecraft:logs', '#tfc:firepit_logs')
+		const vanillaWoodTypesReplacement = {
+			"dark_oak": "hickory",
+			"jungle": "palm"
+		}
+		const boatWoodTypes = [
+			"acacia",
+			"birch",
+			"oak",
+			"dark_oak",
+			"spruce",
+			"jungle"
+		]
+		for (const woodType of boatWoodTypes) {
+			if (vanillaWoodTypesReplacement[woodType]){
+				recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, `minecraft:${woodType}_boat`, `tfc:wood/boat/${vanillaWoodTypesReplacement[woodType]}`)
+			} else {
+				recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, `minecraft:${woodType}_boat`, `tfc:wood/boat/${woodType}`)
+			}
+		}
+
 }
