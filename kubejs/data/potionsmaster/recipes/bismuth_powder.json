@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "potionsmaster:pestle"
+    },
+    {
+      "tag": "forge:ingots/bismuth"
+    },
+    {
+      "item": "potionsmaster:tile_mortar"
+    }
+  ],
+  "result": {
+    "item": "potionsmaster:bismuth_powder"
+  },
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/bismuth"
+      }
+    }
+  ]
+}
