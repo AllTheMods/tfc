@@ -1,0 +1,1 @@
+{"type":"immersiveengineering:turn_and_copy","pattern":["ici","cbc","ici"],"key":{"i":{"tag":"forge:sheetmetals/steel"},"c":{"tag":"forge:plates/copper"},"b":{"item":"minecraft:water_bucket"}},"result":{"item":"immersiveengineering:radiator","count":4},"quarter_turn":true}

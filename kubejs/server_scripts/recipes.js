@@ -108,6 +108,8 @@ const removeRecipes = (recipesEvent) => {
 		
 		recipesEvent.remove({id: "minecraft:stone_bricks"})
 		recipesEvent.remove({id: /bloodmagic:.*telepos.*/})
+		recipesEvent.remove({id: "bloodmagic:alchemytable/reagent_suppression"})
+		recipesEvent.remove({id: "bloodmagic:array/suppressionsigil"})
 		recipesEvent.remove({id: "create:mixing/chocolate_melting"})
 		recipesEvent.remove({id: "biggerreactors:smelting/graphite_ingot"})
 
@@ -178,7 +180,7 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: /.*coal_generator/, mod:"integrateddynamics"})
 
 		// Removing AE2 tools
-		const tools = ["hoe", "axe", "shovel", "pickaxe"]
+		const tools = ["hoe", "axe", "shovel", "pickaxe", "spade"]
 		const materialsAe2 = ["fluix", "nether_quartz", "certus_quartz"]
 		materialsAe2.forEach(materialAe2 => {
 			tools.forEach(tool =>{
@@ -1115,4 +1117,29 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({id: 'create:milling/gravel'}, 'minecraft:gravel', '#forge:gravel')
 
 		recipesEvent.replaceInput({mod: 'integrateddynamics', id: /ore\/redstone/}, '#forge:ores/redstone', '#forge:cinnabar')
+		
+		// Smallships
+		recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, 'minecraft:chest', '#balm:wooden_chests')
+		recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, '#minecraft:wool', '#tfc:high_quality_cloth')
+		recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, '#minecraft:logs', '#tfc:firepit_logs')
+		const vanillaWoodTypesReplacement = {
+			"dark_oak": "hickory",
+			"jungle": "palm"
+		}
+		const boatWoodTypes = [
+			"acacia",
+			"birch",
+			"oak",
+			"dark_oak",
+			"spruce",
+			"jungle"
+		]
+		for (const woodType of boatWoodTypes) {
+			if (vanillaWoodTypesReplacement[woodType]){
+				recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, `minecraft:${woodType}_boat`, `tfc:wood/boat/${vanillaWoodTypesReplacement[woodType]}`)
+			} else {
+				recipesEvent.replaceInput({mod: 'smallships', type:"minecraft:crafting_shaped"}, `minecraft:${woodType}_boat`, `tfc:wood/boat/${woodType}`)
+			}
+		}
+
 }
