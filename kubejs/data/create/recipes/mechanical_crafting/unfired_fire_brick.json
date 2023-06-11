@@ -1,0 +1,17 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "F": {
+      "item": "tfc:fire_clay"
+    }
+  },
+  "pattern": [
+    "FFFFF",
+    "FFFFF"
+  ],
+  "result": {
+    "count": 5,
+    "item": "tfc:ceramic/unfired_fire_brick"
+  }
+}

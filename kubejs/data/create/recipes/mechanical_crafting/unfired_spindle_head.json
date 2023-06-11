@@ -1,0 +1,18 @@
+{
+  "type": "create:mechanical_crafting",
+  "acceptMirrored": false,
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "pattern": [
+    "  C  ",
+    "CCCCC",
+    "  C  "
+  ],
+  "result": {
+    "count": 1,
+    "item": "tfc:ceramic/unfired_spindle_head"
+  }
+}
