@@ -1142,4 +1142,17 @@ const setRecipes = (recipesEvent) => {
 			}
 		}
 
+		// Replacing vanilla emerald to tfc emerald for alien trading
+		recipesEvent.forEachRecipe({ id: /beyond_earth:alien_trading/ }, (r) => {
+			let tfcEmerald = "tfc:gem/emerald"
+			console.log(r.getType())
+			if (r.json.keySet().contains("costA")) {
+				let costA = r.json.get("costA").getAsJsonObject()
+				if (costA.get("item").toString() == '"minecraft:emerald"'){
+					costA.addProperty("item",tfcEmerald)
+					r.save()
+				}
+			}
+		})
+
 }
