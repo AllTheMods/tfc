@@ -160,7 +160,7 @@ const removeRecipes = (recipesEvent) => {
 		// drawers related
 		recipesEvent.remove({output: "#storagedrawers:drawers"})
 		for (const woodType of vanillaWoodTypes) {
-				console.log(`removing storagedrawers:${woodType}_trim`)
+				// console.log(`removing storagedrawers:${woodType}_trim`)
 				recipesEvent.remove({output: `storagedrawers:${woodType}_trim`})
 		}
 
@@ -168,6 +168,8 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({input: "minecraft:kelp", not: {id: "integrateddynamics:special/facade"}})
 		recipesEvent.remove({id: "integrateddynamics:drying_basin/convenience/minecraft_dried_kelp"})
 		recipesEvent.remove({id: "integrateddynamics:mechanical_drying_basin/convenience/minecraft_dried_kelp"})
+		recipesEvent.remove({id: "minecraft:dried_kelp"})
+		recipesEvent.remove({id: "thermal:machines/press/unpacking/press_dried_kelp_unpacking"})
 
 		// Removing vanilla dye recipes from ID Squeezer and create mill
 		recipesEvent.remove({id: /minecraft_dye_.*/, mod:"integrateddynamics"})
@@ -187,6 +189,11 @@ const removeRecipes = (recipesEvent) => {
 				recipesEvent.remove({id: `ae2:tools/${materialAe2}_${tool}`})
 			})
 		})
+		// Create update 0.5.1
+		recipesEvent.remove({id: "create:crafting/appliances/netherite_backtank_from_netherite"})
+		recipesEvent.remove({id: "create:crafting/appliances/netherite_diving_helmet_from_netherite"})
+		recipesEvent.remove({id: "create:crafting/appliances/netherite_diving_boots_from_netherite"})
+		recipesEvent.remove({id: "create:mixing/dough_by_mixing"})
 	}
 
 const setRecipes = (recipesEvent) => {
@@ -364,7 +371,7 @@ const setRecipes = (recipesEvent) => {
 		]
 		const mold = "immersiveengineering:mold_plate";
 		for (const sheetMetal of sheetAndDoubleIngotMetals) {
-				console.log(`Setting up ${sheetMetal}`);
+				// console.log(`Setting up ${sheetMetal}`);
 				recipesEvent.recipes.immersiveengineeringMetalPress(Ingredient.of(`tfc:metal/sheet/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/double_ingot/${sheetMetal}`).ignoreNBT(), mold)
 				recipesEvent.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_sheet/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/sheet/${sheetMetal}`).ignoreNBT())
 				recipesEvent.recipes.immersiveengineeringArcFurnace(Ingredient.of(`tfc:metal/double_ingot/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${sheetMetal}`).ignoreNBT(), Ingredient.of(`tfc:metal/ingot/${sheetMetal}`).ignoreNBT())
@@ -1145,7 +1152,7 @@ const setRecipes = (recipesEvent) => {
 		// Replacing vanilla emerald to tfc emerald for alien trading
 		recipesEvent.forEachRecipe({ id: /beyond_earth:alien_trading/ }, (r) => {
 			let tfcEmerald = "tfc:gem/emerald"
-			console.log(r.getType())
+			// console.log(r.getType())
 			if (r.json.keySet().contains("costA")) {
 				let costA = r.json.get("costA").getAsJsonObject()
 				if (costA.get("item").toString() == '"minecraft:emerald"'){
@@ -1155,4 +1162,5 @@ const setRecipes = (recipesEvent) => {
 			}
 		})
 
+		recipesEvent.replaceInput({output:"minecraft:dried_kelp_block"}, `minecraft:dried_kelp`, `tfc:food/dried_kelp`)
 }
