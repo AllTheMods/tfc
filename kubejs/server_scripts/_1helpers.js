@@ -131,7 +131,6 @@ const stoneToolTypes = [
         "metamorphic",
         "sedimentary"
 ]
-
 const dyes = [
 		"blue",
 		"brown",
@@ -147,6 +146,15 @@ const dyes = [
 		"white",
 		"yellow",
 		"black"
+]
+const mcwRoofTypes = [
+		"roof",
+		"attic_roof",
+		"top_roof",
+		"lower_roof",
+		"steep_roof",
+		"upper_lower_roof",
+		"upper_steep_roof"
 ]
 
 const removeRecipeByID = (recipesEvent, recipes) => {

@@ -35,5 +35,20 @@ const setBlockTags = (blockTagsEvent) => {
     blockTagsEvent.get('forge:farmland').add('#tfc:farmland')
     blockTagsEvent.get('minecraft:anvil').add('#tfc:anvils')
 
-    blockTagsEvent.get('minecraft:mineable/axe').add(['craftingstation:crafting_station_slab', 'craftingstation:crafting_station'])
+    const axeMineable = blockTagsEvent.get('minecraft:mineable/axe')
+    const pickaxeMineable = blockTagsEvent.get('minecraft:mineable/pickaxe')
+
+    axeMineable.add(['craftingstation:crafting_station_slab', 'craftingstation:crafting_station'])
+
+    // fix for some roofs taking too long to break, no tool associated
+    for (const roofType of mcwRoofTypes) {
+        // tfc stripped wood roofs
+        for (const tfcWood of tfcWoodTypes) {
+            axeMineable.add([`mcw_tfc_roof:stripped_${tfcWood}_${roofType}`])
+        }
+        // tfc stone roofs
+        for (const tfcStone of tfcStoneTypes) {
+            pickaxeMineable.add([`mcw_tfc_roof:${tfcStone}_${roofType}`])
+        }
+    }
 }
