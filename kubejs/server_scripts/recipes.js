@@ -117,7 +117,6 @@ const removeRecipes = (recipesEvent) => {
 
 
 		const materials = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle"] // andesite, granite and diorite are obtainable
-		const roofTypes = ["roof", "attic_roof", "top_roof", "lower_roof", "steep_roof", "upper_lower_roof", "upper_steep_roof"]
 		for (const woodType of vanillaWoodTypes) {
 				recipesEvent.replaceInput({id: `create:${woodType}_window`}, `minecraft:${woodType}_planks`, `tfc:wood/planks/${woodType}`)
 				recipesEvent.remove({id: `thermal:machines/insolator/insolator_${woodType}_sapling`})
@@ -130,7 +129,7 @@ const removeRecipes = (recipesEvent) => {
 				recipesEvent.remove({id: `immersiveengineering:sawmill/${material}_stairs`})
 				recipesEvent.remove({id: `immersiveengineering:sawmill/${material}_door`})
 				recipesEvent.remove({id: `immersiveengineering:sawmill/stripped_${material}_log`})
-				for (const roofType of roofTypes) {
+				for (const roofType of mcwRoofTypes) {
 						recipesEvent.remove({id: `mcwroofs:${material}_${roofType}`})
 						recipesEvent.remove({id: `mcwroofs:${material}_planks_${roofType}`}) // some uses _planks_
 				}
