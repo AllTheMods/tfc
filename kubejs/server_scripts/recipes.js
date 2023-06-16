@@ -498,6 +498,9 @@ const setRecipes = (recipesEvent) => {
 		recipesEvent.replaceInput({id: "immersiveengineering:crafting/balloon"}, "minecraft:torch", "tfc:torch")
 		recipesEvent.replaceInput({id: "immersiveengineering:crafting/conveyor_dropper"}, "minecraft:iron_trapdoor", "tfc:metal/trapdoor/wrought_iron")
 
+		for (const wireType of ['copper', 'electrum', 'steel', 'redstone']) {
+			recipesEvent.replaceInput( {id: `immersiveengineering:crafting/wirecoil_${wireType}` }, "#forge:rods/wooden", "immersiveengineering:stick_treated")
+		}
 
 		modifyShaped(recipesEvent, "ae2:certus_quartz_wrench", 1, ['Q Q', ' I ', ' I '], {
 				Q: "ae2:certus_quartz_crystal",
