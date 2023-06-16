@@ -637,7 +637,7 @@ const setRecipes = (recipesEvent) => {
 				D: "tfc:powder/graphite"
 		})
 		modifyShaped(recipesEvent, "immersiveengineering:hemp_fabric", 3, ["CYC", "SYS", "YCY"], {
-				S: "#forge:rods/wooden",
+				S: "immersiveengineering:stick_treated",
 				C: "tfc:wool_cloth",
 				Y: "tfc:wool_yarn"
 		})
