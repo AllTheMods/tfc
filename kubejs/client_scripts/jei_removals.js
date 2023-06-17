@@ -8,7 +8,7 @@ onEvent('jei.hide.items', event => {
 		
 		event.hide('minecraft:kelp')
 		event.hide('minecraft:dried_kelp')
-		event.hide('minecraft:dried_kelp_block')
+		// event.hide('minecraft:dried_kelp_block')
 		event.hide('minecraft:torch')
 		event.hide('minecraft:soul_torch')
 		event.hide('minecraft:lantern')
