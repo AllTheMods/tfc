@@ -1,0 +1,10 @@
+{
+    "type": "tfc:quern",
+    "ingredient": {
+        "tag": "tfc:fluxstone"
+    },
+    "result": {
+        "item": "tfc:powder/flux",
+        "count": 4
+    }
+}
