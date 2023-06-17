@@ -412,4 +412,8 @@ const setItemTags = itemTagsEvent => {
     for (const tfcStoneType of tfcStoneTypes){
         itemTagsEvent.add('tfc:raw_rock_slabs',[`tfc:rock/raw/${tfcStoneType}_slab`])
     }
+
+    for(const stone of ['limestone', 'dolomite', 'chalk', 'marble']) {
+        itemTagsEvent.get('tfc:fluxstone').remove(`tfc:rock/loose/${stone}`) //stones to flux
+    }
 }
