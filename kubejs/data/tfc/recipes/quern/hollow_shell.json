@@ -1,0 +1,10 @@
+{
+    "type": "tfc:quern",
+    "ingredient": {
+        "item": "firmalife:hollow_shell"
+    },
+    "result": {
+        "item": "tfc:powder/flux",
+        "count": 4
+    }
+}
