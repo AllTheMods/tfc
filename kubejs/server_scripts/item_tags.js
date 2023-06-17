@@ -416,4 +416,6 @@ const setItemTags = itemTagsEvent => {
     for(const stone of ['limestone', 'dolomite', 'chalk', 'marble']) {
         itemTagsEvent.get('tfc:fluxstone').remove(`tfc:rock/loose/${stone}`) //stones to flux
     }
+
+    itemTagsEvent.get('tfc:fluxstone').add(['minecraft:nautilus_shell'])
 }
