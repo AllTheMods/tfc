@@ -12,6 +12,6 @@
 	"texHeight": 40,
 	"widgets": false,
 	"texture": "packmenu:textures/gui/button.png",
-	"action": "OPEN_GUI",
-	"data": "SUPPORTERS"
+	"action": "OPEN_URL",
+	"data": "https://www.akliz.net/atmgravitas"
 }
