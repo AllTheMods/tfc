@@ -1,0 +1,162 @@
+{
+	id: "3A953E436E706EB2"
+	group: "20028FE0986EEEC1"
+	order_index: 4
+	filename: "blast_furnace_to_help_make_a_different_anvil"
+	title: "{gravitas.chapters.5.title}"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 2.0d
+			y: 0.0d
+			subtitle: "{gravitas.quest.steel.blast_furnace}"
+			description: [
+				"{gravitas.quest.steel.desc.blast_furnace.1}"
+				"{gravitas.quest.steel.desc.blast_furnace.2}"
+			]
+			dependencies: ["1A99EF05065B3689"]
+			id: "7A77905EB8350098"
+			tasks: [
+				{
+					id: "02239FA53229FFC6"
+					type: "item"
+					item: "tfc:blast_furnace"
+				}
+				{
+					id: "4A6C1E0FB8052EE7"
+					type: "item"
+					item: {
+						id: "tfc:metal/sheet/wrought_iron"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 12L
+				}
+				{
+					id: "38BBB45AE5DA35CF"
+					type: "item"
+					item: "tfc:fire_bricks"
+					count: 4L
+				}
+				{
+					id: "2F7E73FE259210A5"
+					type: "item"
+					item: {
+						id: "tfc:metal/tuyere/wrought_iron"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "{gravitas.quest.steel.steel}"
+			x: 2.0d
+			y: 1.0d
+			dependencies: ["7A77905EB8350098"]
+			id: "19C25C233BCCF44C"
+			tasks: [
+				{
+					id: "6048FAC8D6CF4EE4"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/pig_iron"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "7F4567FA981346C8"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/high_carbon_steel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "553994114B1261E2"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/steel"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 2.0d
+			y: 2.0d
+			description: ["{gravitas.quest.steel.desc.steel_anvil}"]
+			dependencies: ["19C25C233BCCF44C"]
+			id: "568F95FC508BA84A"
+			tasks: [{
+				id: "742BF1EDAA186BEE"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "{gravitas.quest.steel.early_create}"
+			x: 5.5d
+			y: -1.5d
+			description: [
+				"{gravitas.quest.steel.desc.early_create.1}"
+				"{gravitas.quest.steel.desc.early_create.2}"
+			]
+			id: "39FEE3418D86CFB9"
+			tasks: [
+				{
+					id: "4A504CC7DF30FB7A"
+					type: "item"
+					item: "create:encased_fan"
+				}
+				{
+					id: "3835C7D033329EF1"
+					type: "item"
+					item: "create:mechanical_press"
+				}
+			]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,0 +1,124 @@
+{
+	id: "3BE4D5CA7BA9EB50"
+	group: "20028FE0986EEEC1"
+	order_index: 6
+	filename: "the_moon_has_anvils"
+	title: "{gravitas.chapters.7.title}"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 2.5d
+			y: 0.5d
+			id: "2F917443D6FE3081"
+			tasks: [{
+				id: "417E47D6C3A4DDBF"
+				type: "item"
+				item: "immersiveengineering:treated_wood_horizontal"
+				count: 8L
+			}]
+		}
+		{
+			x: 1.5d
+			y: 0.5d
+			id: "7503CFC31F970927"
+			tasks: [{
+				id: "21A2A42B370CCC98"
+				type: "item"
+				item: "immersiveengineering:craftingtable"
+			}]
+		}
+		{
+			x: 0.5d
+			y: 0.5d
+			id: "5DD8A4A919AF644C"
+			tasks: [{
+				id: "023D3F70F9EAD415"
+				type: "item"
+				item: "immersiveengineering:workbench"
+			}]
+		}
+		{
+			title: "{gravitas.quest.moon.blueprints}"
+			x: -0.5d
+			y: 0.5d
+			id: "2D871E3A9A87DAC0"
+			tasks: [
+				{
+					id: "57F918136F31687B"
+					type: "item"
+					item: {
+						id: "immersiveengineering:blueprint"
+						Count: 1b
+						tag: {
+							blueprint: "components"
+						}
+					}
+				}
+				{
+					id: "5665CF88032607C0"
+					type: "item"
+					item: {
+						id: "immersiveengineering:blueprint"
+						Count: 1b
+						tag: {
+							blueprint: "molds"
+						}
+					}
+				}
+				{
+					id: "191F9765CEA38DCB"
+					type: "item"
+					item: {
+						id: "immersiveengineering:blueprint"
+						Count: 1b
+						tag: {
+							blueprint: "electrode"
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 3.0d
+			description: ["{gravitas.quest.moon.desc.silicon_press}"]
+			id: "2A2A3F949126C284"
+			tasks: [
+				{
+					id: "7349267BAAC84B3F"
+					type: "item"
+					item: "ae2:calculation_processor_press"
+				}
+				{
+					id: "7E563514ACD0E8CC"
+					type: "item"
+					item: "ae2:engineering_processor_press"
+				}
+				{
+					id: "1B06A15BB8204D97"
+					type: "item"
+					item: "ae2:logic_processor_press"
+				}
+				{
+					id: "51F7A54A76393112"
+					type: "item"
+					item: "ae2:silicon_press"
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: 3.0d
+			description: ["{gravitas.quest.moon.desc.fluix_crystal}"]
+			id: "3559C441679F94D4"
+			tasks: [{
+				id: "7F8C807291A64A4E"
+				type: "item"
+				item: "ae2:fluix_crystal"
+				count: 32L
+			}]
+		}
+	]
+	quest_links: [ ]
+}

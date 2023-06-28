@@ -1,0 +1,379 @@
+{
+	id: "300E8AFE33A6D9E3"
+	group: "20028FE0986EEEC1"
+	order_index: 5
+	filename: "anvils_to_beat_you_black_red_and_blue"
+	title: "{gravitas.chapters.6.title}"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 3.0d
+			y: -3.0d
+			dependencies: ["568F95FC508BA84A"]
+			id: "32CE5C0CEBF02E0E"
+			tasks: [{
+				id: "38CEA148BCE0FBFA"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/black_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+				count: 14L
+			}]
+		}
+		{
+			x: 3.0d
+			y: -2.0d
+			dependencies: ["32CE5C0CEBF02E0E"]
+			id: "44CE2B741A323973"
+			tasks: [{
+				id: "00AA0D8F600239E1"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/black_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 2.5d
+			y: -0.5d
+			description: ["{gravitas.quest.blacksteel.desc.weak_blue}"]
+			dependencies: ["44CE2B741A323973"]
+			id: "1F261F1F9CDC5CA8"
+			tasks: [{
+				id: "6B02B33E330B1FF2"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/weak_blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 3.5d
+			y: -0.5d
+			description: ["{gravitas.quest.blacksteel.desc.weak_red}"]
+			dependencies: ["44CE2B741A323973"]
+			id: "6DD0554711B68632"
+			tasks: [{
+				id: "00C1DED048695DA6"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/weak_red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 2.5d
+			y: 1.5d
+			dependencies: ["37180015F854BC0D"]
+			id: "4C8385E2ACE406EE"
+			tasks: [{
+				id: "2D41794F5ED2908B"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 3.5d
+			y: 1.5d
+			dependencies: ["3F1A57E5A784E739"]
+			id: "15BC783BB17EE2D4"
+			tasks: [{
+				id: "2BD6E6BD32452467"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 2.5d
+			y: 2.5d
+			dependencies: ["4C8385E2ACE406EE"]
+			id: "782836C39D00C73C"
+			tasks: [{
+				id: "06F8DDE48FE6BBF0"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 3.5d
+			y: 2.5d
+			dependencies: ["15BC783BB17EE2D4"]
+			id: "01711092E2004315"
+			tasks: [{
+				id: "3A08DCD55EB38342"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 2.5d
+			y: 3.5d
+			dependencies: ["782836C39D00C73C"]
+			id: "4110D65952C446BC"
+			tasks: [{
+				id: "42FB9AAFC71A5729"
+				type: "item"
+				item: "tfc:metal/bucket/blue_steel"
+			}]
+		}
+		{
+			x: 3.5d
+			y: 3.5d
+			dependencies: ["01711092E2004315"]
+			id: "7655E45A37759CAB"
+			tasks: [{
+				id: "39890A991AB341B5"
+				type: "item"
+				item: "tfc:metal/bucket/red_steel"
+			}]
+		}
+		{
+			x: 2.5d
+			y: 0.5d
+			description: ["{gravitas.quest.blacksteel.desc.high_blue}"]
+			dependencies: ["1F261F1F9CDC5CA8"]
+			id: "37180015F854BC0D"
+			tasks: [{
+				id: "72311DDE4A132AAA"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/high_carbon_blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 3.5d
+			y: 0.5d
+			description: ["{gravitas.quest.blacksteel.desc.high_red}"]
+			dependencies: ["6DD0554711B68632"]
+			id: "3F1A57E5A784E739"
+			tasks: [{
+				id: "5127DF54C38672CD"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/high_carbon_red_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: -2.0d
+			y: 6.0d
+			hide_dependency_lines: false
+			dependencies: ["4170701E508D58B5"]
+			hide: true
+			id: "679D7B1E110BE18E"
+			tasks: [{
+				id: "4D221A36C8F952DF"
+				type: "item"
+				item: "immersiveengineering:cokebrick"
+				count: 27L
+			}]
+		}
+		{
+			x: 3.0d
+			y: 5.0d
+			description: ["{gravitas.quest.blacksteel.desc.bucket}"]
+			dependencies: [
+				"7655E45A37759CAB"
+				"4110D65952C446BC"
+			]
+			id: "42471A8474620E27"
+			tasks: [{
+				id: "5B69D6251E53714A"
+				type: "item"
+				item: "minecraft:bucket"
+			}]
+		}
+		{
+			title: "{gravitas.quest.blacksteel.engineers_tools}"
+			x: -2.0d
+			y: 5.0d
+			dependencies: ["42471A8474620E27"]
+			id: "4170701E508D58B5"
+			tasks: [
+				{
+					id: "1B4B95CC48B88CA0"
+					type: "item"
+					item: {
+						id: "immersiveengineering:hammer"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "4A861E5E22EF9766"
+					type: "item"
+					item: {
+						id: "immersiveengineering:wirecutter"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "2EB2B34F41B4C17D"
+					type: "item"
+					item: "immersiveengineering:screwdriver"
+				}
+			]
+		}
+		{
+			x: -2.0d
+			y: 7.0d
+			description: ["{gravitas.quest.blacksteel.desc.blast_brick}"]
+			dependencies: [
+				"679D7B1E110BE18E"
+				"4B88B6D1DD2A30EA"
+			]
+			id: "584E1EADFF9DB1FC"
+			tasks: [{
+				id: "371BDAFC059C182F"
+				type: "item"
+				item: "immersiveengineering:blastbrick"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 5.0d
+			description: ["{gravitas.quest.blacksteel.desc.obsidian}"]
+			dependencies: [
+				"01711092E2004315"
+				"782836C39D00C73C"
+			]
+			id: "7B044C2424F0CF68"
+			tasks: [
+				{
+					id: "34CB282F5D3011A1"
+					type: "item"
+					item: {
+						id: "tfc:metal/pickaxe/blue_steel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "0756308FEA3B221C"
+					type: "item"
+					item: {
+						id: "tfc:metal/pickaxe/red_steel"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: 7.0d
+			description: ["{gravitas.quest.blacksteel.desc.going_deeper}"]
+			dependencies: ["7B044C2424F0CF68"]
+			dependency_requirement: "all_started"
+			id: "4B88B6D1DD2A30EA"
+			tasks: [{
+				id: "04A96D71D2B55663"
+				type: "dimension"
+				title: "{gravitas.quest.blacksteel.going_deeper}"
+				dimension: "minecraft:the_nether"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

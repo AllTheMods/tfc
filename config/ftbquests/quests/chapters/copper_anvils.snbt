@@ -1,0 +1,110 @@
+{
+	id: "5B4F6C8B409688D4"
+	group: "20028FE0986EEEC1"
+	order_index: 1
+	filename: "copper_anvils"
+	title: "{gravitas.chapters.2.title}"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 3.0d
+			y: -1.5d
+			description: [
+				"{gravitas.quest.copper.desc.flux.1}"
+				"{gravitas.quest.copper.desc.flux.2}"
+			]
+			id: "28D6404D84C87C70"
+			tasks: [{
+				id: "32B11FC0F2015C21"
+				type: "item"
+				item: "tfc:powder/flux"
+				count: 16L
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			description: ["{gravitas.quest.copper.desc.copper_double}"]
+			dependencies: [
+				"5B949C879D977B18"
+				"538D08DB0D760122"
+			]
+			id: "593520325799F3D6"
+			tasks: [{
+				id: "2D763A27456019A2"
+				type: "item"
+				item: {
+					id: "tfc:metal/double_ingot/copper"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			x: 4.0d
+			y: 0.0d
+			description: [
+				"{gravitas.quest.copper.desc.anvil.1}"
+				"{gravitas.quest.copper.desc.anvil.2}"
+			]
+			dependencies: ["7F97680AF1303C0B"]
+			id: "1BD449BE6B5C6E93"
+			tasks: [{
+				id: "7079ACD99C9E5967"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/copper"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "{gravitas.quest.copper.charcoal_forge}"
+			x: 5.5d
+			y: -1.5d
+			description: [
+				"{gravitas.quest.copper.desc.charcoal_forge.1}"
+				"{gravitas.quest.copper.desc.charcoal_forge.2}"
+			]
+			dependencies: [
+				"2F073E07D1A9533A"
+				"50063D8DA6A258F6"
+			]
+			id: "543CB2FB24387CF0"
+			tasks: [{
+				id: "2FFBFD1E56ABAF0E"
+				type: "item"
+				item: "minecraft:charcoal"
+				count: 8L
+			}]
+		}
+		{
+			x: 6.5d
+			y: -1.5d
+			description: [
+				"{gravitas.quest.copper.desc.bellows.1}"
+				"{gravitas.quest.copper.desc.bellows.2}"
+			]
+			dependencies: ["7860C0D66B682A1F"]
+			id: "5862FB3D01494F5C"
+			tasks: [{
+				id: "646442B25233B967"
+				type: "item"
+				item: "tfc:bellows"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

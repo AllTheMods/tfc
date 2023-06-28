@@ -1,0 +1,155 @@
+{
+	id: "6A814E642C093E01"
+	group: "20028FE0986EEEC1"
+	order_index: 3
+	filename: "you_like_anvils_say_no_more_iron_anvil"
+	title: "{gravitas.chapters.4.title}"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 5.0d
+			y: -1.0d
+			dependencies: [
+				"70E673F1B136B04B"
+				"6923F62255270C3B"
+			]
+			id: "58B741AD2C5B5ABF"
+			tasks: [
+				{
+					id: "06A53490DB116BA3"
+					type: "item"
+					item: "tfc:bloomery"
+				}
+				{
+					id: "6B700862C9460E62"
+					type: "item"
+					title: "{gravitas.quest.iron.brick}"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:rock/bricks"
+						}
+					}
+					count: 11L
+				}
+			]
+		}
+		{
+			title: "{gravitas.quest.iron.mortar}"
+			x: 4.0d
+			y: -3.0d
+			description: [
+				"{gravitas.quest.iron.desc.mortar.1}"
+				"{gravitas.quest.iron.desc.mortar.2}"
+			]
+			dependencies: [
+				"606A5B99436B903D"
+				"2213ABB8B1EA20B3"
+			]
+			dependency_requirement: "one_started"
+			id: "2378E492C0EA778B"
+			tasks: [{
+				id: "07F5E8C32BB468C3"
+				type: "item"
+				item: "tfc:mortar"
+				count: 16L
+			}]
+		}
+		{
+			title: "{gravitas.quest.iron.cutting}"
+			x: 4.0d
+			y: 0.0d
+			description: ["{gravitas.quest.iron.desc.cutting}"]
+			dependencies: [
+				"606A5B99436B903D"
+				"67CC0E5D923049A4"
+			]
+			dependency_requirement: "all_started"
+			id: "7C814B7542057941"
+			tasks: [{
+				id: "725B8C6F1D91ECC1"
+				type: "item"
+				item: "tfc:brick/andesite"
+				count: 16L
+			}]
+		}
+		{
+			x: 6.5d
+			y: -1.0d
+			description: [
+				"{gravitas.quest.iron.desc.wrought_iron.1}"
+				"{gravitas.quest.iron.desc.wrought_iron.2}"
+			]
+			dependencies: ["42EF08866DDD2A7D"]
+			id: "698110FC264CA642"
+			tasks: [
+				{
+					id: "4D7E1F060F3C60D4"
+					type: "item"
+					item: {
+						id: "tfc:metal/ingot/wrought_iron"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "20EDB521B9339B5F"
+					type: "item"
+					item: {
+						id: "tfc:raw_iron_bloom"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "321B979240668CAF"
+					type: "item"
+					item: {
+						id: "tfc:refined_iron_bloom"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 6.5d
+			y: 0.0d
+			description: ["{gravitas.quest.iron.desc.iron_anvil}"]
+			dependencies: ["58CB73D4B892EA86"]
+			id: "2227EA4328622F97"
+			tasks: [{
+				id: "5DEABA8C3C7372B3"
+				type: "item"
+				item: {
+					id: "tfc:metal/anvil/wrought_iron"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+			}]
+		}
+	]
+	quest_links: [ ]
+}
