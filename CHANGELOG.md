@@ -1,5 +1,55 @@
 # Changelog
 
+# 📦 v3.5
+
+## ℹ️ General changes and notes
+
+---
+
+- Changed Flywheel render config to `Instancing`
+- Shaders are now off by default to avoid crash on startup for some players
+- Slightly tweaked Create and Additions
+- Added missing tools to break TFC Macaw's blocks
+
+---
+
+## 🛠️ Mods
+
+---
+
+<details open>
+<summary>Updated</summary>
+
+
+- Advanced TFC Tech Unofficial (1.7) -> (1.8)
+- CodeChickenLib (4.1.3.480) -> (4.1.4.488)
+- Create & Additions (1.18.2-20230527a) -> (1.18.2-20230623a)
+- Inventory Profiles Next (1.10.3) -> (1.10.5)
+- Max Health Fix (5.0.1) -> (5.0.4)
+- Supermartijn642 Core Lib (1.1.9a) -> (1.1.10)
+- TerraFirmaCraft (2.2.24) -> (2.2.25)
+- TrashCans (1.0.17a) -> (1.0.18)
+
+</details>
+
+---
+
+## 🍳 Recipes
+
+---
+
+<details open>
+<summary>🆕 Added</summary>
+
+- Lots of dyes made from TFC Flowers at Quern
+- `advancedtfctech:power_loom/pineapple_leather`
+- `advancedtfctech:crafting/pineapple_winded_pirn`
+
+</details>
+
+
+---
+
 # 📦 v3.4
 
 ## ℹ️ General changes and notes
