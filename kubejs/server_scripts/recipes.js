@@ -193,6 +193,10 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "create:crafting/appliances/netherite_diving_helmet_from_netherite"})
 		recipesEvent.remove({id: "create:crafting/appliances/netherite_diving_boots_from_netherite"})
 		recipesEvent.remove({id: "create:mixing/dough_by_mixing"})
+
+		// Removing Thermal Tree Extractor
+		recipesEvent.remove({type: "thermal:tree_extractor"})
+		recipesEvent.remove({id: "thermal:device_tree_extractor"})
 	}
 
 const setRecipes = (recipesEvent) => {

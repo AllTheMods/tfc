@@ -25,6 +25,7 @@ onEvent('jei.hide.items', e => {
     e.hide('thermal:deepslate_sulfur_ore')
     e.hide('thermal:tin_ore')
     e.hide('thermal:deepslate_tin_ore')
+    e.hide('thermal:device_tree_extractor')
 })
 
 onEvent('jei.remove.categories', event => {
