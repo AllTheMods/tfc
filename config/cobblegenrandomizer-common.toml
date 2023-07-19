@@ -1,0 +1,33 @@
+
+#General settings
+[general]
+	#Use config instead of datapack
+	use_config = true
+
+	#List settings
+	#Syntax: ["modid:block|weight"]
+	#Example: ["minecraft:stone|2","minecraft:dirt|1"]
+	#Forge tags are supported
+	[general.lists]
+		#Cobble gen
+		block_list_cobble = ["tfc:rock/hardened/rhyolite|1"]
+		#Stone gen
+		block_list_stone = ["tfc:rock/hardened/rhyolite|1"]
+		#Basalt gen
+		block_list_basalt = ["minecraft:basalt|1"]
+
+		#Custom settings
+		[general.lists.custom]
+			#Custom generators
+			#Syntax: [gen]
+			#Gen: [type, block, list]
+			#Type: cobblestone, stone
+			#Block: resource location of the block below the generated block
+			#List: see List settings
+			#Examples:
+			#custom_generators = [
+			#   ["cobblestone", "minecraft:diamond_block", ["minecraft:diamond_block"]],
+			#   ["cobblestone", "minecraft:dirt", ["forge:dirt"]],
+			#   ["cobblestone", "minecraft:white_wool", ["minecraft:wool"]]]
+			custom_generators = [["cobblestone", "tfc:rock/raw/granite", ["tfc:rock/raw/granite|1"]], ["cobblestone", "tfc:rock/raw/diorite", ["tfc:rock/raw/diorite|1"]], ["cobblestone", "tfc:rock/raw/gabbro", ["tfc:rock/raw/gabbro|1"]], ["cobblestone", "tfc:rock/raw/shale", ["tfc:rock/raw/shale|1"]], ["cobblestone", "tfc:rock/raw/claystone", ["tfc:rock/raw/claystone|1"]], ["cobblestone", "tfc:rock/raw/limestone", ["tfc:rock/raw/limestone|1"]], ["cobblestone", "tfc:rock/raw/conglomerate", ["tfc:rock/raw/conglomerate|1"]], ["cobblestone", "tfc:rock/raw/dolomite", ["tfc:rock/raw/dolomite|1"]], ["cobblestone", "tfc:rock/raw/chert", ["tfc:rock/raw/chert|1"]], ["cobblestone", "tfc:rock/raw/chalk", ["tfc:rock/raw/chalk|1"]], ["cobblestone", "tfc:rock/raw/rhyolite", ["tfc:rock/raw/rhyolite|1"]], ["cobblestone", "tfc:rock/raw/basalt", ["tfc:rock/raw/basalt|1"]], ["cobblestone", "tfc:rock/raw/andesite", ["tfc:rock/raw/andesite|1"]], ["cobblestone", "tfc:rock/raw/dacite", ["tfc:rock/raw/dacite|1"]], ["cobblestone", "tfc:rock/raw/quartzite", ["tfc:rock/raw/quartzite|1"]], ["cobblestone", "tfc:rock/raw/slate", ["tfc:rock/raw/slate|1"]], ["cobblestone", "tfc:rock/raw/schist", ["tfc:rock/raw/schist|1"]], ["cobblestone", "tfc:rock/raw/gneiss", ["tfc:rock/raw/gneiss|1"]], ["cobblestone", "tfc:rock/raw/marble", ["tfc:rock/raw/marble|1"]]]
+

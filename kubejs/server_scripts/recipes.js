@@ -115,6 +115,11 @@ const removeRecipes = (recipesEvent) => {
 
 		recipesEvent.remove({input: "#forge:ores/apatite"})
 
+        recipesEvent.remove({id:"buildinggadgets:gadget_destruction"})
+        recipesEvent.remove({id:"buildinggadgets:construction_paste_powder"})
+        recipesEvent.remove({id:"buildinggadgets:construction_paste_container"})
+        recipesEvent.remove({id:"buildinggadgets:construction_paste_container_t2"})
+        recipesEvent.remove({id:"buildinggadgets:construction_paste_container_t3"})
 
 		const materials = ["oak", "birch", "dark_oak", "spruce", "acacia", "jungle"] // andesite, granite and diorite are obtainable
 		for (const woodType of vanillaWoodTypes) {
@@ -1155,7 +1160,7 @@ const setRecipes = (recipesEvent) => {
 			}
 		}
 
-		// Replacing vanilla emerald to tfc emerald for alien trading
+	    // Replacing vanilla emerald to tfc emerald for alien trading
 		recipesEvent.forEachRecipe({ id: /beyond_earth:alien_trading/ }, (r) => {
 			let tfcEmerald = "tfc:gem/emerald"
 			// console.log(r.getType())
@@ -1206,4 +1211,8 @@ const setRecipes = (recipesEvent) => {
 				}
 		}
 		}).id(`kubejs:shaped/immersiveengineering/treated_wood_horizontal`)
+
+		for (const rockType of tfcStoneTypes) {
+			recipesEvent.recipes.createCutting(`tfc:brick/${rockType}`,`tfc:rock/loose/${rockType}`)
+		}
 }
