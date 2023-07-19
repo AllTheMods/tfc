@@ -1162,4 +1162,8 @@ const setRecipes = (recipesEvent) => {
 		})
 
 		recipesEvent.replaceInput({output:"minecraft:dried_kelp_block"}, `minecraft:dried_kelp`, `tfc:food/dried_kelp`)
+
+        for (const rockType of tfcStoneTypes) {
+			recipesEvent.recipes.createCutting(`tfc:brick/${rockType}`,`tfc:rock/loose/${rockType}`)
+		}
 }
