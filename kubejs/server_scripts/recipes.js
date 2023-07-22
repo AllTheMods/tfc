@@ -198,6 +198,13 @@ const removeRecipes = (recipesEvent) => {
 		recipesEvent.remove({id: "create:crafting/appliances/netherite_diving_helmet_from_netherite"})
 		recipesEvent.remove({id: "create:crafting/appliances/netherite_diving_boots_from_netherite"})
 		recipesEvent.remove({id: "create:mixing/dough_by_mixing"})
+
+		// Removing Thermal Tree Extractor
+		recipesEvent.remove({type: "thermal:tree_extractor"})
+		recipesEvent.remove({id: "thermal:device_tree_extractor"})
+
+		// Remove Paper from Dust from IE
+		recipesEvent.remove({id: "immersiveengineering:crafting/paper_from_sawdust"})
 	}
 
 const setRecipes = (recipesEvent) => {
@@ -1168,6 +1175,42 @@ const setRecipes = (recipesEvent) => {
 
 		recipesEvent.replaceInput({output:"minecraft:dried_kelp_block"}, `minecraft:dried_kelp`, `tfc:food/dried_kelp`)
 
+		recipesEvent
+		.shapeless(
+				`2x minecraft:paper`,
+				[
+						{
+								type: "tfc:fluid_item",
+								"fluid_ingredient": {
+										"ingredient": "minecraft:water",
+										"amount": 100
+								}
+						},"4x #forge:dusts/wood"
+				]
+		)
+		.id(`kubejs:minecraft/paper_4_manual_only`)
+		
+		recipesEvent
+				.recipes
+				.createMixing(
+						`2x minecraft:paper`,
+						[
+								Fluid.of("minecraft:water", 100),
+								"4x #forge:dusts/wood"
+						]
+				)
+				.id(`kubejs:minecraft/paper_mixer`)
+
+		recipesEvent.shaped(Item.of("immersiveengineering:treated_wood_horizontal", 8), ["PPP","PBP","PPP"], {
+			"P": "#minecraft:planks",
+			"B": {
+				type: "tfc:fluid_item",
+				"fluid_ingredient": {
+						"ingredient": "immersiveengineering:creosote",
+						"amount": 1000
+				}
+		}
+		}).id(`kubejs:shaped/immersiveengineering/treated_wood_horizontal`)
 
 		for (const rockType of tfcStoneTypes) {
 			recipesEvent.recipes.createCutting(`tfc:brick/${rockType}`,`tfc:rock/loose/${rockType}`)
