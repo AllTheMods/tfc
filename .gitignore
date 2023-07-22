@@ -1,3 +1,6 @@
-
+kubejs/probe
+kubejs/documentation
+kubejs/jsconfig.json
 *.bak
 *.xml
+.vscode
