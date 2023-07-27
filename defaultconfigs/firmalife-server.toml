@@ -1,0 +1,42 @@
+
+[general]
+	#Days in a cellar to make cheese Aged.
+	#Range: > 1
+	cheeseAgedDays = 28
+	#Days in a cellar to make cheese Vintage.
+	#Range: > 1
+	cheeseVintageDays = 112
+	#Ticks to dry something on a drying mat (24000 ticks = 1 day)
+	#Range: > 1
+	dryingTicks = 12000
+	#Ticks to dry something on a solar drier (24000 ticks = 1 day)
+	#Range: > 1
+	solarDryingTicks = 1000
+	#Ticks to smoke something on a string (24000 ticks = 1 day)
+	#Range: > 1
+	smokingTicks = 8000
+	#Ticks for an iron composter to finish (24000 ticks = 1 day)
+	#Range: > 1
+	ironComposterTicks = 72000
+	#Ticks for an oven to cure (24000 ticks = 1 day)
+	#Range: > 1
+	ovenCureTicks = 2000
+	#Minimum temperature for an oven to start the curing process (24000 ticks = 1 day)
+	#Range: > 1
+	ovenCureTemperature = 600
+	#If true, ovens will hurt the player if they touch it without a peel in hand.
+	ovenRequirePeel = true
+	#If true, players can throw seed balls.
+	enableSeedBalls = true
+	#If true, bees can swarm and hurt the player if provoked.
+	enableBeeSwarm = true
+	#The capacity in mB of the hollow shell. Default 100
+	#Range: > 1
+	hollowShellCapacity = 100
+	#The average temperature below which stronger decay modifiers apply to cellar blocks.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	cellarLevel2Temperature = 0.0
+	#The average temperature below which even stronger decay modifiers apply to cellar blocks.
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	cellarLevel3Temperature = -12.0
+
