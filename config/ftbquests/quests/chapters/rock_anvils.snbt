@@ -10,32 +10,59 @@
 	quests: [
 		{
 			title: "{gravitas.quest.caveman.start_somewhere}"
-			x: 8.5d
+			x: 9.5d
 			y: 4.5d
-			description: ["{gravitas.quest.caveman.desc.start_somewhere}"]
+			description: [
+				"Using our newly crafted tools, we can now grab some vital resources for our survival."
+				""
+				"With the &aAxe&r, you can cut down trees. You won't be getting the standard logs, though."
+				""
+				"With the &eKnife&r, you can cut &2grass&r or &2plants&r to get &aStraw&r."
+				""
+				"The &3Hammer&r is used for Forging, and the &eJavelin&r is great as a weapon!"
+			]
 			dependencies: ["6360E6403A8BB4EE"]
 			id: "297C2E9EF534A201"
-			tasks: [{
-				id: "4D69524B510111AC"
-				type: "item"
-				title: "{gravitas.quest.caveman.logpile}"
-				item: {
-					id: "itemfilters:tag"
-					Count: 1b
-					tag: {
-						value: "tfc:log_pile_logs"
+			tasks: [
+				{
+					id: "4D69524B510111AC"
+					type: "item"
+					title: "Any Tree Log"
+					icon: "tfc:wood/log/oak"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
 					}
+					count: 8L
+					consume_items: false
+					match_nbt: false
 				}
-				count: 8L
-				consume_items: false
-				match_nbt: false
-			}]
+				{
+					id: "7EDACFE705983F49"
+					type: "item"
+					item: "tfc:straw"
+					count: 10L
+				}
+			]
 		}
 		{
-			x: 6.5d
-			y: 5.5d
-			description: ["{gravitas.quest.caveman.desc.pebbles}"]
+			x: 8.5d
+			y: 3.0d
+			description: [
+				"It doesn't make much sense to make wooden tools first when there are literally stones all over the ground, right?"
+				""
+				"Pick up some &3Pebbles&r you see along the ground. You'll get different types of stones and even small ores depending on the geological region you are in."
+				""
+				"To help you locate which region you are in, make sure to open up the &cBlaze Map&r and select &aGeology&r on the left side! You might have to set a keybind for this as well."
+				""
+				"Make sure to check out the TFC guidebook on different areas to learn what you can gather!"
+			]
 			hide_dependency_lines: false
+			dependencies: ["1CD5C4226B41ACCE"]
+			min_width: 300
 			id: "237587BDC90B1D64"
 			tasks: [{
 				id: "3AC63C89B50E3590"
@@ -55,13 +82,23 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.stone_tools}"
-			x: 7.5d
+			x: 8.0d
 			y: 4.5d
-			description: ["{gravitas.quest.caveman.desc.stone_tools}"]
+			description: [
+				"With enough Pebbles, we can create our starter tools by &eKnapping&r the rocks into the shape of the tool head we want."
+				""
+				"To do this, hold &aat least 2&r pebbles in your hand and right click. From here, you can carve out the desired shape to get the tool head you want. Combine the tool head with a twig to get your first tool!"
+				""
+				"Tip: All of the knapping recipes can be found in JEI!"
+				""
+				"{image:gravitas:textures/quests/knapping.png width:200 height:150 align:1}"
+			]
 			dependencies: [
 				"5CB48C20D61478AD"
 				"237587BDC90B1D64"
 			]
+			min_width: 400
+			can_repeat: true
 			id: "6360E6403A8BB4EE"
 			tasks: [
 				{
@@ -102,18 +139,45 @@
 					}
 					match_nbt: true
 				}
+				{
+					id: "00419104F5F7FA5E"
+					type: "item"
+					title: "Stone Javelin"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:stone_javelins"
+						}
+					}
+				}
 			]
 		}
 		{
 			title: "{gravitas.quest.caveman.stick}"
-			x: 6.5d
-			y: 3.5d
-			description: ["{gravitas.quest.caveman.desc.stick}"]
+			x: 7.5d
+			y: 3.0d
+			description: [
+				"Can you chop down a tree with your hand in real life? No?"
+				""
+				"Just like IRL, you'll need to gather &aTwigs&r from the ground. These make great handles for the tools we'll make."
+			]
+			dependencies: ["1CD5C4226B41ACCE"]
 			id: "5CB48C20D61478AD"
 			tasks: [{
 				id: "50903D61361FDE13"
 				type: "item"
-				title: "{gravitas.quest.caveman.twig}"
+				title: "Twigs"
+				icon: {
+					id: "tfc:wood/twig/oak"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
 				item: {
 					id: "itemfilters:tag"
 					Count: 1b
@@ -129,11 +193,12 @@
 		{
 			title: "{gravitas.quest.caveman.raw_hide}"
 			x: 9.5d
-			y: -4.0d
+			y: -3.0d
 			description: [
 				"{gravitas.quest.caveman.desc.raw_hide.1}"
 				"{gravitas.quest.caveman.desc.raw_hide.2}"
 			]
+			dependencies: ["0DD3F3EDB709A4E6"]
 			id: "3D5D15DB0546D915"
 			tasks: [{
 				id: "1B44F920B1E3B777"
@@ -150,14 +215,11 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.soak}"
-			x: 10.5d
-			y: -4.0d
+			x: 8.0d
+			y: -3.0d
 			subtitle: "{gravitas.quest.caveman.limewater_hide}"
 			description: ["{gravitas.quest.caveman.desc.soak}"]
-			dependencies: [
-				"3D5D15DB0546D915"
-				"0DD3F3EDB709A4E6"
-			]
+			dependencies: ["3D5D15DB0546D915"]
 			id: "17F16D7C369DD0F4"
 			tasks: [{
 				id: "531CCD8E2ACC0D88"
@@ -174,8 +236,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.squeegee}"
-			x: 11.5d
-			y: -4.0d
+			x: 6.5d
+			y: -3.0d
 			description: ["{gravitas.quest.caveman.desc.squeegee}"]
 			dependencies: ["17F16D7C369DD0F4"]
 			id: "3506851642FE561A"
@@ -194,8 +256,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.soak_2}"
-			x: 12.5d
-			y: -4.0d
+			x: 5.0d
+			y: -3.0d
 			description: ["{gravitas.quest.caveman.desc.soak_2}"]
 			dependencies: ["3506851642FE561A"]
 			id: "5E783B279FD57C33"
@@ -214,8 +276,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.leather}"
-			x: 13.5d
-			y: -4.0d
+			x: 5.0d
+			y: -4.5d
 			description: [
 				"{gravitas.quest.caveman.desc.leather.1}"
 				"{gravitas.quest.caveman.desc.leather.2}"
@@ -238,8 +300,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.important_molds}"
-			x: 10.0d
-			y: 4.5d
+			x: 12.5d
+			y: 3.0d
 			description: ["{gravitas.quest.caveman.desc.important_molds}"]
 			dependencies: ["7C2E28402F918FEA"]
 			id: "132DC94857046575"
@@ -289,65 +351,61 @@
 			]
 		}
 		{
-			title: "{gravitas.quest.caveman.small_copper}"
-			x: 8.5d
-			y: -0.5d
-			id: "707770D52AABD707"
-			tasks: [{
-				id: "5DA65EC04091D7A4"
-				type: "item"
-				title: "Any #tfc:small_ore_pieces_copper"
-				item: {
-					id: "itemfilters:tag"
-					Count: 1b
-					tag: {
-						value: "tfc:small_ore_pieces_copper"
-					}
-				}
-				count: 20L
-			}]
-		}
-		{
-			title: "{gravitas.quest.caveman.fire}"
-			x: 10.0d
-			y: 2.5d
+			title: "&cPit Kilns&r"
+			x: 11.0d
+			y: 3.0d
 			description: [
-				"{gravitas.quest.caveman.desc.fire.1}"
-				"{gravitas.quest.caveman.desc.fire.2}"
+				"Now that we have access to fire, we can fire our clay molds in a &cPit Kiln&r."
+				""
+				"To create one, make a 1x1 hole and press &aV&r while holding a mold you want to fire up. You can place up to 4 small molds, or one large mold like a Vessel."
+				""
+				"Now right click on the items with 8 pieces of straw, then right click with 8 logs to place them down. Now you can use the &cFirestarter&r to light it on fire."
+				""
+				"It does take a little bit to fire up the molds, roughly 8 in-game hours."
+				""
 			]
 			dependencies: [
-				"78709C7DFCCC40CB"
+				"132DC94857046575"
+				"180277183EB60B6D"
 				"31DC96A27D8FC91C"
+				"239FE88B9320DF9E"
 			]
+			dependency_requirement: "one_completed"
+			min_width: 300
 			id: "72DDCB9936148388"
 			tasks: [
 				{
-					id: "7BE9A4935A7A049B"
+					id: "7D37012EBF41E254"
 					type: "item"
-					title: "{gravitas.quest.caveman.firepit_logs}"
+					title: "Fired Mold"
 					item: {
 						id: "itemfilters:tag"
 						Count: 1b
 						tag: {
-							value: "tfc:firepit_logs"
+							value: "tfc:fired_molds"
 						}
 					}
-					count: 8L
 				}
 				{
-					id: "120EF6DD6688C809"
+					id: "713636C504E468E9"
 					type: "item"
-					item: "tfc:straw"
-					count: 8L
-				}
-				{
-					id: "4C94C47CE7A3C851"
-					type: "item"
+					title: "Vessel"
+					icon: {
+						id: "tfc:ceramic/vessel"
+						Count: 1b
+						tag: { }
+						ForgeCaps: {
+							Parent: {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
 					item: {
-						id: "tfc:firestarter"
+						id: "itemfilters:tag"
 						Count: 1b
 						tag: {
-							Damage: 0
+							value: "tfc:fired_vessels"
 						}
 					}
 				}
@@ -355,10 +413,10 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.early_metal_storage}"
-			x: 10.0d
-			y: 3.5d
+			x: 12.5d
+			y: 1.5d
 			description: ["{gravitas.quest.caveman.desc.early_metal_storage}"]
-			dependencies: ["132DC94857046575"]
+			dependencies: ["7C2E28402F918FEA"]
 			id: "31DC96A27D8FC91C"
 			tasks: [{
 				id: "53987150CA61D080"
@@ -377,139 +435,41 @@
 			}]
 		}
 		{
-			title: "{gravitas.quest.caveman.copper_tool}"
-			x: 10.0d
-			y: -0.5d
+			title: "&eFinding Copper&r"
+			x: 11.0d
+			y: 1.5d
 			shape: "gear"
 			description: [
-				"{gravitas.quest.caveman.desc.copper_tools.1}"
-				"{gravitas.quest.caveman.desc.copper_tools.2}"
+				"Now that we have access to a &cFirepit&r and some &aFired Molds&r, our next step is to find &aSmall Pieces of Copper&r."
+				""
+				"You won't be able to mine anything until you have a pickaxe, so heading into the caves won't work. Instead, your best bet is to head to a &eLimestone&r region to find &a Small Malachite&r pebbles."
+				""
+				"Each one of these will net you 10mb of Copper when smelted down, so you'll need 10 Small Malachite per tool head you want to make."
 			]
-			dependencies: [
-				"707770D52AABD707"
-				"4187F26BEEE6B0E4"
-			]
-			id: "6A9592B8BDE532CE"
-			tasks: [
-				{
-					id: "09BB8C22F366F654"
-					type: "item"
-					item: {
-						id: "tfc:metal/pickaxe_head/copper"
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-				{
-					id: "36480AD3F1927B2B"
-					type: "item"
-					item: {
-						id: "tfc:metal/propick_head/copper"
-						Count: 1b
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-			]
-		}
-		{
-			title: "{gravitas.quest.caveman.fired_mold}"
-			x: 10.0d
-			y: 1.5d
 			dependencies: ["72DDCB9936148388"]
-			id: "4187F26BEEE6B0E4"
-			tasks: [
-				{
-					id: "3E2C7CC92C865122"
-					type: "item"
-					item: {
-						id: "tfc:ceramic/pickaxe_head_mold"
-						Count: 1b
-						tag: { }
-						ForgeCaps: {
-							Parent: {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-				{
-					id: "0DDEBB5D2C5C3F4D"
-					type: "item"
-					item: {
-						id: "tfc:ceramic/propick_head_mold"
-						Count: 1b
-						tag: { }
-						ForgeCaps: {
-							Parent: {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-				{
-					id: "155C029D095D6F9C"
-					type: "item"
-					item: {
-						id: "tfc:ceramic/saw_blade_mold"
-						Count: 1b
-						tag: { }
-						ForgeCaps: {
-							Parent: {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-				{
-					id: "58DC6431A9D96D45"
-					type: "item"
-					item: {
-						id: "tfc:ceramic/vessel"
-						Count: 1b
-						tag: { }
-						ForgeCaps: {
-							Parent: {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-			]
-		}
-		{
-			title: "{gravitas.quest.caveman.straw}"
-			x: 11.5d
-			y: 2.5d
-			id: "78709C7DFCCC40CB"
+			id: "6A9592B8BDE532CE"
 			tasks: [{
-				id: "2C960696B6D7554B"
+				id: "45AB7A368F769835"
 				type: "item"
-				item: "tfc:straw"
+				title: "Small Ore Pieces of Copper"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:small_ore_pieces_copper"
+					}
+				}
 			}]
 		}
 		{
 			title: "{gravitas.quest.caveman.rock_anvil}"
-			x: 11.5d
-			y: -0.5d
+			x: 11.0d
+			y: -1.5d
 			description: [
 				"{gravitas.quest.caveman.desc.copper_pick.1}"
 				"{gravitas.quest.caveman.desc.copper_pick.2}"
 			]
-			dependencies: ["6A9592B8BDE532CE"]
+			dependencies: ["7CF28D1E8ABAF228"]
 			id: "59541FF5AD12B13A"
 			tasks: [{
 				id: "33C36ACF058CD1AE"
@@ -523,49 +483,44 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.saw_blade}"
-			x: 8.5d
-			y: 1.5d
+			x: 9.5d
+			y: 0.0d
 			description: ["{gravitas.quest.caveman.desc.saw_blade}"]
-			dependencies: ["4187F26BEEE6B0E4"]
+			dependencies: ["7CF28D1E8ABAF228"]
 			id: "70D78EF128C722A1"
-			tasks: [{
-				id: "13BC7D6A62F1E4FA"
-				type: "item"
-				title: "{gravitas.quest.caveman.copper_saw}"
-				item: {
-					id: "itemfilters:tag"
-					Count: 1b
-					tag: {
-						value: "tfc:saws"
+			tasks: [
+				{
+					id: "13BC7D6A62F1E4FA"
+					type: "item"
+					title: "{gravitas.quest.caveman.copper_saw}"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:saws"
+						}
 					}
 				}
-			}]
-		}
-		{
-			title: "{gravitas.quest.caveman.lumber_jack}"
-			x: 7.0d
-			y: 1.5d
-			dependencies: ["70D78EF128C722A1"]
-			id: "1238AA59D567EE35"
-			tasks: [{
-				id: "099B31D17EC30B83"
-				type: "item"
-				title: "{gravitas.quest.caveman.lumber_16}"
-				item: {
-					id: "itemfilters:tag"
-					Count: 1b
-					tag: {
-						value: "tfc:lumber"
+				{
+					id: "66402090BB5AD114"
+					type: "item"
+					title: "Lumber"
+					icon: "tfc:wood/lumber/oak"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:lumber"
+						}
 					}
 				}
-				count: 16L
-			}]
+			]
 		}
 		{
-			x: 5.5d
-			y: 1.5d
+			x: 6.5d
+			y: 0.0d
 			description: ["{gravitas.quest.caveman.desc.work_bench}"]
-			dependencies: ["1238AA59D567EE35"]
+			dependencies: ["70D78EF128C722A1"]
 			id: "22A0A2AB85BF37A4"
 			tasks: [{
 				id: "66295A20EFF4960C"
@@ -582,8 +537,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.crafting_table}"
-			x: 4.0d
-			y: 1.5d
+			x: 5.0d
+			y: 0.0d
 			description: ["{gravitas.quest.caveman.desc.crafting_table}"]
 			dependencies: ["22A0A2AB85BF37A4"]
 			optional: true
@@ -595,8 +550,8 @@
 			}]
 		}
 		{
-			x: 5.5d
-			y: -0.5d
+			x: 6.5d
+			y: -1.5d
 			description: ["{gravitas.quest.caveman.desc.beehive_frame}"]
 			dependencies: ["22A0A2AB85BF37A4"]
 			id: "5478150085EF27C0"
@@ -614,8 +569,8 @@
 			}]
 		}
 		{
-			x: 4.0d
-			y: -0.5d
+			x: 5.0d
+			y: -1.5d
 			description: ["{gravitas.quest.caveman.desc.beehive}"]
 			dependencies: ["5478150085EF27C0"]
 			id: "5F20B205754CE462"
@@ -626,8 +581,8 @@
 			}]
 		}
 		{
-			x: 3.0d
-			y: -1.0d
+			x: 4.0d
+			y: -2.0d
 			description: ["{gravitas.quest.caveman.desc.beeswax}"]
 			dependencies: ["5F20B205754CE462"]
 			id: "535D2CF323ED6D05"
@@ -638,8 +593,8 @@
 			}]
 		}
 		{
-			x: 3.0d
-			y: 0.0d
+			x: 4.0d
+			y: -1.0d
 			description: ["{gravitas.quest.caveman.desc.honey}"]
 			dependencies: ["5F20B205754CE462"]
 			id: "604EA4BA99BE1F09"
@@ -657,8 +612,8 @@
 			]
 		}
 		{
-			x: 2.0d
-			y: -1.0d
+			x: 3.0d
+			y: -1.5d
 			description: [
 				"{gravitas.quest.caveman.desc.treated_lumber.1}"
 				"{gravitas.quest.caveman.desc.treated_lumber.2}"
@@ -674,8 +629,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.clay}"
-			x: 10.0d
-			y: 5.5d
+			x: 14.0d
+			y: 3.0d
 			description: ["{gravitas.quest.caveman.desc.clay}"]
 			id: "7C2E28402F918FEA"
 			tasks: [{
@@ -687,8 +642,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.useful_molds}"
-			x: 11.0d
-			y: 5.5d
+			x: 12.5d
+			y: 4.5d
 			description: ["{gravitas.quest.caveman.desc.useful_molds}"]
 			dependencies: ["7C2E28402F918FEA"]
 			id: "239FE88B9320DF9E"
@@ -851,9 +806,10 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.big_barrel}"
-			x: 10.5d
-			y: -2.5d
+			x: 9.5d
+			y: -1.5d
 			description: ["{gravitas.quest.caveman.desc.big_barrel}"]
+			dependencies: ["70D78EF128C722A1"]
 			id: "0DD3F3EDB709A4E6"
 			tasks: [{
 				id: "39E80AB56CB3FFC9"
@@ -870,9 +826,11 @@
 			}]
 		}
 		{
-			x: 13.5d
-			y: -0.5d
+			title: "Getting Around"
+			x: 9.5d
+			y: 1.5d
 			description: ["{gravitas.quest.caveman.desc.waystone}"]
+			dependencies: ["1CD5C4226B41ACCE"]
 			id: "61D2B2C65CD18F80"
 			tasks: [{
 				id: "314D9E700211415E"
@@ -882,8 +840,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.loom}"
-			x: 4.5d
-			y: -2.5d
+			x: 12.5d
+			y: -3.0d
 			dependencies: ["16BB7334ACB35025"]
 			id: "154A9384B22C1FC2"
 			tasks: [{
@@ -900,8 +858,10 @@
 			}]
 		}
 		{
-			x: 6.5d
-			y: -2.5d
+			x: 12.5d
+			y: 0.0d
+			hide_dependency_lines: true
+			dependencies: ["7C2E28402F918FEA"]
 			id: "3BD7DB417DDE94D0"
 			tasks: [
 				{
@@ -937,8 +897,8 @@
 			]
 		}
 		{
-			x: 5.5d
-			y: -2.5d
+			x: 12.5d
+			y: -1.5d
 			dependencies: ["3BD7DB417DDE94D0"]
 			id: "16BB7334ACB35025"
 			tasks: [
@@ -955,8 +915,8 @@
 			]
 		}
 		{
-			x: 3.5d
-			y: -2.5d
+			x: 11.0d
+			y: -3.0d
 			dependencies: ["154A9384B22C1FC2"]
 			id: "628F17390BE87E57"
 			tasks: [{
@@ -967,8 +927,8 @@
 		}
 		{
 			title: "{gravitas.quest.caveman.small_ship}"
-			x: 3.5d
-			y: -4.0d
+			x: 11.0d
+			y: -4.5d
 			description: ["{gravitas.quest.caveman.desc.small_ship}"]
 			dependencies: ["628F17390BE87E57"]
 			id: "1CB1E914C394C297"
@@ -986,18 +946,116 @@
 			}]
 		}
 		{
-			x: 4.0d
-			y: 3.5d
+			x: 8.0d
+			y: -1.5d
 			description: [
 				"{gravitas.quest.caveman.desc.composter.1}"
 				"{gravitas.quest.caveman.desc.composter.2}"
 			]
+			dependencies: ["70D78EF128C722A1"]
 			id: "2AD5D0FD00A5C4FD"
 			tasks: [{
 				id: "0B81C8F0564E121A"
 				type: "item"
 				item: "tfc:composter"
 			}]
+		}
+		{
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "ftbquests:textures/gui/guide.png"
+				}
+			}
+			x: 8.0d
+			y: 1.5d
+			shape: "hexagon"
+			description: [
+				"TerraFirmaCraft (TFC) adds a completely different experience from the standard Minecraft journey."
+				""
+				"It's easy to get lost, but you've been equipped with a guidebook in your inventory! If you ever get lost, click on the TFC guidebook tab on the right side of your inventory screen!"
+			]
+			size: 2.0d
+			id: "1CD5C4226B41ACCE"
+			tasks: [{
+				id: "417CC152C24BFD53"
+				type: "dimension"
+				title: "Getting Started"
+				dimension: "minecraft:overworld"
+			}]
+		}
+		{
+			title: "We have &cFIRE&r!"
+			icon: "tfc:firepit"
+			x: 11.0d
+			y: 4.5d
+			description: [
+				"Using 2 Twigs, you can craft a &cFirestarter&r, which will help us make a &cFirepit&r!"
+				""
+				"Campfires are made by throwing down these items all on one block: 1 log, 3 Sticks, and up to 5 pieces of Kindling (Straw is great for this!)"
+				""
+				"Once all items are thrown down, use the Firestarter on the items to try and light it. If successful, you will make your first &cFirepit&r!"
+			]
+			dependencies: ["297C2E9EF534A201"]
+			min_width: 300
+			id: "180277183EB60B6D"
+			tasks: [
+				{
+					id: "144E1396C65C0BCC"
+					type: "item"
+					item: {
+						id: "tfc:firestarter"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "1CEA9B0C4959F993"
+					type: "advancement"
+					title: "Make a Firepit"
+					advancement: "tfc:story/firepit"
+					criterion: ""
+				}
+			]
+		}
+		{
+			x: 11.0d
+			y: 0.0d
+			dependencies: ["6A9592B8BDE532CE"]
+			id: "7CF28D1E8ABAF228"
+			tasks: [
+				{
+					id: "3375A5CA9F1B1FF3"
+					type: "item"
+					item: {
+						id: "tfc:metal/pickaxe_head/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+				{
+					id: "158CE6F45E6BCB20"
+					type: "item"
+					item: {
+						id: "tfc:metal/propick_head/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+				}
+			]
 		}
 	]
 	quest_links: [ ]
