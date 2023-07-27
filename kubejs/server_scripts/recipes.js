@@ -758,7 +758,37 @@ const setRecipes = (recipesEvent) => {
       Ingredient.of(`tfc:metal/ingot/${sheetMetal}`).ignoreNBT()
     )
   }
-
+  //Rosia compat
+    recipesEvent.recipes.immersiveengineeringMetalPress(
+      Ingredient.of(`rosia:purple_steel_sheet`).ignoreNBT(),
+      Ingredient.of(`rosia:purple_steel_double_ingot`).ignoreNBT(),
+      mold
+    )
+    recipesEvent.recipes.immersiveengineeringArcFurnace(
+      Ingredient.of(`rosia:purple_steel_double_sheet`).ignoreNBT(),
+      Ingredient.of(`rosia:purple_steel_sheet`).ignoreNBT(),
+      Ingredient.of(`rosia:purple_steel_sheet`).ignoreNBT()
+    )
+    recipesEvent.recipes.immersiveengineeringArcFurnace(
+      Ingredient.of(`rosia:purple_steel_double_ingot`).ignoreNBT(),
+      Ingredient.of(`rosia:purple_steel_ingot`).ignoreNBT(),
+      Ingredient.of(`rosia:purple_steel_ingot`).ignoreNBT()
+    )
+    recipesEvent.recipes.immersiveengineeringMetalPress(
+      Ingredient.of(`rosia:invar_sheet`).ignoreNBT(),
+      Ingredient.of(`rosia:invar_double_ingot`).ignoreNBT(),
+      mold
+    )
+    recipesEvent.recipes.immersiveengineeringArcFurnace(
+      Ingredient.of(`rosia:invar_double_sheet`).ignoreNBT(),
+      Ingredient.of(`rosia:invar_sheet`).ignoreNBT(),
+      Ingredient.of(`rosia:invar_sheet`).ignoreNBT()
+    )
+    recipesEvent.recipes.immersiveengineeringArcFurnace(
+      Ingredient.of(`rosia:invar_double_ingot`).ignoreNBT(),
+      Ingredient.of(`rosia:invar_ingot`).ignoreNBT(),
+      Ingredient.of(`rosia:invar_ingot`).ignoreNBT()
+    )
   recipesEvent.recipes.immersiveengineeringMetalPress(
     `firmalife:metal/sheet/chromium`,
     Ingredient.of(`firmalife:metal/double_ingot/chromium`).ignoreNBT(),
@@ -769,6 +799,11 @@ const setRecipes = (recipesEvent) => {
     Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT(),
     Ingredient.of(`firmalife:metal/sheet/chromium`).ignoreNBT()
   )
+  recipesEvent.recipes.immersiveengineeringArcFurnace(
+      `firmalife:metal/double_ingot/chromium`,
+      Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT(),
+      Ingredient.of(`firmalife:metal/ingot/chromium`).ignoreNBT()
+    )
   recipesEvent.recipes.immersiveengineeringMetalPress(
     `firmalife:metal/sheet/stainless_steel`,
     Ingredient.of(`firmalife:metal/double_ingot/stainless_steel`).ignoreNBT(),

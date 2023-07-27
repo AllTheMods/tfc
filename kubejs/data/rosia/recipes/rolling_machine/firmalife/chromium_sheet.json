@@ -1,0 +1,12 @@
+{
+  "type": "rosia:rolling_machine",
+  "ingredients": [
+    {
+      "item": "firmalife:metal/double_ingot/chromium"
+    }
+  ],
+  "output": {
+    "item": "firmalife:metal/sheet/chromium",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "rosia:extruding_machine",
+  "ingredients": [
+    {
+      "item": "firmalife:metal/ingot/chromium"
+    }
+  ],
+  "output": {
+    "item": "firmalife:metal/rod/chromium",
+    "count": 2
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "rosia:rolling_machine",
+  "ingredients": [
+    {
+      "item": "firmalife:metal/double_ingot/stainless_steel"
+    }
+  ],
+  "output": {
+    "item": "firmalife:metal/sheet/stainless_steel",
+    "count": 1
+  }
+}
