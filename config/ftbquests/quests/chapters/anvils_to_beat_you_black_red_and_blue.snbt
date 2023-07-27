@@ -4,6 +4,16 @@
 	order_index: 5
 	filename: "anvils_to_beat_you_black_red_and_blue"
 	title: "{gravitas.chapters.6.title}"
+	icon: {
+		id: "tfc:metal/anvil/red_steel"
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+	}
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
@@ -173,6 +183,7 @@
 		{
 			x: 2.5d
 			y: 3.5d
+			description: ["{gravitas.quest.blacksteel.desc.blue_bucket}"]
 			dependencies: ["782836C39D00C73C"]
 			id: "4110D65952C446BC"
 			tasks: [{
@@ -184,6 +195,7 @@
 		{
 			x: 3.5d
 			y: 3.5d
+			description: ["{gravitas.quest.blacksteel.desc.red_bucket}"]
 			dependencies: ["01711092E2004315"]
 			id: "7655E45A37759CAB"
 			tasks: [{
@@ -235,20 +247,6 @@
 			}]
 		}
 		{
-			x: -2.0d
-			y: 6.0d
-			hide_dependency_lines: false
-			dependencies: ["4170701E508D58B5"]
-			hide: true
-			id: "679D7B1E110BE18E"
-			tasks: [{
-				id: "4D221A36C8F952DF"
-				type: "item"
-				item: "immersiveengineering:cokebrick"
-				count: 27L
-			}]
-		}
-		{
 			x: 3.0d
 			y: 5.0d
 			description: ["{gravitas.quest.blacksteel.desc.bucket}"]
@@ -261,57 +259,6 @@
 				id: "5B69D6251E53714A"
 				type: "item"
 				item: "minecraft:bucket"
-			}]
-		}
-		{
-			title: "{gravitas.quest.blacksteel.engineers_tools}"
-			x: -2.0d
-			y: 5.0d
-			dependencies: ["42471A8474620E27"]
-			id: "4170701E508D58B5"
-			tasks: [
-				{
-					id: "1B4B95CC48B88CA0"
-					type: "item"
-					item: {
-						id: "immersiveengineering:hammer"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
-					}
-				}
-				{
-					id: "4A861E5E22EF9766"
-					type: "item"
-					item: {
-						id: "immersiveengineering:wirecutter"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
-					}
-				}
-				{
-					id: "2EB2B34F41B4C17D"
-					type: "item"
-					item: "immersiveengineering:screwdriver"
-				}
-			]
-		}
-		{
-			x: -2.0d
-			y: 7.0d
-			description: ["{gravitas.quest.blacksteel.desc.blast_brick}"]
-			dependencies: [
-				"679D7B1E110BE18E"
-				"4B88B6D1DD2A30EA"
-			]
-			id: "584E1EADFF9DB1FC"
-			tasks: [{
-				id: "371BDAFC059C182F"
-				type: "item"
-				item: "immersiveengineering:blastbrick"
 			}]
 		}
 		{
@@ -361,8 +308,8 @@
 			]
 		}
 		{
-			x: 4.5d
-			y: 7.0d
+			x: 6.5d
+			y: 5.0d
 			description: ["{gravitas.quest.blacksteel.desc.going_deeper}"]
 			dependencies: ["7B044C2424F0CF68"]
 			dependency_requirement: "all_started"

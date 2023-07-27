@@ -4,6 +4,16 @@
 	order_index: 1
 	filename: "copper_anvils"
 	title: "{gravitas.chapters.2.title}"
+	icon: {
+		id: "tfc:metal/anvil/copper"
+		Count: 1b
+		ForgeCaps: {
+			"tfc:item_heat": {
+				heat: 0.0f
+				ticks: 0L
+			}
+		}
+	}
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
@@ -27,8 +37,8 @@
 			y: 0.0d
 			description: ["{gravitas.quest.copper.desc.copper_double}"]
 			dependencies: [
-				"5B949C879D977B18"
-				"538D08DB0D760122"
+				"28D6404D84C87C70"
+				"50665005FAC7C569"
 			]
 			id: "593520325799F3D6"
 			tasks: [{
@@ -47,13 +57,13 @@
 			}]
 		}
 		{
-			x: 4.0d
+			x: 4.5d
 			y: 0.0d
 			description: [
 				"{gravitas.quest.copper.desc.anvil.1}"
 				"{gravitas.quest.copper.desc.anvil.2}"
 			]
-			dependencies: ["7F97680AF1303C0B"]
+			dependencies: ["593520325799F3D6"]
 			id: "1BD449BE6B5C6E93"
 			tasks: [{
 				id: "7079ACD99C9E5967"
@@ -72,15 +82,11 @@
 		}
 		{
 			title: "{gravitas.quest.copper.charcoal_forge}"
-			x: 5.5d
+			x: 1.5d
 			y: -1.5d
 			description: [
 				"{gravitas.quest.copper.desc.charcoal_forge.1}"
 				"{gravitas.quest.copper.desc.charcoal_forge.2}"
-			]
-			dependencies: [
-				"2F073E07D1A9533A"
-				"50063D8DA6A258F6"
 			]
 			id: "543CB2FB24387CF0"
 			tasks: [{
@@ -91,18 +97,42 @@
 			}]
 		}
 		{
-			x: 6.5d
+			x: 0.0d
 			y: -1.5d
 			description: [
 				"{gravitas.quest.copper.desc.bellows.1}"
 				"{gravitas.quest.copper.desc.bellows.2}"
 			]
-			dependencies: ["7860C0D66B682A1F"]
+			dependencies: [
+				"543CB2FB24387CF0"
+				"558C90FFC7FA976D"
+			]
 			id: "5862FB3D01494F5C"
 			tasks: [{
 				id: "646442B25233B967"
 				type: "item"
 				item: "tfc:bellows"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 0.0d
+			description: ["{gravitas.quest.copper.desc.ingot}"]
+			dependencies: ["543CB2FB24387CF0"]
+			id: "50665005FAC7C569"
+			tasks: [{
+				id: "6AD8D6C94291AD4A"
+				type: "item"
+				item: {
+					id: "tfc:metal/ingot/copper"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
 			}]
 		}
 	]
