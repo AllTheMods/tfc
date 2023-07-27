@@ -3,7 +3,7 @@
 	group: "20028FE0986EEEC1"
 	order_index: 0
 	filename: "rock_anvils"
-	title: "Getting Started"
+	title: "Getting Started(Featuring Stone Anvils!)"
 	icon: "tfc:rock/anvil/basalt"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
