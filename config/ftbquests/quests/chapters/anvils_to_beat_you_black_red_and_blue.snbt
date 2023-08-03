@@ -141,41 +141,23 @@
 			}]
 		}
 		{
-			x: 2.5d
+			x: 3.0d
 			y: 2.5d
-			dependencies: ["4C8385E2ACE406EE"]
+			dependencies: [
+				"4C8385E2ACE406EE"
+				"15BC783BB17EE2D4"
+			]
+			dependency_requirement: "one_completed"
 			id: "782836C39D00C73C"
 			tasks: [{
 				id: "06F8DDE48FE6BBF0"
 				type: "item"
+				title: "{gravitas.quest.caveman.coloured_anvil}"
 				item: {
-					id: "tfc:metal/anvil/blue_steel"
+					id: "itemfilters:tag"
 					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
-					}
-				}
-			}]
-		}
-		{
-			x: 3.5d
-			y: 2.5d
-			dependencies: ["15BC783BB17EE2D4"]
-			id: "01711092E2004315"
-			tasks: [{
-				id: "3A08DCD55EB38342"
-				type: "item"
-				item: {
-					id: "tfc:metal/anvil/red_steel"
-					Count: 1b
-					ForgeCaps: {
-						"tfc:item_heat": {
-							heat: 0.0f
-							ticks: 0L
-						}
+					tag: {
+						value: "tfc:anvil_tier6"
 					}
 				}
 			}]
@@ -185,6 +167,7 @@
 			y: 3.5d
 			description: ["{gravitas.quest.blacksteel.desc.blue_bucket}"]
 			dependencies: ["782836C39D00C73C"]
+			dependency_requirement: "one_completed"
 			id: "4110D65952C446BC"
 			tasks: [{
 				id: "42FB9AAFC71A5729"
@@ -196,7 +179,8 @@
 			x: 3.5d
 			y: 3.5d
 			description: ["{gravitas.quest.blacksteel.desc.red_bucket}"]
-			dependencies: ["01711092E2004315"]
+			dependencies: ["782836C39D00C73C"]
+			dependency_requirement: "one_completed"
 			id: "7655E45A37759CAB"
 			tasks: [{
 				id: "39890A991AB341B5"
@@ -262,53 +246,28 @@
 			}]
 		}
 		{
-			x: 4.5d
-			y: 5.0d
+			title: "{gravitas.quest.caveman.coloured_pickaxe}"
+			x: 5.0d
+			y: 2.5d
 			description: ["{gravitas.quest.blacksteel.desc.obsidian}"]
-			dependencies: [
-				"01711092E2004315"
-				"782836C39D00C73C"
-			]
+			dependencies: ["782836C39D00C73C"]
+			dependency_requirement: "one_completed"
 			id: "7B044C2424F0CF68"
-			tasks: [
-				{
-					id: "34CB282F5D3011A1"
-					type: "item"
-					item: {
-						id: "tfc:metal/pickaxe/blue_steel"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
+			tasks: [{
+				id: "34CB282F5D3011A1"
+				type: "item"
+				title: "Any #tfc:pickaxe_tier6"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "tfc:pickaxe_tier6"
 					}
 				}
-				{
-					id: "0756308FEA3B221C"
-					type: "item"
-					item: {
-						id: "tfc:metal/pickaxe/red_steel"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
-						ForgeCaps: {
-							"tfc:item_heat": {
-								heat: 0.0f
-								ticks: 0L
-							}
-						}
-					}
-				}
-			]
+			}]
 		}
 		{
-			x: 6.5d
+			x: 5.0d
 			y: 5.0d
 			description: ["{gravitas.quest.blacksteel.desc.going_deeper}"]
 			dependencies: ["7B044C2424F0CF68"]

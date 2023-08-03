@@ -1,0 +1,2391 @@
+{
+	id: "2E58B32F9A1289D6"
+	group: "78F1C802B893F66C"
+	order_index: 0
+	filename: "pathfinders_map_shop"
+	title: "{gravitas.shop.chapter.1}"
+	icon: "minecraft:tall_grass"
+	tags: ["biome_maps"]
+	disable_toast: true
+	default_quest_shape: ""
+	default_hide_dependency_lines: true
+	images: [
+		{
+			x: -3.0d
+			y: -16.0d
+			width: 4.5d
+			height: 1.0d
+			rotation: 0.0d
+			image: "kubejs:textures/biomes_text.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -4.5d
+			y: -14.5d
+			width: 2.0d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/aquatic.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -5.285714285714285d
+			y: -10.0d
+			width: 4.0d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/high_altitude.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -5.142857142857139d
+			y: -13.0d
+			width: 3.5d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/low_altitude.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -5.142857142857139d
+			y: -11.5d
+			width: 3.5d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/mid_altitude.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -4.464285714285715d
+			y: -7.0d
+			width: 2.0d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/shores.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -4.285714285714285d
+			y: -8.535714285714285d
+			width: 1.5d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/water.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -6.142857142857139d
+			y: -5.5d
+			width: 6.0d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/mountain_fresh_water.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+		{
+			x: -4.5d
+			y: -4.0d
+			width: 2.0d
+			height: 0.5d
+			rotation: 0.0d
+			image: "kubejs:textures/nether.png"
+			hover: [ ]
+			click: ""
+			dev: false
+			corner: false
+		}
+	]
+	quests: [
+		{
+			title: "{gravitas.shop.map.biome.badlands}"
+			icon: {
+				id: "minecraft:red_sand"
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+			}
+			disable_toast: true
+			x: -3.0d
+			y: -11.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "6FE4D7D9D62A4A75"
+			tasks: [
+				{
+					id: "554D0CF89F994B9F"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "2C0FA13DB3C7C0B5"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "3419CD4167C00630"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "7D0F0002CFB52FB6"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.badlands}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_badlands"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.inverted_badlands}"
+			icon: {
+				id: "tfc:sand/white"
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+			}
+			disable_toast: true
+			x: -2.0d
+			y: -11.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "5403877F1E017832"
+			tasks: [
+				{
+					id: "34D3A2ABE63A4E69"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "49ABB45AC71E825A"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "2FA62A7C70673302"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "771F4E9CCD245EB7"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.inverted_badlands}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_inverted_badlands"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.canyons}"
+			icon: "tfc:mud/loam"
+			disable_toast: true
+			x: 0.0d
+			y: -11.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "418F3DD6F75F5D21"
+			tasks: [
+				{
+					id: "373361598194E3FD"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "1F6CCAC0BD39AC27"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "651EA37030407231"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "6AEE498906F3A523"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.canyons}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_canyons"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.low_canyons}"
+			icon: "tfc:mud/silt"
+			disable_toast: true
+			x: -3.0d
+			y: -13.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "011C08B2AFCAD4C7"
+			tasks: [
+				{
+					id: "233F0A5DC2B96F11"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "03F842E6D4C33308"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "686EF426B93C9A86"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "0CE7384D64CFE376"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.low_canyons}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_low_canyons"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.plains}"
+			icon: "minecraft:grass_block"
+			disable_toast: true
+			x: 0.0d
+			y: -13.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "78E2C6DD754B0C76"
+			tasks: [
+				{
+					id: "40CE0908588FE31C"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "0548634BB908A7CC"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "4B1F046E9C5B1186"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "160D08E16990E6E1"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.plains}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_plains"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.plateau}"
+			icon: "tfc:grass/silt"
+			disable_toast: true
+			x: -1.0d
+			y: -11.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "0915252D887797E4"
+			tasks: [
+				{
+					id: "3B73C4FCA2391661"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "7CA0960024E2DA9A"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "0E536DF458D5CDE4"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "79B0F330091B9C29"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.plateau}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_plateau"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.hills}"
+			icon: "minecraft:stone"
+			disable_toast: true
+			x: -1.0d
+			y: -13.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "143875A2195B9422"
+			tasks: [
+				{
+					id: "45DCCA98D83DF80C"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "27A1B70BAC9EF0A8"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "722547729AAFFC28"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "4E984260F986F84E"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.hills}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_hills"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.rolling_hills}"
+			icon: "tfc:rock/raw/diorite"
+			disable_toast: true
+			x: 1.0d
+			y: -11.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "3D1D94701E97B400"
+			tasks: [
+				{
+					id: "728931BA0B7589EC"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "409ECFA8451D5DFC"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "7D24089395A294E1"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "50D0B9B7D7FB10D2"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.rolling_hills}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_rolling_hills"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.lake}"
+			icon: "minecraft:lily_pad"
+			disable_toast: true
+			x: -2.0d
+			y: -8.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "1FE0C8F68D3D2A86"
+			tasks: [
+				{
+					id: "0F4C51964F5EB48E"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "39AE11AB253C8F41"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "7BE714091FFAE5BB"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "43F2ED5C264C009A"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_lake"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.lowlands}"
+			icon: "tfc:plant/dry_phragmite"
+			disable_toast: true
+			x: -2.0d
+			y: -13.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "555E1D429EF65E1A"
+			tasks: [
+				{
+					id: "1ECDB706CFF34BC7"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "6309898AEDB7B279"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "7982F5C7823279E0"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "6D9C356B7681E462"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.lowlands}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_lowlands"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.mountains}"
+			icon: "tfc:rock/raw/granite"
+			disable_toast: true
+			x: -1.0d
+			y: -10.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "3D8DF133962CFF1F"
+			tasks: [
+				{
+					id: "00333C4BF120B21E"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "327AAEC85E74DA57"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "5BCF2D2F935F963F"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "7991DFB316EA91E5"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.mountains}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_mountains"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.volcanic_mountains}"
+			icon: "tfc:rock/magma/basalt"
+			disable_toast: true
+			x: -2.0d
+			y: -10.0d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "7B0CB147D6DEE32C"
+			tasks: [
+				{
+					id: "4A7172D0EEC7026D"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "1F82AB9C4A26B5C2"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "498C598EB2721DD2"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "66209F8592C4FD41"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.volcanic_mountains}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_volcanic_mountains"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.old_mountains}"
+			icon: "tfc:bucket/spring_water"
+			disable_toast: true
+			x: -3.0d
+			y: -10.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "341E463883DC4085"
+			tasks: [
+				{
+					id: "1E8B4C02254CD28F"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "35FAA859FAB675D0"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "265E9C221CCEE2B9"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "78B93C4A2B3A06A2"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.old_mountains}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_old_mountains"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.oceanic_mountains}"
+			icon: "tfc:rock/gravel/dolomite"
+			disable_toast: true
+			x: 0.0d
+			y: -10.0d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "4FA81BB2DC80A360"
+			tasks: [
+				{
+					id: "0D39AE137CADFA7F"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "28B2815051F62EAC"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "57787EDA93F5BB24"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "2196F6577B176E00"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.oceanic_mountains}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_oceanic_mountains"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.volcanic_oceanic_mountains}"
+			icon: "tfc:rock/magma/gabbro"
+			disable_toast: true
+			x: 1.0d
+			y: -10.0d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "4C827EED9A3F3E4C"
+			tasks: [
+				{
+					id: "0920898A9829DDD5"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "6288958351DDA9FC"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "10F4AEDF5B995C77"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "3B6E0FC4915C7C01"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.volcanic_oceanic_mountains}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_volcanic_oceanic_mountains"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.ocean}"
+			icon: "minecraft:pufferfish"
+			disable_toast: true
+			x: -3.0d
+			y: -14.5d
+			shape: "octagon"
+			hide_dependency_lines: true
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "56C3BDF6D5367F04"
+			tasks: [
+				{
+					id: "3CFF30E7E73CA323"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "4D71E95D9B8BA4B1"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "3B5D2A252F710FA6"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "140016D527E12689"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.ocean}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_ocean"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.ocean_reef}"
+			icon: "minecraft:bubble_coral"
+			disable_toast: true
+			x: -2.0d
+			y: -14.5d
+			shape: "octagon"
+			hide_dependency_lines: true
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "1B9963CC1C99E254"
+			tasks: [
+				{
+					id: "1F8A3CADD65D98ED"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "43D794005D24761A"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "08D81AE155AC7A9C"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "7A21274516E8B0BD"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.ocean_reef}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_ocean_reef"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.deep_ocean}"
+			icon: "minecraft:glow_ink_sac"
+			disable_toast: true
+			x: -1.0d
+			y: -14.5d
+			shape: "octagon"
+			hide_dependency_lines: true
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "6344A3E1050B013D"
+			tasks: [
+				{
+					id: "196FCB0828A3E215"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "63879166586F27B5"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "2AFF463E7084EE0B"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "3561D313C7008CEF"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.deep_ocean}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_deep_ocean"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.deep_ocean_trench}"
+			icon: "minecraft:tropical_fish"
+			disable_toast: true
+			x: 0.0d
+			y: -14.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "52BD4CA8E1424554"
+			tasks: [
+				{
+					id: "3397FF1EA935CECA"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "3F30CA5E7C839DD7"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "6C4AD2B883251DDF"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "75E26E0C1971A656"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.deep_ocean_trench}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_deep_ocean_trench"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.river}"
+			icon: "immersiveengineering:watermill"
+			disable_toast: true
+			x: -3.0d
+			y: -8.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "30278E9B24564B83"
+			tasks: [
+				{
+					id: "0DFFE66328515B09"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "47FCA6AA2F5473A2"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "792029C42B6F197E"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "48033CA0B02AF17F"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.river}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_river"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.shore}"
+			icon: {
+				id: "minecraft:sand"
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+			}
+			disable_toast: true
+			x: -3.0d
+			y: -7.0d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "7C1E1D8E8531515A"
+			tasks: [
+				{
+					id: "1AAD044D27A73749"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "74EA5C31D4A5F53D"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "784FF04D84470367"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "28936FBAB099E786"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.shore}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_shore"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.mountain_river}"
+			icon: "tfc:rock/raw/claystone"
+			disable_toast: true
+			x: -2.0d
+			y: -5.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "2E37DAE4A371734B"
+			tasks: [
+				{
+					id: "0EB03277CB887872"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "43DE83F1AD61C95B"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "322D9C1B9F4B0E63"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "74B28145B11CC534"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.mountain_river}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_mountain_river"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.volcanic_mountain_river}"
+			icon: "tfc:rock/magma/andesite"
+			disable_toast: true
+			x: -1.0d
+			y: -5.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "1729FA1A494E1C18"
+			tasks: [
+				{
+					id: "0D20E9AE44C1BC84"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "644393B9CC6B4EF4"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "37CB259F72FDE7DB"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "365EC1B114BB4ECA"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.volcanic_mountain_river}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_volcanic_mountain_river"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.old_mountain_river}"
+			icon: "create:water_wheel"
+			disable_toast: true
+			x: -3.0d
+			y: -5.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "01C56C78CE3C84B7"
+			tasks: [
+				{
+					id: "1F58CC22199D34C9"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "6A89410A1C891B5A"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "1029864F4D03434E"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "6AF372C4B00B8677"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.old_mountain_river}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_old_mountain_river"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.oceanic_mountain_river}"
+			icon: {
+				id: "tfc:food/bluegill"
+				Count: 1b
+				ForgeCaps: {
+					"tfc:food": {
+						traits: [ ]
+						creationDate: -9223372036854775808L
+					}
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+			}
+			disable_toast: true
+			x: 0.0d
+			y: -5.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "07693B9DE14F884E"
+			tasks: [
+				{
+					id: "6219813DA1A03E82"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "16194A1470EE1B72"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "76AD3B5C7EC005A9"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "4C300A4610B2762C"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.oceanic_mountain_river}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_oceanic_mountain_river"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_river}"
+			icon: "tfc:rock/magma/dacite"
+			disable_toast: true
+			x: 3.0d
+			y: -5.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "590AC0E4F83FFF39"
+			tasks: [
+				{
+					id: "443901D28E9AB9C3"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "2B4F318FBE1279CB"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "710578DECA2E2F59"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "36B633F245F54FC1"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_river}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_volcanic_oceanic_mountain_river"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.mountain_lake}"
+			icon: "tfc:plant/water_lily"
+			disable_toast: true
+			x: 2.0d
+			y: -5.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "3150A27D65D901FE"
+			tasks: [
+				{
+					id: "7180FA81B570D5F4"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "39EB36400159E438"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "24ECC66708F1818A"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "5526630F330972EA"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.mountain_lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_mountain_lake"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.volcanic_mountain_lake}"
+			icon: "tfc:rock/magma/granite"
+			disable_toast: true
+			x: 1.0d
+			y: -5.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "6BA8F0FC08F65056"
+			tasks: [
+				{
+					id: "6B196D5EBDD8AFE2"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "32504CDF7B0501DC"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "78EF9A59AA630B29"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "712FC93F6BAB14B7"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.volcanic_mountain_lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_volcanic_mountain_lake"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.old_mountain_lake}"
+			icon: "tfc:plant/coontail"
+			disable_toast: true
+			x: 4.0d
+			y: -5.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "5C620B1B41EB8423"
+			tasks: [
+				{
+					id: "1964FA913A8DA592"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "704023EC44623A4E"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "620E4992F80039DD"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "055A0376D89D92C6"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.old_mountain_lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_old_mountain_lake"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.oceanic_mountain_lake}"
+			icon: "tfc:plant/eel_grass"
+			disable_toast: true
+			x: 5.0d
+			y: -5.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "6F65C978ADFAA711"
+			tasks: [
+				{
+					id: "3B0BCA365A460935"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "506BF43AB0741C67"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "4A547DCAA8B68203"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "73BD06289DBED9B1"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.oceanic_mountain_lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_oceanic_mountain_lake"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_lake}"
+			icon: "tfc:rock/magma/diorite"
+			disable_toast: true
+			x: 6.0d
+			y: -5.5d
+			shape: "octagon"
+			min_required_dependencies: 1
+			dependencies: [
+				"50EC0F521D31465C"
+				"246FF66E4D1AC9B8"
+			]
+			can_repeat: true
+			id: "1F76FEA44BFCE99B"
+			tasks: [
+				{
+					id: "774ACC33D227602B"
+					type: "item"
+					disable_toast: true
+					item: "firmalife:beeswax"
+					count: 32L
+					consume_items: true
+				}
+				{
+					id: "33C09C6358C39BE7"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:iron_block"
+					consume_items: true
+				}
+				{
+					id: "3119208825D684AE"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "tfc:metal/anvil/copper"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "5B312B328EC7A562"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.volcanic_oceanic_mountain_lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_volcanic_oceanic_mountain_lake"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.plateau_lake}"
+			icon: {
+				id: "tfc:plant/milfoil"
+				Count: 1b
+				ForgeCaps: {
+					"tfc:item_heat": {
+						heat: 0.0f
+						ticks: 0L
+					}
+				}
+			}
+			disable_toast: true
+			x: 7.0d
+			y: -5.5d
+			shape: "octagon"
+			can_repeat: true
+			id: "3043586EC5D937B2"
+			tasks: [
+				{
+					id: "55D3D05C4C9E93F2"
+					type: "item"
+					disable_toast: true
+					item: {
+						id: "minecraft:clay"
+						Count: 1b
+						ForgeCaps: {
+							"tfc:item_heat": {
+								heat: 0.0f
+								ticks: 0L
+							}
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "429D12C794CED7C8"
+					type: "item"
+					title: "Any #tfc:log_pile_logs"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:log_pile_logs"
+						}
+					}
+					count: 64L
+					consume_items: true
+				}
+				{
+					id: "6D78E92776AD6E11"
+					type: "item"
+					title: "Any #tfc:seeds"
+					disable_toast: true
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "tfc:seeds"
+						}
+					}
+					count: 16L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "4E6A4E26DC26CE51"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.plateau_lake}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_plateau_lake"]
+			}]
+		}
+		{
+			x: 3.75d
+			y: -12.0d
+			shape: "rsquare"
+			size: 1.5d
+			id: "50EC0F521D31465C"
+			tasks: [{
+				id: "7CB37AFDFE98FC4C"
+				type: "stat"
+				title: "{gravitas.shop.requirement.walk.1}"
+				icon: {
+					id: "tfc:metal/boots/red_steel"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+				stat: "minecraft:walk_one_cm"
+				value: 2000000
+			}]
+		}
+		{
+			x: 3.75d
+			y: -9.0d
+			shape: "rsquare"
+			size: 1.5d
+			id: "246FF66E4D1AC9B8"
+			tasks: [{
+				id: "6712A109B69FE028"
+				type: "stat"
+				title: "{gravitas.shop.requirement.ride_horse.1}"
+				icon: {
+					id: "tfc:metal/horse_armor/blue_steel"
+					Count: 1b
+					ForgeCaps: {
+						"tfc:item_heat": {
+							heat: 0.0f
+							ticks: 0L
+						}
+					}
+				}
+				stat: "minecraft:horse_one_cm"
+				value: 4000000
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.warped_forest}"
+			icon: "minecraft:warped_fungus"
+			disable_toast: true
+			x: -3.0d
+			y: -4.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "7B4C8A1270323D20"
+			tasks: [
+				{
+					id: "4A854568A5B20AF1"
+					type: "dimension"
+					disable_toast: true
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "5D1544A3C85E26FE"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:quartz_block"
+					count: 16L
+					consume_items: true
+				}
+				{
+					id: "486A4088703DFBE1"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:netherrack"
+					count: 32L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "356F3D76F14BB7DB"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.warped_forest}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_warped_forest"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.nether_wastes}"
+			icon: "minecraft:netherrack"
+			disable_toast: true
+			x: -2.0d
+			y: -4.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "4C8AD3A84F700DDA"
+			tasks: [
+				{
+					id: "177E3048381BD275"
+					type: "dimension"
+					disable_toast: true
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "51863E13CCCA47C5"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:quartz_block"
+					count: 16L
+					consume_items: true
+				}
+				{
+					id: "3CB21FB08D88848E"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:netherrack"
+					count: 32L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "3F7CCD3755B13704"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.nether_wastes}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_nether_wastes"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.crimson_forest}"
+			icon: "minecraft:crimson_fungus"
+			disable_toast: true
+			x: -1.0d
+			y: -4.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "4C91436A335DF2D8"
+			tasks: [
+				{
+					id: "6C67E03FE2BAFC8F"
+					type: "dimension"
+					disable_toast: true
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "3F4C3E5334C1C48F"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:quartz_block"
+					count: 16L
+					consume_items: true
+				}
+				{
+					id: "5C55ABDCABB332EB"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:netherrack"
+					count: 32L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "433448202CA30F02"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.crimson_forest}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_crimson_forest"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.soul_sand_valley}"
+			icon: "minecraft:soul_sand"
+			disable_toast: true
+			x: 0.0d
+			y: -4.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "789AD2AD2DB7AE56"
+			tasks: [
+				{
+					id: "758DA4ADBDB97FA5"
+					type: "dimension"
+					disable_toast: true
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "64E1C2F485A2106D"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:quartz_block"
+					count: 16L
+					consume_items: true
+				}
+				{
+					id: "4825C8DB419BCCC3"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:netherrack"
+					count: 32L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "2DAEADA3A37C8290"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.soul_sand_valley}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_soul_sand_valley"]
+			}]
+		}
+		{
+			title: "{gravitas.shop.map.biome.basalt_deltas}"
+			icon: "minecraft:polished_basalt"
+			disable_toast: true
+			x: 1.0d
+			y: -4.0d
+			shape: "octagon"
+			can_repeat: true
+			id: "1A0765454A81AB42"
+			tasks: [
+				{
+					id: "18A975B577EB74DF"
+					type: "dimension"
+					disable_toast: true
+					dimension: "minecraft:the_nether"
+				}
+				{
+					id: "2FBDF199B9BEA7C2"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:quartz_block"
+					count: 16L
+					consume_items: true
+				}
+				{
+					id: "62794D351023ED69"
+					type: "item"
+					disable_toast: true
+					item: "minecraft:netherrack"
+					count: 32L
+					consume_items: true
+				}
+			]
+			rewards: [{
+				id: "5DC3C1FEB7E5C6DE"
+				type: "custom"
+				title: "{gravitas.shop.map.biome.basalt_deltas}"
+				icon: "minecraft:filled_map"
+				tags: ["biome_basalt_deltas"]
+			}]
+		}
+	]
+	quest_links: [ ]
+}

@@ -641,10 +641,7 @@
 			x: 3.0d
 			y: 4.0d
 			hide_dependency_lines: true
-			dependencies: [
-				"628F17390BE87E57"
-				"7EC4991C351C49AC"
-			]
+			dependencies: ["7EC4991C351C49AC"]
 			id: "5D2DB3C9AE40FC3D"
 			tasks: [{
 				id: "67E88D66AFA01992"
