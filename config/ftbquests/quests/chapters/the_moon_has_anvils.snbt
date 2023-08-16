@@ -57,10 +57,7 @@
 			title: "{gravitas.quest.moon.t1_rocket}"
 			x: 2.0d
 			y: -1.5d
-			dependencies: [
-				"782836C39D00C73C"
-				"01711092E2004315"
-			]
+			dependencies: ["782836C39D00C73C"]
 			dependency_requirement: "one_completed"
 			id: "5530739138438C6F"
 			tasks: [

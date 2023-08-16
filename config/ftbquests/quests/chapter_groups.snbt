@@ -1,3 +1,6 @@
 {
-	chapter_groups: [{ id: "20028FE0986EEEC1", title: "{gravitas.chapters.group.1}" }]
+	chapter_groups: [
+		{ id: "20028FE0986EEEC1", title: "{gravitas.chapters.group.1}" }
+		{ id: "78F1C802B893F66C", title: "{gravitas.chapters.group.2}" }
+	]
 }

@@ -307,6 +307,18 @@ const setItemTags = (itemTagsEvent) => {
     "tfc:ore/small_malachite"
   ])
 
+  //coloured anvil tags for quests
+  itemTagsEvent.add("tfc:anvil_tier6", [
+    "tfc:metal/anvil/blue_steel",
+    "tfc:metal/anvil/red_steel"
+  ])
+
+  //coloured pickaxe tags for quests
+  itemTagsEvent.add("tfc:pickaxe_tier6", [
+    "tfc:metal/pickaxe/blue_steel",
+    "tfc:metal/pickaxe/red_steel"
+  ])
+
   // Seeds related
   itemTagsEvent.get("forge:seeds").removeAll().add("#tfc:seeds")
   itemTagsEvent.removeAll("tombstone:seeds")
