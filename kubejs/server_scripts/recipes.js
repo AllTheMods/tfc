@@ -144,6 +144,8 @@ const removeRecipes = (recipesEvent) => {
 
   recipesEvent.remove({ input: "#forge:ores/apatite" })
 
+  recipesEvent.remove({ id: "smallships:cannon_ball" })
+
   recipesEvent.remove({ id: "buildinggadgets:gadget_destruction" })
   recipesEvent.remove({ id: "buildinggadgets:construction_paste_powder" })
   recipesEvent.remove({ id: "buildinggadgets:construction_paste_container" })
